@@ -550,10 +550,8 @@ th{
     border: 2px solid var(--story-border);
     border-radius: 10px;
 }
-#aside-content .card-info .card-info-social-icons{
-    background: var(--story-theme);
-    border: 2px solid var(--story-theme);
-    border-radius: 10px;
+#aside-content .card-info .card-info-social-icons i{
+    color: var(--heo-ahoverbg) !important;
 }
 .social-icon{
     height: 8px;
@@ -927,8 +925,6 @@ th{
 .site-page{
     padding: 5px;
     margin:3px;
-    padding-left: 10px;
-    padding-right: 10px;
     white-space: nowrap;
 }
 .site-page:hover{

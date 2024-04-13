@@ -209,28 +209,30 @@ function tosetting(){
     }
     if(localStorage.getItem("aplayerhide")=="false"){
         document.getElementById("hideAplayer").checked=true;
+        var playerjs = document.querySelector('#xplayer');
+        if (playerjs) {
+            //这两种方法皆可
+            // playerjs.remove();
+            playerjs.parentNode.removeChild(playerjs);
+        }
     }
     else if(localStorage.getItem("aplayerhide")==null){
         localStorage.setItem("aplayerhide","false");
         document.getElementById("hideAplayer").checked=true;
+        var playerjs = document.querySelector('#xplayer');
+        if (playerjs) {
+            //这两种方法皆可
+            // playerjs.remove();
+            playerjs.parentNode.removeChild(playerjs);
+        }
     }
     else{
-        doStuff=function() {
-            flag=0;
-            try{
-                ap=aplayers[0];
-                ap.list;
-                flag=1;
-            }catch{
-                setTimeout(doStuff, 50);
-                return;
-            }
-            if(flag){
-                $(".aplayer-fixed").hide()
-            }
-        }
-        doStuff();
-
+        var script = document.createElement('script');
+        script.id = 'xplayer';
+        script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
+        script.setAttribute('key','661a038c31f2b');
+        script.setAttribute('m','1');
+        document.getElementsByTagName('body')[0].appendChild(script);
     }
 
     document.getElementsByClassName("reSettings")[0].onclick=function(){
