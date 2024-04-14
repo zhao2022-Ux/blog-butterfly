@@ -2723,10 +2723,6 @@ a:hover{
     -o-transition: background-color .3s!important;
 
 }
-.flink-item-name,.flink-item-desc{
-
-    color:white!important
-}
 blockquote {
     border: 1px solid var(--story-border);
     border-radius: 12px;

@@ -227,12 +227,15 @@ function tosetting(){
         }
     }
     else{
-        var script = document.createElement('script');
-        script.id = 'xplayer';
-        script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
-        script.setAttribute('key','661a038c31f2b');
-        script.setAttribute('m','1');
-        document.getElementsByTagName('body')[0].appendChild(script);
+        var playerjs = document.querySelector('#xplayer');
+        if (playerjs = undefined) {
+            var script = document.createElement('script');
+            script.id = 'xplayer';
+            script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
+            script.setAttribute('key','661a038c31f2b');
+            script.setAttribute('m','1');
+            document.getElementsByTagName('body')[0].appendChild(script);
+        }
     }
 
     document.getElementsByClassName("reSettings")[0].onclick=function(){

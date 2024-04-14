@@ -1458,7 +1458,7 @@ hr:before {
   transition: all 1s ease-in-out;
 }
 .table-wrap {
-  overflow-x: scroll;
+  overflow-x: auto;
   margin: 0 0 20px;
 }
 table {
@@ -3422,7 +3422,7 @@ body[data-type="link"] #page .page-title {
   color: var(--anzhiyu-fontcolor);
 }
 #flink-banners .banner-button-group .banner-button:hover {
-  background: var(--anzhiyu-theme);
+  background: var(--story-theme);
   color: var(--anzhiyu-white);
 }
 #flink-banners .banner-button-group .banner-button i {
@@ -3625,7 +3625,7 @@ maxWidth1200()
   -o-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  background: var(--anzhiyu-theme);
+  background: var(--story-theme);
   border: var(--style-border-hover);
   -webkit-box-shadow: var(--anzhiyu-shadow-main);
   box-shadow: var(--anzhiyu-shadow-main);
@@ -3859,7 +3859,7 @@ maxWidth1200()
   top: 0;
   left: 0;
   padding: 4px 8px;
-  background-color: var(--anzhiyu-theme);
+  background-color: var(--story-theme);
   -webkit-box-shadow: var(--anzhiyu-shadow-blue);
   box-shadow: var(--anzhiyu-shadow-blue);
   color: var(--anzhiyu-white);
@@ -3981,7 +3981,7 @@ maxWidth1200()
   box-shadow: var(--anzhiyu-shadow-main);
 }
 #article-container .telescopic-site-card-group .site-card:hover .info {
-  background: var(--anzhiyu-theme);
+  background: var(--story-theme);
   height: 120px;
 }
 #article-container .telescopic-site-card-group .site-card:hover .info .site-card-text .title {
