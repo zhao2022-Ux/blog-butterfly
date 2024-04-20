@@ -87,21 +87,21 @@ function tosetting(){
         if(n=="main"){
             var s=document.querySelectorAll("body,.aplayer")
             for(var i = 0; i <s.length; i++) {
-                s[i].style.fontFamily="-apple-system, IBM Plex Mono ,monospace,'微软雅黑', sans-serif"
+                s[i].style.fontFamily="-apple-system, IBM Plex Mono ,monospace,'寰蒋闆呴粦', sans-serif"
             }
         }
         else if(n=="HYPailou"){
             var s=document.querySelectorAll("body,.aplayer")
             for(var i = 0; i <s.length; i++) {
-                s[i].style.fontFamily="Fredoka,HYPailou,KyoukashoProL,-apple-system, IBM Plex Mono ,monospace,'微软雅黑', sans-serif"
+                s[i].style.fontFamily="Fredoka,HYPailou,KyoukashoProL,-apple-system, IBM Plex Mono ,monospace,'寰蒋闆呴粦', sans-serif"
             }
         }
         else{
             var s=document.querySelectorAll("body,.aplayer")
             for(var i = 0; i <s.length; i++) {
-                s[i].style.fontFamily="var(--global-font),KyoukashoProL,-apple-system, IBM Plex Mono ,monosapce,\"微软雅黑\", sans-serif"
+                s[i].style.fontFamily="var(--global-font),KyoukashoProL,-apple-system, IBM Plex Mono ,monosapce,\"寰蒋闆呴粦\", sans-serif"
             }
-            document.body.style.fontFamily="var(--global-font),KyoukashoProL,-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif"
+            document.body.style.fontFamily="var(--global-font),KyoukashoProL,-apple-system, IBM Plex Mono ,monosapce,'寰蒋闆呴粦', sans-serif"
             document.documentElement.style.setProperty('--global-font', n)
         }
     }
@@ -128,26 +128,26 @@ function tosetting(){
         localStorage.setItem("font","HYTMR")
     }
     setFont(localStorage.getItem("font"))
-// 存数据
-// name：命名 data：数据
+// 瀛樻暟鎹�
+// name锛氬懡鍚� data锛氭暟鎹�
     saveData=function(name, data) {
         localStorage.setItem(name, JSON.stringify({ 'time': Date.now(), 'data': data }))
     }
 
-// 取数据
-// name：命名 time：过期时长,单位分钟,如传入30,即加载数据时如果超出30分钟返回0,否则返回数据
+// 鍙栨暟鎹�
+// name锛氬懡鍚� time锛氳繃鏈熸椂闀�,鍗曚綅鍒嗛挓,濡備紶鍏�30,鍗冲姞杞芥暟鎹椂濡傛灉瓒呭嚭30鍒嗛挓杩斿洖0,鍚﹀垯杩斿洖鏁版嵁
     loadData=function(name, time) {
         let d = JSON.parse(localStorage.getItem(name));
-        // 过期或有错误返回 0 否则返回数据
+        // 杩囨湡鎴栨湁閿欒杩斿洖 0 鍚﹀垯杩斿洖鏁版嵁
         if (d) {
             let t = Date.now() - d.time
             if (t < (time * 60 * 1000) && t > -1) return d.data;
         }
         return 0;
     }
-// 切换背景函数
-// 此处的flag是为了每次读取时都重新存储一次,导致过期时间不稳定
-// 如果flag为0则存储,即设置背景. 为1则不存储,即每次加载自动读取背景.
+// 鍒囨崲鑳屾櫙鍑芥暟
+// 姝ゅ鐨刦lag鏄负浜嗘瘡娆¤鍙栨椂閮介噸鏂板瓨鍌ㄤ竴娆�,瀵艰嚧杩囨湡鏃堕棿涓嶇ǔ瀹�
+// 濡傛灉flag涓�0鍒欏瓨鍌�,鍗宠缃儗鏅�. 涓�1鍒欎笉瀛樺偍,鍗虫瘡娆″姞杞借嚜鍔ㄨ鍙栬儗鏅�.
     changeBg=function(s, flag) {
         let bg = document.getElementById('web_bg')
         if (s.charAt(0) == '#') {
@@ -156,9 +156,9 @@ function tosetting(){
         } else bg.style.backgroundImage = s
         if (!flag) { saveData('blogbg', s) }
     }
-// 上面两个函数如果你有其他需要存取数据的功能，也可以直接使用
+// 涓婇潰涓や釜鍑芥暟濡傛灉浣犳湁鍏朵粬闇€瑕佸瓨鍙栨暟鎹殑鍔熻兘锛屼篃鍙互鐩存帴浣跨敤
 
-// 读取背景
+// 璇诲彇鑳屾櫙
     try {
         let data = loadData('blogbg', 1440)
         if (data) changeBg(data, 1)
@@ -211,7 +211,7 @@ function tosetting(){
         document.getElementById("hideAplayer").checked=true;
         var playerjs = document.querySelector('#xplayer');
         if (playerjs) {
-            //这两种方法皆可
+            //杩欎袱绉嶆柟娉曠殕鍙�
             // playerjs.remove();
             playerjs.parentNode.removeChild(playerjs);
         }
@@ -221,7 +221,7 @@ function tosetting(){
         document.getElementById("hideAplayer").checked=true;
         var playerjs = document.querySelector('#xplayer');
         if (playerjs) {
-            //这两种方法皆可
+            //杩欎袱绉嶆柟娉曠殕鍙�
             // playerjs.remove();
             playerjs.parentNode.removeChild(playerjs);
         }
