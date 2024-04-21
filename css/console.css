@@ -1327,8 +1327,6 @@ h6:before{
 }
 .pagination-post{
     border-radius: 12px;
-    position: fixed;
-    z-index: 1000;
 }
 [data-theme="dark"] #post .post-copyright {
     background-color: rgb(7 8 10);
