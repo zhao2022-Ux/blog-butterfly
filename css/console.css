@@ -1678,6 +1678,7 @@ th{
 :root{
     --style-border-forever: 2px solid var(--heo-main);
     --story-border:#c9c9c9;
+    --story-default:#e66744;
     --story-blue:#6cf;
     --story-gray:#e2e2e2;
     --story-theme:var(--story-orange);
@@ -1702,6 +1703,10 @@ th{
     --story-heoblue:#0098db;
     --story-darkblue:#61649f;
     --scrollbar-color:var(--story-theme);
+    --story-load-bg:#FCFCFC;
+}
+[data-theme="dark"]{
+    --story-load-bg:#1d1e22;
 }
 .tag-link-title{
     color:var(--gcolor);
@@ -2223,6 +2228,9 @@ input[name="colors"]{
     -webkit-appearance: none;
     border-radius: 50%;
 }
+#default{
+    border: 3px solid var(--story-default);
+}
 #red{
     border: 3px solid var(--story-red);
 }
@@ -2255,6 +2263,12 @@ input[name="colors"]{
 }
 #blackgray  {
     border: 3px solid var(--story-blackgray);
+}
+#default:checked{
+    box-shadow: 0 0 0 2px #fff inset;
+    border-radius: 50%;
+    border: 3px solid var(--story-default);
+    background-color: var(--story-default);
 }
 #purple:checked{
     box-shadow: 0 0 0 2px #fff inset;

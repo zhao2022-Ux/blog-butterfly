@@ -106,7 +106,7 @@ function tosetting(){
         }
     }
     if(localStorage.getItem("themeColor")==undefined){
-        localStorage.setItem("themeColor","pink");
+        localStorage.setItem("themeColor","orange");
     }
 
     setColor(localStorage.getItem("themeColor"));

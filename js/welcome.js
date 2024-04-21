@@ -1,14 +1,14 @@
 //首次访问弹窗
 if (localStorage.getItem("popWelcomeWindow") != "0") {
-    if(document.referrer==undefined||document.referrer.indexOf("yisous.xyz")!=-1||document.referrer.indexOf("ariasaka.top")!=-1){ //改成自己域名，注意是referrer!!! qwq
+    if(document.referrer==undefined||document.referrer.indexOf("blog.sinzmise.top")!=-1||document.referrer.indexOf("blog.storisinz.site")!=-1||document.referrer.indexOf("127.0.0.1")!=-1){ //改成自己域名，注意是referrer!!! qwq
         Snackbar.show({
-            pos: "top-right",
+            pos: "top-left",
             showAction: false,
             text: '欢迎访问本站！'
         })
     }else{
         Snackbar.show({
-            pos: "top-right",
+            pos: "top-left",
             showAction: false,
             text: `欢迎来自${document.referrer.split("://")[1].split("/")[0]}的童鞋访问本站！`
         })
@@ -38,7 +38,7 @@ function browserTC() {
         text: '浏览器版本较低，网站样式可能错乱',
         actionText: '关闭',
         duration: '6000',
-        pos: 'bottom-right'
+        pos: 'top-left'
     });
 }
 function browserVersion() {
