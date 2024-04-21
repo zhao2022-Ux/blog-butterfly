@@ -15,20 +15,6 @@ if (localStorage.getItem("popWelcomeWindow") != "0") {
         localStorage.setItem("popWelcomeWindow", "0");
     }
 }
-if (sessionStorage.getItem("popCookieWindow") != "0") {
-    setTimeout(function () {
-        Snackbar.show({
-            text: '本站使用Cookie和本地/会话存储保证浏览体验和网站统计',
-            pos: 'bottom-right',
-            actionText: "查看博客声明",
-            onActionClick: function (element) {
-                window.open("/license")
-            },
-        })
-    }, 3000)
-}
-//不在弹出Cookie提醒
-sessionStorage.setItem("popCookieWindow", "0");
 
 //自带上文浏览器提示
 

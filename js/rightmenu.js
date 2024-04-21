@@ -124,6 +124,11 @@ rmf.switchReadMode = function () {
 rmf.copySelect = function () {
     document.execCommand('Copy', false, null);
     //这里可以写点东西提示一下 已复制
+    Snackbar.show({
+        text: '复制成功,如转载请注明出处！',
+        pos: 'top-left',
+        showAction: false
+    });
 }
 
 //回到顶部

@@ -215,6 +215,15 @@ function tosetting(){
             // playerjs.remove();
             playerjs.parentNode.removeChild(playerjs);
         }
+        Snackbar.show({
+            text: '本站配合音乐播放器最佳（可在设置里关闭）',
+            pos: 'bottom-right',
+            actionText: "开启播放器（会重新加载页面）",
+            onActionClick: function (element) {
+                toggleAplayer()
+                location.reload()
+            },
+        })
     }
     else if(localStorage.getItem("aplayerhide")==null){
         localStorage.setItem("aplayerhide","false");
@@ -225,17 +234,15 @@ function tosetting(){
             // playerjs.remove();
             playerjs.parentNode.removeChild(playerjs);
         }
+
     }
     else{
-        var playerjs = document.querySelector('#xplayer');
-        if (playerjs = undefined) {
-            var script = document.createElement('script');
-            script.id = 'xplayer';
-            script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
-            script.setAttribute('key','661a038c31f2b');
-            script.setAttribute('m','1');
-            document.getElementsByTagName('body')[0].appendChild(script);
-        }
+        var script = document.createElement('script');
+        script.id = 'xplayer';
+        script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
+        script.setAttribute('key','661a038c31f2b');
+        script.setAttribute('m','1');
+        document.getElementsByTagName('body')[0].appendChild(script);
     }
 
     document.getElementsByClassName("reSettings")[0].onclick=function(){
