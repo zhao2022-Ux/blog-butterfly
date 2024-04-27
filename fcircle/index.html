@@ -38,7 +38,7 @@
     toc: true,
     rightside: false,
   }
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"朋友圈",isPost:!1,isHome:!1,isHighlightShrink:!1,isToc:!1,postUpdate:"2024-04-27 18:03:51"}</script><noscript><style>#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"朋友圈",isPost:!1,isHome:!1,isHighlightShrink:!1,isToc:!1,postUpdate:"2024-04-27 19:06:49"}</script><noscript><style>#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
     win.saveToLocal = {
       set: function setWithExpiry(key, value, ttl) {
         if (ttl === 0) return
@@ -105,8 +105,27 @@
       }
       const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
         
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
@@ -385,7 +404,7 @@ if (true) {
         radius: ['15%', '90%'],
         center: ['50%', '55%'],
         sort: 'desc',
-        data: [{"name":"个人小记","value":12,"path":"categories/个人小记/","id":"clvhxp76u000jqwqna5m4c53a","parentId":"0"},{"name":"站点折腾","value":12,"path":"categories/站点折腾/","id":"clvhxp7cf001gqwqn2hbz5j4d","parentId":"0"},{"name":"游戏相关","value":3,"path":"categories/游戏相关/","id":"clvhxp7600004qwqnekwog5cv","parentId":"0"},{"name":"项目折腾","value":3,"path":"categories/项目折腾/","id":"clvhxp76i000cqwqn1k5f8s53","parentId":"0"},{"name":"歌曲收集","value":1,"path":"categories/歌曲收集/","id":"clvhxp7h30034qwqn1soqa2tj","parentId":"0"}],
+        data: [{"name":"个人小记","value":12,"path":"categories/个人小记/","id":"clvhzwoz40004rsqn44eigqpv","parentId":"0"},{"name":"站点折腾","value":12,"path":"categories/站点折腾/","id":"clvhzwp0x0019rsqnggctgp5c","parentId":"0"},{"name":"游戏相关","value":3,"path":"categories/游戏相关/","id":"clvhzwp01000trsqnd1hw5gs1","parentId":"0"},{"name":"项目折腾","value":3,"path":"categories/项目折腾/","id":"clvhzwp0d0012rsqnh9ug2oja","parentId":"0"},{"name":"歌曲收集","value":1,"path":"categories/歌曲收集/","id":"clvhzwp3m002vrsqn7ig11g6y","parentId":"0"}],
         itemStyle: {
           borderColor: '#fff',
           borderWidth: 2,
@@ -407,7 +426,7 @@ if (true) {
           color: color,
           formatter: '{b} : {c} ({d}%)'
         },
-        data: [{"name":"个人小记","value":12,"path":"categories/个人小记/","id":"clvhxp76u000jqwqna5m4c53a","parentId":"0"},{"name":"站点折腾","value":12,"path":"categories/站点折腾/","id":"clvhxp7cf001gqwqn2hbz5j4d","parentId":"0"},{"name":"游戏相关","value":3,"path":"categories/游戏相关/","id":"clvhxp7600004qwqnekwog5cv","parentId":"0"},{"name":"项目折腾","value":3,"path":"categories/项目折腾/","id":"clvhxp76i000cqwqn1k5f8s53","parentId":"0"},{"name":"歌曲收集","value":1,"path":"categories/歌曲收集/","id":"clvhxp7h30034qwqn1soqa2tj","parentId":"0"}],
+        data: [{"name":"个人小记","value":12,"path":"categories/个人小记/","id":"clvhzwoz40004rsqn44eigqpv","parentId":"0"},{"name":"站点折腾","value":12,"path":"categories/站点折腾/","id":"clvhzwp0x0019rsqnggctgp5c","parentId":"0"},{"name":"游戏相关","value":3,"path":"categories/游戏相关/","id":"clvhzwp01000trsqnd1hw5gs1","parentId":"0"},{"name":"项目折腾","value":3,"path":"categories/项目折腾/","id":"clvhzwp0d0012rsqnh9ug2oja","parentId":"0"},{"name":"歌曲收集","value":1,"path":"categories/歌曲收集/","id":"clvhzwp3m002vrsqn7ig11g6y","parentId":"0"}],
         itemStyle: {
           emphasis: {
             shadowBlur: 10,
