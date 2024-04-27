@@ -6,7 +6,7 @@
   <link href="https://blog.sinzmise.top/atom.xml" rel="self"/>
   
   <link href="https://blog.sinzmise.top/"/>
-  <updated>2024-04-21T07:23:57.860Z</updated>
+  <updated>2024-04-27T12:14:27.595Z</updated>
   <id>https://blog.sinzmise.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>马里奥制造1打百人团教程</title>
+    <link href="https://blog.sinzmise.top/posts/10996/"/>
+    <id>https://blog.sinzmise.top/posts/10996/</id>
+    <published>2024-04-27T11:43:40.000Z</published>
+    <updated>2024-04-27T12:14:27.595Z</updated>
+    
+    <content type="html"><![CDATA[<p>不知道什么时候，我开始玩马里奥制造（以下简称“马造”）了<br>但是我没有Switch，模拟器配置较为麻烦，所以我没法玩马造2，只能玩玩马造1<br>然而在2024年4月9日，任天堂 3DS / WiiU 在线功能停服</p><p>在停服之前，我就一直知道马造1有私服，但是这玩意之前不知道为啥总配置失败<br>现在倒是配置好了，话不多说，游玩教程开始！</p><h1 id="下载懒人包"><a href="#下载懒人包" class="headerlink" title="下载懒人包"></a>下载懒人包</h1><p>这玩意我已经打包成为一个懒人包了<br>大伙想要的可以下载：<br><div class="btns rounded grid5">            <a class="button" href='https://pan.sinzmise.top/SMM/SMM.7z' title='懒人包链接'><i class='fas fa-download'></i>懒人包链接</a>          </div><br>下载完成之后先点击Start启动服务端<br><img src="https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/SmmServer_5kCtRQwhp0.5mnlvwyhv7.webp" alt="SmmServer_5kCtRQwhp0"><br><div class="tip success"><p>正常情况下的这四个的提示是这样的：</p><ul><li>NEX（SMM） 占用端口59900和59921<br><img src="https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/SmmServer_ONoCeAxy5j.7awyt3pvwx.webp" alt="SmmServer_ONoCeAxy5j"></li><li>NEX（Friends）占用端口60000和60021<br><img src="https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/SmmServer_H0VbUAIUgS.4xucbwc9yi.webp" alt="SmmServer_H0VbUAIUgS"></li><li>Pretando++ 占用端口8383<br><img src="https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/SmmServer_NY1UtocxVh.7awyt3q0js.webp" alt="SmmServer_NY1UtocxVh"></li><li>Caddy 占用端口80和443<br><img src="https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/SmmServer_Hngcypv9AG.6ik3bd9cqv.webp" alt="SmmServer_Hngcypv9AG"></li></ul></div><br><div class="tip warning"><p><strong><em>请注意：</em></strong><br>如果出现异常的话<br>十有八九可能是端口被占用了<br>请先用<code>netstat -ano|findstr 程序对应的端口号</code>查看端口有没有被占用<br>如果端口被侵占了，输入<code>taskkill /t /f /im 进程号</code>关闭占用端口的进程<br>如果还是不行的话。。。。加Q群问（在最下方）</p></div><br>一切正常的话，点击“Start Cemu”打开模拟器<strong><em>注意：必须用自带的模拟器！要不然打开马造世界关卡会提示106-0502错误</em></strong><br><img src="https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/SmmServer_zKuO6e7rGt.4xucbwm194.webp" alt="SmmServer_zKuO6e7rGt"><br>然后双击Super Mario Maker，等待加载完成便可以游玩了！</p><psw>这可能是我写博客以来第一次写这么简短的教程</psw>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;不知道什么时候，我开始玩马里奥制造（以下简称“马造”）了&lt;br&gt;但是我没有Switch，模拟器配置较为麻烦，所以我没法玩马造2，只能玩玩马造1&lt;br&gt;然而在2024年4月9日，任天堂 3DS / WiiU 在线功能停服&lt;/p&gt;
+&lt;p&gt;在停服之前，我就一直知道马造1有私服，但</summary>
+      
+    
+    
+    
+    <category term="游戏相关" scheme="https://blog.sinzmise.top/categories/%E6%B8%B8%E6%88%8F%E7%9B%B8%E5%85%B3/"/>
+    
+    
+    <category term="游戏相关" scheme="https://blog.sinzmise.top/tags/%E6%B8%B8%E6%88%8F%E7%9B%B8%E5%85%B3/"/>
+    
+    <category term="其它游戏" scheme="https://blog.sinzmise.top/tags/%E5%85%B6%E5%AE%83%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Serv00搭建Artalk</title>
@@ -494,30 +521,6 @@
     
     
     <category term="个人小记" scheme="https://blog.sinzmise.top/tags/%E4%B8%AA%E4%BA%BA%E5%B0%8F%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客大更新</title>
-    <link href="https://blog.sinzmise.top/posts/53662/"/>
-    <id>https://blog.sinzmise.top/posts/53662/</id>
-    <published>2023-07-05T11:33:40.000Z</published>
-    <updated>2024-03-31T09:27:04.344Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="为什么要重写博客"><a href="#为什么要重写博客" class="headerlink" title="为什么要重写博客"></a>为什么要重写博客</h1><p>随着我考试完成和我新网名（也就是我那个笔名：王九弦）的使用，我发现原先的主题配色已经不太适合我现在的人设，因此不得不对博客进行重写<br><psw>（我甚至还用ai绘画重新画了一遍头像，且进行修改）</psw></p><h1 id="更新了什么"><a href="#更新了什么" class="headerlink" title="更新了什么"></a>更新了什么</h1><p>1.从原先的butterfly主题换成了<a href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">anzhiyu主题</a><br>2.博客更名为“九弦之屋”（也算是为了契合我那笔名）<br>3.修复了Waline无法注册的问题（我重新部署了评论，导致所有评论数据丢失）<br>4.主题配色大更换<br>5.不知道你们有没有发现，我在评论框里放了动态背景图片<psw>（废话）</psw><br>Twikoo背景图出处：<a href="https://www.aigei.com/item/cai_se_xuan_lan_3.html">https://www.aigei.com/item/cai_se_xuan_lan_3.html</a><br>Waline背景图出处：<a href="http://www.yini.org/girl/gif/001.htm">http://www.yini.org/girl/gif/001.htm</a> <psw>（这站有些年头了，不然怎么到现在还用http。。。。。。）</psw></p><p><del>（后面实在不知道怎么写了，那就这样吧。。。。。。。）</del></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;为什么要重写博客&quot;&gt;&lt;a href=&quot;#为什么要重写博客&quot; class=&quot;headerlink&quot; title=&quot;为什么要重写博客&quot;&gt;&lt;/a&gt;为什么要重写博客&lt;/h1&gt;&lt;p&gt;随着我考试完成和我新网名（也就是我那个笔名：王九弦）的使用，我发现原先的主题配色已经不太适合</summary>
-      
-    
-    
-    
-    <category term="站点折腾" scheme="https://blog.sinzmise.top/categories/%E7%AB%99%E7%82%B9%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="站点折腾" scheme="https://blog.sinzmise.top/tags/%E7%AB%99%E7%82%B9%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
