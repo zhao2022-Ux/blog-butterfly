@@ -214,7 +214,7 @@ if (true) {
   }
 
   const searchClickFn = () => {
-    btf.addEventListenerPjax(document.querySelector('#search-button > .search'), 'click', handleClick)
+    document.querySelector('#search-button > .search').addEventListener('click', handleClick)
   }
 
   searchClickFn()
