@@ -43,11 +43,11 @@ gulp.task('minify-css', function() {
 })
 
 // 压缩js
-gulp.task('minify-js', function() {
+gulp.task('compress', () =>
     gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
         .pipe(terser())
         .pipe(gulp.dest('./public'))
-})
+)
 
 // 压缩图片
 gulp.task('minify-images', function() {
@@ -68,4 +68,4 @@ gulp.task('minify-images', function() {
         .pipe(gulp.dest('./public/images'))
 })
 
-gulp.task('default', gulp.series('minify-html', 'minify-css', 'minify-js', 'minify-images'))
+gulp.task('default', gulp.series('minify-html', 'minify-css', 'compress', 'minify-images'))
