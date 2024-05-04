@@ -1,27 +1,20 @@
-var gulp = require('gulp');
-var cleanCSS = require('gulp-clean-css');
-var htmlmin = require('gulp-htmlmin');
-var htmlclean = require('gulp-htmlclean');
-var workbox = require("workbox-build");
+const gulp = require("gulp")
+// 用到的各个插件
+const htmlMin = require('gulp-html-minifier-terser')
+const htmlClean = require('gulp-htmlclean')
+const terser = require('gulp-terser')
+const cssnano = require('gulp-cssnano')
+const fontmin = require('gulp-fontmin')
+const workbox = require("workbox-build");
 
-// 若使用babel压缩js，则取消下方注释，并注释terser的代码
-// var uglify = require('gulp-uglify');
-// var babel = require('gulp-babel');
-
-// 若使用terser压缩js
-var terser = require('gulp-terser');
-
-//pwa
+// 生成sw.js
 gulp.task('generate-service-worker', () => {
     return workbox.injectManifest({
         swSrc: './sw-template.js',
         swDest: './public/sw.js',
         globDirectory: './public',
         globPatterns: [
-            // 缓存所有以下类型的文件，极端不推荐
-            // "**/*.{html,css,js,json,woff2,xml}"
-            // 推荐只缓存404，主页和主要样式和脚本。
-            "404.html","index.html","js/main.js","css/index.css"
+            "**/*.{html,css,js,json,woff2}"
         ],
         modifyURLPrefix: {
             "": "./"
@@ -29,55 +22,79 @@ gulp.task('generate-service-worker', () => {
     });
 });
 
-//minify js babel
-// 若使用babel压缩js，则取消下方注释，并注释terser的代码
-// gulp.task('compress', () =>
-//   gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
-// 		.pipe(babel({
-// 			presets: ['@babel/preset-env']
-// 		}))
-//     .pipe(uglify().on('error', function(e){
-//       console.log(e);
-//     }))
-// 		.pipe(gulp.dest('./public'))
-// );
-
-// minify js - gulp-tester
-// 若使用terser压缩js
-gulp.task('compress', () =>
-    gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
-        .pipe(terser())
+// 压缩js
+// 参数 doc：https://github.com/terser-js/terser#minify-options
+gulp.task('minify-js', () =>
+    gulp.src(['./public/**/*.js'])
+        .pipe(terser({
+            compress: {
+                /** @see https://blog.csdn.net/weixin_39842528/article/details/81390588 */
+                sequences: 50,
+                unsafe: true,
+                unsafe_math: true,
+                pure_getters: true,
+                ecma: true
+            }
+        }))
         .pipe(gulp.dest('./public'))
 )
-//css
-gulp.task('minify-css', () => {
-    return gulp.src('./public/**/*.css')
-        .pipe(cleanCSS({
-            compatibility: 'ie11'
-        }))
-        .pipe(gulp.dest('./public'));
-});
 
+// 压缩css
+// 参数 doc：https://cssnano.co/docs/what-are-optimisations/
+gulp.task('minify-css', () =>
+    gulp.src(['./public/**/*.css'])
+        .pipe(cssnano({
+            mergeIdents: false,
+            reduceIdents: false,
+            discardUnused: false
+        })).pipe(gulp.dest('./public'))
+)
 
-// 壓縮 public 目錄內 html
-gulp.task('minify-html', () => {
-    return gulp.src('./public/**/*.html')
-        .pipe(htmlclean())
-        .pipe(htmlmin({
-            removeComments: true, //清除 HTML 註釋
-            collapseWhitespace: true, //壓縮 HTML
-            collapseBooleanAttributes: true, //省略布爾屬性的值 <input checked="true"/> ==> <input />
-            removeEmptyAttributes: true, //刪除所有空格作屬性值 <input id="" /> ==> <input />
-            removeScriptTypeAttributes: true, //刪除 <script> 的 type="text/javascript"
-            removeStyleLinkTypeAttributes: true, //刪除 <style> 和 <link> 的 type="text/css"
-            minifyJS: true, //壓縮頁面 JS
-            minifyCSS: true, //壓縮頁面 CSS
-            minifyURLs: true
+// 压缩html
+// 参数 doc：https://github.com/terser/html-minifier-terser#readme
+gulp.task('minify-html', () =>
+    gulp.src('./public/**/*.html')
+        .pipe(htmlClean())
+        .pipe(htmlMin({
+            removeComments: true,                   // 清除html注释
+            collapseWhitespace: true,               // 合并空格
+            collapseBooleanAttributes: true,        // 压缩布尔类型的 attributes
+            noNewlinesBeforeTagClose: false,        // 去掉换行符
+            removeAttributeQuotes: true,            // 在可能时删除属性值的引号
+            removeRedundantAttributes: true,        // 属性值与默认值一样时删除属性
+            removeEmptyAttributes: true,            // 删除值为空的属性
+            removeScriptTypeAttributes: true,       // 删除 `type="text/javascript"`
+            removeStyleLinkTypeAttributes: true,    // 删除 `type="text/css"`
+            minifyJS: true,                         //压缩页面 JS
+            minifyCSS: true,                        //压缩页面 CSS
+            minifyURLs: true                        //压缩页面URL
         }))
         .pipe(gulp.dest('./public'))
+)
+
+//压缩字体
+function minifyFont(text, cb) {
+    gulp
+        .src('./public/fonts/*.ttf') //原字体所在目录
+        .pipe(fontmin({
+            text: text
+        }))
+        .pipe(gulp.dest('./public/fontsdest/')) //压缩后的输出目录
+        .on('end', cb);
+}
+
+gulp.task('minify-ttf', (cb) => {
+    var buffers = [];
+    gulp
+        .src(['./public/**/*.html']) //HTML文件所在目录请根据自身情况修改
+        .on('data', function (file) {
+            buffers.push(file.contents);
+        })
+        .on('end', function () {
+            var text = Buffer.concat(buffers).toString('utf-8');
+            minifyFont(text, cb);
+        });
 });
 
-// 執行 gulp 命令時執行的任務
-gulp.task("default", gulp.series("generate-service-worker", gulp.parallel(
-    'compress','minify-html', 'minify-css'
-)));
+//压缩
+gulp.task("zip", gulp.series("generate-service-worker", gulp.parallel('minify-js', 'minify-css', 'minify-html', 'minify-ttf')))
