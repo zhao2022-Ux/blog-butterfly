@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo clean && hexo generate && hexo bangumi -u hexo swpp",
+    "build": "hexo clean && hexo generate && hexo bangumi -u && hexo swpp",
     "clean": "hexo clean",
-    "deploy": "hexo clean && hexo generate && hexo bangumi -u hexo swpp && hexo deploy",
-    "server": "hexo clean && hexo generate && hexo bangumi -u hexo swpp && hexo server"
+    "deploy": "hexo clean && hexo generate && hexo bangumi -u && hexo swpp && hexo deploy",
+    "server": "hexo clean && hexo generate && hexo bangumi -u && hexo swpp && hexo server"
   },
   "hexo": {
     "version": "6.3.0"
