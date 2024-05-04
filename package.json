@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo clean && hexo generate && hexo algolia && hexo bangumi -u && gulp",
+    "build": "hexo clean && hexo generate && hexo bangumi -u && gulp",
     "clean": "hexo clean",
-    "deploy": "hexo clean && hexo generate && hexo algolia && hexo bangumi -u && gulp && hexo deploy",
-    "server": "hexo clean && hexo generate && hexo algolia && hexo bangumi -u && gulp && hexo server"
+    "deploy": "hexo clean && hexo generate && hexo bangumi -u && gulp && hexo deploy",
+    "server": "hexo clean && hexo generate && hexo bangumi -u && gulp && hexo server"
   },
   "hexo": {
     "version": "6.3.0"
