@@ -1,0 +1,31 @@
+#comments-page
+
+script.
+    if (1) {
+        fetch('/article.json').then(res => res.json()).then(data => {
+            let article = data
+            fetch('https://tk.pl.blog.sinzmise.top/', {
+                method: "POST",
+                body: JSON.stringify({ "event": "GET_RECENT_COMMENTS", "accessToken": "f230dc1bac8bbb58af81860f1c6b5ca4", "includeReply": true, "pageSize": 100, }),
+                headers: { 'Content-Type': 'application/json' }
+            }).then(res => res.json()).then(({ data }) => {
+                let html = ''
+                data.forEach(item => {
+                    const createdDate = new Date(item.created);
+                    const formattedDate = `${createdDate.getFullYear().toString().slice(-2)}-${createdDate.getMonth() + 1}-${createdDate.getDate()} ${createdDate.getHours()}:${createdDate.getMinutes()}:${createdDate.getSeconds()}`;
+                    html += `<div class="comment-card" title="${item.commentText.replaceAll(/<.*?>/g, '').replaceAll(/[\s\n]/g, '')}" onclick="pjax.loadUrl('${item.url}#${item.id}')">
+                    <div class="comment-info">
+                        <img src="${item.avatar}" class="nolazyload">
+                        <div class="comment-information">
+                            <span class="${item.nick === '亦封' ? 'comment-user comment-author' : 'comment-user'}">${item.nick}</span>
+                            <span class="comment-time">${formattedDate}</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">${item.commentText.replaceAll('<', '&lt;').replaceAll('>', '&gt;')}</div>
+                    <div class="comment-article">"${article[item.url]}"</div>
+                </div>`
+                })
+                document.getElementById('comments-page').innerHTML = html
+            })
+        })
+    }

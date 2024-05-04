@@ -1,0 +1,38 @@
+- class_name: 遭殃前的海洋
+  path_name: /seas
+  type: 2
+  description: Ade！美丽的海洋
+  cover: https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693055324987.6r5gsrqllx00.jpg
+  top_background: https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031499.3ohwpbisv040.webp
+  rowHeight: 220
+  limit: 10
+  lazyload: true
+  btnLazyload: false
+  url: false
+  top_link: /album
+  top_btn_text: 返回
+  album_list:
+    - date: 2023/07
+      content: 2023.07.26
+      address: 广东惠州
+      image:
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031514.7ifub8zvy180.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031555.a82pcppt6y8.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031559.5p8d0qzrqbw0.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031561.5xgjho8559s0.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031550.4y27xh0aiuo0.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031553.6jvgcahyujw0.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031546.3eeo0y3pyhc.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031528.5sn1pzz02c40.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031531.1zpqqqwlfda8.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031518.2klt6yi49mg0.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031507.6xrgckga3o00.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031521.3d69mm2x6no0.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031499.3ohwpbisv040.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031501.qqazrz2zii8.webp
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693054031496.7tmgceaoyh4.webp
+    - date: 2023/08
+      content: 八月那次在汕头没有拍照片，但有拍视频
+      address: 广东汕头
+      image:
+        - https://jsd.onmicrosoft.cn/gh/SinzMise/picx-images-hosting@master/20230826/1693055324987.6r5gsrqllx00.jpg

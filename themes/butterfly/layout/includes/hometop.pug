@@ -1,0 +1,73 @@
+- let home_top_config = theme.hometop
+- let { title, subTitle, siteText } = home_top_config
+if is_home() && home_top_config.enable
+    #home_top
+        .recent-top-post-group#recent-top-post-group
+            .recent-post-top#recent-post-top
+                #bannerGroup
+                    #banners
+                        .banners-title
+                            .banners-title-big=title
+                            .banners-title-big=subTitle
+                            .banners-title-small=siteText
+                        .tags-group-all
+                            .tags-group-wrapper
+                                each i in site.data.creativity
+                                    - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
+                                    - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
+                                    each item, index in i.creativity_list
+                                        if ((index + 1 <= evenNum.length) && (index + 1 <= oddNum.length))
+                                            .tags-group-icon-pair
+                                                .tags-group-icon(style=`background: ${evenNum[index].color}`)
+                                                    img(src=evenNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=evenNum[index].name, alt=evenNum[index].name)
+                                                .tags-group-icon(style=`background: ${oddNum[index].color}`)
+                                                    img(src=oddNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=oddNum[index].name, alt=oddNum[index].name)
+                                each i in site.data.creativity
+                                    - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
+                                    - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
+                                    each item, index in i.creativity_list
+                                        if ((index + 1 <= evenNum.length) && (index + 1 <= oddNum.length))
+                                            .tags-group-icon-pair
+                                                .tags-group-icon(style=`background: ${evenNum[index].color}`)
+                                                    img(src=evenNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=evenNum[index].name, alt=evenNum[index].name)
+                                                .tags-group-icon(style=`background: ${oddNum[index].color}`)
+                                                    img(src=oddNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=oddNum[index].name, alt=oddNum[index].name)
+                        a#banner-hover(onclick='toRandomPost()')
+                            span.bannerText 随便逛逛
+                            i.fas.fa-arrow-right.banner-righticon
+                    .categoryGroup
+                        each item in home_top_config.category
+                            .categoryItem(style=`box-shadow:${item.shadow}`)
+                                a.categoryButton.CB1(href=url_for(item.path) class=`${item.class}`)
+                                    span.categoryButtonText=item.name
+                                    if (item.icon.startsWith("fa"))
+                                        i(class=`${item.icon}`)
+                                    else if (item.icon.startsWith("icon"))
+                                        svg.icon(aria-hidden="true")
+                                            use(xlink:href=`#` + item.icon)
+                .topGroup
+                    .topgroups
+                        - site.posts.sort(sort, -1).limit(postLimit).each(function(article){
+                        - let link = article.link || article.path
+                        - let title = article.title || _p('no_title')
+                        if article.cover == undefined
+                          - let post_cover = article.cover
+                        else
+                          - let post_cover = theme.error_img.post_page
+                        .recent-post-item
+                            .post_cover.left_radius
+                                a(href=url_for(link), title=title)
+                                    span.recent-post-top-text(onclick=`pjax.loadUrl("` + link + `")`) 荐
+                                    img.post_bg.entered.loaded(src=url_for(post_cover) onerror=`this.onerror=null,this.src='${url_for(theme.error_img.post_page)}'`)
+                            .recent-post-info(onclick=`pjax.loadUrl("` + link + `")`)
+                                a.article-title(href=url_for(link), title=title)= title
+                        - })
+                    .todayCard#todayCard(onclick=`pjax.loadUrl(${home_top_config.banner.link})`, style='z-index: 1;')
+                        .todayCard-info
+                            .todayCard-tips=home_top_config.banner.tips
+                            .todayCard-title=home_top_config.banner.title
+                        .todayCard-cover(style=`background:url(${home_top_config.banner.image}) no-repeat center/cover`, onerror='this.onerror=null,this.src="/img/404.png"')
+                        .banner-button-group
+                            a.banner-button(onclick='window.event.cancelBubble=!0,bywind.hideTodayCard()')
+                                i.hnfont.icon-add-circle-fill
+                                span.banner-button-text 更多推荐

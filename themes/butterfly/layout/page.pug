@@ -1,0 +1,31 @@
+extends includes/layout.pug
+
+block content
+  #page
+    if page.top_page && page.top_page === true
+      include includes/page/icat_change.pug
+    else
+      if top_img === false
+        h1.page-title= page.title
+
+    case page.type
+      when 'essay'
+        include includes/page/essay.pug
+      when 'tags'
+        include includes/page/tags.pug
+      when 'link'
+        include includes/page/flink.pug
+      when 'bbs'
+        include includes/page/bbs.pug
+      when 'categories'
+        include includes/page/categories.pug
+      when 'comments'
+        include includes/page/comments.pug
+      when 'about'
+        include includes/page/about.pug
+      default
+        include includes/page/default-page.pug
+
+    if page.comments !== false && theme.comments && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})

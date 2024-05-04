@@ -1,0 +1,22 @@
+case theme.preloader.load_style
+  when 'gear'
+    include ./load_style/gear.pug
+  when 'ironheart'
+    include ./load_style/ironheart.pug
+  when 'scarecrow'
+    include ./load_style/scarecrow.pug
+  when 'triangles'
+    include ./load_style/triangles.pug
+  when 'wizard'
+    include ./load_style/wizard.pug
+  when 'image'
+    include ./load_style/image.pug
+  when 'icat'
+    include ./load_style/icat.pug
+  when 'heo'
+    include ./load_style/heo.pug
+  default
+    include ./load_style/fullpage-loading.pug
+
+if theme.preloader.pace
+  include ./pace.pug

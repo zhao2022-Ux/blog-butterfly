@@ -1,0 +1,56 @@
+- var now = new Date()
+- var nowYear = now.getFullYear()
+
+#footer-wrap
+  .footer_custom_text
+    #jsi-flying-fish-container
+    .footer-content
+      .footer-content-column
+        .footer-logo
+          a.footer-logo-link(href="#")
+            span.hidden-link-text LOGO
+            img(src="/img/icon-light.png" style="height:40%; width:40%")
+        .footer-menu
+          h2.footer-menu-name 开始
+          ul#menu-get-started.footer-menu-list
+            li.menu-item.menu-item-object-product.menu-item-type-post_type
+              a(href="/sitemap.xml") 站点地图
+      if theme.footer.center
+        each footc in theme.footer.center
+          .footer-content-column
+              .footer-menu
+                  each footerc in footc.item
+                      h2.footer-menu-name=footerc.title
+                      ul#menu-company.footer-menu-list
+                          each footer2link in footerc.list
+                              li.menu-item.menu-item-object-category.menu-item-type-taxonomy
+                                  a(href=url_for(footer2link.url))=footer2link.name
+      .footer-content-column
+        ul#menu-get-started.footer-menu-list
+          if theme.footer.menu_right
+            each memulist in theme.footer.menu_right
+              li.menu-item.menu-item-object-product.menu-item-type-post_type
+                a(href=url_for(memulist.link))
+                  img.img-not-ai(width="120" height="42" alt=memulist.name src=url_for(memulist.image))
+                  if memulist.shortname
+                    p=memulist.name
+          li.menu-item.menu-item-object-product.menu-item-type-post_type="©"+nowYear + " By " + config.author
+      if theme.footer.social_links
+        .footer-social-links
+          each slink in theme.footer.social_links
+            - var link_target
+            - if (slink.target) link_target = slink.target
+            - else link_target = "_blank"
+            a.footer-social-link(class=`${slink.class}` href=`${slink.link}` target=`${slink.target}`)
+              span.hidden-link-text=slink.name
+              i(class=`footer-social-icon-svg ${slink.icon}`)
+    .footer-copyright
+      .footer-copyright-wrapper
+        p.footer-copyright-text
+          | Powered By&nbsp;
+          a(href="https://hexo.io" rel="noopener external nofollow noreferrer" target="_blank")="Hexo"
+          | &nbsp;| Theme&nbsp;
+          a( href="https://github.com/jerryc127/hexo-theme-butterfly" rel="noopener external nofollow noreferrer" target="_blank")="Butterfly"
+        if theme.footer.custom_text
+          p.footer-copyright-text
+            != injectHtml(theme.footer.custom_text)

@@ -1,0 +1,71 @@
+#loading-box.loaded
+  #icat-splash
+    opacity: 0
+    z-index: -1000
+
+#icat-splash
+  display: -webkit-box
+  display: -moz-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: box
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+  position: fixed
+  background: var(--story-load-bg)
+  z-index: 1999
+  opacity: 1
+  -ms-filter: none
+  filter: none
+  -webkit-transition: .3s
+  -moz-transition: .3s
+  -o-transition: .3s
+  -ms-transition: .3s
+  transition: .3s
+
+  .icat-loading
+    width: 30%
+    height: auto
+    overflow: hidden
+    display: flex
+    justify-content: center
+    position: relative
+
+    @media screen and (max-width: 768px)
+      width: 50%
+
+    img
+      width: 100%
+      height: auto
+      -webkit-filter: brightness(1)
+      -moz-filter: brightness(1)
+      -o-filter: brightness(1)
+      -ms-filter: brightness(1)
+      filter: brightness(1)
+
+    &::before
+      content: ""
+      display: inline-block
+      width: 100%
+      height: 400%
+      background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)
+      background-position: center top
+      position: absolute
+      top: 0
+      animation-name: loading
+      animation-delay: 0.5s
+      animation-duration: 4s
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+
+      [data-theme="dark"]
+        background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%)
+
+@keyframes loading
+  from
+    top: 0
+  to
+    top: -300%
