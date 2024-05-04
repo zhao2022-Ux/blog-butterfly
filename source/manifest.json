@@ -5,6 +5,7 @@
   "background_color": "#e66744",
   "display": "standalone",
   "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "/img/siteicon/android-chrome-36x36.png",
