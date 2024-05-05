@@ -30,6 +30,7 @@ module.exports.config = {
               backgroundColor: snackbarBg,
               duration: 5000,
               pos: snackbarPos,
+              showAction: false
             })
           });
         } else {
