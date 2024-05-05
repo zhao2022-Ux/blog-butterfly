@@ -55,8 +55,13 @@ module.exports.config = {
         return [
             srcUrl,
             `https://cdn.cbd.int` + url.pathname,
+            `https://cdn.anheyu.com/npm` + url.pathname,
+            `https://jsd.cdn.zzko.cn/npm` + url.pathname,
             `https://cdn.jsdelivr.net/npm` + url.pathname,
             `https://cdn1.tianli0.top/npm` + url.pathname,
+            `https://www.jsdelivr.ren/npm` + url.pathname,
+            `https://cdn.statically.io/npm` + url.pathname,
+            `https://jsd.onmicrosoft.cn/npm` + url.pathname,
             `https://fastly.jsdelivr.net/npm` + url.pathname
         ]
       } else {
@@ -88,11 +93,13 @@ module.exports.cacheRules = {
     clean: true,
     match: url =>
       [
+        "unpkg.com",
         "cdn.cbd.int",
         "lf26-cdn-tos.bytecdntp.com",
         "lf6-cdn-tos.bytecdntp.com",
         "lf3-cdn-tos.bytecdntp.com",
         "lf9-cdn-tos.bytecdntp.com",
+        "npm.onmicrosoft.cn",
         "cdn.staticfile.org",
         "npm.elemecdn.com",
       ].includes(url.host) && url.pathname.match(/\.(js|css|woff2|woff|ttf|cur)$/),
