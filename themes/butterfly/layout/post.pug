@@ -43,7 +43,7 @@ block content
       - var commentsJsLoad = true
       !=partial('includes/third-party/comments/index', {}, {cache: true})
 
-    if page.ai == true && theme.ai_excerpt.enable
+    if page.ai === true && theme.ai_excerpt.enable
       - var aiexclude = theme.ai_excerpt.exclude
       link(href="https://cdn1.tianli0.top/gh/qxchuckle/Post-Summary-AI/chuckle-post-ai.css" rel="stylesheet")
       script(src="https://cdn1.tianli0.top/gh/qxchuckle/Post-Summary-AI/chuckle-post-ai.js")
