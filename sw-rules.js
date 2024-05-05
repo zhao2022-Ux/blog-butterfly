@@ -20,6 +20,11 @@ module.exports.config = {
         if (response) {
           // 如果找到了匹配的缓存响应
           response.json().then(function(data) {
+            var snackbarBg =
+                document.documentElement.getAttribute('data-theme') === 'light' ?
+                    GLOBAL_CONFIG.Snackbar.bgLight :
+                    GLOBAL_CONFIG.Snackbar.bgDark
+            var snackbarPos = GLOBAL_CONFIG.Snackbar.position
             Snackbar.show({
               text: `已刷新缓存，更新为${data.global + "." + data.local}版本最新内容`,
               backgroundColor: snackbarBg,
