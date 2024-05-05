@@ -91,7 +91,7 @@ social:
 
 # Algolia search
 algolia_search:
-  enable: true
+  enable: false
   hits:
     per_page: 6
 
@@ -100,9 +100,9 @@ algolia_search:
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
-  enable: false
+  enable: true
   appId: QAS05YI2PH # see email
-  apiKey: ca5f8dbdbff910816e2995bfd16c2b27 # see email
+  apiKey: 67ffd4c9fa1234148ec4f8b27dfdb2a7 # see email
   indexName: sinzmise # see email
   option:
 
