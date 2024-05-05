@@ -73,6 +73,7 @@ hexo.extend.filter.register('before_generate', () => {
         zzkojsd: `https://jsd.cdn.zzko.cn/npm/${name}${verType}/${min_file}`,
         statically: `https://cdn.statically.io/npm/${name}${verType}/${min_file}`,
         jsdren: `https://www.jsdelivr.ren/npm/${name}${verType}/${min_file}`,
+        szntcdn: `https://jsd.cdn.storisinz.site/npm/${name}${verType}/${min_file}`,
         unpkg: `https://unpkg.com/${name}${verType}/${file}`,
         elemecdn: `https://npm.elemecdn.com/${name}${verType}/${file}`,
         cbdint: `https://cdn.cbd.int/${name}${verType}/${file}`,

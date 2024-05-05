@@ -63,7 +63,8 @@ module.exports.config = {
             `https://www.jsdelivr.ren/npm` + url.pathname,
             `https://cdn.statically.io/npm` + url.pathname,
             `https://jsd.onmicrosoft.cn/npm` + url.pathname,
-            `https://fastly.jsdelivr.net/npm` + url.pathname
+            `https://fastly.jsdelivr.net/npm` + url.pathname,
+            `https://jsd.cdn.storisinz.site/npm` + url.pathname
         ]
       } else {
         return srcUrl
