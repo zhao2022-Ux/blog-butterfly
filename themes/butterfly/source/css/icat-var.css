@@ -110,9 +110,9 @@
 
 [data-theme=dark] {
     --icat-theme: var(--story-theme);
-    --icat-theme-op: var(--story-theme);
-    --icat-theme-op-deep: var(--story-theme);
-    --icat-theme-none: var(--story-theme);
+    --icat-theme-op: var(--story-theme-op);
+    --icat-theme-op-deep: var(--story-theme-deep);
+    --icat-theme-none: var(--story-theme-none);
     --icat-blue: #0084FF;
     --icat-red: #FF3842;
     --icat-pink: #d44040;

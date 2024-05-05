@@ -63,7 +63,7 @@ body
                     p
                         h3.content-head 主题色
                         #themeColorSettings.content(style='display:flex')
-                            input#default(type='radio', name='colors', onclick='setColor(\'default\')')
+                            input#default(type='radio', name='colors', onclick='setColor(\'default\')', checked)
                             span#deftext 默认
                             input#red(type='radio', name='colors', onclick='setColor(\'red\')')
                             input#orange(type='radio', name='colors', onclick='setColor(\'orange\')')
@@ -73,7 +73,7 @@ body
                             input#heoblue(type='radio', name='colors', onclick='setColor(\'heoblue\')')
                             input#darkblue(type='radio', name='colors', onclick='setColor(\'darkblue\')')
                             input#purple(type='radio', name='colors', onclick='setColor(\'purple\')')
-                            input#pink(type='radio', name='colors', onclick='setColor(\'pink\')', checked)
+                            input#pink(type='radio', name='colors', onclick='setColor(\'pink\')')
                             input#black(type='radio', name='colors', onclick='setColor(\'black\')')
                             input#blackgray(type='radio', name='colors', onclick='setColor(\'blackgray\')')
                 #font-settings.asetting

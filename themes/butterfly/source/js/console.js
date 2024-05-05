@@ -78,7 +78,7 @@ function tosetting(){
         }
     }
     setColor=function(c){
-        document.getElementById("themeColor").innerText=`:root{--story-theme:var(--story-${c})!important}`;
+        document.getElementById("themeColor").innerText=`:root{--story-theme:var(--story-${c})!important;--story-theme-op:var(--story-${c}-op;)!important;--story-theme-deep:var(--story-${c}-deep;)!important;--story-theme-none:var(--story-${c}-none;)!important}`;
         localStorage.setItem("themeColor",c);
 
     }
