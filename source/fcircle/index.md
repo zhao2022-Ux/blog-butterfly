@@ -18,6 +18,7 @@ comments: false
       <h2 style="padding-top: 0;margin:0.6rem 0 0.6rem;">🎣 钓鱼</h2><a class="random-post-start" href="javascript:fetchRandomPost();"><i class="fa-solid fa-arrow-rotate-right"></i></a>
     </div>
   </div>
+  <div id="random-post"></div>
   <script type="text/javascript">
     var fdataUser = {
     apiurl: 'https://fcircle.blog.sinzmise.top/',
