@@ -1006,8 +1006,8 @@ post_head_ai_description:
 
 bbs_cdn:
   grid: https://memobbs.app/grid.css
-  memos_css: /bbs/memos.css
-  memos_js: /bbs/memos.js
+  memos_css: https://memobbs.app/memos.css
+  memos_js: https://memobbs.app/memos.js
 
 
 # about
