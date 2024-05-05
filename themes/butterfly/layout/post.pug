@@ -42,16 +42,3 @@ block content
     if page.comments !== false && theme.comments && theme.comments.use
       - var commentsJsLoad = true
       !=partial('includes/third-party/comments/index', {}, {cache: true})
-
-    if page.ai === true && theme.ai_excerpt.enable
-      - var aiexclude = theme.ai_excerpt.exclude
-      link(href="https://cdn1.tianli0.top/gh/qxchuckle/Post-Summary-AI/chuckle-post-ai.css" rel="stylesheet")
-      script(src="https://cdn1.tianli0.top/gh/qxchuckle/Post-Summary-AI/chuckle-post-ai.js")
-      script.
-        new ChucklePostAI({
-          el: '#post>#article-container',
-          key: '!{theme.ai_excerpt.key}',
-          title_el: '.post-title',
-          rec_method: 'web',
-          exclude: [!{aiexclude}],
-        })
