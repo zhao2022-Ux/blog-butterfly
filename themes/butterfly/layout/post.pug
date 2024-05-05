@@ -7,6 +7,21 @@ block content
     if theme.post_head_ai_description
       include includes/ai-info.pug
     article#article-container.post-content!=page.content
+    if (theme.orlike.enable)
+      #orlike-box.orlike-box
+        script.
+          (() => {
+            function loadOrLike() {
+              new OrLike({
+                serverUrl: "!{theme.orlike.serverurl}",
+                el: ".orlike-box",
+                days: 30,
+              });
+            }
+
+            window.pjax ? loadOrLike() : window.addEventListener('load', loadOrLike)
+          })()
+
     include includes/post/post-copyright.pug
     .tag_share
       if (theme.post_meta.post.tags)
@@ -17,19 +32,6 @@ block content
         
     if theme.reward.enable && theme.reward.QR_code
       !=partial('includes/post/reward', {}, {cache: true})
-    #orlike-box.orlike-box
-      script.
-        (() => {
-          function loadOrLike() {
-            new OrLike({
-              serverUrl: "https://orlike.blog.sinzmise.top/",
-              el: ".orlike-box",
-              days: 30,
-            });
-          }
-
-          window.pjax ? loadOrLike() : window.addEventListener('load', loadOrLike)
-        })()
 
     //- ad
     if theme.ad && theme.ad.post
