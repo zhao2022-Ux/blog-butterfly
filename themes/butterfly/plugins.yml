@@ -248,3 +248,7 @@ wow_initjs:
   name: hexo-butterfly-wowjs
   file: lib/wow_init.js
   version: latest
+ai_abstract_js:
+  name: hexo-theme-anzhiyu
+  file: js/anzhiyu/ai_abstract.js
+  version: latest

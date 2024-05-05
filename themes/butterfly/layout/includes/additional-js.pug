@@ -78,19 +78,6 @@ div
   if theme.pwa.enable
     !=partial('includes/third-party/pwanotice', {}, {cache:theme.fragment_cache})
 
-  if is_post() && page.ai === true && theme.ai_excerpt.enable
-    - var aiexclude = theme.ai_excerpt.exclude
-    link(data-pjax href="https://cdn1.tianli0.top/gh/qxchuckle/Post-Summary-AI/chuckle-post-ai.css" rel="stylesheet")
-    script(data-pjax src="https://cdn1.tianli0.top/gh/qxchuckle/Post-Summary-AI/chuckle-post-ai.js")
-    script.
-      new ChucklePostAI({
-      el: '#post>#article-container',
-      key: '!{theme.ai_excerpt.key}',
-      title_el: '.post-title',
-      rec_method: 'web',
-      exclude: [!{aiexclude}],
-      })
-
   if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
     script(async data-pjax src= theme.asset.busuanzi || '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
   if !theme.aside.mobile && theme.fixed_card_widget.enable
