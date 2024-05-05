@@ -13,6 +13,13 @@ top_text: 跳转友链
 comments: false
 ---
 
+<div class="title-h2-a">
+  <div class="title-h2-a-left">
+    <h2 style="padding-top: 0;margin:0.6rem 0 0.6rem;">🎣 钓鱼</h2><a class="random-post-start" href="javascript:fetchRandomPost();"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+  </div>
+</div>
+<link rel="stylesheet" type="text/css" href="https://www.jsdelivr.ren/gh/zhheo/JS-Heo@main/moments/random-friends-post.css">
+<script src = "https://www.jsdelivr.ren/gh/zhheo/JS-Heo@main/moments/random-friends-post.js"></script>
 <div id="hexo-circle-of-friends-root"></div>
 <script>
     let UserConfig = {
@@ -28,3 +35,10 @@ comments: false
 </script>
 <script type="text/javascript" src="https://www.jsdelivr.ren/gh/zhheo/JS-Heo@master/moments5/app.min.js"></script>
 <script type="text/javascript" src="https://www.jsdelivr.ren/gh/zhheo/JS-Heo@master/moments5/bundle.js"></script>
+<script type="text/javascript">
+  var fdataUser = {
+   apiurl: 'https://fcircle.blog.sinzmise.top/',
+  defaultFish: 500,
+  hungryFish: 500,
+  }
+</script>
