@@ -12,7 +12,7 @@ top_link: /link/
 top_text: 跳转友链
 comments: false
 ---
-
+{% raw %}
 <div class="title-h2-a">
   <div class="title-h2-a-left">
     <h2 style="padding-top: 0;margin:0.6rem 0 0.6rem;">🎣 钓鱼</h2><a class="random-post-start" href="javascript:fetchRandomPost();"><i class="fa-solid fa-arrow-rotate-right"></i></a>
@@ -42,3 +42,4 @@ comments: false
   hungryFish: 500,
   }
 </script>
+{% endraw %}
