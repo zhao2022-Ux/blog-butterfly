@@ -26,7 +26,7 @@ module.exports.config = {
                     GLOBAL_CONFIG.Snackbar.bgDark
             var snackbarPos = GLOBAL_CONFIG.Snackbar.position
             Snackbar.show({
-              text: `已刷新缓存，更新为${data.global + "." + data.local}版本最新内容`,
+              text: `已刷新缓存，更新为${GLOBAL_CONFIG.uiversion}版本最新内容`,
               backgroundColor: snackbarBg,
               duration: 5000,
               pos: snackbarPos,

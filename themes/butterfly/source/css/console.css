@@ -6399,14 +6399,3 @@ body {
 #deftext {
     margin: -6px 10px 0 -5px
 }
-
-#body-wrap #content-inner #page #post-comment .comment-wrap{
-    background: #ffffff99;
-    padding: 5px 10px;
-    border-radius: 8px;
-}
-[data-theme=dark] #body-wrap #content-inner #page #post-comment .comment-wrap{
-    background: #00000099;
-    padding: 5px 10px;
-    border-radius: 8px;
-}

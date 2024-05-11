@@ -91,7 +91,7 @@ social:
 
 # Algolia search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 6
 
@@ -100,7 +100,7 @@ algolia_search:
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
-  enable: true
+  enable: false
   appId: QAS05YI2PH # see email
   apiKey: 67ffd4c9fa1234148ec4f8b27dfdb2a7 # see email
   indexName: sinzmise # see email
@@ -995,7 +995,7 @@ css_prefix: true
 # 文章顶部ai摘要
 post_head_ai_description:
   enable: true
-  gptName: AnZhiYu
+  gptName: MagicRing
   mode: tianli # 默认模式 可选值: tianli/local
   switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local
   btnLink: https://afdian.net/item/886a79d4db6711eda42a52540025c377
@@ -1134,6 +1134,8 @@ orlike:
   enable: true
   serverurl: https://orlike.blog.sinzmise.top/
 
+ui_version: v1.6.0
+
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
@@ -1198,10 +1200,6 @@ inject:
 
     # fps显示
     - <script src="/js/fps.js"></script>
-
-    # DanMaku
-    - <script src="/js/easy-Danmaku.js"></script>
-    - <script src="/js/commentdanmaku.js"></script>
 
     # 随机文章
     - <script src="/js/randompost.js"></script>

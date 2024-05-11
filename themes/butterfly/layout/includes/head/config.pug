@@ -64,6 +64,11 @@
     })
   }
 
+  let postHeadAiDescription = 'undefined'
+  if (theme.post_head_ai_description && theme.post_head_ai_description.enable) {
+    postHeadAiDescription = JSON.stringify(theme.post_head_ai_description)
+  }
+
   let noticeOutdate = 'undefined';
   if (theme.noticeOutdate && theme.noticeOutdate.enable) {
     noticeOutdate = JSON.stringify({
@@ -92,6 +97,7 @@ script.
     translate: !{translate},
     noticeOutdate: !{noticeOutdate},
     highlight: !{highlight},
+    postHeadAiDescription: !{postHeadAiDescription},
     copy: {
       success: '!{_p("copy.success")}',
       error: '!{_p("copy.error")}',
@@ -124,5 +130,6 @@ script.
     percent: {
       toc: !{theme.toc.scroll_percent},
       rightside: !{theme.rightside_scroll_percent},
-    }
+    },
+    uiversion: !{theme.ui_version},
   }
