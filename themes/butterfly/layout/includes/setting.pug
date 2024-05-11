@@ -290,11 +290,11 @@ body
                     | 欢迎
                     a(href="/comments")
                         | 反馈！
-        #app-refresh.app-refresh(style='display:none')
+        #app-refresh-setting.app-refresh(style='display:none')
             .app-refresh-wrap
-                label ✨ 星空魔法屋站点已更新！ 👉
-                a(href='javascript:void(0)' onclick='location.reload()')
-                    span(style='color: #fff;text-decoration: underline;cursor: pointer;') 点我刷新
+                label 检测到站点已更新
+                a(href='javascript:void(0)' onclick='location.reload(true)')
+                    span(style='text-decoration: underline;cursor: pointer;float: right;') 点我立即刷新
         #setting-sidesl
             button(title="恢复默认设置" class="reSettings con-rightside")
                 i.fa.fa-repeat
