@@ -28,9 +28,13 @@ module.exports.config = {
             Snackbar.show({
               text: `已刷新缓存，更新为${GLOBAL_CONFIG.uiversion}版本最新内容`,
               backgroundColor: snackbarBg,
-              duration: 5000,
+              duration: 30000,
               pos: snackbarPos,
-              showAction: false
+              actionText: '查看更新日志',
+              actionTextColor: '#fff',
+              onActionClick: function(e) {
+                  location.assign("/update/");
+              },
             })
           });
         } else {
