@@ -209,14 +209,16 @@ function tosetting(){
     }
     if(localStorage.getItem("aplayerhide")=="true"){
         document.getElementById("hideAplayer").checked=false;
-        Snackbar.show({
-            text: '本站配合音乐播放器最佳（可在设置里关闭）',
-            pos: 'bottom-right',
-            actionText: "开启播放器",
-            onActionClick: function (element) {
-                toggleAplayer()
-            },
-        })
+        setTimeout(() =>
+            Snackbar.show({
+                text: '本站配合音乐播放器最佳（可在设置里关闭）',
+                pos: 'bottom-right',
+                actionText: "开启播放器",
+                onActionClick: function (element) {
+                    toggleAplayer()
+                },
+            }),
+        15000)
     }
     else if(localStorage.getItem("aplayerhide")==null){
         localStorage.setItem("aplayerhide","true");
