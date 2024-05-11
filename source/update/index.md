@@ -9,7 +9,8 @@ top_item: 更新日志
 top_title: ThetaStory更新日志
 top_tips: 博客更新都会记录到这里哦~~
 ---
-目前
+其实Theta这个名字很久之前就出现了，但那时还不知道我那魔改butterfly的版本名应该叫什么好
+思来想去，我将这玩意名字取名为ThetaStory
 {% folding cyan open, 2024/05（v1.6.0） %}
 # 2024/05/11
 - 紧急修复Twikoo样式（黑底背景去除）
