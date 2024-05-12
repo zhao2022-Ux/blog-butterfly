@@ -33,7 +33,6 @@
     "hexo-generator-robotstxt": "^0.2.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
-    "hexo-neat": "^1.0.9",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-kramed": "^0.1.2",
     "hexo-renderer-pug": "^3.0.0",
