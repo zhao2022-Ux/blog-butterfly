@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
 var htmlclean = require('gulp-htmlclean');
-var imagemin = require('gulp-imagemin');
 
 // 若使用babel压缩js，则取消下方注释，并注释terser的代码
 // var uglify = require('gulp-uglify');
@@ -59,19 +58,7 @@ gulp.task('minify-html', () => {
         .pipe(gulp.dest('./public'))
 });
 
-// 壓縮 public/uploads 目錄內圖片
-gulp.task('minify-images', async () => {
-    gulp.src('./public/img/**/*.*')
-        .pipe(imagemin({
-            optimizationLevel: 5, //類型：Number  預設：3  取值範圍：0-7（優化等級）
-            progressive: true, //類型：Boolean 預設：false 無失真壓縮jpg圖片
-            interlaced: false, //類型：Boolean 預設：false 隔行掃描gif進行渲染
-            multipass: false, //類型：Boolean 預設：false 多次優化svg直到完全優化
-        }))
-        .pipe(gulp.dest('./public/img'));
-});
-
 // 執行 gulp 命令時執行的任務
 gulp.task("default", gulp.parallel(
-    'compress','minify-html', 'minify-css', 'minify-images'
+    'compress','minify-html', 'minify-css'
 ));
