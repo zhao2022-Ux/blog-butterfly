@@ -17,7 +17,6 @@
     "hexo-algolia": "^1.3.2",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-bilibili-bangumi": "^1.8.9",
-    "hexo-butterfly-clock-anzhiyu": "^1.1.8",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",
