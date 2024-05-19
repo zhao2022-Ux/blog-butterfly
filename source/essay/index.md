@@ -11,5 +11,4 @@ top_title: 一颗颗故事的种子
 top_tips: 使用 即刻短文动态部署版 构建
 top_link: /about/
 top_text: 关于博主
-memos_url: https://diary.sinzmise.top/api/v1/memo?creatorId=1&tag=说说&limit=10
 ---
