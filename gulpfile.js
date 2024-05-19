@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
-var htmlmin = require('gulp-htmlmin');
+var htmlmin = require('gulp-html-minifier-terser');
 var htmlclean = require('gulp-htmlclean');
 
 // 若使用babel压缩js，则取消下方注释，并注释terser的代码
@@ -26,7 +26,7 @@ var terser = require('gulp-terser');
 // minify js - gulp-tester
 // 若使用terser压缩js
 gulp.task('compress', () =>
-    gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
+    gulp.src(['./public/**/*.js', '!./public/**/*.min.js', '!./public/**/custom.js'])
         .pipe(terser())
         .pipe(gulp.dest('./public'))
 )
