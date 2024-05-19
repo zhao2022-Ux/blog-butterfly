@@ -258,6 +258,7 @@ body
                         a.box(href='javascript:;', rel='noopener external nofollow', style='background: #9F17EF', onclick='changeBg(\'#9F17EF\')')
                 #con-echarts.asetting
                     h1 统计
+                    img(src='https://moe.counter.blog.sinzmise.top/sznhouse?theme=asoul')
                     if !is_page()
                         h2 文章统计
                         script(src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js")
@@ -265,23 +266,19 @@ body
                         div(id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;")
                         div(id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;")
                     h2 访问统计 显示不出来请刷新页面
-                    p 总访问量:
-                        span#qiushaocloud_sitecounter_value_site_pv
-                    p 总访客量:
-                        span#qiushaocloud_sitecounter_value_site_uv
-                    p 今日访问量:
-                        span#qiushaocloud_sitecounter_value_today_site_pv
-                    p 今日访客量:
-                        span#qiushaocloud_sitecounter_value_today_site_uv
+                    p 站点访问量:
+                        span#qexo-site-pv
+                    p 站点访客数:
+                        span#qexo-site-uv
                     if is_page()
-                        p 本页面总访问量:
-                            span#qiushaocloud_sitecounter_value_site_page_pv
-                        p 本页面总访客量:
-                            span#qiushaocloud_sitecounter_value_site_page_uv
-                        p 本页面今日访问量:
-                            span#qiushaocloud_sitecounter_value_today_site_page_pv
-                        p 本页面今日访客量:
-                            span#qiushaocloud_sitecounter_value_today_site_page_uv
+                        p 页面访问量:
+                            span#qexo-page-pv
+                    - var qexostatistic = "https://jsd.onmicrosoft.cn/npm/qexo-static/hexo/statistic.js"
+                    if theme.CDN.qexo_statistic
+                        - qexostatistic = theme.CDN.qexo_daodao
+                    script(src=url_for(qexostatistic))
+                    script.
+                        loadStatistic("!{theme.qexo.serverURL}")
 
                 #con-abouts.asetting
                     h1 关于

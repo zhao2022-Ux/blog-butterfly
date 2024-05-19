@@ -1137,8 +1137,6 @@ orlike:
 ui_version: v1.6.0
 
 # essay 即刻短文
-# MeuiCat设计
-# https://meuicat.com/blog/67/
 # --------------------------------------
 
 essay:
@@ -1146,7 +1144,7 @@ essay:
   # 即刻短文仅展示前n条
   # Jike short text only shows the first n
   strip: 50
-  mode: json # local：本地静态 / json：动态json / memos：动态Memos / qexo：Qexo说说
+  mode: qexo # local：本地静态 / json：动态json / memos：动态Memos / qexo：Qexo说说
   mode_link: /test.json #动态模式地址
 
 # qexo接入
@@ -1154,8 +1152,7 @@ essay:
 
 qexo:
   enable: true
-  serverURL: https://houtai.hexo.sinzmise.top/
-
+  serverURL: https://houtai.hexo.sinzmise.top
 
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
@@ -1223,8 +1220,8 @@ inject:
     - <script src="/js/randompost.js"></script>
 
     # 即刻短文
-    - <script defer src="/js/custom.js"></script> # 即刻逻辑文件
-    - <script async src="/js/waterfall/waterfall.js"></script> # 即刻瀑布流JS
+    - <script data-pjax defer src="/js/custom.js"></script> # 即刻逻辑文件
+    - <script data-pjax async src="/js/waterfall/waterfall.js"></script> # 即刻瀑布流JS
 
     # about关于页 - 处理函数
     - <script type="text/javascript" src="/js/about.js"></script>
