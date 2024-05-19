@@ -3,10 +3,11 @@
 # --------------------------------------
 
 menu:
-  文章||icon-wenzhang:
+  站点||icon-wenzhang:
     隧道: /archives/ || icon-a-xiangzishouna
     分类: /categories/ || icon-fenlei
     标签: /tags/ || icon-fenlei-copy
+    更新日志: /update/ || icon-laba
 
   友链||icon-youlian:
     友人帐: /link/ || icon-lianjie
