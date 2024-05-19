@@ -1218,8 +1218,8 @@ inject:
 
     # 伪春菜
     - <link rel="stylesheet" href="/weichuncai/css/style.css">
-    - <script async src="/weichuncai/wcc-config.js"></script>
-    - <script async src="/weichuncai/js/common.js"></script>
+    - <script src="/weichuncai/wcc-config.js"></script>
+    - <script src="/weichuncai/js/common.js"></script>
 
     # Sakura
     - <script src="/js/sakura.js"></script>
