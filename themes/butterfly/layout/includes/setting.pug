@@ -58,7 +58,7 @@ body
                             .content-text 落樱特效
                         .content(style='display:flex')
                             input#autoTheme(type='checkbox', onclick='toggleAutoTheme()')
-                            .content-text 明暗模式手动切换
+                            .content-text 明暗模式自动切换
 
                     p
                         h3.content-head 主题色
@@ -290,7 +290,7 @@ body
         #app-refresh-setting.app-refresh(style='display:none')
             .app-refresh-wrap
                 label 检测到魔法屋已装修
-                a(href='javascript:void(0)' onclick='location.reload(true)')
+                a(href='javascript:void(0)' onclick='window.location.reload()')
                     span(style='text-decoration: underline;cursor: pointer;float: right;') 点我查看
         #setting-sidesl
             button(title="恢复默认设置" class="reSettings con-rightside")

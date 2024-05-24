@@ -241,8 +241,7 @@ function tosetting(){
                     }),
                 15000)
         }
-    }
-    else{
+    }else{
         if(playerid && playertips && playerksc && playerlrc){
             playerid.style.visibility = 'visible';
             playertips.style.visibility = 'visible';
@@ -350,12 +349,12 @@ function tosetting(){
         }
     }
     toggleAutoTheme=()=>{
-        if(localStorage.getItem("autoTheme")=="true"){
-            localStorage.setItem("autoTheme","false");
+        if(localStorage.getItem("autoTheme")=="false"){
+            localStorage.setItem("autoTheme","true");
             $("#con-mode").show();
         }
         else{
-            localStorage.setItem("autoTheme","true");
+            localStorage.setItem("autoTheme","false");
             var time=new Date();
             if(time.getHours()<=7||time.getHours()>=19){
                 activateDarkMode()
