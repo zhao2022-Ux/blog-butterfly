@@ -2,73 +2,73 @@
     font-family: HMOSANS;
     font-style: normal;
     font-display: swap;
-    src: url('https://www.jsdelivr.ren/gh/baige007/ttf/HarmonyOS_Sans_SC_Medium.woff2') format('woff2'),
-    url('https://www.jsdelivr.ren/gh/baige007/ttf/HarmonyOS_Sans_SC_Medium.woff') format('woff');
+    src: url('https://jsd.onmicrosoft.cn/gh/baige007/ttf/HarmonyOS_Sans_SC_Medium.woff2') format('woff2'),
+    url('https://jsd.onmicrosoft.cn/gh/baige007/ttf/HarmonyOS_Sans_SC_Medium.woff') format('woff');
 }
 @font-face {
     font-family: Fredoka;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/Fredoka.woff2) format("woff2")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/Fredoka.woff2) format("woff2")
 }
 
 @font-face {
     font-family: Monaco;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/MONACO.TTF) format("truetype")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/MONACO.TTF) format("truetype")
 }
 
 @font-face {
     font-family: HYTMR;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/HYTangMeiRen55W.woff2) format("woff2")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/HYTangMeiRen55W.woff2) format("woff2")
 }
 
 @font-face {
     font-family: FZXJLJ;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/FZXiJinLJW.woff2) format("woff2")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/FZXiJinLJW.woff2) format("woff2")
 }
 
 @font-face {
     font-family: FZXS;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/FZXiangSu14.woff2) format("woff2")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/FZXiangSu14.woff2) format("woff2")
 }
 
 @font-face {
     font-family: HYPailou;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/HanyiSentyPailouArch.woff2) format("woff2")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/HanyiSentyPailouArch.woff2) format("woff2")
 }
 
 @font-face {
     font-family: FZODZK;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/FZShouJiOuDieZhengKai.woff2) format("woff2")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/FZShouJiOuDieZhengKai.woff2) format("woff2")
 }
 
 @font-face {
     font-family: 'Source Serif';
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/SourceHanSerifSC-Medium.otf) format("opentype")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/SourceHanSerifSC-Medium.otf) format("opentype")
 }
 
 @font-face {
     font-family: 'Source Sans';
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/SourceHanSansCN-Medium.otf) format("opentype")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/SourceHanSansCN-Medium.otf) format("opentype")
 }
 
 @font-face {
     font-family: ZhuZiAWan;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/ZhuZiAWan.woff2) format("woff2")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/ZhuZiAWan.woff2) format("woff2")
 }
 
 @font-face {
     font-family: HYPailou;
     font-display: swap;
-    src: url(https://www.jsdelivr.ren/npm/fontcdn-ariasaka@1.0.0/HanyiSentyPailouArch.woff2) format("woff2")
+    src: url(https://font.onmicrosoft.cn/fontcdn-ariasaka@1.0.0/HanyiSentyPailouArch.woff2) format("woff2")
 }
 
 :root {
