@@ -43,7 +43,7 @@ var meuicat = {
         for (; o === lastSayHello;) o = e[Math.floor(Math.random() * e.length)];
         (t.textContent = o), (lastSayHello = o);
 
-        document.getElementsByClassName('ui-version').innerHTML+=GLOBAL_CONFIG.uiversion;
+        document.getElementById('ui-version').innerHTML=GLOBAL_CONFIG.uiversion;
     }, // about 个人介绍词
     runtimen: function() {
         let t = new Date("2021/12/17 14:53:11")
