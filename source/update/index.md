@@ -6,11 +6,11 @@ aside: false
 top_page: true
 top_bg: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240511/t.mwm.3d4lwazymy.webp
 top_item: 更新日志
-top_title: ThetaStory更新日志
+top_title: CetaStories更新日志
 top_tips: 博客更新都会记录到这里哦~~
 ---
 其实Theta这个名字很久之前就出现了，但那时还不知道我那魔改butterfly的版本名应该叫什么好
-思来想去，我将这玩意名字取名为ThetaStory
+思来想去，我将这玩意名字取名为CetaStories
 {% folding cyan open, 2024/05（v1.6.0） %}
 # 2024/05/19
 - 更换尾部动画
