@@ -207,31 +207,55 @@ function tosetting(){
             stopp,1000);
         isSakura=0;
     }
-    if(localStorage.getItem("aplayerhide")=="true"){
-        document.getElementById("hideAplayer").checked=false;
-        setTimeout(() =>
-            Snackbar.show({
-                text: '本站配合音乐播放器最佳（可在设置里关闭）',
-                pos: 'bottom-right',
-                actionText: "开启播放器",
-                onActionClick: function (element) {
-                    toggleAplayer()
-                },
-            }),
-        15000)
-    }
-    else if(localStorage.getItem("aplayerhide")==null){
-        localStorage.setItem("aplayerhide","true");
-        document.getElementById("hideAplayer").checked=false;
+    var playerid = document.getElementById('guiguiplayer');
+    var playertips = document.getElementById('guiguiTips');
+    var playerksc = document.getElementById('guiguiKsc');
+    var playerlrc = document.getElementById('guiguiKsc');
+    if(document.getElementById("hideAplayer").checked=false){
+        if(playerid && playertips && playerksc && playerlrc){
+            playerid.style.visibility = 'hidden';
+            playertips.style.visibility = 'hidden';
+            playerksc.style.visibility = 'hidden';
+            playerlrc.style.visibility = 'hidden';
+            hasgeci = false;
+            $("li", $albumList).eq(albumId).addClass(cur).find(".artist").html("暂停播放 > ").parent().siblings().removeClass(cur).find(".artist").html("").parent();
+            guiguiTips.show("暂停播放 - " + songSheetList[albumId].songNames[songId]);
+            $cover.removeClass("coverplay");
+            audio.pause();
+            var obj = document.getElementsByClassName('pause');
+            obj[0].style.display = "none";
+
+            var play_obj = document.getElementsByClassName('play');
+            play_obj[0].style.display = "block";
+
+            $.cookie("auto_playre", "no")
+        }else{
+            setTimeout(() =>
+                    Snackbar.show({
+                        text: '本站配合音乐播放器最佳（可在设置里关闭）',
+                        pos: 'bottom-right',
+                        actionText: "开启播放器",
+                        onActionClick: function (element) {
+                            toggleAplayer()
+                        },
+                    }),
+                15000)
+        }
     }
     else{
-        document.getElementById("hideAplayer").checked=true;
-        var script = document.createElement('script');
-        script.id = 'xplayer';
-        script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
-        script.setAttribute('key','661a038c31f2b');
-        script.setAttribute('m','1');
-        document.getElementsByTagName('body')[0].appendChild(script);
+        if(playerid && playertips && playerksc && playerlrc){
+            playerid.style.visibility = 'visible';
+            playertips.style.visibility = 'visible';
+            playerksc.style.visibility = 'visible';
+            playerlrc.style.visibility = 'visible';
+        }else{
+            var script = document.createElement('script');
+            script.id = 'xplayer';
+            script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
+            script.setAttribute('key','661a038c31f2b');
+            script.setAttribute('m','1');
+            document.getElementsByTagName('body')[0].appendChild(script);
+        }
     }
 
     document.getElementsByClassName("reSettings")[0].onclick=function(){
@@ -257,44 +281,11 @@ function tosetting(){
         $htmlDom.toggle('hide-aside')
     }
     toggleAplayer=function(){
-        var playerid = document.getElementById('guiguiplayer');
-        var playertips = document.getElementById('guiguiTips');
-        var playerksc = document.getElementById('guiguiKsc');
-        var playerlrc = document.getElementById('guiguiKsc');
-        if(localStorage.getItem("aplayerhide")=="false"){
-            localStorage.setItem("aplayerhide",true);
-            playerid.style.visibility = 'hidden';
-            playertips.style.visibility = 'hidden';
-            playerksc.style.visibility = 'hidden';
-            playerlrc.style.visibility = 'hidden';
-            hasgeci = false;
-            $("li", $albumList).eq(albumId).addClass(cur).find(".artist").html("暂停播放 > ").parent().siblings().removeClass(cur).find(".artist").html("").parent();
-            guiguiTips.show("暂停播放 - " + songSheetList[albumId].songNames[songId]);
-            $cover.removeClass("coverplay");
-            audio.pause();
-            var obj = document.getElementsByClassName('pause');
-            obj[0].style.display = "none";
-
-            var play_obj = document.getElementsByClassName('play');
-            play_obj[0].style.display = "block";
-
-            $.cookie("auto_playre", "no")
+        if(document.getElementById("hideAplayer").checked==false){
+            document.getElementById("hideAplayer").checked=true;
         }
         else{
-            localStorage.setItem("aplayerhide",false);
-            if(playerid && playertips && playerksc && playerlrc){
-                playerid.style.visibility = 'visible';
-                playertips.style.visibility = 'visible';
-                playerksc.style.visibility = 'visible';
-                playerlrc.style.visibility = 'visible';
-            }else{
-                var script = document.createElement('script');
-                script.id = 'xplayer';
-                script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
-                script.setAttribute('key','661a038c31f2b');
-                script.setAttribute('m','1');
-                document.getElementsByTagName('body')[0].appendChild(script);
-            }
+            document.getElementById("hideAplayer").checked=false;
         }
     }
 // position = $(window).scrollTop();
