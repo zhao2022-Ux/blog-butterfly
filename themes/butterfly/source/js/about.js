@@ -1,5 +1,5 @@
 function whenDOMReady() {
-    if (location.pathname.startsWith('/about/')) meuicat.comments(), meuicat.Introduction(), meuicat.runtimen(), meuicat.fiftyonela();
+    if (location.pathname.startsWith('/about/')) meuicat.comments(), meuicat.Introduction(), meuicat.runtimen(), meuicat.fiftyonela(), document.getElementById('ui-version').innerHTML=GLOBAL_CONFIG.uiversion;
 }
 
 whenDOMReady() // 打开网站先执行一次
@@ -42,8 +42,6 @@ var meuicat = {
         let o = e[Math.floor(Math.random() * e.length)];
         for (; o === lastSayHello;) o = e[Math.floor(Math.random() * e.length)];
         (t.textContent = o), (lastSayHello = o);
-
-        document.getElementById('ui-version').innerHTML=GLOBAL_CONFIG.uiversion;
     }, // about 个人介绍词
     runtimen: function() {
         let t = new Date("2021/12/17 14:53:11")
