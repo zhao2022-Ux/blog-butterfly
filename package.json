@@ -9,7 +9,7 @@
     "server": "hexo clean && hexo generate && hexo bangumi -u && hexo swpp && gulp && hexo server"
   },
   "hexo": {
-    "version": "6.3.0"
+    "version": "7.2.0"
   },
   "dependencies": {
     "gulp": "^5.0.0",
