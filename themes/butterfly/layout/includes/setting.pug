@@ -273,12 +273,13 @@ body
                     if is_page()
                         p 页面访问量:
                             span#qexo-page-pv
-                    - var qexostatistic = "https://jsd.onmicrosoft.cn/npm/qexo-static/hexo/statistic.js"
-                    if theme.CDN.qexo_statistic
-                        - qexostatistic = theme.CDN.qexo_daodao
-                    script(src=url_for(qexostatistic))
-                    script.
-                        loadStatistic("!{theme.qexo.serverURL}")
+                    if theme.qexo.enable && theme.qexo.serverURL
+                        - var qexostatistic = "https://jsd.onmicrosoft.cn/npm/qexo-static/hexo/statistic.js"
+                        if theme.CDN.qexo_statistic
+                            - qexostatistic = theme.CDN.qexo_daodao
+                        script(src=url_for(qexostatistic))
+                        script.
+                            loadStatistic("!{theme.qexo.serverURL}")
 
                 #con-abouts.asetting
                     h1 关于

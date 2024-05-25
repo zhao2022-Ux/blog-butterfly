@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "hexo clean && hexo generate && hexo bangumi -u && hexo swpp && gulp",
+    "generatesearch": "hexo clean && hexo generate && hexo bangumi -u && hexo algolia",
     "clean": "hexo clean",
     "deploy": "hexo clean && hexo generate && hexo bangumi -u && hexo swpp && gulp && hexo deploy",
     "server": "hexo clean && hexo generate && hexo bangumi -u && hexo swpp && gulp && hexo server"
