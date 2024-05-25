@@ -201,6 +201,11 @@
         avatar: https://www.imalun.com/images/avatar.jpg?v=1
         descr: 醒，亦在人间；梦，亦在人间。
         siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://www.imalun.com
+      - name: 磊磊落落
+        link: https://leileiluoluo.com/
+        avatar: https://leileiluoluo.com/images/favicon.png
+        descr: 浩然的个人博客，用于记录生活和分享技术。
+        siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://leileiluoluo.com/
 - class_name: 小伙伴们
   flink_style: byer
   class_desc: 那些人，那些事
