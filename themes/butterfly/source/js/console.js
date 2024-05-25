@@ -211,7 +211,7 @@ function tosetting(){
     var playertips = document.getElementById('guiguiTips');
     var playerksc = document.getElementById('guiguiKsc');
     var playerlrc = document.getElementById('guiguiKsc');
-    if(localStorage.getItem("aplayerhide")=="false"){
+    if(localStorage.getItem("aplayerhide")=="true"){
         document.getElementById("hideAplayer").checked=false;
         if(playerid && playertips && playerksc && playerlrc){
             playerid.style.visibility = 'hidden';
@@ -244,7 +244,7 @@ function tosetting(){
         }
     }
     else if(localStorage.getItem("aplayerhide")==null){
-        localStorage.setItem("aplayerhide","false");
+        localStorage.setItem("aplayerhide","true");
         document.getElementById("hideAplayer").checked=false;
     }else{
         if(playerid && playertips && playerksc && playerlrc){
@@ -287,9 +287,51 @@ function tosetting(){
     toggleAplayer=function(){
         if(localStorage.getItem("aplayerhide")=="true"){
             localStorage.setItem("aplayerhide",false);
+            if(playerid && playertips && playerksc && playerlrc){
+                playerid.style.visibility = 'visible';
+                playertips.style.visibility = 'visible';
+                playerksc.style.visibility = 'visible';
+                playerlrc.style.visibility = 'visible';
+            }else{
+                var script = document.createElement('script');
+                script.id = 'xplayer';
+                script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
+                script.setAttribute('key','661a038c31f2b');
+                script.setAttribute('m','1');
+                document.getElementsByTagName('body')[0].appendChild(script);
+            }
         }
         else{
             localStorage.setItem("aplayerhide",true);
+            if(playerid && playertips && playerksc && playerlrc){
+                playerid.style.visibility = 'hidden';
+                playertips.style.visibility = 'hidden';
+                playerksc.style.visibility = 'hidden';
+                playerlrc.style.visibility = 'hidden';
+                hasgeci = false;
+                $("li", $albumList).eq(albumId).addClass(cur).find(".artist").html("暂停播放 > ").parent().siblings().removeClass(cur).find(".artist").html("").parent();
+                guiguiTips.show("暂停播放 - " + songSheetList[albumId].songNames[songId]);
+                $cover.removeClass("coverplay");
+                audio.pause();
+                var obj = document.getElementsByClassName('pause');
+                obj[0].style.display = "none";
+
+                var play_obj = document.getElementsByClassName('play');
+                play_obj[0].style.display = "block";
+
+                $.cookie("auto_playre", "no")
+            }else{
+                setTimeout(() =>
+                        Snackbar.show({
+                            text: '本站配合音乐播放器最佳（可在设置里关闭）',
+                            pos: 'bottom-right',
+                            actionText: "开启播放器",
+                            onActionClick: function (element) {
+                                toggleAplayer()
+                            },
+                        }),
+                    15000)
+            }
         }
     }
 // position = $(window).scrollTop();
