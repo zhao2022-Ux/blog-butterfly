@@ -211,8 +211,7 @@ function tosetting(){
     var playertips = document.getElementById('guiguiTips');
     var playerksc = document.getElementById('guiguiKsc');
     var playerlrc = document.getElementById('guiguiKsc');
-    if(localStorage.getItem("aplayerhide")=="false"){
-        document.getElementById("hideAplayer").checked=false;
+    if(document.getElementById("hideAplayer").checked=false){
         if(playerid && playertips && playerksc && playerlrc){
             playerid.style.visibility = 'hidden';
             playertips.style.visibility = 'hidden';
@@ -242,10 +241,6 @@ function tosetting(){
                     }),
                 15000)
         }
-    }
-    else if(localStorage.getItem("aplayerhide")==null){
-        localStorage.setItem("aplayerhide","false");
-        document.getElementById("hideAplayer").checked=false;
     }else{
         if(playerid && playertips && playerksc && playerlrc){
             playerid.style.visibility = 'visible';
@@ -285,11 +280,11 @@ function tosetting(){
         $htmlDom.toggle('hide-aside')
     }
     toggleAplayer=function(){
-        if(localStorage.getItem("aplayerhide")=="true"){
-            localStorage.setItem("aplayerhide",false);
+        if(document.getElementById("hideAplayer").checked==false){
+            document.getElementById("hideAplayer").checked=true;
         }
         else{
-            localStorage.setItem("aplayerhide",true);
+            document.getElementById("hideAplayer").checked=false;
         }
     }
 // position = $(window).scrollTop();
