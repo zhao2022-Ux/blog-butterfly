@@ -207,12 +207,12 @@ function tosetting(){
             stopp,1000);
         isSakura=0;
     }
-    var playerid = document.getElementById('guiguiplayer');
-    var playertips = document.getElementById('guiguiTips');
-    var playerksc = document.getElementById('guiguiKsc');
-    var playerlrc = document.getElementById('guiguiKsc');
     if(localStorage.getItem("aplayerhide")=="true"){
         document.getElementById("hideAplayer").checked=false;
+        var playerid = document.getElementById('guiguiplayer');
+        var playertips = document.getElementById('guiguiTips');
+        var playerksc = document.getElementById('guiguiKsc');
+        var playerlrc = document.getElementById('guiguiKsc');
         if(playerid && playertips && playerksc && playerlrc){
             playerid.style.visibility = 'hidden';
             playertips.style.visibility = 'hidden';
@@ -247,6 +247,10 @@ function tosetting(){
         localStorage.setItem("aplayerhide","true");
         document.getElementById("hideAplayer").checked=false;
     }else{
+        var playerid = document.getElementById('guiguiplayer');
+        var playertips = document.getElementById('guiguiTips');
+        var playerksc = document.getElementById('guiguiKsc');
+        var playerlrc = document.getElementById('guiguiKsc');
         if(playerid && playertips && playerksc && playerlrc){
             playerid.style.visibility = 'visible';
             playertips.style.visibility = 'visible';
@@ -287,6 +291,10 @@ function tosetting(){
     toggleAplayer=function(){
         if(localStorage.getItem("aplayerhide")=="true"){
             localStorage.setItem("aplayerhide",false);
+            var playerid = document.getElementById('guiguiplayer');
+            var playertips = document.getElementById('guiguiTips');
+            var playerksc = document.getElementById('guiguiKsc');
+            var playerlrc = document.getElementById('guiguiKsc');
             if(playerid && playertips && playerksc && playerlrc){
                 playerid.style.visibility = 'visible';
                 playertips.style.visibility = 'visible';
@@ -303,6 +311,10 @@ function tosetting(){
         }
         else{
             localStorage.setItem("aplayerhide",true);
+            var playerid = document.getElementById('guiguiplayer');
+            var playertips = document.getElementById('guiguiTips');
+            var playerksc = document.getElementById('guiguiKsc');
+            var playerlrc = document.getElementById('guiguiKsc');
             if(playerid && playertips && playerksc && playerlrc){
                 playerid.style.visibility = 'hidden';
                 playertips.style.visibility = 'hidden';
