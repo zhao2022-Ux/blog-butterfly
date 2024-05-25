@@ -89,6 +89,11 @@
     })
   }
 
+  let playermobile = '0';
+  if (theme.setting.player.mobile) {
+    playermobile = "1"
+  }
+
 script.
   const GLOBAL_CONFIG = { 
     root: '!{config.root}',
@@ -130,6 +135,10 @@ script.
     percent: {
       toc: !{theme.toc.scroll_percent},
       rightside: !{theme.rightside_scroll_percent},
+    },
+    player: {
+      key: !{theme.setting.player.key},
+      mobile: !{playermobile}
     },
     uiversion: "!{theme.ui_version}"
   }

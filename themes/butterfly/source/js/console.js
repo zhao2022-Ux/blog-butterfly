@@ -213,7 +213,8 @@ function tosetting(){
         var playertips = document.getElementById('guiguiTips');
         var playerksc = document.getElementById('guiguiKsc');
         var playerlrc = document.getElementById('guiguiKsc');
-        if(playerid && playertips && playerksc && playerlrc){
+        var playerjs = document.getElementById('xplayer');
+        if(playerjs && playerid && playertips && playerksc && playerlrc){
             playerid.style.visibility = 'hidden';
             playertips.style.visibility = 'hidden';
             playerksc.style.visibility = 'hidden';
@@ -251,7 +252,8 @@ function tosetting(){
         var playertips = document.getElementById('guiguiTips');
         var playerksc = document.getElementById('guiguiKsc');
         var playerlrc = document.getElementById('guiguiKsc');
-        if(playerid && playertips && playerksc && playerlrc){
+        var playerjs = document.getElementById('xplayer');
+        if(playerjs && playerid && playertips && playerksc && playerlrc){
             playerid.style.visibility = 'visible';
             playertips.style.visibility = 'visible';
             playerksc.style.visibility = 'visible';
@@ -260,8 +262,8 @@ function tosetting(){
             var script = document.createElement('script');
             script.id = 'xplayer';
             script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
-            script.setAttribute('key','661a038c31f2b');
-            script.setAttribute('m','1');
+            script.setAttribute('key',GLOBAL_CONFIG.player.key);
+            script.setAttribute('m',GLOBAL_CONFIG.player.mobile);
             document.getElementsByTagName('body')[0].appendChild(script);
         }
     }
@@ -295,7 +297,8 @@ function tosetting(){
             var playertips = document.getElementById('guiguiTips');
             var playerksc = document.getElementById('guiguiKsc');
             var playerlrc = document.getElementById('guiguiKsc');
-            if(playerid && playertips && playerksc && playerlrc){
+            var playerjs = document.getElementById('xplayer');
+            if(playerjs && playerid && playertips && playerksc && playerlrc){
                 playerid.style.visibility = 'visible';
                 playertips.style.visibility = 'visible';
                 playerksc.style.visibility = 'visible';
@@ -304,18 +307,19 @@ function tosetting(){
                 var script = document.createElement('script');
                 script.id = 'xplayer';
                 script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
-                script.setAttribute('key','661a038c31f2b');
-                script.setAttribute('m','1');
+                script.setAttribute('key',GLOBAL_CONFIG.player.key);
+                script.setAttribute('m',GLOBAL_CONFIG.player.mobile);
                 document.getElementsByTagName('body')[0].appendChild(script);
             }
         }
         else{
             localStorage.setItem("aplayerhide",true);
+            var playerjs = document.getElementById('xplayer');
             var playerid = document.getElementById('guiguiplayer');
             var playertips = document.getElementById('guiguiTips');
             var playerksc = document.getElementById('guiguiKsc');
             var playerlrc = document.getElementById('guiguiKsc');
-            if(playerid && playertips && playerksc && playerlrc){
+            if(playerjs && playerid && playertips && playerksc && playerlrc){
                 playerid.style.visibility = 'hidden';
                 playertips.style.visibility = 'hidden';
                 playerksc.style.visibility = 'hidden';
