@@ -1476,19 +1476,6 @@ figure {
     background-color: var(--story-theme)!important
 }
 
-del:not(.noheimu),s {
-    color: #000!important;
-    background-color: #000!important;
-    text-decoration: none;
-    border-radius: 4px;
-    transition-property: background-color,color,padding,font-size,border;
-    transition-duration: .2s
-}
-
-del:not(.noheimu):hover,s:hover {
-    color: #fff!important
-}
-
 .toc-link {
     border-radius: 4px
 }
