@@ -142,12 +142,12 @@ module.exports.ejectValues = (hexo, rules) => {
 };
 
 
-module.exports.modifyRequest = (request, $eject) => {
+module.exports.modifyRequest = async (request, $eject) => {
     const lfetch = async (urls, url) => {
         let controller = new AbortController(); //针对此次请求新建一个AbortController,用于打断并发的其余请求
         const PauseProgress = async (res) => {
             //这个函数的作用时阻塞响应,直到主体被完整下载,避免被提前打断
-            return new Response(await (res).arrayBuffer(), { status: res.status, headers: res.headers });
+            return new Response(await (res).arrayBuffer(), {status: res.status, headers: res.headers});
         };
         if (!Promise.any) { //Polyfill,避免Promise.any不存在,无需关注
             Promise.any = function (promises) {
@@ -201,18 +201,22 @@ module.exports.modifyRequest = (request, $eject) => {
             })
     }
 
-    setInterval(async() => {
+    setInterval(async () => {
         await set_newest_version(mirror) //定时更新,一分钟一次
-    }, 60*1000);
+    }, 60 * 1000);
 
-    setTimeout(async() => {
+    setTimeout(async () => {
         await set_newest_version(mirror)//打开五秒后更新,避免堵塞
-    },5000)
+    }, 5000)
     const uri = request.url
     const endings = ['jpg', 'png', 'js', 'css', 'woff2', 'woff', 'ttf', 'cur', 'webp', 'jpeg', 'gif', 'mp4', 'svg', 'ico', 'json'];
     const denyendings = ['update.json', 'cacheList.json', 'sw.js', 'sw-dom.js'];
     if (uri.startsWith('https://blog.sinzmise.top/') && endings.some(ending => uri.endsWith('.' + ending)) && !denyendings.some(denyending => uri.endsWith(denyending))) {
         const source = uri.replace('https://blog.sinzmise.top', '');
-        return new Request('https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@'+ versions + source, {...request, mode: 'cors',headers: {"Content-Type": "text/html;charset=utf-8"}})
+        return new Request('https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@' + await db.read('blog_version') || +'latest' + source, {
+            ...request,
+            mode: 'cors',
+            headers: {"Content-Type": "text/html;charset=utf-8"}
+        })
     }
 }
