@@ -140,3 +140,68 @@ module.exports.ejectValues = (hexo, rules) => {
     },
   };
 };
+
+
+module.exports.modifyRequest = async (request, $eject) => {
+    const mirror = [
+        `https://registry.npmmirror.com/sinzmise-cetastories/latest`,
+        `https://registry.npmjs.org/sinzmise-cetastories/latest`,
+        `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories/latest`
+    ]
+    self.db = { //全局定义db,只要read和write,看不懂可以略过
+        read: (key, config) => {
+            if (!config) { config = { type: "text" } }
+            return new Promise((resolve, reject) => {
+                caches.open(CACHE_NAME).then(cache => {
+                    cache.match(new Request(`https://blog.sinzmise.top/${encodeURIComponent(key)}`)).then(function (res) {
+                        if (!res) resolve(null)
+                        res.text().then(text => resolve(text))
+                    }).catch(() => {
+                        resolve(null)
+                    })
+                })
+            })
+        },
+        write: (key, value) => {
+            return new Promise((resolve, reject) => {
+                caches.open(CACHE_NAME).then(function (cache) {
+                    cache.put(new Request(`https://blog.sinzmise.top/${encodeURIComponent(key)}`), new Response(value));
+                    resolve()
+                }).catch(() => {
+                    reject()
+                })
+            })
+        }
+    }
+
+    const set_newest_version = async (mirror) => { //改为最新版本写入数据库
+        return lfetch(mirror, mirror[0])
+            .then(res => res.json()) //JSON Parse
+            .then(async res => {
+                await db.write('blog_version', res.version) //写入
+                return;
+            })
+    }
+
+    setInterval(async() => {
+        await set_newest_version(mirror) //定时更新,一分钟一次
+    }, 60*1000);
+
+    setTimeout(async() => {
+        await set_newest_version(mirror)//打开五秒后更新,避免堵塞
+    },5000)
+    const npmmirror = [
+        `https://www.jsdelivr.ren/npm/sinzmise-cetastories@` + await db.read('blog_version') || + 'latest',
+        `https://cdn.jsdelivr.us/npm/sinzmise-cetastories@` + await db.read('blog_version') || + 'latest',
+        `https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@` + await db.read('blog_version') || + 'latest'
+    ]
+    const url = request.url
+    const endings = ['jpg', 'png', 'js', 'css', 'woff2', 'woff', 'ttf', 'cur', 'webp', 'jpeg', 'gif', 'mp4', 'svg', 'ico', 'json'];
+    const denyendings = ['update.json', 'cacheList.json', 'sw.js', 'sw-dom.js'];
+    if (url.startsWith('https://blog.sinzmise.top/') && endings.some(ending => url.endsWith('.' + ending)) && !denyendings.some(denyending => url.endsWith(denyending))) {
+        const source = url.replace('https://blog.sinzmise.top', '');
+        return new Request(npmmirror[i] + source, {...request, mode: 'cors'})
+            .then(res => res.arrayBuffer())//arrayBuffer最科学也是最快的返回
+            .then(buffer => new Response(buffer, {headers: {"Content-Type": "text/html;charset=utf-8"}}))//重新定义header
+    }
+}
