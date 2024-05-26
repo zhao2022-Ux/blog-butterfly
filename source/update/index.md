@@ -11,7 +11,10 @@ top_tips: 博客更新都会记录到这里哦~~
 ---
 其实Theta这个名字很久之前就出现了，但那时还不知道我那魔改butterfly的版本名应该叫什么好
 思来想去，我将这玩意名字取名为CetaStories
-{% folding cyan open, 2024/05（v1.6.0） %}
+{% timeline CetaStories更新日志,blue %}
+
+<!-- timeline 2024/05（v1.6.0） -->
+
 # 2024/05/19
 - 更换尾部动画
 - 适配qexo说说
@@ -30,8 +33,11 @@ top_tips: 博客更新都会记录到这里哦~~
 - 添加“最新文章”、“置顶文章”的文章卡片
 - 博客接入Qexo
 - ~~将Algolia搜索改成DocSearch~~ （由于某些原因暂时没法用，换回algolia了 ）
-{% endfolding %}
-{% folding cyan, 2024/04（v1.5.0） %}
+
+<!-- endtimeline -->
+
+<!-- timeline 2024/04（v1.5.0） -->
+
 # 忘记更新时间了，先这么看吧。。。。。。
 - 将gulp-workbox换成hexo-swpp
 - 魔改tag，将店长的link标签换成[iCat的模仿语雀标签](https://meuicat.com/blog/42/#%E8%AF%AD%E9%9B%80%E5%90%8C%E6%AC%BE%E9%93%BE%E6%8E%A5%E5%8D%A1%E7%89%87)
@@ -43,4 +49,8 @@ top_tips: 博客更新都会记录到这里哦~~
 # 2024/04/06
 - 换回Butterfly主题 {% psw butterfly太香啦~~ %}
 - 模仿~~（抄的）~~Ariasaka的博客
-{% endfolding %}
+
+<!-- endtimeline -->
+
+
+{% endtimeline %}
