@@ -9,8 +9,9 @@ top_item: 更新日志
 top_title: CetaStories更新日志
 top_tips: 博客更新都会记录到这里哦~~
 ---
-其实Theta这个名字很久之前就出现了，但那时还不知道我那魔改butterfly的版本名应该叫什么好
-思来想去，我将这玩意名字取名为CetaStories
+Ceta这个名字来源于希腊字母“θ”，名字叫“Theta”，为了简约而取它的另外一个名字：Ceta
+Stories是Story的复数，因为要讲述的故事太多太多，而且随着旅程还会解锁更多故事
+这两个合起来，CetaStories就出来了！
 {% timeline CetaStories更新日志,blue %}
 
 <!-- timeline 2024/05（v1.6.0） -->
