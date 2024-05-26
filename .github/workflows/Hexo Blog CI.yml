@@ -3,7 +3,7 @@ name: Hexo Blog CI
 on:
   push:
     branches:
-      - main
+      - master
   watch:
     types: [started]
 
