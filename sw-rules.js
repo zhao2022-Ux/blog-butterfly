@@ -142,14 +142,17 @@ module.exports.ejectValues = (hexo, rules) => {
 };
 
 
-module.exports.modifyRequest = async (request, $eject) => {
+module.exports.modifyRequest = (request, $eject) => {
     const uri = request.url
     const endings = ['jpg', 'png', 'js', 'css', 'woff2', 'woff', 'ttf', 'cur', 'webp', 'jpeg', 'gif', 'mp4', 'svg', 'ico', 'json'];
     const denyendings = ['update.json', 'cacheList.json', 'sw.js', 'sw-dom.js'];
     if (uri.startsWith('https://blog.sinzmise.top/') && endings.some(ending => uri.endsWith('.' + ending)) && !denyendings.some(denyending => uri.endsWith(denyending))) {
         const source = uri.replace('https://blog.sinzmise.top', '');
-        return new Request('https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@latest' + source, {...request, mode: 'cors'})
-        .then(res => res.arrayBuffer())//arrayBuffer最科学也是最快的返回
-        .then(buffer => new Response(buffer, {headers: {"Content-Type": "text/html;charset=utf-8"}}))//重新定义header
+        fetch('https://registry.npmjs.org/sinzmise-cetastories/latest')
+            .then(response => response.json())
+            .then(data => {
+                const version = data.version
+            })
+        return new Request('https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@'+ version + source, {...request, mode: 'cors',headers: {"Content-Type": "text/html;charset=utf-8"}})
     }
 }
