@@ -248,6 +248,7 @@ function tosetting(){
         localStorage.setItem("aplayerhide","true");
         document.getElementById("hideAplayer").checked=false;
     }else{
+        document.getElementById("hideAplayer").checked=true;
         var playerid = document.getElementById('guiguiplayer');
         var playertips = document.getElementById('guiguiTips');
         var playerksc = document.getElementById('guiguiKsc');
