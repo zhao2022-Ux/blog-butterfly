@@ -43,15 +43,21 @@ cover: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/
 （这首歌是一个虎牙中的一位MC实况主经常用的背景音乐，这位实况主还是我第一位关注的玩MC的实况主，然后我就对这个bgm印象很深）
 {% tabs Flash音乐播放器Demo %}
 <!-- tab 新浪博客swf音乐播放器 -->
+{% hideBlock 点我测试 %}
 <embed width="238" height="24" name="FlashVars" wmode="opaque" play="true" loop="true" scale="showall" src="https://files.blog.sinzmise.top/swf/sina_music_player.swf" FlashVars="url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3" type="application/x-shockwave-flash"></embed>
+{% endhideBlock %}
 <!-- endtab -->
 
 <!-- tab 人人网日志swf音乐播放器 -->
+{% hideBlock 点我测试 %}
 <embed width="360" height="30" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="sameDomain" bgcolor="#ffffff" scale="noscale" quality="high" menu="false" loop="false" wmode="transparent" src="https://files.blog.sinzmise.top/swf/renren_music_player.swf?url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3&Autoplay=0" />
+{% endhideBlock %}
 <!-- endtab -->
 
 <!-- tab 开心网日志swf音乐播放器 -->
+{% hideBlock 点我测试 %}
 <embed width="365" height="50" align="middle" flashvars="url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3&autoplay=0" src="https://files.blog.sinzmise.top/swf/kaixin_music_player.swf" wmode="transparent" loop="false" menu="false" quality="high" scale="noscale" salign="lt" bgcolor="#ffffff" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"/>
+{% endhideBlock %}
 <!-- endtab -->
 <!-- tab Demo源码 -->
 新浪的
