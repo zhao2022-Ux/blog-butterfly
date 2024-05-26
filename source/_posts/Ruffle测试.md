@@ -1,12 +1,14 @@
 ---
 title: Ruffle测试
-date: 2024-05-25 21:12:39
 tags:
   - 站点折腾
   - Flash相关
 categories:
   - 站点折腾
-cover: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/logo.4913vyk2ki.svg
+cover: >-
+  https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/logo.4913vyk2ki.svg
+abbrlink: 57692
+date: 2024-05-25 21:12:39
 ---
 这玩意也是很久之前就认识到了
 我甚至记得我还给这玩意写过Hexo插件
@@ -43,21 +45,42 @@ cover: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/
 （这首歌是一个虎牙中的一位MC实况主经常用的背景音乐，这位实况主还是我第一位关注的玩MC的实况主，然后我就对这个bgm印象很深）
 {% tabs Flash音乐播放器Demo %}
 <!-- tab 新浪博客swf音乐播放器 -->
-{% hideBlock 点我测试 %}
-<embed width="238" height="24" name="FlashVars" wmode="opaque" play="true" loop="true" scale="showall" src="https://files.blog.sinzmise.top/swf/sina_music_player.swf" FlashVars="url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3" type="application/x-shockwave-flash"></embed>
-{% endhideBlock %}
+{% raw %}
+<div id="sinaplayer"></div>
+<button id="loadsinaplayer" onclick="loadsinamusic()">点我测试</button>
+<script>
+function loadsinamusic() {
+    document.getElementById("sinaplayer").innerHTML='<embed width="238" height="24" name="FlashVars" wmode="opaque" play="true" loop="true" scale="showall" src="https://files.blog.sinzmise.top/swf/sina_music_player.swf" FlashVars="url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3" type="application/x-shockwave-flash"></embed>';
+    document.getElementById("loadsinaplayer").style.visibility = 'hidden';
+}
+</script>
+{% endraw %}
 <!-- endtab -->
 
 <!-- tab 人人网日志swf音乐播放器 -->
-{% hideBlock 点我测试 %}
-<embed width="360" height="30" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="sameDomain" bgcolor="#ffffff" scale="noscale" quality="high" menu="false" loop="false" wmode="transparent" src="https://files.blog.sinzmise.top/swf/renren_music_player.swf?url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3&Autoplay=0" />
-{% endhideBlock %}
+{% raw %}
+<div id="renrenplayer"></div>
+<button id="loadrenrenplayer" onclick="loadrenrenmusic()">点我测试</button>
+<script>
+function loadrenrenmusic() {
+    document.getElementById("renrenplayer").innerHTML='<embed width="360" height="30" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="sameDomain" bgcolor="#ffffff" scale="noscale" quality="high" menu="false" loop="false" wmode="transparent" src="https://files.blog.sinzmise.top/swf/renren_music_player.swf?url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3&Autoplay=0" />';
+    document.getElementById("loadrenrenplayer").style.visibility = 'hidden';
+}
+</script>
+{% endraw %}
 <!-- endtab -->
 
 <!-- tab 开心网日志swf音乐播放器 -->
-{% hideBlock 点我测试 %}
-<embed width="365" height="50" align="middle" flashvars="url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3&autoplay=0" src="https://files.blog.sinzmise.top/swf/kaixin_music_player.swf" wmode="transparent" loop="false" menu="false" quality="high" scale="noscale" salign="lt" bgcolor="#ffffff" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"/>
-{% endhideBlock %}
+{% raw %}
+<div id="kaixinplayer"></div>
+<button id="loadkaixinplayer" onclick="loadkaixinmusic()">点我测试</button>
+<script>
+function loadkaixinmusic() {
+    document.getElementById("kaixinplayer").innerHTML='<embed width="365" height="50" align="middle" flashvars="url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3&autoplay=0" src="https://files.blog.sinzmise.top/swf/kaixin_music_player.swf" wmode="transparent" loop="false" menu="false" quality="high" scale="noscale" salign="lt" bgcolor="#ffffff" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"/>';
+    document.getElementById("loadkaixinplayer").style.visibility = 'hidden';
+}
+</script>
+{% endraw %}
 <!-- endtab -->
 <!-- tab Demo源码 -->
 新浪的

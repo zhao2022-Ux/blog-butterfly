@@ -125,6 +125,6 @@ a(href='https://blog.sinzmise.top/' rel="external nofollow") 中弦星空魔法�
 ```
 <!-- endtab -->
 {% endtabs %}
-<div class="addBtn"><button class="hideBtn" onclick="leonus.linkCom()"><i class="fa-solid fa-circle-plus"></i>&nbsp;快速申请 (默认样式)</button> <button class="hideBtn" onclick="leonus.linkCom(&quot;bf&quot;)"><i class="fa-solid fa-circle-plus"></i>&nbsp;快速申请 (Butterfly)</button></div>
+<div class="addBtns"><button class="addBtn btn-beautify block orange larger" onclick="leonus.linkCom()"><i class="fa-solid fa-circle-plus"></i>&nbsp;快速申请 (默认样式)</button> <button class="addBtn btn-beautify block orange larger" onclick="leonus.linkCom(&quot;bf&quot;)"><i class="fa-solid fa-circle-plus"></i>&nbsp;快速申请 (Butterfly)</button></div>
 <script src="/js/kslink.js"></script>
 由于最近要开学，所以友链不会频繁添加，请见谅！

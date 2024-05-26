@@ -1395,3 +1395,13 @@ a.categoryButton:hover {
 }
 
 /* 最新评论页面样式 */
+
+.addBtns{
+    display: flex;
+    margin: auto 0;
+    justify-content: center;
+    align-items: center;
+}
+.addBtn{
+    margin: 0 auto !important;
+}
