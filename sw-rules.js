@@ -193,7 +193,7 @@ module.exports.modifyRequest = async (request, $eject) => {
         `https://mirrors.cloud.tencent.com/npm/chenyfan-blog/latest`
     ]
     const get_newest_version = async (mirror) => {
-        return lfetch(mirror, mirror[0])
+        return lfetch(mirror, mirror[i])
             .then(res => res.json())
             .then(res.version)
     }
