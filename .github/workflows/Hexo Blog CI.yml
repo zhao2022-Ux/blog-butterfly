@@ -1,0 +1,57 @@
+name: Hexo Blog CI
+
+on:
+  push:
+    branches:
+      - main
+  watch:
+    types: [started]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository master branch
+        uses: actions/checkout@main
+
+      - name: Setup Node.js latest
+        uses: actions/setup-node@main
+        with:
+          node-version: "latest"
+
+      - name: Setup Hexo Dependencies
+        run: |
+          npm i hexo-cli -g
+          npm i yarn -g
+          yarn
+
+      - name: Setup Deploy Private Key
+        env:
+          HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Setup Git Infomation
+        run: |
+          git config --global user.name 'Hoshino-Yumetsuki'
+          git config --global user.email 'hoshino-yumetsuki@outlook.com'
+
+      - name: Deploy Hexo
+        run: |
+          hexo clean
+          hexo bangumi -u
+          hexo generate
+          hexo deploy
+
+      - name: NPM Publish Pre Set
+        run: |
+          node ./prescripts/pkgpublish.mjs
+
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./public/package.json
