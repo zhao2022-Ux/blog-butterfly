@@ -143,77 +143,12 @@ module.exports.ejectValues = (hexo, rules) => {
 
 
 module.exports.modifyRequest = async (request, $eject) => {
-    const lfetch = async (urls, url) => {
-        let controller = new AbortController(); //针对此次请求新建一个AbortController,用于打断并发的其余请求
-        const PauseProgress = async (res) => {
-            //这个函数的作用时阻塞响应,直到主体被完整下载,避免被提前打断
-            return new Response(await (res).arrayBuffer(), {status: res.status, headers: res.headers});
-        };
-        if (!Promise.any) { //Polyfill,避免Promise.any不存在,无需关注
-            Promise.any = function (promises) {
-                return new Promise((resolve, reject) => {
-                    promises = Array.isArray(promises) ? promises : []
-                    let len = promises.length
-                    let errs = []
-                    if (len === 0) return reject(new AggregateError('All promises were rejected'))
-                    promises.forEach((promise) => {
-                        promise.then(value => {
-                            resolve(value)
-                        }, err => {
-                            len--
-                            errs.push(err)
-                            if (len === 0) {
-                                reject(new AggregateError(errs))
-                            }
-                        })
-                    })
-                })
-            }
-        }
-        return Promise.any(urls.map(urls => {//并发请求
-            return new Promise((resolve, reject) => {
-                fetch(urls, {
-                    signal: controller.signal//设置打断点
-                })
-                    .then(PauseProgress)//阻塞当前响应直到下载完成
-                    .then(res => {
-                        if (res.status == 200) {
-                            controller.abort()//打断其余响应(同时也打断了自己的,但本身自己已下载完成,打断无效)
-                            resolve(res)//返回
-                        } else {
-                            reject(res)
-                        }
-                    })
-            })
-        }))
-    }
-    const mirror = [
-        `https://registry.npmmirror.com/sinzmise-cetastories/latest`,
-        `https://registry.npmjs.org/sinzmise-cetastories/latest`,
-        `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories/latest`
-    ]
-    const set_newest_version = async (mirror) => { //改为最新版本写入数据库
-        return lfetch(mirror, mirror[0])
-            .then(res => res.json()) //JSON Parse
-            .then(async res => {
-                await db.write('blog_version', res.version) //写入
-                return;
-            })
-    }
-
-    setInterval(async () => {
-        await set_newest_version(mirror) //定时更新,一分钟一次
-    }, 60 * 1000);
-
-    setTimeout(async () => {
-        await set_newest_version(mirror)//打开五秒后更新,避免堵塞
-    }, 5000)
     const uri = request.url
     const endings = ['jpg', 'png', 'js', 'css', 'woff2', 'woff', 'ttf', 'cur', 'webp', 'jpeg', 'gif', 'mp4', 'svg', 'ico', 'json'];
     const denyendings = ['update.json', 'cacheList.json', 'sw.js', 'sw-dom.js'];
     if (uri.startsWith('https://blog.sinzmise.top/') && endings.some(ending => uri.endsWith('.' + ending)) && !denyendings.some(denyending => uri.endsWith(denyending))) {
         const source = uri.replace('https://blog.sinzmise.top', '');
-        return new Request('https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@' + await db.read('blog_version') || +'latest' + source, {
+        return new Request('https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@latest' + source, {
             ...request,
             mode: 'cors',
             headers: {"Content-Type": "text/html;charset=utf-8"}
