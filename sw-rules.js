@@ -186,6 +186,7 @@ module.exports.modifyRequest = async (request, $eject) => {
                     })
             })
         }))
+    }
     const mirror = [
         `https://registry.npmmirror.com/chenyfan-blog/latest`,
         `https://registry.npmjs.org/chenyfan-blog/latest`,
@@ -201,11 +202,11 @@ module.exports.modifyRequest = async (request, $eject) => {
         `https://cdn.jsdelivr.us/npm/sinzmise-cetastories@` + await get_newest_version() || + 'latest',
         `https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@` + await get_newest_version() || + 'latest'
     ]
-    const url = request.url
+    const uri = request.url
     const endings = ['jpg', 'png', 'js', 'css', 'woff2', 'woff', 'ttf', 'cur', 'webp', 'jpeg', 'gif', 'mp4', 'svg', 'ico', 'json'];
     const denyendings = ['update.json', 'cacheList.json', 'sw.js', 'sw-dom.js'];
-    if (url.startsWith('https://blog.sinzmise.top/') && endings.some(ending => url.endsWith('.' + ending)) && !denyendings.some(denyending => url.endsWith(denyending))) {
-        const source = url.replace('https://blog.sinzmise.top', '');
+    if (uri.startsWith('https://blog.sinzmise.top/') && endings.some(ending => uri.endsWith('.' + ending)) && !denyendings.some(denyending => uri.endsWith(denyending))) {
+        const source = uri.replace('https://blog.sinzmise.top', '');
         return new Request(npmmirror[i] + source, {...request, mode: 'cors'})
             .then(res => res.arrayBuffer())//arrayBuffer最科学也是最快的返回
             .then(buffer => new Response(buffer, {headers: {"Content-Type": "text/html;charset=utf-8"}}))//重新定义header
