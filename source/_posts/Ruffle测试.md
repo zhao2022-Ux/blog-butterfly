@@ -47,7 +47,7 @@ date: 2024-05-25 21:12:39
 <!-- tab 新浪博客swf音乐播放器 -->
 {% raw %}
 <div id="sinaplayer"></div>
-<button id="loadsinaplayer" onclick="loadsinamusic()">点我测试</button>
+<button id="loadsinaplayer" class="btn-beautify block orange center larger" onclick="loadsinamusic()">点我测试</button>
 <script>
 function loadsinamusic() {
     document.getElementById("sinaplayer").innerHTML='<embed width="238" height="24" name="FlashVars" wmode="opaque" play="true" loop="true" scale="showall" src="https://files.blog.sinzmise.top/swf/sina_music_player.swf" FlashVars="url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3" type="application/x-shockwave-flash"></embed>';
@@ -60,7 +60,7 @@ function loadsinamusic() {
 <!-- tab 人人网日志swf音乐播放器 -->
 {% raw %}
 <div id="renrenplayer"></div>
-<button id="loadrenrenplayer" onclick="loadrenrenmusic()">点我测试</button>
+<button id="loadrenrenplayer" class="btn-beautify block orange center larger" onclick="loadrenrenmusic()">点我测试</button>
 <script>
 function loadrenrenmusic() {
     document.getElementById("renrenplayer").innerHTML='<embed width="360" height="30" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="sameDomain" bgcolor="#ffffff" scale="noscale" quality="high" menu="false" loop="false" wmode="transparent" src="https://files.blog.sinzmise.top/swf/renren_music_player.swf?url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3&Autoplay=0" />';
@@ -73,7 +73,7 @@ function loadrenrenmusic() {
 <!-- tab 开心网日志swf音乐播放器 -->
 {% raw %}
 <div id="kaixinplayer"></div>
-<button id="loadkaixinplayer" onclick="loadkaixinmusic()">点我测试</button>
+<button id="loadkaixinplayer" class="btn-beautify block orange center larger" onclick="loadkaixinmusic()">点我测试</button>
 <script>
 function loadkaixinmusic() {
     document.getElementById("kaixinplayer").innerHTML='<embed width="365" height="50" align="middle" flashvars="url=https%3A%2F%2Ffiles.blog.sinzmise.top%2Fmp3%2FRainAndTears.mp3&autoplay=0" src="https://files.blog.sinzmise.top/swf/kaixin_music_player.swf" wmode="transparent" loop="false" menu="false" quality="high" scale="noscale" salign="lt" bgcolor="#ffffff" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"/>';
