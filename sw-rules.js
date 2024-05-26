@@ -151,8 +151,8 @@ module.exports.modifyRequest = (request, $eject) => {
         fetch('https://registry.npmjs.org/sinzmise-cetastories/latest')
             .then(response => response.json())
             .then(data => {
-                const version = data.version
+                const versions = data.version
             })
-        return new Request('https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@'+ version + source, {...request, mode: 'cors',headers: {"Content-Type": "text/html;charset=utf-8"}})
+        return new Request('https://jsd.cdn.storisinz.site/npm/sinzmise-cetastories@'+ versions + source, {...request, mode: 'cors',headers: {"Content-Type": "text/html;charset=utf-8"}})
     }
 }
