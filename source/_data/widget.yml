@@ -9,6 +9,6 @@ top:
   #  html: '<div class="newYear-slider"><div class="swiper-wrapper"><div class="swiper-slide" style="background-image:url(/img/longnian.webp)"></div><div class="swiper-slide" style="background-image:url(/img/longnian1.webp)"></div><div class="swiper-slide" style="background-image:url(/img/longnian2.webp)"></div><div class="swiper-slide" style="background-image:url(/img/longnian3.webp)"></div></div></div><div id="newYear-main"><div class="mask"></div><p class="title"></p><div class="newYear-time"></div><p class="today" style="text-align: right;"></p></div>	'
    - class_name: "card-clock-swf"
      name: 时间
-     html: '<style>.card-swfclock{border: 10px groove rgb(20, 205, 137);background-color: rgb(255, 255, 255);}</style><embed class="card-swfclock" src="/swf/clock.swf" width="100%" height="100">'
+     html: '<canvas id="canvas" style="width:60%;">时钟加载中。。。。。。</canvas><script src="/js/clock.js"></script>'
 
 
