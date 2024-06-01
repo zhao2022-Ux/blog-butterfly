@@ -484,8 +484,6 @@ messenger:
 # --------------------------------------
 footer:
   custom_text:
-    - <iframe width="500" height="40" frameborder="0" scrolling="no" hspace="0" src="https://i.tianqi.com/?c=code&a=getcode&id=173&icon=1"></iframe>
-    - <br>
     - <a href="https://icp.gov.moe/?keyword=20231033">萌ICP备20231033号</a>&nbsp;
     - <br>
     - <span>我加入的：</span>
