@@ -491,7 +491,6 @@ footer:
     - <a href="https://storeweb.cn/member/o/1585">个站商店</a>&nbsp;
     - <a href="https://bf.zzxworld.com/s/995">BlogFinder</a>&nbsp;
     - <a href="https://sites.link/site-info?siteType=life&siteId=64cb373190e35300a8eec654">站点聚合平台</a>&nbsp;
-    - <a href="https://www.boyouquan.com/blogs/blog.sinzmise.top">博友圈</a>&nbsp;
     - <a href="https://boke.lu">博客录</a>&nbsp;
     - <a href="https://rssblog.cn/member/d711afd659d65c2ba2d3b18697818cf7/">RssBlog</a>&nbsp;
     - <a href="https://blogscn.fun">笔墨迹</a>&nbsp;
@@ -507,8 +506,6 @@ footer:
             url: https://zhblogs.ohyee.cc/go
           - name: 异次元之旅
             url: https://travel.moe/go.html
-          - name: 博友圈·星球穿梭
-            url: https://www.boyouquan.com/planet-shuttle
           - name: 博客录-随机博客
             url: https://boke.lu/sj
           - name: 笔墨迹·随机访问
@@ -1056,7 +1053,6 @@ about:
     BlogFinder: https://bf.zzxworld.com/s/995
     个站商店: https://storeweb.cn/member/o/1585
     站点聚合平台: https://sites.link/site-info?siteType=life&siteId=64cb373190e35300a8eec654
-    博友圈: https://www.boyouquan.com/blogs/blog.sinzmise.top
     # xx: xxxx
 
 LA:
