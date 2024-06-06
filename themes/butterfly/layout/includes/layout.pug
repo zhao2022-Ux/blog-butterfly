@@ -13,9 +13,6 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
     .float-box.right.top
     .float-box.right.bottom
 
-    //- jQuery
-    script(src=url_for(theme.asset.jquery))
-
     if theme.preloader.enable
       !=partial('includes/loading/index', {}, {cache: true})
 
