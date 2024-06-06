@@ -1,7 +1,6 @@
-var smjq = jQuery;
 var _typei = 0;
 var weichuncai_text = '';
-smjq(document).ready(function(){
+$(document).ready(function(){
 		var getwidth = getCookie("historywidth");
 		var getheight = getCookie("historyheight");
 		if(getwidth != null && getheight != null){
@@ -23,9 +22,9 @@ smjq(document).ready(function(){
 		var docMouseMoveEvent = document.onmousemove;
 		var docMouseUpEvent = document.onmouseup;
 
-		smjq("body").append('<div id="smchuncai" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="chuncaiface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showchuncaimenu"><ul class="wcc_mlist" id="shownotice">显示公告</ul><ul class="wcc_mlist" id="chatTochuncai">聊&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;天</ul><ul class="wcc_mlist" id="foods">吃 零 食</ul><ul class="wcc_mlist" id="aboutmanage">关&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于</ul><ul class="wcc_mlist" id="lifetimechuncai">生存时间</ul><ul class="wcc_mlist" id="closechuncai">关闭春菜</ul></div><div><ul id="chuncaisaying"></ul></div><div id="getmenu"> </div></div><div id="chat_bottom"></div></div></div>');
-		smjq("#smchuncai").append('<div id="addinput"><div id="inp_l"><input id="talk" type="text" name="mastersay" value="" /> <input id="talkto" type="button" value=" " /></div><div id="inp_r"> X </div></div>');
-		smjq("body").append('<div id="callchuncai">召唤春菜</div>');
+		$("body").append('<div id="smchuncai" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="chuncaiface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showchuncaimenu"><ul class="wcc_mlist" id="shownotice">显示公告</ul><ul class="wcc_mlist" id="chatTochuncai">聊&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;天</ul><ul class="wcc_mlist" id="foods">吃 零 食</ul><ul class="wcc_mlist" id="aboutmanage">关&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于</ul><ul class="wcc_mlist" id="lifetimechuncai">生存时间</ul><ul class="wcc_mlist" id="closechuncai">关闭春菜</ul></div><div><ul id="chuncaisaying"></ul></div><div id="getmenu"> </div></div><div id="chat_bottom"></div></div></div>');
+		$("#smchuncai").append('<div id="addinput"><div id="inp_l"><input id="talk" type="text" name="mastersay" value="" /> <input id="talkto" type="button" value=" " /></div><div id="inp_r"> X </div></div>');
+		$("body").append('<div id="callchuncai">召唤春菜</div>');
 		//判断春菜是否处于隐藏状态
 		var is_closechuncai = getCookie("is_closechuncai");
 		if(is_closechuncai == 'close'){
@@ -35,11 +34,11 @@ smjq(document).ready(function(){
 		getdata("getnotice");
 		setFace(1);
 
-		smjq("#smchuncai").css('left', width+'px');
-		smjq("#smchuncai").css('top', height+'px');
-		smjq("#smchuncai").css('width', imagewidth+'px');
-		smjq("#smchuncai").css('height', imageheight+'px');
-		smjq("#callchuncai").attr("style", "top:"+cheight+"px; left:"+cwidth+"px; text-align:center;");
+		$("#smchuncai").css('left', width+'px');
+		$("#smchuncai").css('top', height+'px');
+		$("#smchuncai").css('width', imagewidth+'px');
+		$("#smchuncai").css('height', imageheight+'px');
+		$("#callchuncai").attr("style", "top:"+cheight+"px; left:"+cwidth+"px; text-align:center;");
 
 		smcc = document.getElementById("smchuncai");
 		smcc.onmousedown = function(){
@@ -82,62 +81,62 @@ smjq(document).ready(function(){
 				}
 			}
 		};
-		smjq("#getmenu").click(function(){
+		$("#getmenu").click(function(){
 				chuncaiMenu();
 				setFace(1);
 				});
-		smjq("#shownotice").click(function(){
+		$("#shownotice").click(function(){
 				getdata("getnotice");
                                 setFace(1);
 		});
-		smjq("#closechuncai").click(function(){
+		$("#closechuncai").click(function(){
 				setFace(3);
 				closechuncai();
 				});
-		smjq("#callchuncai").click(function(){
+		$("#callchuncai").click(function(){
 				setFace(2);
 				callchuncai();
 				setCookie("is_closechuncai", '', 60*60*24*30*1000);
 				});
-		smjq("#shownotice").click(function(){
+		$("#shownotice").click(function(){
 				setFace(1);
 				closeChuncaiMenu();
 				});
-		smjq("#lifetimechuncai").click(function(){
+		$("#lifetimechuncai").click(function(){
 				closeChuncaiMenu();
 				closeNotice();
 				setFace(2);
 				getdata('showlifetime');
 				});
-		smjq("#chatTochuncai").click(function(){
+		$("#chatTochuncai").click(function(){
 				showInput();
 				});
-		smjq("#inp_r").click(function(){
+		$("#inp_r").click(function(){
 				closeInput();
 				chuncaiSay('不聊天了吗？(→_→)');
 				setFace(3);
 				});
-		smjq("#talkto").click(function(){
+		$("#talkto").click(function(){
 				getdata("talking");
 				});
-		smjq("#aboutmanage").click(function(){
+		$("#aboutmanage").click(function(){
 				closeChuncaiMenu();
 				closeNotice();
-				smjq("#getmenu").css("display", "none");
+				$("#getmenu").css("display", "none");
 				chuncaiSay("你想了解我主人？跟我来吧～～～");
 				setFace(2);
 				setTimeout(function(){
 					window.location.href = _about_path ;
 					}, 2000);
 				});
-		smjq("#foods").click(function(){
+		$("#foods").click(function(){
 				closeChuncaiMenu();
 				closeNotice();
 				getdata("foods");
 				});
-/*		smjq("#showchuncaimenu").hover(function(){
+/*		$("#showchuncaimenu").hover(function(){
 				},function(){
-				smjq("#showchuncaimenu").slideUp('slow').show();
+				$("#showchuncaimenu").slideUp('slow').show();
 				});*/
 		document.onmousemove = function(){
 			stoptime();
@@ -183,52 +182,52 @@ function eatfood(obj){
 	setCookie("eattimes", eattimes, 60*10*1000);
 }
 function chuncaiMenu(){
-	//smjq("#showchuncaimenu").slideDown('fast').show();
+	//$("#showchuncaimenu").slideDown('fast').show();
 	clearChuncaiSay();
 	closeInput();
 	chuncaiSay("准备做什么呢？");
-	smjq("#showchuncaimenu").css("display", "block");
-	smjq("#getmenu").css("display", "none");
-	smjq("#chuncaisaying").css("display", "none");
+	$("#showchuncaimenu").css("display", "block");
+	$("#getmenu").css("display", "none");
+	$("#chuncaisaying").css("display", "none");
 }
 function closeChuncaiMenu(){
 	clearChuncaiSay();
-	smjq("#showchuncaimenu").css("display", "none");
-	//smjq("#chuncaisaying").css("display", "block");
+	$("#showchuncaimenu").css("display", "none");
+	//$("#chuncaisaying").css("display", "block");
 	showNotice();
-	smjq("#getmenu").css("display", "block");
+	$("#getmenu").css("display", "block");
 }
 function showNotice(){
-	smjq("#chuncaisaying").css("display", "block");
+	$("#chuncaisaying").css("display", "block");
 }
 function closechuncai(){
 	stopTalkSelf();
 	chuncaiSay("记得再叫我出来哦...");
-	smjq("#showchuncaimenu").css("display", "none");
+	$("#showchuncaimenu").css("display", "none");
 	setTimeout(function(){
-			smjq("#smchuncai").fadeOut(1200);
-			smjq("#callchuncai").css("display", "block");}, 2000);
+			$("#smchuncai").fadeOut(1200);
+			$("#callchuncai").css("display", "block");}, 2000);
 	//保存关闭状态的春菜
 	setCookie("is_closechuncai", 'close', 60*60*24*30*1000);
 }
 function closechuncai_evil(){
 	stopTalkSelf();
-	smjq("#showchuncaimenu").css("display", "none");
+	$("#showchuncaimenu").css("display", "none");
 	setTimeout(function(){
-			smjq("#smchuncai").fadeOut(1200);
-			smjq("#callchuncai").css("display", "block");}, 2000);
+			$("#smchuncai").fadeOut(1200);
+			$("#callchuncai").css("display", "block");}, 2000);
 }
 function closechuncai_init(){
 	stopTalkSelf();
-	smjq("#showchuncaimenu").css("display", "none");
+	$("#showchuncaimenu").css("display", "none");
 	setTimeout(function(){
-			smjq("#smchuncai").css("display", "none");
-			smjq("#callchuncai").css("display", "block");}, 30);
+			$("#smchuncai").css("display", "none");
+			$("#callchuncai").css("display", "block");}, 30);
 }
 function callchuncai(){
 	talkSelf(talktime);
-	smjq("#smchuncai").fadeIn('normal');
-	smjq("#callchuncai").css("display", "none");
+	$("#smchuncai").fadeIn('normal');
+	$("#callchuncai").css("display", "none");
 	closeChuncaiMenu();
 	closeNotice();
 	chuncaiSay("我回来啦～");
@@ -237,8 +236,8 @@ function callchuncai(){
 
 function chuncaiSay(s){
 	clearChuncaiSay();
-	smjq("#tempsaying").append(s);
-	smjq("#tempsaying").css("display", "block");
+	$("#tempsaying").append(s);
+	$("#tempsaying").css("display", "block");
 	weichuncai_text = s;
 	typeWords();
 }
@@ -246,46 +245,46 @@ function clearChuncaiSay(){
 	document.getElementById("tempsaying").innerHTML = '';
 }
 function closeNotice(){
-	smjq("#chuncaisaying").css("display", "none");
+	$("#chuncaisaying").css("display", "none");
 }
 function showInput(){
 	closeChuncaiMenu();
 	closeNotice();
 	chuncaiSay("............?");
 	//setFace(1);
-	smjq("#addinput").css("display", "block");
+	$("#addinput").css("display", "block");
 }
 function closeInput(){
 	setFace(3);
-	smjq("#addinput").css("display", "none");
+	$("#addinput").css("display", "none");
 }
 function clearInput(){
 	document.getElementById("talk").value = '';
 }
 function createFace(a, b, c){
-	smjq("head").append('<div id="hiddenfaces"><img id="hf1" src="'+a+'" /><img id="hf2" src="'+b+'" /><img id="hf3" src="'+c+'" /></div>');
+	$("head").append('<div id="hiddenfaces"><img id="hf1" src="'+a+'" /><img id="hf2" src="'+b+'" /><img id="hf3" src="'+c+'" /></div>');
 	setFace(1);
 }
 function setFace(num){
 	obj = document.getElementById("hf"+num).src;
-	smjq("#chuncaiface").attr("style", "background:url("+obj+") no-repeat scroll 50% 0% transparent; width:"+imagewidth+"px;height:"+imageheight+"px;");
+	$("#chuncaiface").attr("style", "background:url("+obj+") no-repeat scroll 50% 0% transparent; width:"+imagewidth+"px;height:"+imageheight+"px;");
 }
 function getdata(el, id){
-	smjq.ajax({
+	$.ajax({
 		type:	'GET',
 		url:	_weichuncai_jsonpath,
 		cache:	'false',
 		dataType: 'html',
 		contentType: 'application/json; charset=utf8',
 		beforeSend: function(){
-			//smjq("#dialog_chat").fadeOut("normal");
-			smjq("#tempsaying").css('display', "none");
-			smjq("#dialog_chat_loading").fadeIn("normal");
+			//$("#dialog_chat").fadeOut("normal");
+			$("#tempsaying").css('display', "none");
+			$("#dialog_chat_loading").fadeIn("normal");
 		},
 		success: function(data){
-			smjq("#dialog_chat_loading").css('display', "none");
-			//smjq("#dialog_chat").fadeIn("normal");
-			smjq("#tempsaying").css('display', "");
+			$("#dialog_chat_loading").css('display', "none");
+			//$("#dialog_chat").fadeIn("normal");
+			$("#tempsaying").css('display', "");
 			var dat = eval("("+data+")");
             if(el == 'getnotice'){
 				chuncaiSay(dat.notice);
@@ -306,7 +305,7 @@ function getdata(el, id){
 				seconds=Math.floor((minsold-e_minsold)*-60);
 				chuncaiSay("我已经与主人 一起生存了 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分钟 "+seconds+" 秒的快乐时光啦～*^_^*");
 			}else if(el == 'talking'){
-				var talkcon = smjq("#talk").val();
+				var talkcon = $("#talk").val();
 				var i = in_array(talkcon, dat.ques);
 				var types = typeof(i);
 				if(types != 'boolean'){
