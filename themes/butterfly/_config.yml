@@ -494,6 +494,13 @@ footer:
     - <a href="https://boke.lu">博客录</a>&nbsp;
     - <a href="https://rssblog.cn/member/d711afd659d65c2ba2d3b18697818cf7/">RssBlog</a>&nbsp;
     - <a href="https://blogscn.fun">笔墨迹</a>&nbsp;
+  left:
+    - name: 个人主页
+      url: https://www.sinzmise.top/
+    - name: 星空魔法书·Delta
+      url: https://xlog.sinzmise.top/
+    - name: 站点地图
+      url: /sitemap.xml
   center:
     - item:
       - title: 我加入的

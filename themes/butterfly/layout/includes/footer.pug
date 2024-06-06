@@ -21,8 +21,10 @@
         .footer-menu
           h2.footer-menu-name 开始
           ul#menu-get-started.footer-menu-list
-            li.menu-item.menu-item-object-product.menu-item-type-post_type
-              a(href="/sitemap.xml") 站点地图
+            if theme.footer.left
+              each footer2link in theme.footer.left
+                li.menu-item.menu-item-object-product.menu-item-type-post_type
+                  a(href=url_for(footer2link.url))=footer2link.name
       if theme.footer.center
         each footc in theme.footer.center
           .footer-content-column
