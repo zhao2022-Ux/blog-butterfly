@@ -432,6 +432,7 @@ artalk:
   site: 星空故事·魔法小屋
   visitor: false
   option:
+    placeholder: 因某些原因，目前已经将默认使用的评论系统由Twikoo切换到Artalk，请见谅！
 
 # Chat Services
 # --------------------------------------
