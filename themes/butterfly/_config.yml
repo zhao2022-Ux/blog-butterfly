@@ -1206,6 +1206,12 @@ inject:
   bottom:
     # - <script src="xxxx"></script>
 
+    # 伪春菜
+    - <link rel="stylesheet" type="text/css" href="/weichuncai/css/style.css">
+    - <script src="/weichuncai/js/jquery.js"></script>
+    - <script src="/weichuncai/js/common.js"></script>
+    - <script src="/weichuncai/wcc-config.js"></script>
+
     # Ruffle + SWFObject
     - <script src="https://jsd.onmicrosoft.cn/npm/@ruffle-rs/ruffle"></script>
     - <script src="https://jsd.onmicrosoft.cn/gh/swfobject/swfobject@master/swfobject/swfobject.js"></script>

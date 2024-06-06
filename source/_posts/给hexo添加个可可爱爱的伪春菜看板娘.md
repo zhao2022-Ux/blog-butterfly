@@ -561,7 +561,6 @@ inject:
   bottom:
     # 主体
     - <link rel="stylesheet" type="text/css" href="/weichuncai/css/style.css">
-    - <script src="/weichuncai/js/jquery.js"></script>
     - <script src="/weichuncai/js/common.js"></script>
     - <script src="/weichuncai/wcc-config.js"></script>
 ```
