@@ -9,8 +9,6 @@ top:
   #  html: '<div class="newYear-slider"><div class="swiper-wrapper"><div class="swiper-slide" style="background-image:url(/img/longnian.webp)"></div><div class="swiper-slide" style="background-image:url(/img/longnian1.webp)"></div><div class="swiper-slide" style="background-image:url(/img/longnian2.webp)"></div><div class="swiper-slide" style="background-image:url(/img/longnian3.webp)"></div></div></div><div id="newYear-main"><div class="mask"></div><p class="title"></p><div class="newYear-time"></div><p class="today" style="text-align: right;"></p></div>	'
    - class_name: "card-clock-swf"
      name: 时间
-     html:
-       - <canvas id="canvas" style="width:60%;">时钟加载中。。。。。。</canvas><script src="/js/clock.js"></script>
-       - <div id="ww_7e202eea72d61" v='1.3' loc='auto' a='{"t":"horizontal","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/zh/" id="ww_7e202eea72d61_u" target="_blank">天气插件</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_7e202eea72d61"></script>
+     html: '<canvas id="canvas" style="width:100%;background-color: white;" width="100%" height="150"></canvas><script src="/js/clock.js"></script>'
 
 
