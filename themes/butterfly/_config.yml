@@ -1120,8 +1120,8 @@ tag_plugins:
     placeholder: /img/link.png #link_card标签默认的图标图片
 
 font_icon:
-  iconfont_css: //at.alicdn.com/t/c/font_4199232_smskxrrosb.css
-  iconfont_js: //at.alicdn.com/t/c/font_4199232_smskxrrosb.js
+  iconfont_css: //at.alicdn.com/t/c/font_4199232_h26x4fe26o.css
+  iconfont_js: //at.alicdn.com/t/c/font_4199232_h26x4fe26o.js
 
 wowjs:
   animateitem:
@@ -1200,6 +1200,9 @@ inject:
 
     # 自定义404
     - <link rel="stylesheet" href="/css/404.css">
+
+    # 侧边小飞机
+    - <link rel="stylesheet" href="/css/plane.css">
 
     # 控制面板样式
     - <link rel="stylesheet" href="/css/console.css">
