@@ -3,10 +3,10 @@
     height:150px;
     margin:0px;
     padding:0px;
-    background: url(https://dq.pl.blog.sinzmise.top/api/ipcard/img.php) no-repeat;
-    background-size:100% 100%;
-    background-attachment:fixed;
+    background-image: url(https://dq.pl.blog.sinzmise.top/api/ipcard/img.php);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 [data-theme="dark"] .card-clock-weather #weather{
-    background: url(https://dq.pl.blog.sinzmise.top/api/ipcard/img-dark.php) no-repeat;
+    background-image: url(https://dq.pl.blog.sinzmise.top/api/ipcard/img-dark.php);
 }
