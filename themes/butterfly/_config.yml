@@ -1173,6 +1173,7 @@ inject:
 
     # 自定义css
     - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/custom2.css">
     # anzhiyu 颜色方案
     - <link rel="stylesheet" href="/css/anzhiyu-var.css">
     # Heo 颜色方案
