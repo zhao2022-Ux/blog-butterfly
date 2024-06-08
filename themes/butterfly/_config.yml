@@ -484,11 +484,13 @@ messenger:
 # --------------------------------------
 footer:
   custom_text:
-    - <a title="无聊湾 🥱 The Boring Bay" href="https://boringbay.com"><img height="18px" src="https://boringbay.com/api/badge/blog.sinzmise.top"></img></a>
+    - <a title="无聊湾 🥱 The Boring Bay" href="https://boringbay.com"><img height="36px" src="https://boringbay.com/api/badge/blog.sinzmise.top"></img></a>
+    - <br>
     - <a href="https://icp.gov.moe/?keyword=20231033">萌ICP备20231033号</a>&nbsp;
     - <br>
     - <span>我加入的：</span>
     - <a href="https://zhblogs.ohyee.cc/">中文博客列表</a>&nbsp;
+    - <a href="https://storeweb.cn/member/o/1585">个站商店</a>&nbsp;
     - <a href="https://storeweb.cn/member/o/1585">个站商店</a>&nbsp;
     - <a href="https://bf.zzxworld.com/s/995">BlogFinder</a>&nbsp;
     - <a href="https://sites.link/site-info?siteType=life&siteId=64cb373190e35300a8eec654">站点聚合平台</a>&nbsp;
