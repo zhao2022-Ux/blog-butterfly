@@ -14,6 +14,15 @@ Stories是Story的复数，因为要讲述的故事太多太多，而且随着�
 这两个合起来，CetaStories就出来了！
 {% timeline CetaStories更新日志,blue %}
 
+<!-- timeline 2024/06（v1.7.0） -->
+
+# 2024/06/08
+- 全站npm化
+- 添加侧边时钟
+- 修复
+
+<!-- endtimeline -->
+
 <!-- timeline 2024/05（v1.6.0） -->
 
 # 2024/05/19
