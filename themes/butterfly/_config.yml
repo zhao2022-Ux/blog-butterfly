@@ -484,6 +484,7 @@ messenger:
 # --------------------------------------
 footer:
   custom_text:
+    - <a title="无聊湾 🥱 The Boring Bay" href="https://boringbay.com"><img height="18px" src="https://boringbay.com/api/badge/blog.sinzmise.top"></img></a>
     - <a href="https://icp.gov.moe/?keyword=20231033">萌ICP备20231033号</a>&nbsp;
     - <br>
     - <span>我加入的：</span>
