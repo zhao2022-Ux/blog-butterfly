@@ -3,17 +3,17 @@
 # --------------------------------------
 
 menu:
-  站点||icon-wenzhang:
-    隧道: /archives/ || icon-a-xiangzishouna
-    分类: /categories/ || icon-fenlei
-    标签: /tags/ || icon-fenlei-copy
-    更新日志: /update/ || icon-laba
+  站点||icon-pjh-wenzhang:
+    隧道: /archives/ || icon-pjh-a-xiangzishouna
+    分类: /categories/ || icon-pjh-fenlei
+    标签: /tags/ || icon-pjh-fenlei-copy
+    更新日志: /update/ || icon-pjh-gengxin
 
-  友链||icon-youlian:
-    友人帐: /link/ || icon-lianjie
-    朋友圈: /fcircle/ || icon-icon_pengyouquan
-    留言板: /comments/ || icon-liuyanban
-    哔哔广场: /bbs/ || icon-laba
+  友链||icon-pjh-youlian:
+    友人帐: /link/ || icon-pjh-lianjie
+    朋友圈: /fcircle/ || icon-pjh-icon_pengyouquan
+    留言板: /comments/ || icon-pjh-liuyanban
+    哔哔广场: /bbs/ || icon-pjh-laba
 
 #  我的||icon-guanyuwomen:
 #    墙上照片: /album/ || icon-zhaopian
@@ -21,11 +21,11 @@ menu:
   #   相册集: /album/ || anzhiyu-icon-images
   #   小空调: /air-conditioner/ || anzhiyu-icon-fan
 
-  关于||icon-guanyuwomenicon:
-    关于屋主: /about/ || icon-zhifeiji
-    屋主追番: /bangumis/ || icon-bilibili
-    闲言碎语: /essay/ || icon-icon-test
-    随便逛逛: javascript:toRandomPost() || icon-zuji
+  关于||icon-pjh-guanyuwomenicon:
+    关于屋主: /about/ || icon-pjh-zhifeiji
+    屋主追番: /bangumis/ || icon-pjh-bilibili
+    闲言碎语: /essay/ || icon-pjh-icon-test
+    随便逛逛: javascript:toRandomPost() || icon-pjh-zuji
 
 nav:
   display: image
@@ -498,8 +498,6 @@ footer:
   left:
     - name: 个人主页
       url: https://www.sinzmise.top/
-    - name: 星空魔法书·Delta
-      url: https://xlog.sinzmise.top/
     - name: 站点地图
       url: /sitemap.xml
   center:
@@ -539,11 +537,11 @@ footer:
       class: link3
       target: _self
       icon: fas fa-square-rss
-    - name: 日记
-      link: https://diary.sinzmise.top/
+    - name: 星空魔法书·Delta
+      link: https://xlog.sinzmise.top/
       class: link4
       target: _blank
-      icon: iconfont icon-icon_riji
+      icon: iconfont icon-pjh-icon_riji
   menu_right:
     - name: 署名-非商业性使用-相同方式共享 4.0 国际
       link: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -1120,8 +1118,8 @@ tag_plugins:
     placeholder: /img/link.png #link_card标签默认的图标图片
 
 font_icon:
-  iconfont_css: //at.alicdn.com/t/c/font_4199232_h26x4fe26o.css
-  iconfont_js: //at.alicdn.com/t/c/font_4199232_h26x4fe26o.js
+  iconfont_css: //at.alicdn.com/t/c/font_4199232_gh7up2nbg3c.css
+  iconfont_js: //at.alicdn.com/t/c/font_4199232_gh7up2nbg3c.js
 
 wowjs:
   animateitem:
