@@ -138,5 +138,178 @@ module.exports.ejectValues = (hexo, rules) => {
       prefix: "const",
       value: new URL(hexo.config.url).host,
     },
+      mirror: {
+        prefix: "const",
+        value: [
+            // `https://registry.npmmirror.com/sinzmise-cetastories/latest`,
+            // `https://registry.npmjs.org/sinzmise-cetastories/latest`,
+            // `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories/latest`,
+            `https://registry.npmmirror.com/sinzmise-cetastories/latest`
+        ],
+    },
   };
 };
+
+module.exports.selfdb = () => {
+    self.db = { //全局定义db,只要read和write,看不懂可以略过
+        read: (key, config) => {
+            if (!config) { config = { type: "text" } }
+            return new Promise((resolve, reject) => {
+                caches.open(CACHE_NAME).then(cache => {
+                    cache.match(new Request(`https://LOCALCACHE/${encodeURIComponent(key)}`)).then(function (res) {
+                        if (!res) resolve(null)
+                        res.text().then(text => resolve(text))
+                    }).catch(() => {
+                        resolve(null)
+                    })
+                })
+            })
+        },
+        write: (key, value) => {
+            return new Promise((resolve, reject) => {
+                caches.open(CACHE_NAME).then(function (cache) {
+                    cache.put(new Request(`https://LOCALCACHE/${encodeURIComponent(key)}`), new Response(value));
+                    resolve()
+                }).catch(() => {
+                    reject()
+                })
+            })
+        }
+    }
+}
+
+module.exports.lfetch = async (urls, url) => {
+    let controller = new AbortController();
+    const PauseProgress = async (res) => {
+        return new Response(await (res).arrayBuffer(), { status: res.status, headers: res.headers });
+    };
+    if (!Promise.any) {
+        Promise.any = function (promises) {
+            return new Promise((resolve, reject) => {
+                promises = Array.isArray(promises) ? promises : []
+                let len = promises.length
+                let errs = []
+                if (len === 0) return reject(new AggregateError('All promises were rejected'))
+                promises.forEach((promise) => {
+                    promise.then(value => {
+                        resolve(value)
+                    }, err => {
+                        len--
+                        errs.push(err)
+                        if (len === 0) {
+                            reject(new AggregateError(errs))
+                        }
+                    })
+                })
+            })
+        }
+    }
+    return Promise.any(urls.map(urls => {
+        return new Promise((resolve, reject) => {
+            fetch(urls, {
+                signal: controller.signal
+            })
+                .then(PauseProgress)
+                .then(res => {
+                    if (res.status == 200) {
+                        controller.abort();
+                        resolve(res)
+                    } else {
+                        reject(res)
+                    }
+                })
+        })
+    }))
+}
+
+module.exports.fullpath = (path) => {
+    path = path.split('?')[0].split('#')[0]
+    if (path.match(/\/$/)) {
+        path += 'index'
+    }
+    if (!path.match(/\.[a-zA-Z]+$/)) {
+        path += '.html'
+    }
+    return path
+}
+
+module.exports.generate_blog_urls = () => {
+    const npmmirror = [
+        // `https://unpkg.zhimg.com/${packagename}@${blogversion}`,
+        // `https://npm.elemecdn.com/${packagename}@${blogversion}`,
+        // `https://cdn1.tianli0.top/npm/${packagename}@${blogversion}`,
+        // `https://cdn.afdelivr.top/npm/${packagename}@${blogversion}`,
+        `https://registry.npmmirror.com/${packagename}/${blogversion}/files`
+    ]
+    for (var i in npmmirror) {
+        npmmirror[i] += path
+    }
+    return npmmirror
+}
+
+module.exports.get_newest_version = async (ejectMirror) => {
+    return lfetch(ejectMirror, ejectMirror[0])
+        .then(res => res.json())
+        .then(res.version)
+}
+
+module.exports.set_newest_version = async (ejectMirror) => {
+    return lfetch(ejectMirror, ejectMirror[0])
+        .then(res => res.json()) //JSON Parse
+        .then(async res => {
+            await db.write('blog_version', res.version) //写入
+            return;
+        })
+}
+
+module.exports.set_newest_time = () => {
+    setInterval(async() => {
+        await set_newest_version(mirror) //定时更新,一分钟一次
+    }, 60*1000);
+
+    setTimeout(async() => {
+        await set_newest_version(mirror)//打开五秒后更新,避免堵塞
+    },5000)
+    function getFileType(fileName) {
+        suffix=fileName.split('.')[fileName.split('.').length-1]
+        if(suffix=="html"||suffix=="htm") {
+            return 'text/html';
+        }
+        if(suffix=="js") {
+            return 'text/javascript';
+        }
+        if(suffix=="css") {
+            return 'text/css';
+        }
+        if(suffix=="jpg"||suffix=="jpeg") {
+            return 'image/jpeg';
+        }
+        if(suffix=="ico") {
+            return 'image/x-icon';
+        }
+        if(suffix=="png") {
+            return 'image/png';
+        }
+        return 'text/plain';
+    }
+}
+
+module.exports.handle = async(req)=> {
+    const urlStr = req.url
+    const urlObj = new URL(urlStr);
+    const urlPath = urlObj.pathname;
+    const domain = urlObj.hostname;
+    //从这里开始
+    lxs=[]
+    if(domain === "blog.sinzmise.top"){//这里写你需要拦截的域名
+        var l=lfetch(generate_blog_urls('karunari',await db.read('blog_version') || 'latest',fullpath(urlPath))) //将`karunari`改为自己的npm包名
+        return l
+            .then(res=>res.arrayBuffer())
+            .then(buffer=>new Response(buffer,{headers:{"Content-Type":`${getFileType(fullpath(urlPath).split("/")[fullpath(urlPath).split("/").length-1].split("\\")[fullpath(urlPath).split("/")[fullpath(urlPath).split("/").length-1].split("\\").length-1])};charset=utf-8`}}));//重新定义header
+    }
+    else{
+        return fetch(req);
+    }
+}
+
+module.exports.external = ['selfdb','lfetch','fullpath','generate_blog_urls','get_newest_version','set_newest_version','set_newest_time','handle']
