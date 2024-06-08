@@ -19,7 +19,8 @@ Stories是Story的复数，因为要讲述的故事太多太多，而且随着�
 # 2024/06/08
 - 全站npm化
 - 添加侧边时钟
-- 修复
+- 优化canonical
+- 将搜索引擎更换为DocSearch ~~（搞了半天居然是canonical的问题）~~
 
 <!-- endtimeline -->
 
