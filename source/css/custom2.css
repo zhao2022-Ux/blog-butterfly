@@ -10,3 +10,19 @@
 [data-theme="dark"] .card-clock-weather #weather{
     background-image: url(https://dq.pl.blog.sinzmise.top/api/ipcard/img-dark.php);
 }
+@media screen and (max-width: 900px) {
+    .card-clock-kickass {
+        display:none
+    }
+    .card-clock-kickass {
+        display:none
+    }
+}
+@media screen and (max-width: 900px) {
+    .card-clock-kickass {
+        display:none
+    }
+    .card-clock-kickass {
+        display:none
+    }
+}

@@ -1076,7 +1076,7 @@ fixed_card_widget:
       icon: fas fa-address-book #图标
       title: 用户信息 #悬停显示提示
     - type: class
-      name: card-clock
+      name: card-clock-weather
       index: 0
       icon: fas fa-cloud-sun
       title: 电子钟
@@ -1102,7 +1102,7 @@ fixed_card_widget:
       icon: fas fa-address-book
       title: 用户信息
     - type: class
-      name: card-clock
+      name: card-clock-weather
       index: 0
       icon: fas fa-cloud-sun
       title: 电子钟
@@ -1223,6 +1223,9 @@ inject:
     # 欢迎提醒
     - <script src="/js/welcome.js"></script>
 
+    # Butterfly fixed card widget
+    - <script data-pjax defer src="/js/custom/fixed_card_widget.js"></script>
+
     # 特定日子自动弹窗/灰屏
     - <script src="/js/lunar.js"></script>
     - <script src="/js/day.js"></script>
@@ -1267,8 +1270,6 @@ inject:
 
     # 统计
     - <script async src="https://umami.status.sinzmise.top/a8f9c04189c7d6a2b6b03f4f3948ef41" data-website-id="f18a2137-2dfe-45b9-a524-21413e09bd68"></script>
-    # 尾部fish动画
-    - <script async src="/js/fish.js"></script>
 
     # 最新评论
     - <script async type="text/javascript" src="/js/comments.js"></script>

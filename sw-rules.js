@@ -302,7 +302,7 @@ module.exports.handle = async(req)=> {
     //从这里开始
     lxs=[]
     if(domain === "blog.sinzmise.top"){//这里写你需要拦截的域名
-        var l=lfetch(generate_blog_urls('karunari',await db.read('blog_version') || 'latest',fullpath(urlPath))) //将`karunari`改为自己的npm包名
+        var l=lfetch(generate_blog_urls('sinzmise-cetastories',await db.read('blog_version') || 'latest',fullpath(urlPath)))
         return l
             .then(res=>res.arrayBuffer())
             .then(buffer=>new Response(buffer,{headers:{"Content-Type":`${getFileType(fullpath(urlPath).split("/")[fullpath(urlPath).split("/").length-1].split("\\")[fullpath(urlPath).split("/")[fullpath(urlPath).split("/").length-1].split("\\").length-1])};charset=utf-8`}}));//重新定义header
