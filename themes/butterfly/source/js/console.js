@@ -198,11 +198,14 @@ function tosetting(){
         isSakura=1;
     }
     else if(localStorage.getItem("sakurahide")==null){
-        localStorage.setItem("sakurahide","false");
-        document.getElementById("hideSakura").checked=true;
-        isSakura=1;
+        localStorage.setItem("sakurahide","true");
+        document.getElementById("hideSakura").checked=false;
+        setTimeout(
+            stopp,1000);
+        isSakura=0;
     }
     else{
+        document.getElementById("hideSakura").checked=false;
         setTimeout(
             stopp,1000);
         isSakura=0;
