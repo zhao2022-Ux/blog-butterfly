@@ -430,6 +430,11 @@
           descr: 天在将暗未暗时最美 爱在将爱未爱时最迷人
           link: https://www.landiaoshike.com/
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://www.landiaoshike.com/
+        - name: XenWayne’s Blog
+          avatar: https://jsd.cdn.storisinz.site/gh/XenWayne/sitefile@master/img/avatar_square.png
+          descr: 寸进具欢喜，万物皆可爱。
+          link: https://xenwayne.top
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://xenwayne.top
 - class_name: 友谊长存
   flink_style: anzhiyu
   class_desc: 无评论系统的博客（相识即是缘分）
