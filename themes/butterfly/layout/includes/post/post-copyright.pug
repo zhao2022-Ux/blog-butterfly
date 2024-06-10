@@ -6,24 +6,24 @@ if theme.post_copyright.enable && page.copyright !== false
   .post-copyright
     .post-copyright__title
       span.post-copyright-info
-        h #[=page.title]
+        h.p-name #[=page.title]
     .post-copyright__type
       span.post-copyright-info
-        a(href=url_for(url))= theme.post_copyright.decode ? decodeURI(url) : url
+        a.u-url(href=url_for(url))= theme.post_copyright.decode ? decodeURI(url) : url
     .post-copyright-m
       .post-copyright-m-info
         .post-copyright-a
           h 作者
           .post-copyright-cc-info
-            h=author
+            h.p-author=author
         .post-copyright-c
           h 发布于
           .post-copyright-cc-info
-            h=date(page.date, config.date_format)
+            h.dt-published=date(page.date, config.date_format)
         .post-copyright-u
           h 更新于
           .post-copyright-cc-info
-            h=date(page.updated, config.date_format)
+            h.dt-updated=date(page.updated, config.date_format)
         .post-copyright-c
           h 许可协议
           .post-copyright-cc-info

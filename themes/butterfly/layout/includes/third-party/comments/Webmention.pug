@@ -1,0 +1,29 @@
+- const { option } = theme.webmention
+- const webmention_js = theme.CDN.webmention_js || 'https://jsd.onmicrosoft.cn/gh/PlaidWeb/webmention.js@main/static/webmention.min.js'
+- const webmention_css = theme.CDN.webmention_css || 'https://jsd.onmicrosoft.cn/gh/PlaidWeb/webmention.js@main/static/webmention.css'
+script.
+    function loadWebmention () {
+
+        const config = Object.assign({
+            src: '!{webmention_js}'
+        },!{JSON.stringify(option)})
+
+        let ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+
+        if (typeof WebMention === 'function') document.getElementById('webmention-warp').insertAdjacentElement('afterbegin',ele)
+        else {
+            getCSS('!{url_for(webmention_css)}').then(document.getElementById('webmention-warp').insertAdjacentElement('afterbegin',ele))
+        }
+    }
+
+    if ('!{theme.comments.use[0]}' === 'Webmention' || !!{theme.comments.lazyload}) {
+        if (!{theme.comments.lazyload}) btf.loadComment(document.getElementById('webmentions'), loadWebmention)
+        else loadWebmention()
+    } else {
+        function loadOtherComment () {
+            loadWebmention()
+        }
+    }

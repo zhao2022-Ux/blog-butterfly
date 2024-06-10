@@ -15,5 +15,7 @@ if hexo-config('preloader.enable')
     @import './_load_style/icat'
   else if hexo-config('preloader.load_style') == 'heo'
     @import './_load_style/heo'
+  else if hexo-config('preloader.load_style') == 'story'
+    @import './_load_style/story'
   else
     @import './_load_style/default'

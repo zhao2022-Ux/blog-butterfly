@@ -22,6 +22,15 @@ meta(name="copyright" content=pageCopyright)
 meta(name ="format-detection" content="telephone=no")
 meta(name="theme-color" content=themeColor)
 
+if theme.IndieWeb.enable && theme.IndieWeb.IndieAuth.enable
+  - var authlink= theme.IndieWeb.IndieAuth.auth_link || "https://indieauth.com/auth"
+  - var tokenlink= theme.IndieWeb.IndieAuth.token_link || "https://tokens.indieauth.com/token"
+  link(rel="authorization_endpoint" href=authlink)
+  link(rel="token_endpoint" href=tokenlink)
+
+if theme.IndieWeb.enable && theme.IndieWeb.webmention
+  link(rel="webmention" href="https://webmention.io/"+ config.link +"/webmention")
+
 //- Open_Graph
 include ./head/Open_Graph.pug
 

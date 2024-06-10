@@ -1,12 +1,12 @@
 extends includes/layout.pug
 
 block content
-  #post
+  #post.h-entry
     if top_img === false
       include includes/header/post-info.pug
     if theme.post_head_ai_description
       include includes/ai-info.pug
-    article#article-container.post-content!=page.content
+    article#article-container.post-content.e-content!=page.content
     if (theme.orlike.enable)
       #orlike-box.orlike-box
         script.
@@ -27,7 +27,7 @@ block content
       if (theme.post_meta.post.tags)
         .post-meta__tag-list
           each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+            a(href=url_for(item.path)).post-meta__tags.p-category #[=item.name]
       include includes/third-party/share/index.pug
         
     if theme.reward.enable && theme.reward.QR_code

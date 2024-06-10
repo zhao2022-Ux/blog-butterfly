@@ -83,8 +83,9 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/SinzMise || Github
-  fas fa-envelope: mailto:email@sinzmise.top || Email
+  fas fa-house: https://www.sinzmise.top/ || Home || u-url
+  fab fa-github: https://github.com/SinzMise || Github || u-url
+  fas fa-envelope: mailto:email@sinzmise.top || Email || u-email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -324,7 +325,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: Twikoo,Artalk # Valine,Disqus
+  use: Twikoo,Webmention # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -350,6 +351,9 @@ disqusjs:
 # https://www.livere.com/
 livere:
   uid:
+
+webmention:
+  option:
 
 # gitalk
 # https://github.com/gitalk/gitalk
@@ -763,7 +767,7 @@ subtitle:
 preloader:
   enable: true
   load_color: 'var(--story-theme)' # '#37474f'
-  load_style: icat # default|gear|ironheart|scarecrow|triangles|wizard|image|icat|heo
+  load_style: story # default|gear|ironheart|scarecrow|triangles|wizard|image|icat|heo
   load_image: /img/load-light.png # url
   load_image_dark: /img/load-dark.png
 
@@ -1157,6 +1161,14 @@ qexo:
   enable: true
   serverURL: https://houtai.hexo.sinzmise.top
 
+IndieWeb:
+  enable: true
+  IndieAuth:
+    enable: true
+    auth_link:
+    token_link:
+  webmention: true
+
 # 博客设置
 setting:
   # 笒鬼鬼音乐播放器
@@ -1233,7 +1245,7 @@ inject:
     # 特定日子自动弹窗/灰屏
     - <script src="/js/lunar.js"></script>
     - <script src="/js/day.js"></script>
-    - <script type="text/javascript" src="https://npm.elemecdn.com/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
+    - <script type="text/javascript" src="https://jsd.onmicrosoft.cn/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
 
     # Live2D
     - <script src="/js/autoload.js"></script>
