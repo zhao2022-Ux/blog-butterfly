@@ -497,12 +497,12 @@ footer:
     - <span>我加入的：</span>
     - <a href="https://zhblogs.ohyee.cc/" target="_blank">中文博客列表</a>&nbsp;
     - <a href="https://storeweb.cn/member/o/1585" target="_blank">个站商店</a>&nbsp;
-    - <a href="https://storeweb.cn/member/o/1585" target="_blank">个站商店</a>&nbsp;
     - <a href="https://bf.zzxworld.com/s/995" target="_blank">BlogFinder</a>&nbsp;
     - <a href="https://sites.link/site-info?siteType=life&siteId=64cb373190e35300a8eec654" target="_blank">站点聚合平台</a>&nbsp;
     - <a href="https://boke.lu" target="_blank">博客录</a>&nbsp;
     - <a href="https://rssblog.cn/member/d711afd659d65c2ba2d3b18697818cf7/" target="_blank">RssBlog</a>&nbsp;
     - <a href="https://blogscn.fun" target="_blank">笔墨迹</a>&nbsp;
+    - <a href="https://forever.dreamerhe.cn/" target="_blank">梦境列车</a>&nbsp;
     - <a href="https://firewood.news/" target="_blank">积薪</a>&nbsp;
     - <a href="https://daohang.lusongsong.com/" target="_blank">博客大全</a>&nbsp;
   left:
@@ -524,6 +524,8 @@ footer:
             url: https://travel.moe/go.html
           - name: 博客录-随机博客
             url: https://boke.lu/sj
+          - name: 梦境列车 · 时空穿梭
+            url: https://forever.dreamerhe.cn/planet-shuttle
           - name: 笔墨迹·随机访问
             url: https://blogscn.fun/random.html
     - item:
@@ -1072,6 +1074,11 @@ about:
     BlogFinder: https://bf.zzxworld.com/s/995
     个站商店: https://storeweb.cn/member/o/1585
     站点聚合平台: https://sites.link/site-info?siteType=life&siteId=64cb373190e35300a8eec654
+    博客录: https://boke.lu/
+    笔墨迹: https://blogscn.fun/
+    博客大全: https://daohang.lusongsong.com/
+    Webring: https://xn--sr8hvo.ws/
+    梦境列车: https://forever.dreamerhe.cn/
     # xx: xxxx
 
 LA:
