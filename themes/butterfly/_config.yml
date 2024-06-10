@@ -488,9 +488,11 @@ messenger:
 # --------------------------------------
 footer:
   custom_text:
-    - <a title="无聊湾 🥱 The Boring Bay" href="https://boringbay.com" target="_blank"><img height="36px" src="https://boringbay.com/api/badge/blog.sinzmise.top"></img></a>
-    - <br>
     - <a href="https://icp.gov.moe/?keyword=20231033" target="_blank">萌ICP备20231033号</a>&nbsp;
+    - <br>
+    - <a href="https://xn--sr8hvo.ws/previous">←</a>
+    - An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
+    - <a href="https://xn--sr8hvo.ws/next">→</a>
     - <br>
     - <span>我加入的：</span>
     - <a href="https://zhblogs.ohyee.cc/" target="_blank">中文博客列表</a>&nbsp;
@@ -557,6 +559,9 @@ footer:
     - name: 本站已加入BLOGS·CN
       link: https://blogscn.fun/
       image: https://photo.xiangming.site/img/blogscnlogo.png
+    - name: 无聊湾 🥱 The Boring Bay
+      link: https://boringbay.com
+      image: https://boringbay.com/api/badge/blog.sinzmise.top
 
 # Analysis
 # --------------------------------------
