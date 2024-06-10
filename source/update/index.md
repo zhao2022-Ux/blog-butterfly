@@ -21,6 +21,7 @@ Stories是Story的复数，因为要讲述的故事太多太多，而且随着�
 - 优化侧边时钟
 - 优化canonical
 - 将搜索引擎更换为DocSearch ~~（搞了半天居然是canonical的问题）~~
+- 添加IndieWeb支持（顺便连Webring也加入了）
 
 <!-- endtimeline -->
 
