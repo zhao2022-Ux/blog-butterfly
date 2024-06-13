@@ -14,9 +14,17 @@ script.
             ele.setAttribute(key, config[key])
         }
 
-        if (typeof WebMention === 'function') document.getElementById('webmention-warp').insertAdjacentElement('afterbegin',ele)
+        if (document.getElementById("webmention_css")) document.getElementById('webmention-warp').insertAdjacentElement('afterbegin',ele)
         else {
-            getCSS('!{url_for(webmention_css)}').then(document.getElementById('webmention-warp').insertAdjacentElement('afterbegin',ele))
+            function includeWMStyle(url) {
+                var link = document.createElement("link");
+                link.id = "webmention_css";
+                link.rel = "stylesheet";
+                link.type = "text/css";
+                link.href = url;
+                document.getElementsByTagName("head")[0].appendChild(link);
+            }
+            includeWMStyle("!{url_for(webmention_css)}").then(document.getElementById('webmention-warp').insertAdjacentElement('afterbegin',ele))
         }
     }
 
