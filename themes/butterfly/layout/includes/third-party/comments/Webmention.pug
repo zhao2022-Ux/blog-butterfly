@@ -5,7 +5,8 @@ script.
     function loadWebmention () {
 
         const config = Object.assign({
-            src: '!{webmention_js}'
+            src: '!{webmention_js}',
+            async
         },!{JSON.stringify(option)})
 
         let ele = document.createElement('script')
