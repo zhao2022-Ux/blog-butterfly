@@ -435,6 +435,11 @@
           descr: 寸进具欢喜，万物皆可爱。
           link: https://xenwayne.top
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://xenwayne.top
+        - name: 白丁往事`Blog
+          link: https://blog.rayvv.com/
+          avatar: https://blog.rayvv.com/img/logo.png
+          descr: 起风而行，风静
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.rayvv.com/
 - class_name: 友谊长存
   flink_style: anzhiyu
   class_desc: 无评论系统的博客（相识即是缘分）
