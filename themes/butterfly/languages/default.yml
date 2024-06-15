@@ -121,3 +121,11 @@ load_more: Load More
 
 error404:
   back_button: back
+
+fps:
+  normal1: Very Good
+  normal2: Good
+  laggy1: Normal
+  laggy2: Bad
+  laggy3: Very Bad
+  laggy4: What????

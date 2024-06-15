@@ -29,22 +29,22 @@ if(window.localStorage.getItem("fpson")=="1"){
         if (now > 1000 + lastTime) {
             var fps = Math.round((frame * 1000) / (now - lastTime));
             if(fps<=6){
-                var kd=`<span style="color:#bd0000">卡成ppt</span>`
+                var kd=`<span style="color:#bd0000">${GLOBAL_LANG.fps.laggy4}</span>`
             }
             else if(fps<=10){
-                var kd=`<span style="color:red">电竞级帧率</span>`
+                var kd=`<span style="color:red">${GLOBAL_LANG.fps.laggy3}</span>`
             }
             else if(fps<=14){
-                var kd=`<span style="color:yellow">难受</span>`
+                var kd=`<span style="color:yellow">${GLOBAL_LANG.fps.laggy2}</span>`
             }
             else if(fps<24){
-                var kd=`<span style="color:orange">卡</span>`
+                var kd=`<span style="color:orange">${GLOBAL_LANG.fps.laggy1}</span>`
             }
             else if(fps<=40){
-                var kd=`<span style="color:green">...</span>`
+                var kd=`<span style="color:green">${GLOBAL_LANG.fps.normal2}</span>`
             }
             else{
-                var kd=`<span style="color:#425aef">正常</span>`
+                var kd=`<span style="color:#425aef">${GLOBAL_LANG.fps.normal1}</span>`
             }
             document.getElementById("fps").innerHTML=`FPS:${fps} ${kd}`;
             frame = 0;

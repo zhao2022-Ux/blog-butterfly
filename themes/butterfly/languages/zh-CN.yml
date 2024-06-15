@@ -122,3 +122,11 @@ load_more: 加载更多
 
 error404:
   back_button: 返回
+
+fps:
+  normal1: 非常好
+  normal2: 很好
+  laggy1: 卡
+  laggy2: 难受
+  laggy3: 电竞级帧率
+  laggy4: 卡成ppt
