@@ -138,6 +138,7 @@ module.exports.ejectValues = (hexo, rules) => {
             prefix: "const",
             value: new URL(hexo.config.url).host,
         },
+        /* 全站npm化需要的变量 */
         mirror: {
             prefix: "const",
             value: [
@@ -150,6 +151,7 @@ module.exports.ejectValues = (hexo, rules) => {
     };
 };
 
+/* 全站npm化 */
 module.exports.selfdb = () => {
     self.db = { //全局定义db,只要read和write,看不懂可以略过
         read: (key, config) => {
