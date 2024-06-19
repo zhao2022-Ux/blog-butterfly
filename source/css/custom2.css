@@ -4,7 +4,7 @@
     margin:0px;
     padding:0px;
     background-image: url(https://dq.pl.blog.sinzmise.top/api/ipcard/img.php);
-    background-size: cover;
+    background-size: 100% 150px;
     background-repeat: no-repeat;
 }
 [data-theme="dark"] .card-clock-weather #weather{
