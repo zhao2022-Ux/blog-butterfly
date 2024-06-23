@@ -2,7 +2,7 @@
 title: 自建Meting服务
 description: Meting官方API用不了了，所以。。。。。
 swiper_index: 5
-cover: https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230128/30165599-36623bea-93a6-11e7-8956-1ddf99ce0e6f.2rbu2i9xfvy0.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230128/30165599-36623bea-93a6-11e7-8956-1ddf99ce0e6f.2rbu2i9xfvy0.webp
 tags:
   - 站点折腾
   - 自建部署
@@ -21,9 +21,9 @@ date: 2023-01-19 19:52:34
 点击下方按钮，跳转至 Vercel：
 [![跳转到Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/xizeyoupan/Meting-API)
 名字随便写，然后点击“Create”
-![msedge_4fdyFO3sCF](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230119/msedge_4fdyFO3sCF.7hpgbpasakc0.webp)
+![msedge_4fdyFO3sCF](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230119/msedge_4fdyFO3sCF.7hpgbpasakc0.webp)
 看到这个就算成功了
-![msedge_fs4WGcMy4l](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230119/msedge_fs4WGcMy4l.326qjm58vf20.webp)
+![msedge_fs4WGcMy4l](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230119/msedge_fs4WGcMy4l.326qjm58vf20.webp)
 <!-- endtab -->
 
 <!-- tab 服务器部署 -->

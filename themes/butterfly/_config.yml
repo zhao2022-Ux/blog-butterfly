@@ -58,7 +58,7 @@ hometop:
   banner:
     tips: 今天大佬们又发布了什么呢？
     title: 哔哔广场
-    image: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
+    image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
     link: /bbs/
 
 # Code Blocks (代碼相關)
@@ -523,7 +523,7 @@ footer:
           - name: 异次元之旅
             url: https://travel.moe/go.html
           - name: 博客录-随机博客
-            url: https://boke.lu/sj
+            url: https://bokelu.suijiboke.gs
           - name: 梦境列车 · 时空穿梭
             url: https://forever.dreamerhe.cn/planet-shuttle
           - name: 笔墨迹·随机访问
@@ -1039,6 +1039,11 @@ about:
     image: https://img.meuicat.com/blog/17.webp
     describe: 欢迎各位乘坐星空的列车，来到这座充满故事的魔法小屋
     tips: Welcome all travelers with stories to this magical cabin full of stories（Translate by BaiDu）
+    date: 2021/12/17 14:53:11
+    Introductions:
+      - 测试一下
+      - 测试
+      - 233
 
     bar:
       year: 2007
@@ -1239,7 +1244,7 @@ inject:
     - <style id="themeColor"></style>
 
     # ECharts
-    - <script src="https://www.jsdelivr.ren/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+    - <script src="https://jsd.cdn.storisinz.site/npm/echarts@4.9.0/dist/echarts.min.js"></script>
 
   bottom:
     # - <script src="xxxx"></script>
@@ -1292,7 +1297,7 @@ inject:
     - <script src="/js/nav.js"></script>
     # 控制面板js
     - <script src="/js/console.js"></script>
-    - <script src="https://www.jsdelivr.ren/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script>
+    - <script src="https://jsd.cdn.storisinz.site/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script>
     # 右键菜单
     - <script type="text/javascript" src="/js/rightmenu.js"></script>
 

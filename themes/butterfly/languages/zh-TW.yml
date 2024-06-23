@@ -130,3 +130,47 @@ fps:
   laggy2: 難受
   laggy3: 電競級幀率
   laggy4: 卡成ppt
+
+about:
+  introduction:
+    hello: 您好！
+    iam: '我是 %s'
+    aboutme: 博主資訊
+    aboutsite: 網站資訊
+  introduction_bar:
+    born: 生於
+    constellation: 星座
+    hobby: 愛好
+    career: 職業
+  one_layout:
+    living: 現在生活在
+    aboutme: 博主資訊
+    mbti:
+      mbti: MBTI
+      learn: '在 <a href="https://www.16personalities.com/" target="_blank">16Personalities</a> 查看有關 <a href="%s" target="_blank">%s</a> 的更多資訊'
+    motto: 座右銘
+    account:
+      myaccount: 帳號
+      social: 社交平臺
+  two_layout:
+    about: 本站資訊
+    runtime: 運行時間
+    statistics:
+      articles: '%s 篇文章'
+      comments: 評論數量
+      comment: 個評論
+      tags: '%s 個分類'
+      totalcounts: '%s 字'
+  stats:
+    tips: 訪問量
+    title: 訪問統計
+    tip:
+      box: '統計資訊來自 <a href="https://v6.51.la/land/%s" target="_blank">51la</a>'
+      btn: 更多統計
+  union:
+    tips: 共創
+    title: 站長聯盟
+  content:
+    tips: 心路歷程
+    title: 關於本站的介紹
+  error: '錯誤：評論總數功能無法獲取到正確的元素，請檢查頁面是否正常！'

@@ -6,7 +6,7 @@ tags:
 categories:
   - 站点折腾
 cover: >-
-  https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240216/16V9BANNER091002000.4rmqc30bwnc0.jpg
+  https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240216/16V9BANNER091002000.4rmqc30bwnc0.jpg
 abbrlink: 54787
 date: 2024-02-16 17:17:26
 ---
@@ -568,11 +568,11 @@ inject:
 我为什么会将伪春菜定义为桌面精灵而不是桌宠？
 是因为相比于桌宠来说，伪春菜比桌宠的功能还多得多
 因此我即使开着虚拟桌宠模拟器，我有时也会开着伪春菜
-![ssp_OgKZgUjISo](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240216/ssp_OgKZgUjISo.1rssdhcjowjk.webp)
+![ssp_OgKZgUjISo](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240216/ssp_OgKZgUjISo.1rssdhcjowjk.webp)
 （甚至我电脑卡的时候也会提醒我，虽然我电脑没有卡死QWQ）
 
 还有，我之前看[关于Kikka](https://steve02081504.github.io/2020/02/27/about-kikka/)这篇文章，有一句话很吸引我：
-![msedge_h7th45Tk9U](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240216/msedge_h7th45Tk9U.47mkdav98180.webp)
+![msedge_h7th45Tk9U](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240216/msedge_h7th45Tk9U.47mkdav98180.webp)
 也据此可以看出，在2020年，伪春菜这个圈子越来越难活下去
 更何况现在是2024。。。。。。
 

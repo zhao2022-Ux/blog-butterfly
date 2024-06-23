@@ -130,3 +130,47 @@ fps:
   laggy2: 难受
   laggy3: 电竞级帧率
   laggy4: 卡成ppt
+
+about:
+  introduction:
+    hello: 您好！
+    iam: '我是 %s'
+    aboutme: 博主信息
+    aboutsite: 站点信息
+  introduction_bar:
+    born: 生于
+    constellation: 星座
+    hobby: 爱好
+    career: 职业
+  one_layout:
+    living: 现在生活在
+    aboutme: 博主信息
+    mbti:
+      mbti: 性格
+      learn: '在 <a href="https://www.16personalities.com/" target="_blank">16Personalities</a> 了解关于 <a href="%s" target="_blank">%s</a> 的更多信息'
+    motto: 座右铭
+    account:
+      myaccount: 账号
+      social: 社交平台
+  two_layout:
+    about: 本站信息
+    runtime: 运行时间
+    statistics:
+      articles: '%s 篇文章'
+      comments: 评论数量
+      comment: 个评论
+      tags: '%s 个分类'
+      totalcounts: '%s 字'
+  stats:
+    tips: 浏览
+    title: 访问统计
+    tip:
+      box: '统计信息来自 <a href="https://v6.51.la/land/%s" target="_blank">51la</a> 网站统计'
+      btn: 更多统计
+  union:
+    tips: 共创
+    title: 站长联盟
+  content:
+    tips: 心路历程
+    title: 关于本站的介绍
+  error: '错误：评论总数功能无法获取到正确的元素，请检查页面是否正常！'

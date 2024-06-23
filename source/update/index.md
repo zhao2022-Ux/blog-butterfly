@@ -4,7 +4,7 @@ date: 2024-05-11 17:42:39
 top_img: false
 aside: false
 top_page: true
-top_bg: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240511/t.mwm.3d4lwazymy.webp
+top_bg: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240511/t.mwm.3d4lwazymy.webp
 top_item: 更新日志
 top_title: CetaStories更新日志
 top_tips: 博客更新都会记录到这里哦~~

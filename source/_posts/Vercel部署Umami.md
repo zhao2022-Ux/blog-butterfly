@@ -1,7 +1,7 @@
 ---
 title: Vercel部署Umami
 abbrlink: 28733
-cover: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/umami-x-vercel.37hd3icfx5y0.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/umami-x-vercel.37hd3icfx5y0.webp
 date: 2023-07-14 08:48:13
 tags:
   - 站点折腾
@@ -23,7 +23,7 @@ Umami支持MySQL和PostgreSQL数据库，选择自己喜欢的数据库进行数
 # 数据库部署
 {% note warning simple %}
 目前已知Supabase部署失败原因：
-![msedge_DL0IGBX6O1](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230716/msedge_DL0IGBX6O1.2876ewjv3lz4.webp)
+![msedge_DL0IGBX6O1](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230716/msedge_DL0IGBX6O1.2876ewjv3lz4.webp)
 {% endnote %}
 {% tabs 数据库部署 %}
 <!-- tab MySQL -->
@@ -31,10 +31,10 @@ Umami支持MySQL和PostgreSQL数据库，选择自己喜欢的数据库进行数
 <!-- tab FREEDB.TECH -->
 打开[FREEDB.TECH](https://freedb.tech/)，注册登录，创建数据库和用户
 
-![msedge_gi9vdCGiIt](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_gi9vdCGiIt.48n3g4pzzvw0.webp)
+![msedge_gi9vdCGiIt](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_gi9vdCGiIt.48n3g4pzzvw0.webp)
 
 得到你的数据库和密码：
-![msedge_fGVbS9POH4](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_fGVbS9POH4.409i0oz7v9k0.webp)
+![msedge_fGVbS9POH4](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_fGVbS9POH4.409i0oz7v9k0.webp)
 
 组合一下：
 ```url
@@ -49,7 +49,7 @@ mysql://（DATABASE USER）:（PASSWORD）@（HOST）:（PORT）/（DATABASE NAM
 {% endnote %}
 打开[db4free](https://www.db4free.net/)，点击“注册免费账号”，输入信息然后点击“注册”，一会后你会收到如下邮件：
 
-![网易灵犀办公_JmFVOuOEIc](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/网易灵犀办公_JmFVOuOEIc.30smaneqwfa0.webp)
+![网易灵犀办公_JmFVOuOEIc](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/网易灵犀办公_JmFVOuOEIc.30smaneqwfa0.webp)
 
 访问邮件提供的确认网址，数据库就创建成功了
 
@@ -60,7 +60,7 @@ mysql://（你设置的数据库用户名）:（你设置的数据库密码）@d
 <!-- endtab -->
 <!-- tab SQLPub（推荐） -->
 访问[SQLPub](https://sqlpub.com/)，输入账号密码，点击申请，申请成功后会有如下提示
-![msedge_8FyIBEs6Ja](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_8FyIBEs6Ja.14toupglasps.webp)
+![msedge_8FyIBEs6Ja](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_8FyIBEs6Ja.14toupglasps.webp)
 然后将里面的替换掉下面括号里的内容（注意：括号得去掉）：
 ```url
 mysql://（数据库用户）:（数据库密码）@（数据库地址）/（数据库名称）
@@ -80,12 +80,12 @@ mysql://（数据库用户）:（数据库密码）@（数据库地址）/（数
 - Pricing Plan：Free白嫖
 
 创建成功后，打开菜单Project Setting -> Database -> Connection string -> URI，如下图：
-![image](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/image.3jutc7fp3fc0.webp)
+![image](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/image.3jutc7fp3fc0.webp)
 将红框内的内容复制下来，然后把`[YOUR-PASSWORD]`替换成你生成的密码，复制备用
 <!-- endtab -->
 <!-- tab ElephantSQL -->
 打开ElephantSQL，推荐使用Github登录，创建一个新的实例。Plan选择Tiny Turtle(Free)、Region随意，提交创建。
-![msedge_ELQQZsgMsH](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_ELQQZsgMsH.68dwkz5in1w0.webp)
+![msedge_ELQQZsgMsH](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_ELQQZsgMsH.68dwkz5in1w0.webp)
 打开刚刚创建的示例，找到URL，点击眼睛图标，然后将URL复制下来备用
 <!-- endtab -->
 {% endtabs %}
@@ -99,11 +99,11 @@ mysql://（数据库用户）:（数据库密码）@（数据库地址）/（数
 {% note warning simple %}如果你未登录的话，Vercel 会让你注册或登录，请使用 GitHub 账户进行快捷登录。{% endnote %}
 2. 输入一个你喜欢的 Vercel 项目名称并点击 Create 继续:
 
-![msedge_EtpjrPwPlG](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_EtpjrPwPlG.4zkys81bppo0.webp)
+![msedge_EtpjrPwPlG](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_EtpjrPwPlG.4zkys81bppo0.webp)
 
 3. 配置环境变量
 
-![msedge_EtpjrPwPlG](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_EtpjrPwPlG.4zkys81bppo0.webp)
+![msedge_EtpjrPwPlG](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_EtpjrPwPlG.4zkys81bppo0.webp)
 部署完成后，会跳转到环境变量部分，请按照如下方式配置环境变量：
 | 名称      | 说明	 |
 | ----------- | ----------- |
@@ -111,28 +111,28 @@ mysql://（数据库用户）:（数据库密码）@（数据库地址）/（数
 |HASH_SALT|（必填）任意字符串，推荐[这里](https://uuid.bmcx.com/)生成一串UUID|
 |TRACKER_SCRIPT_NAME|（建议）任意字符串，推荐[这里](https://uuid.bmcx.com/)生成一串UUID（不填会导致去广告插件把这段脚本给拦截）|
 
-![msedge_3VF46Qh4uk](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_3VF46Qh4uk.6ebntqavbmw.webp)
+![msedge_3VF46Qh4uk](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_3VF46Qh4uk.6ebntqavbmw.webp)
 
 配置完成后点击Deploy开始部署，部署过程大概两分钟，部署成功后会有一个彩纸的喜庆页面。
 # 绑定域名
 点击Go to Dashboard，进入Settings---->Domains绑定域名
 
-![image](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/image.6kbvzv14uic.webp)
+![image](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/image.6kbvzv14uic.webp)
 
 你绑定的域名就是umami的后台网址
 # 配置后台
 点击你绑定的域名，进入Umami后台登录（默认用户名admin和密码umami）进入后第一时间修改密码。
 
-![msedge_V6f3L8vvos](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_V6f3L8vvos.3pvc55z6eqw0.webp)
+![msedge_V6f3L8vvos](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_V6f3L8vvos.3pvc55z6eqw0.webp)
 
 # 添加站点 & 获取代码
 “网站”--->“添加网站”添加你自己的网站
 
-![image](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/image.x9jagr7mvxc.webp)
+![image](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/image.x9jagr7mvxc.webp)
 
 保存后点击“编辑”--->“跟踪代码”，将获取到的代码放进你的站点
 
-![msedge_trQnJ47k75](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_trQnJ47k75.20wh55o85wkg.webp)
+![msedge_trQnJ47k75](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_trQnJ47k75.20wh55o85wkg.webp)
 
 不久后就能看到你的站点数据了
 
@@ -141,6 +141,6 @@ mysql://（数据库用户）:（数据库密码）@（数据库地址）/（数
 等待几分钟后登录重试
 - 使用Supabase数据库时，Vercel提示这个错误：
 
-![msedge_D1X7RIZpUD](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230714/msedge_D1X7RIZpUD.5wxtzukahdo0.webp)
+![msedge_D1X7RIZpUD](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_D1X7RIZpUD.5wxtzukahdo0.webp)
 
 建议重新新建数据库，还不行的话更换别的数据库

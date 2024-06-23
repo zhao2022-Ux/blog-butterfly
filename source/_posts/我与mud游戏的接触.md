@@ -1,7 +1,7 @@
 ---
 title: 游玩mud游戏
 cover: >-
-  https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/Update_2JXuMM4TY3.2hgks6n4b8o0.webp
+  https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/Update_2JXuMM4TY3.2hgks6n4b8o0.webp
 tags:
   - 游戏相关
   - 其它游戏
@@ -24,7 +24,7 @@ date: 2023-08-06 15:51:36
 1. [打开控制面板](https://zhcn.eyewated.com/%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF/)
 2. 点击“程序” $\rightarrow$ “程序和功能” $\rightarrow$ “启用或关闭Windows功能”
 3. 选择“Telnet客户端”然后点击确定，等待安装完成
-![OptionalFeatures_5TSADzdqnv](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/OptionalFeatures_5TSADzdqnv.411d65y34ym0.png)
+![OptionalFeatures_5TSADzdqnv](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/OptionalFeatures_5TSADzdqnv.411d65y34ym0.png)
 4. 安装完成后，打开cmd，输入telnet，如果出现“Microsoft Telnet>”就代表安装成功
 
 运行游戏命令：
@@ -34,7 +34,7 @@ telnet [hostname] [port]
 其中hostname是游戏地址，port是端口
 
 游戏示例：江湖
-![cmd_JhvCA2hkU8](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/cmd_JhvCA2hkU8.2pef24j7jwq0.webp)
+![cmd_JhvCA2hkU8](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/cmd_JhvCA2hkU8.2pef24j7jwq0.webp)
 ```
 telnet 112.124.42.98 9999
 ```
@@ -44,27 +44,27 @@ telnet 112.124.42.98 9999
 教程：
 1. 去 https://cn.mudlet.org/zh/下载/ 下载Mudlet安装包
 2. 安装Mudlet
-![Update_2JXuMM4TY3](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/Update_2JXuMM4TY3.2hgks6n4b8o0.webp)
+![Update_2JXuMM4TY3](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/Update_2JXuMM4TY3.2hgks6n4b8o0.webp)
 3. 设置语言
 先点击Cancel
-![Mudlet_cEpS2mQ8I2](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/Mudlet_cEpS2mQ8I2.4qigjn94a7q0.webp)
+![Mudlet_cEpS2mQ8I2](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/Mudlet_cEpS2mQ8I2.4qigjn94a7q0.webp)
 然后点击左上角的“Options” $\rightarrow$ “Preferences”
-![Mudlet_COXDZT41bd](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/Mudlet_COXDZT41bd.5rovpj6nqus0.webp)
+![Mudlet_COXDZT41bd](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/Mudlet_COXDZT41bd.5rovpj6nqus0.webp)
 在这里设置语言，然后点击“保存”
-![Mudlet_gMMEj6tiPf](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/Mudlet_gMMEj6tiPf.6az1vg2nq740.webp)
+![Mudlet_gMMEj6tiPf](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/Mudlet_gMMEj6tiPf.6az1vg2nq740.webp)
 最后重启Mudlet
-![image](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/image.n9nebgxiw9s.webp)
+![image](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/image.n9nebgxiw9s.webp)
 好的，页面变成中文了
 
 4. 添加游戏
 点击“新建”
 （例子：北大侠客行MUD，注意：玩这个游戏的之后不能勾选“安全”选项！！）
-![image](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/image.1ktlttflv0rk.webp)
+![image](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/image.1ktlttflv0rk.webp)
 （当然如果你有这个注册这个游戏的账号密码的话，可以到“选项”里配置账号密码）
-![image](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/image.8sod90xd4ig.webp)
+![image](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/image.8sod90xd4ig.webp)
 5. 开始游戏
 点击“连接”
-![image](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230806/image.5jc66kvbgs00.webp)
+![image](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/image.5jc66kvbgs00.webp)
 看到这个画面就说明成功了
 <!-- endtab -->
 <!-- tab MacOS -->

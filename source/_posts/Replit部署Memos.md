@@ -6,7 +6,7 @@ tags:
 categories:
   - 站点折腾
 cover: >-
-  https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230801/未标题-1.66u9tpp5tsw0.webp
+  https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230801/未标题-1.66u9tpp5tsw0.webp
 abbrlink: 18063
 date: 2023-08-01 16:30:15
 ---
@@ -33,25 +33,25 @@ Zeabur部署Memos很方便，自带的Marketplace就有Memos
 查issues，才知道原来得部署前端
 问题不大！将部署前端的命令写在update.yml里面
 第二次试运行，成功！
-![AP7iMWt7QU](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20230801/AP7iMWt7QU.6stfiu4ghlk0.png)
+![AP7iMWt7QU](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230801/AP7iMWt7QU.6stfiu4ghlk0.png)
 {% psw （别问为啥没有第一次试运行的图。。。。。。忘记截图了） %}
 感兴趣的话可以看一下我的项目：https://github.com/SinzMise/memos-on-replit
 # Koyeb部署
 最近听安小歪说Replit要收费了
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/QQ_EqAgdYlEts.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/QQ_EqAgdYlEts.png)
 他的Memos转到了codesandbox，我的也转过去了
 但我们发现codesandbox会休眠，不得不换个部署平台
 之后我发现Memos能连Mysql或者postgreSQL数据库，于是我决定换koyeb部署
 注册koyeb账号必须开t才没有银行卡验证的选项
 然后再新建个Web Service
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_Kd4LmCDhpM.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_Kd4LmCDhpM.png)
 选择docker
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_rAnK6dlRB5.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_rAnK6dlRB5.png)
 在image这一行填写：`ghcr.io/usememos/memos:latest`，点击Next
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_3pmSNqxnlH.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_3pmSNqxnlH.png)
 划到下面，点击Advanced，Environment variables新增两个变量：`MEMOS_DRIVER`和`MEMOS_DSN`
 {% note warning modern %}注意：两个变量都是必选的，当然你也可以不用添加这两个，只不过一旦Memos更新数据会丢失！{% endnote %}
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_3jo6namzf5.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_3jo6namzf5.png)
 | 变量      | 值 |
 | ----------- | ----------- |
 |MEMOS_DRIVER|数据库名称，MySQL就填`mysql`，postgreSQL就填`postgres`|

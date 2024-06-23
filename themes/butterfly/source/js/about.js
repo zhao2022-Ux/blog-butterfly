@@ -24,35 +24,29 @@ var meuicat = {
                         const commentElements = document.querySelectorAll('.N_comments');
                         commentElements.forEach(element => {
                             if (element.classList.contains('N_comments')) {
-                                element.innerText = totalComments + '条评论';
+                                element.innerText = totalComments + GLOBAL_LANG.about.comments;
                             } else {
-                                console.log(`魔法之屋提醒您：\n\n评论总数功能无法获取到正确的元素，请检查页面是否正常！`);
+                                console.error(GLOBAL_LANG.about.comment_error);
                             }
                         });
                     });
             });
     }, // 总评论数量
     Introduction: function() {
-        const e = [
-                "📔️ 喜欢分享故事的屋主",
-                "✨ 星空之下的旅行者",
-                "📚 一位平凡的学生",
-            ],
+        const e = GLOBAL_LANG.about.introduction,
             t = document.getElementById("Introduction");
         let o = e[Math.floor(Math.random() * e.length)];
         for (; o === lastSayHello;) o = e[Math.floor(Math.random() * e.length)];
         (t.textContent = o), (lastSayHello = o);
     }, // about 个人介绍词
     runtimen: function() {
-        let t = new Date("2021/12/17 14:53:11")
+        let t = new Date(GLOBAL_CONFIG.date)
                 .getTime(),
             n = new Date()
                 .getTime(),
-            a = Math.round((n - t) / 1e3),
-            l = (a / 7884e4)
-                .toFixed(2);
+            a = Math.round((n - t) / 1e3);
         let c = document.getElementById("run-time");
-        c && (c.innerHTML = `已稳定运行 ${l} 坤年 🏀`),
+        c && (c.innerHTML = `已稳定运行 ${a} 年`),
             setTimeout(meuicat.runtime, 1e3);
     }, // about 运行时间
     fiftyonela: function() {

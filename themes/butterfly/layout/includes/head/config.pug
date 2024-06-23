@@ -103,6 +103,7 @@ script.
     noticeOutdate: !{noticeOutdate},
     highlight: !{highlight},
     postHeadAiDescription: !{postHeadAiDescription},
+    date: '!{theme.about.Personal_Introduction.date}',
     copy: {
       success: '!{_p("copy.success")}',
       error: '!{_p("copy.error")}',
@@ -150,5 +151,10 @@ script.
       laggy2: '!{_p("fps.laggy2")}',
       laggy3: '!{_p("fps.laggy3")}',
       laggy4: '!{_p("fps.laggy4")}'
+    },
+    about: {
+      comments: '!{_p("about.two_layout.statistics.comment")}',
+      introduction: !{JSON.stringify(theme.about.Personal_Introduction.Introductions)},
+      comment_error: '!{_p("about.error")}'
     }
   }

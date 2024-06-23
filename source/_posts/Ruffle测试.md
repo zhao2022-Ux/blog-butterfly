@@ -6,7 +6,7 @@ tags:
 categories:
   - 站点折腾
 cover: >-
-  https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/logo.4913vyk2ki.svg
+  https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/logo.4913vyk2ki.svg
 abbrlink: 57692
 date: 2024-05-25 21:12:39
 ---
@@ -22,7 +22,7 @@ date: 2024-05-25 21:12:39
 
 搞这玩意的很多教程都是得在浏览器安装插件，让用户通过这个插件来实现播放flash
 但我在Ruffle的官网找到个这玩意：
-![官网截图](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/msedge_3a7lLAiAqh.1ov9jby5xi.webp)
+![官网截图](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/msedge_3a7lLAiAqh.1ov9jby5xi.webp)
 这玩意能通过引入在站点js的方式来让自己的站点再次适配swf
 
 那就废话不多说，赶紧开始吧！

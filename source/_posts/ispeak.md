@@ -4,7 +4,7 @@ description: 这篇文章是我之前写过的教程的重写
 swiper_index: 3
 abbrlink: 38964
 date: 2023-01-13 21:01:37
-cover: https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230114/msedge_GVRhG42nuu.1g9uz8t24io0.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/msedge_GVRhG42nuu.1g9uz8t24io0.webp
 tags:
   - 站点折腾
   - 页面魔改
@@ -56,14 +56,14 @@ categories:
 1. 点击下方按钮，跳转至 Vercel 进行部署。
 [![部署到Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/kkfive/kkapi-open/tree/vercel)
 2. 配置环境变量：
-![msedge_wwcTzH8isA](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230114/msedge_wwcTzH8isA.10hmhosvut28.webp)
+![msedge_wwcTzH8isA](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/msedge_wwcTzH8isA.10hmhosvut28.webp)
 环境变量可能随项目的迭代而增加必填的环境变量，具体请参考[官网 —— kkapi环境变量](https://kkapi.js.org/reference/kkapi/environment.html)
 3. 重新部署
-![msedge_owqMifozPi](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230114/msedge_owqMifozPi.37vcfu5vfpm0.webp)
-![msedge_5WUBTLL0NZ](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230114/msedge_5WUBTLL0NZ.1nl1z1a7qiqo.webp)
-![msedge_mMprAjHb9O](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230114/msedge_mMprAjHb9O.3b2527plrfg.webp)
+![msedge_owqMifozPi](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/msedge_owqMifozPi.37vcfu5vfpm0.webp)
+![msedge_5WUBTLL0NZ](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/msedge_5WUBTLL0NZ.1nl1z1a7qiqo.webp)
+![msedge_mMprAjHb9O](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/msedge_mMprAjHb9O.3b2527plrfg.webp)
 4. 绑定域名（建议）
-![msedge_miAwQcdm9f](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230114/msedge_miAwQcdm9f.3htnm9dlllq0.webp)
+![msedge_miAwQcdm9f](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/msedge_miAwQcdm9f.3htnm9dlllq0.webp)
 5. 初始化账户
 浏览器访问：
 你刚刚复制的地址/api/user/init?userName=你想设置的账户名
@@ -141,19 +141,19 @@ pm2 restart pm2.json
 {% endnote %}
 1. Fork这个项目：https://github.com/kkfive/kkadmin-open/
    
-![msedge_6HMaGfN000](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_6HMaGfN000.1csf0rae8okg.webp)
-![msedge_UPsCgr2okQ](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_UPsCgr2okQ.7k0gi7brxoc0.webp)
+![msedge_6HMaGfN000](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_6HMaGfN000.1csf0rae8okg.webp)
+![msedge_UPsCgr2okQ](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_UPsCgr2okQ.7k0gi7brxoc0.webp)
 2. 配置变量
-![msedge_ktuszZjpej](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_ktuszZjpej.7ftbduod9uc0.webp)
+![msedge_ktuszZjpej](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_ktuszZjpej.7ftbduod9uc0.webp)
 
 VITE_GLOB_API_URL（必选）
-![msedge_wqMbtdCCon](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_wqMbtdCCon.26m2h3r94d7k.webp)
+![msedge_wqMbtdCCon](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_wqMbtdCCon.26m2h3r94d7k.webp)
 
 3. 构建actions
 
-![msedge_yymiOm8Kek](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_yymiOm8Kek.23xjzofdum3.webp)
-![msedge_4awdNaFJGz](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_4awdNaFJGz.1rdq0mxyfhog.webp)
-![msedge_2uYyc6Qh4I](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_2uYyc6Qh4I.4p3ngtkhmh00.webp)
+![msedge_yymiOm8Kek](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_yymiOm8Kek.23xjzofdum3.webp)
+![msedge_4awdNaFJGz](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_4awdNaFJGz.1rdq0mxyfhog.webp)
+![msedge_2uYyc6Qh4I](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_2uYyc6Qh4I.4p3ngtkhmh00.webp)
 
 
 
@@ -169,11 +169,11 @@ PS：如果你Fork的这个项目有改Repository name，那么请将上面的�
 
 然后直接部署
 
-![msedge_GJbsx9xoOw](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_GJbsx9xoOw.8zgxw8og644.webp)
+![msedge_GJbsx9xoOw](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_GJbsx9xoOw.8zgxw8og644.webp)
 
 部署完成后点“Go to Dashboard”，并点左上角的“Visit”
 
-![msedge_Lyo0nIvIqF](https://www.jsdelivr.ren/gh/StarWEB890/TuChuang@master/images/msedge_Lyo0nIvIqF.d4g2uabkljk.webp)
+![msedge_Lyo0nIvIqF](https://jsd.cdn.storisinz.site/gh/StarWEB890/TuChuang@master/images/msedge_Lyo0nIvIqF.d4g2uabkljk.webp)
 
 账号输入你之前初始化账户的账户名
 密码请输入默认密码：123456
@@ -188,8 +188,8 @@ PS：如果你Fork的这个项目有改Repository name，那么请将上面的�
 1. fork项目（可直接fork）
 2. 导入项目
 
-![msedge_1bV5Of8ioS](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_1bV5Of8ioS.xtthsj95ytc.webp)
-![msedge_CcnQ68DBFQ](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_CcnQ68DBFQ.2q893j8w72k0.webp)
+![msedge_1bV5Of8ioS](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_1bV5Of8ioS.xtthsj95ytc.webp)
+![msedge_CcnQ68DBFQ](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_CcnQ68DBFQ.2q893j8w72k0.webp)
 
 4. 配置环境变量
 

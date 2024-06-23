@@ -2,7 +2,7 @@
 title: Serv00搭建Artalk
 abbrlink: 13624
 date: 2024-04-12 22:46:14
-cover: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/pc.6f0hm71zvw.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/pc.6f0hm71zvw.webp
 tags:
   - 项目折腾
   - 自建部署
@@ -51,7 +51,7 @@ wget -O artalk-freebsd.sh https://github.com/SinzMise/artalk-deploy/raw/serv00/a
 其中port改成你放行的端口
 db是数据库设置
 参考如下：
-![msedge_1Z2sZqAP2k](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/msedge_1Z2sZqAP2k.70a4hbgckz.webp)
+![msedge_1Z2sZqAP2k](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/msedge_1Z2sZqAP2k.70a4hbgckz.webp)
 改完之后，点击 save 保存，接着回到 SSH 窗口中进行操作：
 
 测试启动 Artalk：

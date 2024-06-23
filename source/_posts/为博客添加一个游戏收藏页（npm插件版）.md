@@ -8,7 +8,7 @@ categories:
 ai: true
 abbrlink: 10045
 date: 2024-01-18 21:39:51
-cover: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/fe131d7f5a6b38b23cc967316c13dae2.8dwp7xp4q5.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/fe131d7f5a6b38b23cc967316c13dae2.8dwp7xp4q5.webp
 ---
 # 前言
 之前看到Kouseki大佬的这篇文章：
@@ -17,7 +17,7 @@ cover: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/
 思来想去，我还是决定做npm版本的游戏收藏页
 # 效果
 {% hideBlock 效果预览 %}
-![](https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240118/msedge_3ga8r6QcmR.3doduw5wpd60.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240118/msedge_3ga8r6QcmR.3doduw5wpd60.png)
 {% endhideBlock %}
 # 安装
 
@@ -40,7 +40,7 @@ cover: https://www.jsdelivr.ren/gh/SinzMise/picx-images-hosting@master/20240525/
       top_background: https://th.bing.com/th/id/R.13a97ef4830efa5e0b87134d622719f3?rik=G7RaJFpxg5PtkA&riu=http%3a%2f%2fupload.techweb.com.cn%2fs%2f640%2f2019%2f0530%2f1559208230699.jpg&ehk=j1G8rMX98TRX52EkLgI5jW1p7lIQp4I8Si1nqEggFRs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1
       buttonText: Steam 
       buttonLink: https://steamcommunity.com/
-      css: https://www.jsdelivr.ren/npm/hexo-butterfly-games/lib/games.css
+      css: https://jsd.cdn.storisinz.site/npm/hexo-butterfly-games/lib/games.css
       good_games:
         - title: 风景一绝
           description: 不会错过的风景

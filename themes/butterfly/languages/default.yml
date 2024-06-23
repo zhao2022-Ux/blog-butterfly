@@ -129,3 +129,47 @@ fps:
   laggy2: Bad
   laggy3: Very Bad
   laggy4: What????
+
+about:
+  introduction:
+    hello: Welcome！
+    iam: 'I am %s'
+    aboutme: About me
+    aboutsite: About this site
+  introduction_bar:
+    born: Born in
+    constellation: Constellation
+    hobby: Hobby
+    career: Occupation
+  one_layout:
+    living: Currently living in
+    aboutme: About me
+    mbti:
+      mbti: MBTI
+      learn: 'Learn more about <a href="%s" target="_blank">%s</a> on <a href="https://www.16personalities.com/" target="_blank">16Personalities</a>'
+    motto: Motto
+    account:
+      myaccount: My social account
+      social: Social platforms
+  two_layout:
+    about: About this site
+    runtime: Runtime
+    statistics:
+      articles: '%s articles'
+      comments: Comment
+      comment: ' comments'
+      tags: '%s categories'
+      totalcounts: '%s counts'
+  stats:
+    tips: Visits
+    title: Access statistics
+    tip:
+      box: 'Statistical information from <a href="https://v6.51.la/land/%s" target="_blank">51la</a>'
+      btn: More statistics
+  union:
+    tips: create together
+    title: Site Alliance
+  content:
+    tips: Psychological journey
+    title: Introduction to this website
+  error: 'Error: The total comment count function cannot obtain the correct element. Please check if the page is functioning properly!'

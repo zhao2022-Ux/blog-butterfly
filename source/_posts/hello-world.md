@@ -1,6 +1,6 @@
 ---
 title: 新起点，新出发
-cover: https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20221230/46348.3e004dfapae0.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20221230/46348.3e004dfapae0.webp
 description: 改名后的第一篇文章
 date: 2021-12-17 14:53:11
 abbrlink: 16107

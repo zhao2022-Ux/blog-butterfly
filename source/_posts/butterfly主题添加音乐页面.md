@@ -2,7 +2,7 @@
 title: butterfly主题添加音乐页面（适配手机）
 description: 原先的音乐页面存在BUG：手机访问会错乱，所以我重新找了个音乐播放器源码
 swiper_index: 2
-cover: https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230114/logo.22azkjyis5uo.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/logo.22azkjyis5uo.webp
 tags:
   - 站点折腾
   - 页面魔改
@@ -19,11 +19,11 @@ date: 2023-01-08 22:31:46
 {% psw （等会为啥开头这么像<a href="https://www.chuckle.top/article/3322c8a8.html">这篇文章</a>） %}
 原本我是想做[单页背景透明](https://www.chuckle.top/article/eb3a4679.html)的，但我发现单页背景透明和我博客背景冲突导致丑的一批，所以我把背景换成了渐变动画
 以下是我之前的音乐页面：
-![msedge_x1MaJIbBQg](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230109/msedge_x1MaJIbBQg.2ka3d6xxnu80.webp)
+![msedge_x1MaJIbBQg](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230109/msedge_x1MaJIbBQg.2ka3d6xxnu80.webp)
 别问为啥是之前，这个音乐页面手机访问是这样的：
-![Screenshot_2023-01-09-09-59-57-499_com](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230109/Screenshot_2023-01-09-09-59-57-499_com.2sej4yl2vuw0.webp)
+![Screenshot_2023-01-09-09-59-57-499_com](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230109/Screenshot_2023-01-09-09-59-57-499_com.2sej4yl2vuw0.webp)
 当时我还以为是浏览器的问题，立即换成了Chrome浏览器，结果：
-![Screenshot_2023-01-09-10-02-41-554_com](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/20230109/Screenshot_2023-01-09-10-02-41-554_com.6tcc3lty2uo0.webp)
+![Screenshot_2023-01-09-10-02-41-554_com](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230109/Screenshot_2023-01-09-10-02-41-554_com.6tcc3lty2uo0.webp)
 （后来我用手机访问了那位大佬的音乐页面，也是一样出现这个问题，之前有人反映过这位大佬，大佬说自己去适配，~~但我懒得适配，于是就有了这个教程~~ ）
 # 教程
 {% tabs 教程开始, 2 %}

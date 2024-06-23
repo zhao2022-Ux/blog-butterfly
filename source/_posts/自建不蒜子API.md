@@ -20,20 +20,20 @@ cover: https://vip1.loli.io/2022/05/11/eKfrdV9p48IcCj5.jpg
 ## Redis数据库
 这个不蒜子默认用的Redis数据库，这边推荐[upstash](https://upstash.com/)
 直接注册个账号然后新建个项目
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_NKCiPPkXqL.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_NKCiPPkXqL.png)
 复制这里面的数据库地址（后面的“:”和端口要复制下来！）和密码
 ## 正式开始部署
 老样子，注册个koyeb账号
 注册koyeb账号必须开t才没有银行卡验证的选项
 (注册过koyeb账号且没有部署项目就不用这个步骤)
 然后再新建个Web Service
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_Kd4LmCDhpM.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_Kd4LmCDhpM.png)
 选择docker
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_rAnK6dlRB5.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_rAnK6dlRB5.png)
 image填写`docker.io/szninty/busuanzi:houtai`或者`ghcr.io/SinzMise/busuanzi`
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_TZkQypDvYW.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_TZkQypDvYW.png)
 划到下面，点击Advanced，添加环境变量
-![](https://www.jsdelivr.ren/gh/SinzMise/MYPictures@master/msedge_rZ7fnbMSfz.png)
+![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_rZ7fnbMSfz.png)
 | Name      | Value |必选|
 | ----------- | ----------- | ----------- |
 |API_SERVER|busuanzi.js API地址 需要转译|√|
