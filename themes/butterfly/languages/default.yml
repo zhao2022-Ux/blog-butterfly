@@ -180,3 +180,4 @@ about:
     yesterday_uv: Yesterday's Visits
     month_uv: Visits this month
     recent: Recent Visits
+    years: 'Stable operation for ${q} years'

@@ -181,3 +181,4 @@ about:
     yesterday_uv: 昨日访问
     month_uv: 本月访问
     recent: 最近访问
+    years: '已稳定运行 ${q} 年'

@@ -44,18 +44,19 @@ var meuicat = {
                 .getTime(),
             n = new Date()
                 .getTime(),
-            a = (n - t),
+            a = Math.round((n - t) / 1e3),
             l = (a / 7884e4)
-                .toFixed(2)
+                .toFixed(2),
+            q = (l * 2.5);
         let c = document.getElementById("run-time");
-        c && (c.innerHTML = `已稳定运行 ${l} 年 `),
+        c && (c.innerHTML = GLOBAL_LANG.about.stats.years),
             setTimeout(meuicat.runtime, 1e3);
     }, // about 运行时间
     fiftyonela: function() {
         fetch('https://v6-widget.51.la/v6/K9WDMA2h2AfDg5GG/quote.js')
             .then(res => res.text())
             .then((data) => {
-                let title = [GLOBAL_LANG.stats.today_users, GLOBAL_LANG.stats.today_uv,GLOBAL_LANG.stats.yesterday_users,GLOBAL_LANG.stats.yesterday_uv,GLOBAL_LANG.stats.month_uv]
+                let title = [GLOBAL_LANG.about.stats.today_users, GLOBAL_LANG.about.stats.today_uv,GLOBAL_LANG.about.stats.yesterday_users,GLOBAL_LANG.about.stats.yesterday_uv,GLOBAL_LANG.about.stats.month_uv]
                 let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g)
 
                 num = num.map((el) => {
@@ -70,7 +71,7 @@ var meuicat = {
                 // 添加最近活跃访客的内容
                 let TBoxEl = document.querySelector('.T-box')
                 if (TBoxEl) {
-                    TBoxEl.innerHTML = GLOBAL_LANG.stats.recent + '：' + activeVisitors + '&ensp;|&ensp;' + TBoxEl.innerHTML
+                    TBoxEl.innerHTML = GLOBAL_LANG.about.stats.recent + '：' + activeVisitors + '&ensp;|&ensp;' + TBoxEl.innerHTML
                 }
 
                 // 自定义不显示哪个或者显示哪个，如下不显示总访问量
