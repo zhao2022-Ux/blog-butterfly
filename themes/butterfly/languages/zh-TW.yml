@@ -174,3 +174,10 @@ about:
     tips: 心路歷程
     title: 關於本站的介紹
   error: '錯誤：評論總數功能無法獲取到正確的元素，請檢查頁面是否正常！'
+  stats_js:
+    today_users: 今日人數
+    today_uv: 今日訪問
+    yesterday_users: 昨日人數
+    yesterday_uv: 昨日訪問
+    month_uv: 本月訪問
+    recent: 最近訪問

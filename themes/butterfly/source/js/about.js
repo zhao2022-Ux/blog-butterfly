@@ -44,7 +44,7 @@ var meuicat = {
                 .getTime(),
             n = new Date()
                 .getTime(),
-            a = Math.round(n - t),
+            a = (n - t),
             l = (a / 7884e4)
                 .toFixed(2)
         let c = document.getElementById("run-time");
@@ -55,7 +55,7 @@ var meuicat = {
         fetch('https://v6-widget.51.la/v6/K9WDMA2h2AfDg5GG/quote.js')
             .then(res => res.text())
             .then((data) => {
-                let title = ['今日人数', '今日访问', '昨日人数', '昨日访问', '本月访问']
+                let title = [GLOBAL_LANG.stats.today_users, GLOBAL_LANG.stats.today_uv,GLOBAL_LANG.stats.yesterday_users,GLOBAL_LANG.stats.yesterday_uv,GLOBAL_LANG.stats.month_uv]
                 let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g)
 
                 num = num.map((el) => {
@@ -70,7 +70,7 @@ var meuicat = {
                 // 添加最近活跃访客的内容
                 let TBoxEl = document.querySelector('.T-box')
                 if (TBoxEl) {
-                    TBoxEl.innerHTML = '最近活跃：' + activeVisitors + '&ensp;|&ensp;' + TBoxEl.innerHTML
+                    TBoxEl.innerHTML = GLOBAL_LANG.stats.recent + '：' + activeVisitors + '&ensp;|&ensp;' + TBoxEl.innerHTML
                 }
 
                 // 自定义不显示哪个或者显示哪个，如下不显示总访问量

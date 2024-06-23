@@ -173,3 +173,10 @@ about:
     tips: Psychological journey
     title: Introduction to this website
   error: 'Error: The total comment count function cannot obtain the correct element. Please check if the page is functioning properly!'
+  stats_js:
+    today_users: Visitor numbers (today)
+    today_uv: Today's Visits
+    yesterday_users: Visitor numbers (yesterday)
+    yesterday_uv: Yesterday's Visits
+    month_uv: Visits this month
+    recent: Recent Visits
