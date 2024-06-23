@@ -44,12 +44,11 @@ var meuicat = {
                 .getTime(),
             n = new Date()
                 .getTime(),
-            a = Math.round((n - t) / 1e3),
+            a = Math.round(n - t),
             l = (a / 7884e4)
-                .toFixed(2),
-            p = (l * 2.5);
+                .toFixed(2)
         let c = document.getElementById("run-time");
-        c && (c.innerHTML = `已稳定运行 ${p} 年 `),
+        c && (c.innerHTML = `已稳定运行 ${l} 年 `),
             setTimeout(meuicat.runtime, 1e3);
     }, // about 运行时间
     fiftyonela: function() {
