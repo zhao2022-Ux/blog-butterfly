@@ -18,29 +18,29 @@ function tosetting(){
         localStorage.setItem("fpson","1");
     }
     if(!blur){
+        document.getElementById("settingStyle").innerText=''}
+    else{
         document.getElementById("settingStyle").innerText=`
     *,*:not(.card-info)::before,*::after{
         -webkit-backdrop-filter: none!important;
         backdrop-filter: none!important;
         -webkit-filter: none!important;
         filter: none!important;
-    }`}
-    else{
-        document.getElementById("settingStyle").innerText=''
+    }`
     }
     setBlur=function(){
         blur=!blur;
         localStorage.setItem("blur",blur);
         if(!blur){
+            document.getElementById("settingStyle").innerText=''}
+        else{
             document.getElementById("settingStyle").innerText=`
-    *{
+    *,*:not(.card-info)::before,*::after{
         -webkit-backdrop-filter: none!important;
         backdrop-filter: none!important;
         -webkit-filter: none!important;
         filter: none!important;
-    }`}
-        else{
-            document.getElementById("settingStyle").innerText=''
+    }`
         }
     }
 // if(yjjs){
