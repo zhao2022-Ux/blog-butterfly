@@ -33,10 +33,10 @@ module.exports.config = {
                         })
                     });
                 } else {
-                    console.info('未找到匹配的缓存响应');
+                    console.info('No matching cache response found');
                 }
             }).catch(function(error) {
-                console.error('缓存匹配出错:', error);
+                console.error('Cache matching error:', error);
             });
         },
     },
@@ -137,9 +137,9 @@ module.exports.ejectValues = (hexo, rules) => {
         mirror: {
             prefix: "const",
             value: [
-                // `https://registry.npmmirror.com/sinzmise-cetastories-en/latest`,
-                // `https://registry.npmjs.org/sinzmise-cetastories-en/latest`,
-                // `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories-en/latest`,
+                `https://registry.npmmirror.com/sinzmise-cetastories-en/latest`,
+                `https://registry.npmjs.org/sinzmise-cetastories-en/latest`,
+                `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories-en/latest`,
                 `https://registry.npmmirror.com/sinzmise-cetastories-en/latest`
             ],
         },
@@ -232,10 +232,10 @@ module.exports.fullpath = (path) => {
 
 module.exports.generate_blog_urls = () => {
     const npmmirror = [
-        // `https://unpkg.zhimg.com/${packagename}@${blogversion}`,
-        // `https://npm.elemecdn.com/${packagename}@${blogversion}`,
-        // `https://cdn1.tianli0.top/npm/${packagename}@${blogversion}`,
-        // `https://cdn.afdelivr.top/npm/${packagename}@${blogversion}`,
+        `https://unpkg.zhimg.com/${packagename}@${blogversion}`,
+        `https://npm.elemecdn.com/${packagename}@${blogversion}`,
+        `https://cdn1.tianli0.top/npm/${packagename}@${blogversion}`,
+        `https://cdn.afdelivr.top/npm/${packagename}@${blogversion}`,
         `https://registry.npmmirror.com/${packagename}/${blogversion}/files`
     ]
     for (var i in npmmirror) {

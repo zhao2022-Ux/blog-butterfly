@@ -142,9 +142,9 @@ module.exports.ejectValues = (hexo, rules) => {
         mirror: {
             prefix: "const",
             value: [
-                // `https://registry.npmmirror.com/sinzmise-cetastories/latest`,
-                // `https://registry.npmjs.org/sinzmise-cetastories/latest`,
-                // `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories/latest`,
+                `https://registry.npmmirror.com/sinzmise-cetastories/latest`,
+                `https://registry.npmjs.org/sinzmise-cetastories/latest`,
+                `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories/latest`,
                 `https://registry.npmmirror.com/sinzmise-cetastories/latest`
             ],
         },
@@ -237,10 +237,10 @@ module.exports.fullpath = (path) => {
 
 module.exports.generate_blog_urls = () => {
     const npmmirror = [
-        // `https://unpkg.zhimg.com/${packagename}@${blogversion}`,
-        // `https://npm.elemecdn.com/${packagename}@${blogversion}`,
-        // `https://cdn1.tianli0.top/npm/${packagename}@${blogversion}`,
-        // `https://cdn.afdelivr.top/npm/${packagename}@${blogversion}`,
+        `https://unpkg.zhimg.com/${packagename}@${blogversion}`,
+        `https://npm.elemecdn.com/${packagename}@${blogversion}`,
+        `https://cdn1.tianli0.top/npm/${packagename}@${blogversion}`,
+        `https://cdn.afdelivr.top/npm/${packagename}@${blogversion}`,
         `https://registry.npmmirror.com/${packagename}/${blogversion}/files`
     ]
     for (var i in npmmirror) {
