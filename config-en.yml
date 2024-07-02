@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 # Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://blog.sinzmise.top/en/
+url: https://en.blog.sinzmise.top/
 root: /
 link: blog.sinzmise.top
 permalink: posts/:abbrlink/
@@ -27,7 +27,7 @@ pretty_urls:
 
 # Directory
 source_dir: source-en
-public_dir: public/en/
+public_dir: public-en
 tag_dir: tags
 archive_dir: archives
 category_dir: categories

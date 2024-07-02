@@ -465,14 +465,14 @@ messenger:
 # --------------------------------------
 footer:
   custom_text:
-    - <a href="https://icp.gov.moe/?keyword=20231033" target="_blank">萌ICP备20231033号</a>&nbsp;
+    - <a href="https://icp.gov.moe/?keyword=20231033" target="_blank">MoeICP-20231033</a>&nbsp;
     - <br>
     - <a href="https://xn--sr8hvo.ws/previous">←</a>
     - An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
     - <a href="https://xn--sr8hvo.ws/next">→</a>
     - <br>
     - <span>I joined：</span>
-    - <a href="https://zhblogs.ohyee.cc/" target="_blank">CN Blog list</a>&nbsp;
+    - <a href="https://zhblogs.ohyee.cc/" target="_blank">CN independent blogs</a>&nbsp;
     - <a href="https://storeweb.cn/member/o/1585" target="_blank">Store Web</a>&nbsp;
     - <a href="https://bf.zzxworld.com/s/995" target="_blank">BlogFinder</a>&nbsp;
     - <a href="https://boke.lu" target="_blank">blog.lu</a>&nbsp;
@@ -494,7 +494,7 @@ footer:
             url: https://www.travellings.cn/go.html
           - name: StoreWeb
             url: https://storeweb.cn/s/1707
-          - name: CN Blog List
+          - name: CN independent blogs
             url: https://zhblogs.ohyee.cc/go
           - name: Moe Travelling
             url: https://travel.moe/go.html
