@@ -1143,8 +1143,8 @@ tag_plugins:
     placeholder: /img/link.png #link_card标签默认的图标图片
 
 font_icon:
-  iconfont_css: //at.alicdn.com/t/c/font_4199232_gh7up2nbg3c.css
-  iconfont_js: //at.alicdn.com/t/c/font_4199232_gh7up2nbg3c.js
+  iconfont_css: //at.alicdn.com/t/c/font_4199232_yyljyxsak2m.css
+  iconfont_js: //at.alicdn.com/t/c/font_4199232_yyljyxsak2m.js
 
 wowjs:
   animateitem:

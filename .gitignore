@@ -5,10 +5,14 @@ package-lock.json
 yarn.lock
 *.log
 node_modules/
-/public/
+/public*/
 .deploy*/
 .idea/
 _multiconfig.yml
+_config.butterfly.yml
+_config.landscape.yml
+gulpfile.js
+sw-rules.js
 logs
 *.log
 npm-debug.log*

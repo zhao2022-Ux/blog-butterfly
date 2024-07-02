@@ -119,6 +119,7 @@
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    position: relative;
 }
 #sidebar #sidebar-menus .menus_items a.site-page, #sidebar .menus_item ul {
     padding-left: 0;
@@ -200,7 +201,6 @@
     border: 5px #fff solid;
 }
 #sidebar .open > .avatar-img::before {
-    bottom: 8px;
     height: 12px;
     width: 12px;
 }
