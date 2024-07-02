@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "npm run clean && npm run builden && npm run buildzh && gulp",
-    "builden": "ls && sh ./deploy.sh set en && hexo generate && hexo bangumi -u ",
-    "buildzh": "ls && sh ./deploy.sh set zh && hexo generate && hexo bangumi -u",
+    "builden": "sh ./deploy-en.sh && hexo generate && hexo bangumi -u ",
+    "buildzh": "sh ./deploy-zh.sh && hexo generate && hexo bangumi -u",
     "clean": "hexo clean",
     "deployzh": "npm run clean && npm run buildzh && hexo swpp && gulp && hexo deploy",
     "deployen": "npm run clean && npm run builden && hexo swpp && gulp && hexo deploy",
