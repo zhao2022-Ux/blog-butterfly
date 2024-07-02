@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run clean && npm run builden && npm run buildzh && gulp",
+    "build": "npm run clean && npm run builden && npm run buildzh && hexo swpp && gulp",
     "builden": "sh ./deploy-en.sh && hexo generate && hexo bangumi -u ",
     "buildzh": "sh ./deploy-zh.sh && hexo generate && hexo bangumi -u",
     "clean": "hexo clean",
     "deployzh": "npm run clean && npm run buildzh && hexo swpp && gulp && hexo deploy",
     "deployen": "npm run clean && npm run builden && hexo swpp && gulp && hexo deploy",
-    "deployall": "npm run clean && npm run builden && npm run buildzh && gulp && hexo deploy",
     "serveren": "npm run clean && npm run builden && hexo swpp && gulp && hexo server",
     "serverzh": "npm run clean && npm run buildzh && hexo swpp && gulp && hexo server"
   },
@@ -41,9 +40,11 @@
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
+    "hexo-swpp": "^3.3.7",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-wordcount": "^6.0.1",
     "pwa-asset-generator": "^6.3.1",
+    "swpp-backends": "^2.3.12",
     "workbox-build": "^7.1.1"
   }
 }
