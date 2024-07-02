@@ -6,6 +6,7 @@ date: 2022-12-31 14:53:11
 cover: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230104/Goodbye2022.21ppwx94kqf4.webp
 categories: 个人小记
 tags: 个人小记
+lang: zh-CN
 ---
 {% note info %}
 封面图片来自：https://www.tukuppt.com/muban/vnjzjzvp.html

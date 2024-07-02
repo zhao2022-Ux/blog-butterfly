@@ -9,6 +9,7 @@ cover: >-
   https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/logo.4913vyk2ki.svg
 abbrlink: 57692
 date: 2024-05-25 21:12:39
+lang: zh-CN
 ---
 这玩意也是很久之前就认识到了
 我甚至记得我还给这玩意写过Hexo插件

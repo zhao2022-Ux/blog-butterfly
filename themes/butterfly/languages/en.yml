@@ -56,6 +56,7 @@ aside:
   articles: Articles
   tags: Tags
   categories: Categories
+  comments: Comments
   card_announcement: Announcement
   card_categories: Categories
   card_tags: Tags
@@ -181,3 +182,15 @@ about:
     month_uv: Visits this month
     recent: Recent Visits
     years: 'Stable operation for ${q} years'
+
+settings:
+  title: Settings
+  site:
+    title: Sites
+  fonts:
+    title: Fonts
+  backgrounds:
+    title: Backgrounds
+    default: Default background
+  count:
+    title: Status

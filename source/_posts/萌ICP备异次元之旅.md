@@ -8,6 +8,7 @@ categories:
 abbrlink: 58203
 date: 2023-07-24 14:46:32
 cover: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240118/msedge_3aLdvwLt31.2bmcuelg2vms.webp
+lang: zh-CN
 ---
 # 前言
 今天在修改我那萌备的时候，无意在导航栏上看到了“异次元”这玩意

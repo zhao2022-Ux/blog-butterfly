@@ -10,6 +10,7 @@ categories:
 ai: true
 abbrlink: 38917
 date: 2023-08-06 15:51:36
+lang: zh-CN
 ---
 # 前言
 昨天我打开了很久没访问的[北大侠客行Mud](https://pkuxkx.net/)官网

@@ -4,33 +4,34 @@ body
         span.setting-title
             button#backer(onclick='$(\'.asetting\').hide();$(\'.settingx\').show();$(\'#backer\').hide();$(\'#stt-style\').hide();$(\'#stt-font\').hide();$(\'#stt-background\').hide();$(\'#stt-count\').hide();$(\'#stt-about\').hide();')
                 i.fa.fa-chevron-left
-            span#stt 设置
-            span#stt-style &nbsp;-> 外观
-            span#stt-font &nbsp;-> 字体
-            span#stt-background &nbsp;-> 背景
-            span#stt-count &nbsp;-> 统计
-            span#stt-about &nbsp;-> 关于
+            span#stt= _p('settings.title')
+            span#stt-style='&nbsp;-> ' + _p('settings.site.title')
+            span#stt-font='&nbsp;-> ' + _p('settings.fonts.title')
+            span#stt-background='&nbsp;-> ' + _p('settings.backgrounds.title')
+            span#stt-count='&nbsp;-> ' + _p('settings.count.title')
+            span#stt-about='&nbsp;-> '
             a(id="close-console" onclick="toggleWinbox();") ×
         .settings
             #setting-buttons
                 button.settingx(onclick='$(\'#theme-settings\').show();$(\'.settingx\').hide();$(\'#backer\').show();$(\'#stt-style\').show();')
                     i.fas.fa-layer-group
-                    span 外观
+                    span=_p('settings.site.title')
                 button.settingx(onclick='$(\'#font-settings\').show();$(\'.settingx\').hide();$(\'#backer\').show();$(\'#stt-font\').show();')
                     i.fa.fa-font
-                    span 字体
-                button.settingx(onclick='$(\'#background-settings\').show();$(\'.settingx\').hide();$(\'#backer\').show();$(\'#stt-background\').show();')
-                    i.far.fa-image
-                    span 背景
+                    span=_p('settings.fonts.title')
+                if theme.setting.background
+                    button.settingx(onclick='$(\'#background-settings\').show();$(\'.settingx\').hide();$(\'#backer\').show();$(\'#stt-background\').show();')
+                        i.far.fa-image
+                        span=_p('settings.backgrounds.title')
                 button.settingx(onclick='$(\'#con-echarts\').show();$(\'.settingx\').hide();$(\'#backer\').show();$(\'#stt-count\').show();var evt = document.createEvent("HTMLEvents");evt.initEvent("resize", false, false);window.dispatchEvent(evt);')
                     i.fas.fa-chart-pie
-                    span 统计
+                    span=_p('settings.count.title')
                 button.settingx(onclick='$(\'#con-abouts\').show();$(\'.settingx\').hide();$(\'#backer\').show();$(\'#stt-about\').show();')
                     i.fa.fa-cloud-download
                     span 关于
             #setting-hides
                 #theme-settings.asetting
-                    h2.content-head 性能设置
+                    h2.content-head 站点设置
                     p
                         .content(style='display:flex')
                             input#blur(type='checkbox', onclick='setBlur()')
@@ -49,10 +50,11 @@ body
                         //- .content(style='display:flex')
                         //-     input#hideAside(type='checkbox', onclick='toggleRightside()')
                         //-     .content-text 隐藏侧边栏
-                        .content(style='display:flex')
-                            input#hideAplayer(type='checkbox', onclick='toggleAplayer()')
-                            .content-text
-                                 span 音乐播放器
+                        if theme.setting.player.enable
+                            .content(style='display:flex')
+                                input#hideAplayer(type='checkbox', onclick='toggleAplayer()')
+                                .content-text
+                                    span 音乐播放器
                         .content(style='display:flex')
                             input#hideSakura(type='checkbox', onclick='toggleSakuras()')
                             .content-text 落樱特效
@@ -99,169 +101,169 @@ body
                         br
                         a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:-apple-system, IBM Plex Mono ,monosapce,\'微软雅黑\', sans-serif;', onclick='setFont(\'main\')') 系统默认
                         br
-                #background-settings.asetting
-                    h2(style='margin-left:10px') 背景设置
-                    div
-                    button.content-button(onclick='localStorage.removeItem(\'blogbg\');location.reload();')
-                        i.fa-solid.fa-arrows-rotate
-                        span  点我恢复默认背景
-                    h3 BA图片（手机）
-                    .bgbox
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/01.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/01.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/02.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/02.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/03.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/03.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/04.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/04.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/05.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/05.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/06.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/06.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/07.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/07.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/08.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/08.webp)\')')
-                    h3 BA图片（电脑）
-                    .bgbox
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/01.73tpzcksoy.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/01.73tpzcksoy.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/02.pf43r2w6h.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/02.pf43r2w6h.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/03.5tqst12tfi.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/03.5tqst12tfi.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/04.8ojgyti07r.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/04.8ojgyti07r.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/05.esaalno2u.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/05.esaalno2u.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/06.86tfa8gmnm.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/06.86tfa8gmnm.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/07.4qr3i56zll.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/07.4qr3i56zll.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/08.9rj69pdu4s.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/08.9rj69pdu4s.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/09.2veipiuk0n.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/09.2veipiuk0n.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/10.54xj90fai0.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/10.54xj90fai0.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/11.4g49ozrrhv.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/11.4g49ozrrhv.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/12.7p3dlnf8wi.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/12.7p3dlnf8wi.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/13.3uum2oxazj.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/13.3uum2oxazj.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/14.7i05q7t3hn.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/14.7i05q7t3hn.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/15.pf43r2w3d.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/15.pf43r2w3d.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/16.2doh0xt6a1.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/16.2doh0xt6a1.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/17.5q76vb9qmr.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/17.5q76vb9qmr.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/18.839tcinjtm.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/18.839tcinjtm.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/19.7p2f61ijp.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/19.7p2f61ijp.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/20.ibw8bgqp8.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/20.ibw8bgqp8.webp')
-                    h3 其它图片（手机）
-                    .bgbox
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d4d539a5.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d4d539a5.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d4e15c9d.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d4e15c9d.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6f22c03c6.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6f22c03c6.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d56c83eb.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d56c83eb.webp)\')')
-                        a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d50b439b.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d50b439b.webp)\')')
-                    h3 其它图片（电脑）
-                    .bgbox
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d5574d0e.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d5574d0e.webp)\')')
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d529adf9.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d529adf9.webp)\')')
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d5159b31.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d5159b31.webp)\')')
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d718bbeef6.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d718bbeef6.webp)\')')
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d72f237d19.jpg)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72f237d19.jpg)\')')
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d72f2032c8.jpg)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72f2032c8.jpg)\')')
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2021/12/01/7792ff0082ec4.jpg)', onclick='changeBg(\'url(https://bu.dusays.com/2021/12/01/7792ff0082ec4.jpg)\')')
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d72ee6d4f3.png)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72ee6d4f3.png)\')')
-                        a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d72ed76532.jpg)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72ed76532.jpg)\')')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aea549be6.webp)\')')
-                            img(src='https://bu.dusays.com/2022/09/17/6324aea549be6.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aec701a68.webp)\')')
-                            img(src='https://bu.dusays.com/2022/09/17/6324aec701a68.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aef4a5543.webp)\')')
-                            img(src='https://bu.dusays.com/2022/09/17/6324aef4a5543.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324af3622884.webp)\')')
-                            img(src='https://bu.dusays.com/2022/09/17/6324af3622884.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/5.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/5.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/6.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/6.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/7.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/7.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/12/08/6391b77ed767c.png)\')')
-                            img(src='https://bu.dusays.com/2022/12/08/6391b77ed767c.png')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/9.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/9.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/10.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/10.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/11.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/11.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/12.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/12.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/13.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/13.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/14.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/14.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/15.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/15.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/16.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/16.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/17.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/17.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/18.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/18.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/19.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/19.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/20.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/20.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/21.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/21.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/22.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/22.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/23.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/23.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/24.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/24.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/25.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/25.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/26.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/26.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/27.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/27.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/28.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/28.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/29.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/29.webp')
-                        a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/30.webp)\')')
-                            img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/30.webp')
-                    h3 渐变色
-                    .bgbox
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #eecda3, #ef629f)', onclick='changeBg(\'linear-gradient(to right, #eecda3, #ef629f)\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #B7D31E, #42CE1E)', onclick='changeBg(\'linear-gradient(to right, #B7D31E, #42CE1E)\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #06DE86, #06A5DE)', onclick='changeBg(\'linear-gradient(to right, #06DE86, #06A5DE)\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #189BC4, #183DC4)', onclick='changeBg(\'linear-gradient(to right, #189BC4, #183DC4)\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #C018C4, #C41818)', onclick='changeBg(\'linear-gradient(to right, #C018C4, #C41818)\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #8B00BB, #030094)', onclick='changeBg(\'linear-gradient(to right, #8B00BB, #030094)\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #eecda3, #ef629f)', onclick='changeBg(\'linear-gradient(to right, #eecda3, #ef629f)\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(90deg, #ffd7e4 0%, #c8f1ff 100%)', onclick='changeBg(\'linear-gradient(90deg, #ffd7e4 0%, #c8f1ff 100%)\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(45deg, #e5737b, #c6999e, #96b9c2, #00d6e8)', onclick='changeBg(\'linear-gradient(45deg, #e5737b, #c6999e, #96b9c2, #00d6e8)\')')
-                    h3 纯色
-                    .bgbox
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #7D9D9C', onclick='changeBg(\'#7D9D9C\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #fff', onclick='changeBg(\'#fff\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #49A6E9', onclick='changeBg(\'#49A6E9\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #F7CEFF', onclick='changeBg(\'#F7CEFF\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #FFFFCE', onclick='changeBg(\'#FFFFCE\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #CFFFCE', onclick='changeBg(\'#CFFFCE\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #17EFE9', onclick='changeBg(\'#17EFE9\')')
-                        a.box(href='javascript:;', rel='noopener external nofollow', style='background: #9F17EF', onclick='changeBg(\'#9F17EF\')')
+                if theme.setting.background
+                    #background-settings.asetting
+                        h2(style='margin-left:10px') 背景设置
+                        div
+                        button.content-button(onclick='localStorage.removeItem(\'blogbg\');location.reload();')
+                            i.fa-solid.fa-arrows-rotate
+                            span  点我恢复默认背景
+                        h3 BA图片（手机）
+                        .bgbox
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/01.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/01.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/02.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/02.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/03.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/03.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/04.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/04.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/05.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/05.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/06.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/06.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/07.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/07.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/08.webp)', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pe/08.webp)\')')
+                        h3 BA图片（电脑）
+                        .bgbox
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/01.73tpzcksoy.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/01.73tpzcksoy.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/02.pf43r2w6h.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/02.pf43r2w6h.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/03.5tqst12tfi.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/03.5tqst12tfi.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/04.8ojgyti07r.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/04.8ojgyti07r.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/05.esaalno2u.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/05.esaalno2u.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/06.86tfa8gmnm.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/06.86tfa8gmnm.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/07.4qr3i56zll.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/07.4qr3i56zll.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/08.9rj69pdu4s.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/08.9rj69pdu4s.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/09.2veipiuk0n.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/09.2veipiuk0n.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/10.54xj90fai0.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/10.54xj90fai0.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/11.4g49ozrrhv.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/11.4g49ozrrhv.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/12.7p3dlnf8wi.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/12.7p3dlnf8wi.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/13.3uum2oxazj.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/13.3uum2oxazj.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/14.7i05q7t3hn.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/14.7i05q7t3hn.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/15.pf43r2w3d.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/15.pf43r2w3d.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/16.2doh0xt6a1.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/16.2doh0xt6a1.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/17.5q76vb9qmr.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/17.5q76vb9qmr.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/18.839tcinjtm.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/18.839tcinjtm.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/19.7p2f61ijp.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/19.7p2f61ijp.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/20.ibw8bgqp8.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/20.ibw8bgqp8.webp')
+                        h3 其它图片（手机）
+                        .bgbox
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d4d539a5.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d4d539a5.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d4e15c9d.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d4e15c9d.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6f22c03c6.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6f22c03c6.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d56c83eb.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d56c83eb.webp)\')')
+                            a.pimgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d50b439b.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d50b439b.webp)\')')
+                        h3 其它图片（电脑）
+                        .bgbox
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d5574d0e.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d5574d0e.webp)\')')
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d529adf9.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d529adf9.webp)\')')
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d6d5159b31.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d6d5159b31.webp)\')')
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d718bbeef6.webp)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d718bbeef6.webp)\')')
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d72f237d19.jpg)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72f237d19.jpg)\')')
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d72f2032c8.jpg)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72f2032c8.jpg)\')')
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2021/12/01/7792ff0082ec4.jpg)', onclick='changeBg(\'url(https://bu.dusays.com/2021/12/01/7792ff0082ec4.jpg)\')')
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d72ee6d4f3.png)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72ee6d4f3.png)\')')
+                            a.imgbox(href='javascript:;', rel='noopener external nofollow', style='background-image:url(https://bu.dusays.com/2022/08/30/630d72ed76532.jpg)', onclick='changeBg(\'url(https://bu.dusays.com/2022/08/30/630d72ed76532.jpg)\')')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aea549be6.webp)\')')
+                                img(src='https://bu.dusays.com/2022/09/17/6324aea549be6.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aec701a68.webp)\')')
+                                img(src='https://bu.dusays.com/2022/09/17/6324aec701a68.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324aef4a5543.webp)\')')
+                                img(src='https://bu.dusays.com/2022/09/17/6324aef4a5543.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/09/17/6324af3622884.webp)\')')
+                                img(src='https://bu.dusays.com/2022/09/17/6324af3622884.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/5.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/5.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/6.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/6.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/7.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/7.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://bu.dusays.com/2022/12/08/6391b77ed767c.png)\')')
+                                img(src='https://bu.dusays.com/2022/12/08/6391b77ed767c.png')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/9.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/9.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/10.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/10.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/11.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/11.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/12.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/12.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/13.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/13.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/14.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/14.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/15.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/15.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/16.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/16.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/17.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/17.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/18.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/18.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/19.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/19.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/20.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/20.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/21.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/21.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/22.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/22.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/23.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/23.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/24.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/24.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/25.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/25.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/26.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/26.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/27.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/27.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/28.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/28.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/29.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/29.webp')
+                            a.imgbox(href='javascript:;', onclick='changeBg(\'url(https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/30.webp)\')')
+                                img(src='https://jsd.cdn.storisinz.site/npm/saiodgm-api@1.0.1/randomimg-my/30.webp')
+                        h3 渐变色
+                        .bgbox
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #eecda3, #ef629f)', onclick='changeBg(\'linear-gradient(to right, #eecda3, #ef629f)\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #B7D31E, #42CE1E)', onclick='changeBg(\'linear-gradient(to right, #B7D31E, #42CE1E)\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #06DE86, #06A5DE)', onclick='changeBg(\'linear-gradient(to right, #06DE86, #06A5DE)\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #189BC4, #183DC4)', onclick='changeBg(\'linear-gradient(to right, #189BC4, #183DC4)\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #C018C4, #C41818)', onclick='changeBg(\'linear-gradient(to right, #C018C4, #C41818)\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #8B00BB, #030094)', onclick='changeBg(\'linear-gradient(to right, #8B00BB, #030094)\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(to right, #eecda3, #ef629f)', onclick='changeBg(\'linear-gradient(to right, #eecda3, #ef629f)\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(90deg, #ffd7e4 0%, #c8f1ff 100%)', onclick='changeBg(\'linear-gradient(90deg, #ffd7e4 0%, #c8f1ff 100%)\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: linear-gradient(45deg, #e5737b, #c6999e, #96b9c2, #00d6e8)', onclick='changeBg(\'linear-gradient(45deg, #e5737b, #c6999e, #96b9c2, #00d6e8)\')')
+                        h3 纯色
+                        .bgbox
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: #7D9D9C', onclick='changeBg(\'#7D9D9C\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: #fff', onclick='changeBg(\'#fff\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: #49A6E9', onclick='changeBg(\'#49A6E9\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: #F7CEFF', onclick='changeBg(\'#F7CEFF\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: #FFFFCE', onclick='changeBg(\'#FFFFCE\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: #CFFFCE', onclick='changeBg(\'#CFFFCE\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: #17EFE9', onclick='changeBg(\'#17EFE9\')')
+                            a.box(href='javascript:;', rel='noopener external nofollow', style='background: #9F17EF', onclick='changeBg(\'#9F17EF\')')
                 #con-echarts.asetting
                     h1 统计
                     img(src='https://moe.counter.blog.sinzmise.top/sznhouse?theme=asoul')
                     if !is_page()
                         h2 文章统计
-                        script(src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js")
                         div(id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;")
                         div(id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;")
                         div(id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;")

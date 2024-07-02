@@ -9,6 +9,7 @@ ai: true
 abbrlink: 10045
 date: 2024-01-18 21:39:51
 cover: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/fe131d7f5a6b38b23cc967316c13dae2.8dwp7xp4q5.webp
+lang: zh-CN
 ---
 # 前言
 之前看到Kouseki大佬的这篇文章：

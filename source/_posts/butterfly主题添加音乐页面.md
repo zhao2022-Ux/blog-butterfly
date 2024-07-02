@@ -10,6 +10,7 @@ categories:
   - 站点折腾
 abbrlink: 22945
 date: 2023-01-08 22:31:46
+lang: zh-CN
 ---
 # 前言
 {% note info modern %}

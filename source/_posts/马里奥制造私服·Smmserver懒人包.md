@@ -9,6 +9,7 @@ cover: >-
   https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/dp2l6fpd1yfj0sxcjsi8.9kfzckr3ik.webp
 abbrlink: 10996
 date: 2024-04-27 19:43:40
+lang: zh-CN
 ---
 不知道什么时候，我开始玩马里奥制造（以下简称“马造”）了
 但是我没有Switch，模拟器配置较为麻烦，所以我没法玩马造2，只能玩玩马造1

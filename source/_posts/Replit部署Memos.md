@@ -9,6 +9,7 @@ cover: >-
   https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230801/未标题-1.66u9tpp5tsw0.webp
 abbrlink: 18063
 date: 2023-08-01 16:30:15
+lang: zh-CN
 ---
 # 前言
 ispeak的编辑器用的jsdelivr，这导致了每次我要新建日记的时候编辑器没显示，被迫换方案

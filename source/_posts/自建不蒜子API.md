@@ -8,6 +8,7 @@ categories:
 abbrlink: 28536
 date: 2024-01-11 19:52:48
 cover: https://vip1.loli.io/2022/05/11/eKfrdV9p48IcCj5.jpg
+lang: zh-CN
 ---
 # 前言
 [不蒜子](https://busuanzi.ibruce.info/)是一款很好用的前端计数工具，但是因为流量日渐变多，经常会出现 502 的情况

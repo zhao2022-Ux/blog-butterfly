@@ -256,3 +256,7 @@ ai_abstract_js:
   name: hexo-theme-anzhiyu
   file: source/js/anzhiyu/ai_abstract.js
   version: latest
+echarts_js:
+  name: echarts
+  file: dist/echarts.min.js
+  version: 4.9.0

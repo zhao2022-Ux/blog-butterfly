@@ -9,6 +9,7 @@ categories:
   - 游戏相关
 abbrlink: 21375
 date: 2023-04-04 20:07:45
+lang: zh-CN
 ---
 # 前言
 自从在我的360极速浏览器安装FVD Downloader这个插件后，我就习惯将4399上的swf下载下来了

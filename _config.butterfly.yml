@@ -1188,6 +1188,7 @@ IndieWeb:
 
 # 博客设置
 setting:
+  background: false
   # 笒鬼鬼音乐播放器
   # 样式13：明月浩空的Cover样式
   player:
@@ -1242,9 +1243,6 @@ inject:
     - <style id="css"></style>
     - <style id="yjjs"></style>
     - <style id="themeColor"></style>
-
-    # ECharts
-    - <script src="https://jsd.cdn.storisinz.site/npm/echarts@4.9.0/dist/echarts.min.js"></script>
 
   bottom:
     # - <script src="xxxx"></script>

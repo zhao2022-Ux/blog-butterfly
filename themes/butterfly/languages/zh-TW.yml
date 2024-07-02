@@ -57,6 +57,7 @@ aside:
   articles: 文章
   tags: 標籤
   categories: 分類
+  comments: 評論
   card_announcement: 公告
   card_categories: 分類
   card_tags: 標籤
@@ -182,3 +183,15 @@ about:
     month_uv: 本月訪問
     recent: 最近訪問
     years: '已穩定運行 ${q} 年'
+
+settings:
+  title: 設定
+  site:
+    title: 網站
+  fonts:
+    title: 字體
+  backgrounds:
+    title: 背景
+    default: 恢復默認背景
+  count:
+    title: 統計

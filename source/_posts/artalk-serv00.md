@@ -9,6 +9,7 @@ tags:
 categories:
   - 项目折腾
 ai: true
+lang: zh-CN
 ---
 之前在安小歪的推荐下，找到了一个叫serv00的东西
 但是因为这玩意我不会用，所以我把Serv00一直当成不能部署thinkphp的虚拟主机使用

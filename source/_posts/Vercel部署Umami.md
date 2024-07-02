@@ -8,6 +8,7 @@ tags:
   - 自建部署
 categories: 
   - 站点折腾
+lang: zh-CN
 ---
 # 前言
 之前我是想参考这个教程来部署：https://digu.plus/post/8034746f42b3495fbb19926e3fb8ec4f/

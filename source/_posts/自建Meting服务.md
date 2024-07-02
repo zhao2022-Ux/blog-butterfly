@@ -10,6 +10,7 @@ categories:
   - 站点折腾
 abbrlink: 61417
 date: 2023-01-19 19:52:34
+lang: zh-CN
 ---
 # 前言
 听人说Meting官方API证书过期了，也就是说MetingAPI得自建了

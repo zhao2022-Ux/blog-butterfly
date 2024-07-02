@@ -10,6 +10,7 @@ tags:
   - 页面魔改
 categories:
   - 站点折腾
+lang: zh-CN
 ---
 # 前言
 搞ispeak时发现ispeak更新，能自定义评论了，也就是说我之前写的[ispeak教程](https://blog.xsnet.eu.org/posts/43224/)失效了

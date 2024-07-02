@@ -8,6 +8,7 @@ tags:
   - 站点折腾
 categories:
   - 站点折腾
+lang: zh-CN
 ---
 你好，我是小星鑫233，当然现在请叫我“SinzMise”或“Sinz”
 这是“SinGO博客”停止更新且我更换名字的第一篇文章

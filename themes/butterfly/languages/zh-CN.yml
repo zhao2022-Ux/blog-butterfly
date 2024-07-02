@@ -57,6 +57,7 @@ aside:
   articles: 文章
   tags: 标签
   categories: 分类
+  comments: 评论
   card_announcement: 公告
   card_categories: 分类
   card_tags: 标签
@@ -182,3 +183,15 @@ about:
     month_uv: 本月访问
     recent: 最近访问
     years: '已稳定运行 ${q} 年'
+
+settings:
+  title: 设置
+  site:
+    title: 站点
+  fonts:
+    title: 字体
+  backgrounds:
+    title: 背景
+    default: 恢复默认背景
+  count:
+    title: 统计

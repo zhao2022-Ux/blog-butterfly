@@ -9,6 +9,7 @@ cover: >-
   https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240216/16V9BANNER091002000.4rmqc30bwnc0.jpg
 abbrlink: 54787
 date: 2024-02-16 17:17:26
+lang: zh-CN
 ---
 # 前言
 什么是伪春菜？[请看这里](https://mzh.moegirl.org.cn/%E4%BC%AA%E6%98%A5%E8%8F%9C)

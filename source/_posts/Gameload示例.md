@@ -9,6 +9,7 @@ categories:
   - 项目折腾
 abbrlink: 20412
 date: 2023-04-08 18:25:26
+lang: zh-CN
 ---
 ## 安装GameLoad
 {% raw %}

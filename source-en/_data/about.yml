@@ -1,0 +1,86 @@
+- class_name: 关于页
+  subtitle: 随着风和光来的旅行者，欢迎来到我的小屋
+  avatarImg: https://blog.sinzmise.top/img/avatar.png
+  name: 王九弦SZ·Ninty
+  description: 是一名学生，是这个小屋的屋主、九弦之都的主人
+  aboutsiteTips:
+    tips: 追求
+    title1: 源于
+    title2: 热爱而去 感受
+    word:
+      - 学习
+      - 生活
+      - 程序
+      - 旅行
+      - 拍照
+      - 游戏
+  helloAbout: Hello world!
+  skillsTips:
+    tips: 技能
+    title: 开启创造力
+  careers:
+    tips: 喜欢做的事
+    title: 没有什么是拍照解决不了
+    item:
+      - 拍照、
+      - 折腾、
+      - 玩游戏
+    img: https://cdn.sinzmise.eu.org/images/camera-solid.svg
+  statistic:
+    link: /archives
+    text: 文章隧道
+    cover: https://cdn.sinzmise.eu.org/images/wormhole-2514312_1280.jpg
+  map:
+    title: 我现在住在
+    StrengthenTitle: 中国，广东，潮州市
+    background: https://cdn.sinzmise.eu.org/images/msedge_rW8coY9Rbh.png
+    backgroundDark: https://cdn.sinzmise.eu.org/images/msedge_NiCvJz7u0F.png
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 2007
+    selfInfoTips2: 现在职业
+    selfInfoContent2: 高一学生
+    selfInfoTips3: 目标
+    selfInfoContent3: 未知
+  personalities:
+    author_name: 建筑师
+    personality_type: INTJ-T
+    photo_url: https://cdn.sinzmise.eu.org/images/IMG_20230619_183617.jpg
+    personality_img: https://cdn.sinzmise.eu.org/images/INTJ_T.png
+    name_url: https://www.16personalities.com/ch/intj-%E4%BA%BA%E6%A0%BC
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 随着风去
+    maxim_bottom: 又随着风来
+  buff:
+    buff_tips: 特长
+    buff_top: 一名早已习惯孤独的 普通人
+    buff_bottom: 二次元指数 MAX
+  game:
+    game_tips: 最爱游戏
+    game_title: 蔚蓝档案（国际服）
+    game_uid: ID：17374737
+    game_bg: https://jsd.cdn.sininno.eu.org/gh/SinzMise/picx-images-hosting@master/20240120/Blue_archive_main_picture.1xn3v0svk0ao.webp
+  comic:
+    comic_tips: 爱好番剧
+    comic_title: 虽然我不怎么追番。。。。。。
+    comic_list:
+      - name: 赛马娘
+        href: https://www.bilibili.com/bangumi/media/md77972
+        cover: https://cdn.sinzmise.eu.org/images/07baf44beaddcfdeb31a7bda5ac8149c48a4ea98.png
+      - name: 赛马娘第二季
+        href: https://www.bilibili.com/bangumi/media/md28232238
+        cover: https://cdn.sinzmise.eu.org/images/c87869bc63883138e9f561a7c303284f6ed1dc89.png
+  like:
+    like_tips: 关注偏好
+    like_title: 数码科技
+    like_bg: https://cdn.sinzmise.eu.org/images/632f0dd8f33c6.webp
+    like_bottom: 手机、电脑软硬件
+  music:
+    music_tips: 音乐偏好
+    music_title: 安静、纯音乐
+    music_bg: https://p1.music.126.net/nd_hrcffrO41ho9kwvh6mQ==/109951163026324216.jpg
+    music_link: /music/?id=8253386665&server=netease
+  reward_list: false
+
+  extra: false
