@@ -109,8 +109,8 @@ theme: butterfly
 # Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   - type: git
-    repository: git@github.com:SinzMise/sinzmise.github.io.git
-    branch: master
+    repository: git@github.com:SinzMise/blog
+    branch: en
 
 plugins:
   - hexo-algoliasearch
