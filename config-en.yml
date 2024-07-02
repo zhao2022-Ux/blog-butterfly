@@ -166,8 +166,8 @@ bangumi: # 追番设置
   source: bili
   path:
   vmid: 479627766
-  title: "追番列表"
-  quote: "屋主喜欢追的番剧"
+  title: "Follow up list"
+  quote: "Fantasy dramas that homeowners like to pursue"
   show: 1
   lazyload: false
   loading:
