@@ -99,7 +99,7 @@ share: 分享
 rightside:
   readmode_title: 閱讀模式
   translate_title: 簡繁轉換
-  night_mode_title: 淺色和深色模式轉換
+  night_mode_title: 淺深轉換
   back_to_top: 回到頂部
   toc: 目錄
   scroll_to_comment: 直達評論
