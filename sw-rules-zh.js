@@ -33,7 +33,7 @@ module.exports.config = {
                             actionText: '查看更新日志',
                             actionTextColor: '#fff',
                             onActionClick: function(e) {
-                                location.assign("/update/");
+                                pjax.loadUrl("/update/");
                             },
                         })
                     });

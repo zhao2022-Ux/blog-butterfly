@@ -11,77 +11,74 @@
     .rightMenu-group.rightMenu-line.hide#menu-text
         a.rightMenu-item(href="javascript:rmf.copySelect();")
             i.fa.fa-copy
-            span='复制'
-        a.rightMenu-item(href="javascript:window.open(\"https://www.baidu.com/s?wd=\"+window.getSelection().toString());window.location.reload();")
-            i.iconfont.icon-baidu
-            span='百度搜索'
+            span=_p('rightmenu.copy')
+        a.rightMenu-item(href="javascript:window.open(\"https://www.bing.com/?q=\"+window.getSelection().toString());window.location.reload();")
+            i.pj-historical.icon-pjh-bing
+            span=_p('rightmenu.search_bing')
         a.rightMenu-item(href="javascript:rmf.searchinThisPage();")
             i.fas.fa-search
-            span='站内搜索'
+            span=_p('rightmenu.search')
         if theme.comments.use
             a.rightMenu-item(href="#post-comment" onclick="rmf.yinyong()")
                 i.fa-solid.fa-message
-                span='引用文本评论'
+                span=_p('rightmenu.quote')
     .rightMenu-group.rightMenu-line.hide#menu-too
         a.rightMenu-item(href="javascript:window.open(window.getSelection().toString());window.location.reload();")
             i.fa.fa-link
-            span='转到链接'
+            span=_p('rightmenu.goto')
     .rightMenu-group.rightMenu-line.hide#menu-paste
         a.rightMenu-item(href='javascript:rmf.paste()')
             i.fa.fa-copy
-            span='粘贴'
+            span=_p('rightmenu.paste')
     .rightMenu-group.rightMenu-line.hide#menu-post
         if theme.comments.use
             a.rightMenu-item(href="#post-comment")
                 i.fas.fa-comment
-                span='空降评论'
+                span=_p('rightmenu.airbone')
         a.rightMenu-item(href="javascript:rmf.copyWordsLink()")
             i.fa.fa-link
-            span='复制本文地址'
+            span=_p('rightmenu.copylink')
     .rightMenu-group.rightMenu-line.hide#menu-to
         a.rightMenu-item(href="javascript:rmf.openWithNewTab()")
             i.fa.fa-window-restore
-            span='新窗口打开'
+            span=_p('rightmenu.restore')
         a.rightMenu-item#menu-too(href="javascript:rmf.open()")
             i.fa.fa-link
-            span='转到链接'
+            span=_p('rightmenu.goto')
         a.rightMenu-item(href="javascript:rmf.copyLink()")
             i.fa.fa-copy
-            span='复制链接'
+            span=_p('rightmenu.copylink2')
     .rightMenu-group.rightMenu-line.hide#menu-img
         a.rightMenu-item(href="javascript:rmf.saveAs()")
             i.fa.fa-download
-            span='保存图片'
+            span=_p('rightmenu.savepic')
         a.rightMenu-item(href="javascript:rmf.openWithNewTab()")
             i.fa.fa-window-restore
-            span='在新窗口打开'
+            span=_p('rightmenu.restore')
         a.rightMenu-item(href="javascript:rmf.click()")
             i.fa.fa-arrows-alt
-            span='全屏显示'
+            span=_p('rightmenu.fullpage')
         a.rightMenu-item(href="javascript:rmf.copyLink()")
             i.fa.fa-copy
-            span='复制图片链接'
+            span=_p('rightmenu.copypicname')
     .rightMenu-group.rightMenu-line
         a.rightMenu-item(href="javascript:toRandomPost()")
             i.fa.fa-paper-plane
-            span='随便逛逛'
+            span=_p('rightmenu.random')
         a.rightMenu-item(href="javascript:rmf.switchDarkMode();")
             i.fa.fa-moon
-            span='昼夜切换'
+            span=_p('rightside.night_mode_title')
         if theme.translate.enable
             a.rightMenu-item(href="javascript:rmf.translate();")
                 i.iconfont.icon-fanti
-                span='繁简转换'
+                span=_p('rightside.translate_title')
         if is_post()||is_page()
             a.rightMenu-item(href="javascript:rmf.switchReadMode();")
                 i.fa.fa-book
-                span='阅读模式'
-        a.rightMenu-item(href="javascript:pjax.loadUrl(\"/license/\");")
-            i.fa.fa-info-circle
-            span='版权声明'
+                span=_p('rightside.readmode_title')
         a.rightMenu-item(href="javascript:toggleWinbox();")
             i.fas.fa-cog
-            span='博客设置'
+            span=_p('rightside.setting')
         a.rightMenu-item(href="javascript:fullScreen();")
             i.fas.fa-expand
-            span='进入全屏'
+            span=_p('rightmenu.fullpage')

@@ -1,6 +1,7 @@
 footer:
   framework: Framework
   theme: Theme
+  start: Start
 
 copy:
   success: Copy successfully
@@ -182,6 +183,22 @@ about:
     month_uv: Visits this month
     recent: Recent Visits
     years: 'Stable operation for ${q} years'
+
+rightmenu:
+  copy: Copy
+  search_bing: Search for Bing
+  search: Search for this site
+  quote: Quoted text comments
+  goto: Go to link
+  paste: Paste
+  airbone: Go to comments
+  copylink: Copy the link of this article
+  restore: Open a new tab
+  copylink2: Copy link
+  savepic: Save this image
+  fullpage: Full Screen
+  copypicname: Copy image link
+  random: Random posts
 
 settings:
   title: Settings

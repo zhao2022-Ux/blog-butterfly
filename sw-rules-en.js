@@ -30,11 +30,6 @@ module.exports.config = {
                             backgroundColor: snackbarBg,
                             duration: 30000,
                             pos: snackbarPos,
-                            actionText: '查看更新日志',
-                            actionTextColor: '#fff',
-                            onActionClick: function(e) {
-                                location.assign("/update/");
-                            },
                         })
                     });
                 } else {

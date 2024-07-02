@@ -19,7 +19,7 @@
             span.hidden-link-text LOGO
             img(src="/img/icon-light.png" style="height:40%; width:40%")
         .footer-menu
-          h2.footer-menu-name 开始
+          h2.footer-menu-name=_p('footer.start')
           ul#menu-get-started.footer-menu-list
             if theme.footer.left
               each footer2link in theme.footer.left

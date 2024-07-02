@@ -1,6 +1,7 @@
 footer:
   framework: 框架
   theme: 主題
+  start: 開始
 
 copy:
   success: 複製成功
@@ -183,6 +184,22 @@ about:
     month_uv: 本月訪問
     recent: 最近訪問
     years: '已穩定運行 ${q} 年'
+
+rightmenu:
+  copy: 複製
+  search_bing: Bing 搜尋
+  search: 站內搜尋
+  quote: 引用文字評論
+  goto: 轉到連結
+  paste: 粘貼
+  airbone: 轉到評論
+  copylink: 複製本文地址
+  restore: 新窗口開啟
+  copylink2: 複製連結
+  savepic: 保存圖片
+  fullpage: 全屏顯示
+  copypicname: 複製圖片連結
+  random: 隨便逛逛
 
 settings:
   title: 設定
