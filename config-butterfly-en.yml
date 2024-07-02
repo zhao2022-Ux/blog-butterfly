@@ -4,9 +4,9 @@
 
 menu:
   Site||icon-pjh-wenzhang:
-    Archives: /archives/ || icon-pjh-a-xiangzishouna
-    Categories: /categories/ || icon-pjh-fenlei
-    Tags: /tags/ || icon-pjh-fenlei-copy
+    Archives: /en/archives/ || icon-pjh-a-xiangzishouna
+    Categories: /en/categories/ || icon-pjh-fenlei
+    Tags: /en/tags/ || icon-pjh-fenlei-copy
 
 #  我的||icon-guanyuwomen:
 #    墙上照片: /album/ || icon-zhaopian
