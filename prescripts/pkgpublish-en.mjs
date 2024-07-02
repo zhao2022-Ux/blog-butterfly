@@ -3,7 +3,7 @@ const pkgfile = {
     "name": "sinzmise-cetastories-en",
     "version": "1.7.0-"+new Date().getTime()
 }
-writeFile('./public/package.json', JSON.stringify(pkgfile), function (err) {
+writeFile('./public-en/package.json', JSON.stringify(pkgfile), function (err) {
     if (err) {
         console.log(err);
     }
