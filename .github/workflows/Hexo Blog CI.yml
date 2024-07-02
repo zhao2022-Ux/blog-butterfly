@@ -43,7 +43,7 @@ jobs:
 
       - name: Deploy Hexo
         run: |
-          yarn deploy
+          yarn deployall
 
       - name: NPM Publish Pre Set
         run: |
