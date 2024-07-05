@@ -298,7 +298,7 @@ module.exports.handle = async(req)=> {
     const domain = urlObj.hostname;
     //从这里开始
     lxs=[]
-    if(domain === "blog.sinzmise.top"){//这里写你需要拦截的域名
+    if(domain === "en.blog.sinzmise.top"){//这里写你需要拦截的域名
         var l=lfetch(generate_blog_urls('sinzmise-cetastories-en',await db.read('blog_version') || 'latest',fullpath(urlPath)))
         return l
             .then(res=>res.arrayBuffer())
