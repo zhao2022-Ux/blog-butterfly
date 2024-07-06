@@ -164,12 +164,15 @@ algolia:
 bangumi: # 追番设置
   enable: true
   source: bili
+  bgmInfoSource: 'bgmv0'
   path:
   vmid: 479627766
   title: "Follow up list"
   quote: "Fantasy dramas that homeowners like to pursue"
   show: 1
-  lazyload: false
+  lazyload: true
+  srcValue: '__image__'
+  lazyloadAttrName: 'data-src=__image__'
   loading:
   showMyComment: false
   pagination: false
@@ -178,11 +181,11 @@ bangumi: # 追番设置
   webp:
   progress:
   extraOrder:
-  proxy: false
+  order: latest
   extra_options:
-    top_img: false
-    lazyload:
-      enable: false
+    key: value
+  coverMirror:
+
 
 swpp:
   # 是否启用插件
