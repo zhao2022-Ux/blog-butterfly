@@ -260,3 +260,7 @@ echarts_js:
   name: echarts
   file: dist/echarts.min.js
   version: 4.9.0
+Discuss_js:
+  name: discuss
+  file: dist/discuss.js
+  version: latest
