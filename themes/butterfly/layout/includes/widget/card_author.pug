@@ -5,20 +5,23 @@ if theme.aside.card_author.enable
         img.u-photo(src=url_for(theme.avatar.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
       .author-info__name.p-name= config.author
       .author-info__description.p-note!= theme.aside.card_author.description || config.description
-
-    .card-info-data.site-data.is-center
-      a(href=url_for(config.archive_dir) + '/')
-        .headline= _p('aside.articles')
-        .length-num= site.posts.length
-      a(href=url_for(config.tag_dir) + '/')
-        .headline= _p('aside.tags')
-        .length-num= site.tags.length
-      a(href=url_for(config.category_dir) + '/')
-        .headline= _p('aside.categories')
-        .length-num= site.categories.length
-      a(href="/comments/")
-        .headline= _p('aside.comments')
-        .length-num.icat-pc-comment= _p('0')
+      .card-info-data.site-data.is-center
+        .card-info-data-item
+          a(href=url_for(config.archive_dir) + '/')
+            i.headline.fas.fa-cash-register
+            .length-num= site.posts.length
+        .card-info-data-item
+          a(href=url_for(config.tag_dir) + '/')
+            i.headline.fas.fa-tags
+            .length-num= site.tags.length
+        .card-info-data-item
+          a(href=url_for(config.category_dir) + '/')
+            i.headline.fas.fa-folder-open
+            .length-num= site.categories.length
+        .card-info-data-item
+          a(href="/comments/")
+            i.headline.fas.fa-comment
+            .length-num.icat-pc-comment= _p('0')
 
     if theme.aside.card_author.button.enable
       a#card-info-btn(href=theme.aside.card_author.button.link)
@@ -26,5 +29,5 @@ if theme.aside.card_author.enable
         span=theme.aside.card_author.button.text
   
     if(theme.social)
-        .card-info-social-icons.is-center
+        .social-list
           !=fragment_cache('social', function(){return partial('includes/header/social')}) 

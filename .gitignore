@@ -10,6 +10,7 @@ node_modules/
 .idea/
 _multiconfig.yml
 _config.butterfly.yml
+_config.yml
 _config.landscape.yml
 gulpfile.js
 sw-rules.js

@@ -176,8 +176,8 @@ bangumi: # 追番设置
   loading:
   showMyComment: false
   pagination: false
-  metaColor: 'var(--anzhiyu-fontcolor)'
-  color: 'var(--anzhiyu-scrollbar)'
+  metaColor:
+  color:
   webp:
   progress:
   extraOrder:
