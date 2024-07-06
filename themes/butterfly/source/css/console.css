@@ -2022,6 +2022,9 @@ html {
     #random2 {
         display:none
     }
+    #nav #toggle-menu {
+        display: none!important
+    }
 }
 
 @media screen and (max-width: 955px) {
