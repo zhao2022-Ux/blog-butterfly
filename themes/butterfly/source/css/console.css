@@ -6392,10 +6392,6 @@ body {
     box-shadow: var(--story-card-widget-social-list2);
 }
 
-[data-theme="dark"] #aside-content .card-widget {
-    background: rgba(18, 18, 18, 1)!important;
-}
-
 /*头像边框效果*/
 div.is-center > div.avatar-img > img{
     border: rgba(144,147,153,0.23) 3px solid;
@@ -6403,4 +6399,5 @@ div.is-center > div.avatar-img > img{
 #aside-content .card-info .author-info__description{
     text-align: left;
     color: #f2f2f2;
+    margin-left: 3px;
 }
