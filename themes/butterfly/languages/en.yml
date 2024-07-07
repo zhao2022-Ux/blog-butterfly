@@ -211,3 +211,5 @@ settings:
     default: Default background
   count:
     title: Status
+  about:
+    title: 关于

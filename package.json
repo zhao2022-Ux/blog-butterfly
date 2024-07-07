@@ -3,7 +3,7 @@
   "version": "1.8.0",
   "private": true,
   "scripts": {
-    "build": "npm run clean && npm run builden && npm run buildzh && hexo swpp && gulp",
+    "build": "npm run builden && npm run buildzh && hexo swpp && gulp",
     "builden": "sh ./deploy-en.sh && npm run clean && hexo generate && hexo bangumi -u ",
     "buildzh": "sh ./deploy-zh.sh && npm run clean && hexo generate && hexo bangumi -u",
     "clean": "hexo clean",

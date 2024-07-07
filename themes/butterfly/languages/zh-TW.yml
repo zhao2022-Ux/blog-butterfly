@@ -212,3 +212,5 @@ settings:
     default: 恢復默認背景
   count:
     title: 統計
+  about:
+    title: 關於

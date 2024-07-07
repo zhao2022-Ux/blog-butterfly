@@ -1194,7 +1194,7 @@ IndieWeb:
 
 # 博客设置
 setting:
-  background: false
+  background: true
   # 笒鬼鬼音乐播放器
   # 样式13：明月浩空的Cover样式
   player:

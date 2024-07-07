@@ -5,11 +5,11 @@ body
             button#backer(onclick='$(\'.asetting\').hide();$(\'.settingx\').show();$(\'#backer\').hide();$(\'#stt-style\').hide();$(\'#stt-font\').hide();$(\'#stt-background\').hide();$(\'#stt-count\').hide();$(\'#stt-about\').hide();')
                 i.fa.fa-chevron-left
             span#stt= _p('settings.title')
-            span#stt-style='&nbsp;-> ' + _p('settings.site.title')
-            span#stt-font='&nbsp;-> ' + _p('settings.fonts.title')
-            span#stt-background='&nbsp;-> ' + _p('settings.backgrounds.title')
-            span#stt-count='&nbsp;-> ' + _p('settings.count.title')
-            span#stt-about='&nbsp;-> '
+            span#stt-style=' -> ' + _p('settings.site.title')
+            span#stt-font=' -> ' + _p('settings.fonts.title')
+            span#stt-background=' -> ' + _p('settings.backgrounds.title')
+            span#stt-count=' -> ' + _p('settings.count.title')
+            span#stt-about=' -> ' + _p('settings.about.title')
             a(id="close-console" onclick="toggleWinbox();") ×
         .settings
             #setting-buttons
@@ -28,7 +28,7 @@ body
                     span=_p('settings.count.title')
                 button.settingx(onclick='$(\'#con-abouts\').show();$(\'.settingx\').hide();$(\'#backer\').show();$(\'#stt-about\').show();')
                     i.fa.fa-cloud-download
-                    span 关于
+                    span=_p('settings.about.title')
             #setting-hides
                 #theme-settings.asetting
                     h2.content-head 站点设置
