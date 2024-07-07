@@ -6305,12 +6305,12 @@ body {
 }
 /*--------------------------------card-widget-----------------------------------*/
 #aside-content .card-info{
-    background: url('https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240706/9f8103c1ce4b859ce8dd6ef90db5a488d87d781c.51e11gc9p9.webp');
+    background: url('https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240706/9f8103c1ce4b859ce8dd6ef90db5a488d87d781c.51e11gc9p9.jpg');
     background-size: cover;
     padding: 0;
 }
 [data-theme="dark"] #aside-content .card-info{
-    background: url('https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240706/9537055c4a6e226d8d4e4e9838ad287a05803080.77dfn8401k.webp');
+    background: url('https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240706/9537055c4a6e226d8d4e4e9838ad287a05803080.77dfn8401k.jpg');
     background-size: cover;
     padding: 0;
 }
