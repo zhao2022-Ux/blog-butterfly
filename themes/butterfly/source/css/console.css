@@ -2,8 +2,8 @@
     font-family: HMOSANS;
     font-style: normal;
     font-display: swap;
-    src: url('https://jsd.onmicrosoft.cn/gh/baige007/ttf/HarmonyOS_Sans_SC_Medium.woff2') format('woff2'),
-    url('https://jsd.onmicrosoft.cn/gh/baige007/ttf/HarmonyOS_Sans_SC_Medium.woff') format('woff');
+    src: url('https://jsd.onmicrosoft.cn/gh/IKKI2000/harmonyos-fonts/fonts/HarmonyOS_Sans/HarmonyOS_Sans_Regular.woff2') format('woff2'),
+    url('https://jsd.onmicrosoft.cn/gh/IKKI2000/harmonyos-fonts/fonts/HarmonyOS_Sans/HarmonyOS_Sans_Regular.woff') format('woff');
 }
 @font-face {
     font-family: Fredoka;
