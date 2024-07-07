@@ -1266,7 +1266,7 @@ inject:
     # 特定日子自动弹窗/灰屏
     - <script src="/js/lunar.js"></script>
     - <script src="/js/day.js"></script>
-    - <script type="text/javascript" src="https://jsd.onmicrosoft.cn/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
+    - <script type="text/javascript" src="https://jsd.onmicrosoft.cn/npm/sweetalert/dist/sweetalert.min.js"></script>
 
     # Live2D
     - <script src="/js/autoload.js"></script>
