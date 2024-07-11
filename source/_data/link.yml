@@ -216,6 +216,11 @@
         avatar: https://cdn.koxiuqiu.cn/koxiuqiu/img/favicon.webp
         descr: 一定会和喜欢的人在夏日夜晚牵手慢步
         siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://koxiuqiu.cn/
+      - name: 网友小宋
+        link: https://xyzbz.cn/
+        avatar: https://bu.dusays.com/2023/07/25/64bf920527086.png
+        descr: 一介草民，只为生活！
+        siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://xyzbz.cn/
 - class_name: 小伙伴们
   flink_style: byer
   class_desc: 那些人，那些事
