@@ -211,6 +211,11 @@
         avatar: https://cdn.gallery.uuanqin.top/img/avatar.webp
         descr: 只能懂一点点
         siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://uuanqin.top/
+      - name: 朽丘博
+        link: https://koxiuqiu.cn/
+        avatar: https://cdn.koxiuqiu.cn/koxiuqiu/img/favicon.webp
+        descr: 一定会和喜欢的人在夏日夜晚牵手慢步
+        siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://koxiuqiu.cn/
 - class_name: 小伙伴们
   flink_style: byer
   class_desc: 那些人，那些事
@@ -450,6 +455,26 @@
           avatar: https://kfdzcoffee.cn/upload/mmexport1715001096100.png
           descr: 所有奇迹的始发点
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://kfdzcoffee.cn
+        - name: 雪萌天文台
+          link: https://blog.snowy.moe
+          avatar: https://img.snowy.moe/head.png
+          descr: 发现巷子里的那颗星星
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.snowy.moe
+        - name: 澄沨的漫游茶记
+          link: https://champhoon.xyz/
+          avatar: https://api.champhoon.xyz/favicon/favicon-main.png
+          descr: Stay hungry, Stay foolish.
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://champhoon.xyz/
+        - name: VanllaOcap Blog
+          link: https://blog.255650.xyz
+          avatar: https://q.qlogo.cn/g?b=qq&nk=66870019&s=640
+          descr: Nice2MeetU.
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.255650.xyz
+        - name: LeZi的猫窝
+          link: https://leziblog.com
+          avatar: https://leziblog.com/logo.jpg
+          descr: 世上本没有博客，直到有了程序员
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://leziblog.com
 - class_name: 友谊长存
   flink_style: anzhiyu
   class_desc: 无评论系统的博客（相识即是缘分）
