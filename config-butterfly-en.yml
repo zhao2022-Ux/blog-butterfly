@@ -1241,9 +1241,6 @@ inject:
     # Live2D
     - <script src="/js/autoload.js"></script>
 
-    # Sakura
-    - <script src="/js/sakura.js"></script>
-
     # fps显示
     - <script src="/js/fps.js"></script>
 

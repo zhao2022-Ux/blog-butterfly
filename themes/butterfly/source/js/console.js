@@ -192,22 +192,29 @@ function tosetting(){
         document.getElementById("fpson").checked=true;
     }
 
-
+    var sakuraid = document.getElementById('canvas_sakura');
+    var sakurajs = document.getElementById('sakurajs');
     if(localStorage.getItem("sakurahide")=="false"){
         document.getElementById("hideSakura").checked=true;
         isSakura=1;
+        if(sakuraid && sakurajs){
+            sakuraid.style.display = 'block';
+        }else{
+            var script = document.createElement('script');
+            script.id = 'sakurajs';
+            script.src = '/js/sakura.js';
+            document.getElementsByTagName('body')[0].appendChild(script);
+        }
     }
     else if(localStorage.getItem("sakurahide")==null){
         localStorage.setItem("sakurahide","true");
         document.getElementById("hideSakura").checked=false;
-        setTimeout(
-            stopp,1000);
-        isSakura=0;
     }
     else{
         document.getElementById("hideSakura").checked=false;
-        setTimeout(
-            stopp,1000);
+        if(sakuraid && sakurajs){
+            sakuraid.style.display = 'none';
+        }
         isSakura=0;
     }
     if(localStorage.getItem("aplayerhide")=="true"){
@@ -371,13 +378,22 @@ function tosetting(){
 //     position = scroll;
 //   });
     toggleSakuras=function(){
-        isSakura=!isSakura;
-        stopp(isSakura);
         if(localStorage.getItem("sakurahide")=="true"){
             localStorage.setItem("sakurahide",false);
+            if(sakuraid && sakurajs){
+                sakuraid.style.display = 'block';
+            }else{
+                var script = document.createElement('script');
+                script.id = 'sakurajs';
+                script.src = '/js/sakura.js';
+                document.getElementsByTagName('body')[0].appendChild(script);
+            }
         }
         else{
             localStorage.setItem("sakurahide",true);
+            if(sakuraid && sakurajs){
+                sakuraid.style.display = 'none';
+            }
         }
     }
     switchAside=function(){
