@@ -378,6 +378,8 @@ function tosetting(){
 //     position = scroll;
 //   });
     toggleSakuras=function(){
+        var sakuraid = document.getElementById('canvas_sakura');
+        var sakurajs = document.getElementById('sakurajs');
         if(localStorage.getItem("sakurahide")=="true"){
             localStorage.setItem("sakurahide",false);
             if(sakuraid && sakurajs){

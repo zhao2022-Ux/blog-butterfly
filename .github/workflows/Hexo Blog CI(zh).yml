@@ -41,12 +41,12 @@ jobs:
           git config --global user.name 'SinzMise'
           git config --global user.email 'email@sinzmise.top'
 
-      - name: Deploy Hexo (zh)
+      - name: Deploy Hexo
         run: |
           yarn deployzh
 
 
-      - name: NPM Publish Pre Set (zh)
+      - name: NPM Publish Pre Set
         run: |
           node ./prescripts/pkgpublish.mjs
 
@@ -54,17 +54,3 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./public/package.json
-
-      - name: Deploy Hexo (en)
-        run: |
-          yarn deployen
-
-
-      - name: NPM Publish Pre Set (en)
-        run: |
-          node ./prescripts/pkgpublish-en.mjs
-
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: ./public-en/package.json
