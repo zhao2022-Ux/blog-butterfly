@@ -237,7 +237,7 @@ module.exports.fullpath = (path) => {
 
 module.exports.generate_blog_urls = () => {
     const npmmirror = [
-        `https://unpkg.zhimg.com/${packagename}@${blogversion}`,
+        `https://jsd.cdn.storisinz.site/npm/${packagename}@${blogversion}`,
         `https://npm.elemecdn.com/${packagename}@${blogversion}`,
         `https://cdn1.tianli0.top/npm/${packagename}@${blogversion}`,
         `https://cdn.afdelivr.top/npm/${packagename}@${blogversion}`,
