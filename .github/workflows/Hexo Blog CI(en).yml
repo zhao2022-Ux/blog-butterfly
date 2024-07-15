@@ -1,4 +1,4 @@
-name: Hexo Blog CI
+name: Hexo Blog CI (EN)
 
 on:
   push:

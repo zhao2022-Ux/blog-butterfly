@@ -1,4 +1,4 @@
-name: Algolia Push
+name: Algolia Push (ZH)
 on:
   schedule:
     - cron: "0 0 * * *"
