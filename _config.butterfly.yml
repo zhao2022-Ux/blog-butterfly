@@ -36,30 +36,10 @@ nav:
 
 hometop:
   enable: true
-  title: 种下故事的种子
-  subTitle: 随着魔法生根发芽
-  siteText: 欢迎来到这个故事的小屋
-  category:
-    - name: 站点折腾
-      path: /categories/站点折腾/
-      shadow: var(--bywind-shadow-blue)
-      class: blue
-      icon: fa fa-keyboard
-    - name: 项目折腾
-      path: /categories/项目折腾/
-      shadow: var(--bywind-shadow-red)
-      class: red
-      icon: fa fa-desktop
-    - name: 个人小记
-      path: /categories/个人小记/
-      shadow: var(--bywind-shadow-green)
-      class: green
-      icon: fa fa-book
-  banner:
-    tips: 今天大佬们又发布了什么呢？
-    title: 哔哔广场
-    image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
-    link: /bbs/
+  link:
+    - title: 点击进入我的个人主页
+      link: https://www.sinzmise.top/
+      image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -325,7 +305,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: Twikoo,Webmention # Valine,Disqus
+  use: Twikoo,Discuss # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -435,6 +415,12 @@ artalk:
   server: https://alt.pl.blog.sinzmise.top/
   site: 星空故事·魔法小屋
   visitor: false
+  option:
+
+# Discuss
+# https://discuss.js.org/Quick-Start.html
+discuss:
+  serverURLs: https://dsc.pl.blog.sinzmise.top/
   option:
 
 # Chat Services
@@ -1162,7 +1148,7 @@ orlike:
   enable: true
   serverurl: https://orlike.blog.sinzmise.top/
 
-ui_version: v1.7.0
+ui_version: v1.8.0
 
 # essay 即刻短文
 essay:
@@ -1188,7 +1174,7 @@ IndieWeb:
 
 # 博客设置
 setting:
-  background: false
+  background: true
   # 笒鬼鬼音乐播放器
   # 样式13：明月浩空的Cover样式
   player:
@@ -1265,9 +1251,6 @@ inject:
     # Live2D
     - <script src="/js/autoload.js"></script>
 
-    # Sakura
-    - <script src="/js/sakura.js"></script>
-
     # fps显示
     - <script src="/js/fps.js"></script>
 
@@ -1280,9 +1263,6 @@ inject:
 
     # about关于页 - 处理函数
     - <script type="text/javascript" src="/js/about.js"></script>
-
-    # hometop
-    - <script src="/js/hometop.js"></script>
 
     # OwO表情包放大
     - <script src="/js/owobig.js"></script>

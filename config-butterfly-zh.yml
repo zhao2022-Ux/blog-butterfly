@@ -36,30 +36,10 @@ nav:
 
 hometop:
   enable: true
-  title: 种下故事的种子
-  subTitle: 随着魔法生根发芽
-  siteText: 欢迎来到这个故事的小屋
-  category:
-    - name: 站点折腾
-      path: /categories/站点折腾/
-      shadow: var(--bywind-shadow-blue)
-      class: blue
-      icon: fa fa-keyboard
-    - name: 项目折腾
-      path: /categories/项目折腾/
-      shadow: var(--bywind-shadow-red)
-      class: red
-      icon: fa fa-desktop
-    - name: 个人小记
-      path: /categories/个人小记/
-      shadow: var(--bywind-shadow-green)
-      class: green
-      icon: fa fa-book
-  banner:
-    tips: 今天大佬们又发布了什么呢？
-    title: 哔哔广场
-    image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
-    link: /bbs/
+  link:
+    - title: 点击进入我的个人主页
+      link: https://www.sinzmise.top/
+      image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -1283,9 +1263,6 @@ inject:
 
     # about关于页 - 处理函数
     - <script type="text/javascript" src="/js/about.js"></script>
-
-    # hometop
-    - <script src="/js/hometop.js"></script>
 
     # OwO表情包放大
     - <script src="/js/owobig.js"></script>

@@ -1277,7 +1277,7 @@ th {
 
 .menus_item_child:not(#sidebar-menus>.menus_items>.menus_item>.menus_item_child)::before {
     transform: translateY(-20px);
-    margin-top: 20px
+    margin-top: 10px
 }
 
 .wzbutton:hover {

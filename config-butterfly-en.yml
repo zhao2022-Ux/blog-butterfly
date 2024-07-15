@@ -23,20 +23,10 @@ nav:
 
 hometop:
   enable: true
-  title: Plant the seeds of a story
-  subTitle: As magic takes root and sprouts
-  siteText: Welcome to the Story Magic House
-  category:
-    - name: Writing
-      path: /categories/writing/
-      shadow: var(--bywind-shadow-green)
-      class: green
-      icon: fa fa-book
-  banner:
-    tips: Hello!
-    title: This is en page!
-    image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
-    link: /en/
+  link:
+    - title: Go to my personal page
+      link: https://www.sinzmise.top/
+      image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -1253,9 +1243,6 @@ inject:
 
     # about关于页 - 处理函数
     - <script type="text/javascript" src="/js/about.js"></script>
-
-    # hometop
-    - <script src="/js/hometop.js"></script>
 
     # OwO表情包放大
     - <script src="/js/owobig.js"></script>
