@@ -25,7 +25,7 @@ window.onload = function(){
     var current = 0;
 
     var timer;
-    timer = setInterval(go,1000);
+    timer = setInterval(go,5000);
     function go(){
         for(var j =0;j<$length;j++){
             $box1[j].style.display = "none";
@@ -44,7 +44,7 @@ window.onload = function(){
             clearInterval(timer);
         }
         $box1[k].onmouseout = function(){
-            timer = setInterval(go,1000);
+            timer = setInterval(go,5000);
         }
     }
     for(var p=0;p<$box3.children.length;p++){
@@ -52,7 +52,7 @@ window.onload = function(){
             clearInterval(timer);
         };
         $box3.children[p].onmouseout = function(){
-            timer = setInterval(go,1000);
+            timer = setInterval(go,5000);
         }
     }
 
@@ -69,7 +69,7 @@ window.onload = function(){
             current = this.index +1;
         }
         $box2.children[u].onmouseout = function(){
-            timer = setInterval(go,1000);
+            timer = setInterval(go,5000);
         }
     }
 
