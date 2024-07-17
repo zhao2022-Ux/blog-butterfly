@@ -1237,8 +1237,8 @@ inject:
     # - <script src="xxxx"></script>
 
     # Ruffle + SWFObject
-    - <script src="https://jsd.onmicrosoft.cn/npm/@ruffle-rs/ruffle"></script>
-    - <script src="https://jsd.onmicrosoft.cn/gh/swfobject/swfobject@master/swfobject/swfobject.js"></script>
+    - <script src="https://jsd.cdn.storisinz.site/npm/@ruffle-rs/ruffle"></script>
+    - <script src="https://jsd.cdn.storisinz.site/gh/swfobject/swfobject@master/swfobject/swfobject.js"></script>
 
     # 欢迎提醒
     - <script src="/js/welcome.js"></script>
@@ -1249,7 +1249,7 @@ inject:
     # 特定日子自动弹窗/灰屏
     - <script src="/js/lunar.js"></script>
     - <script src="/js/day.js"></script>
-    - <script type="text/javascript" src="https://jsd.onmicrosoft.cn/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
+    - <script type="text/javascript" src="https://jsd.cdn.storisinz.site/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
 
     # Live2D
     - <script src="/js/autoload.js"></script>

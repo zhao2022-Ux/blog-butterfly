@@ -264,3 +264,7 @@ Discuss_js:
   name: discuss
   file: dist/discuss.js
   version: latest
+qexo_daodao:
+  name: qexo-static
+  file: hexo/statistic.js
+  version: latest
