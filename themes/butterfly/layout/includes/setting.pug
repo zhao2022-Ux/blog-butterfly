@@ -31,7 +31,7 @@ body
                     span=_p('settings.about.title')
             #setting-hides
                 #theme-settings.asetting
-                    h2.content-head 站点设置
+                    h2.content-head=_p('settings.site.title')
                     p
                         .content(style='display:flex')
                             input#blur(type='checkbox', onclick='setBlur()')
@@ -79,7 +79,7 @@ body
                             input#black(type='radio', name='colors', onclick='setColor(\'black\')')
                             input#blackgray(type='radio', name='colors', onclick='setColor(\'blackgray\')')
                 #font-settings.asetting
-                    h2.content-head 字体设置
+                    h2.content-head=_p('settings.fonts.title')
                     p#swfs
                         a.swf(href='javascript:;', rel='noopener external nofollow', style='font-family:\'HYTMR\'!important;color:black', onclick='setFont(\'HYTMR\')') 汉仪唐美人
                         br
@@ -103,7 +103,7 @@ body
                         br
                 if theme.setting.background
                     #background-settings.asetting
-                        h2(style='margin-left:10px') 背景设置
+                        h2(style='margin-left:10px')=_p('settings.backgrounds.title')
                         div
                         button.content-button(onclick='localStorage.removeItem(\'blogbg\');location.reload();')
                             i.fa-solid.fa-arrows-rotate
