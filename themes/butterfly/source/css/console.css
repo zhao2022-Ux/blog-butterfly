@@ -176,18 +176,6 @@ body {
     transition-duration: .2s
 }
 
-[data-theme=dark] #web_bg {
-    background: url(https://sininno.api.sinzmise.x10.bz/api/Random/ba/api.php);
-    background-repeat: no-repeat;
-    background-size: cover
-}
-
-[data-theme=light] #web_bg {
-    background: url(https://sininno.api.sinzmise.x10.bz/api/Random/ba/api.php);
-    background-repeat: no-repeat;
-    background-size: cover
-}
-
 [data-theme=light] #rightMenu {
     display: none;
     position: fixed;
@@ -5939,6 +5927,19 @@ body {
     #con-barrage,.rightMenu-item:has(.icon-danmu) {
         display:none!important
     }
+    #background-settings.asetting .bg-mobi{
+        display:block!important;
+    }
+    #background-settings.asetting .bg-pc{
+        display:none!important;
+    }
+}
+
+#background-settings.asetting .bg-mobi{
+    display:none;
+}
+#background-settings.asetting .bg-pc{
+    display:block;
 }
 
 #speaks {

@@ -40,6 +40,9 @@ hometop:
     - title: 点击进入我的个人主页
       link: https://www.sinzmise.top/
       image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240131/20.34xsj1b9tek0.webp
+    - title: 列车即将启动！下一站是哪里呢？
+      link: https://www.travellings.cn/go-by-clouds.html
+      image: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240716/msedge_0OXdzIbvSH.4uatk1eoqy.png
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -1234,8 +1237,8 @@ inject:
     # - <script src="xxxx"></script>
 
     # Ruffle + SWFObject
-    - <script src="https://jsd.onmicrosoft.cn/npm/@ruffle-rs/ruffle"></script>
-    - <script src="https://jsd.onmicrosoft.cn/gh/swfobject/swfobject@master/swfobject/swfobject.js"></script>
+    - <script src="https://jsd.cdn.storisinz.site/npm/@ruffle-rs/ruffle"></script>
+    - <script src="https://jsd.cdn.storisinz.site/gh/swfobject/swfobject@master/swfobject/swfobject.js"></script>
 
     # 欢迎提醒
     - <script src="/js/welcome.js"></script>
@@ -1246,7 +1249,7 @@ inject:
     # 特定日子自动弹窗/灰屏
     - <script src="/js/lunar.js"></script>
     - <script src="/js/day.js"></script>
-    - <script type="text/javascript" src="https://jsd.onmicrosoft.cn/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
+    - <script type="text/javascript" src="https://jsd.cdn.storisinz.site/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
 
     # Live2D
     - <script src="/js/autoload.js"></script>

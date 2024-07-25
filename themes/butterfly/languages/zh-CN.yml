@@ -205,6 +205,9 @@ settings:
   title: 设置
   site:
     title: 站点
+    blur: 启用模糊效果
+    fps: '开启帧率检测 （<a href="javascript:window.location.reload()">刷新</a>后生效）'
+    theme: 主题
   fonts:
     title: 字体
   backgrounds:

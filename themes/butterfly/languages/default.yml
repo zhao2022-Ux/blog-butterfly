@@ -204,6 +204,9 @@ settings:
   title: Settings
   site:
     title: Sites
+    blur: Enable blur effect
+    fps: 'Enable FPS detection (Effective after <a href="javascript:window.location.reload()">refreshing</a>)'
+    theme: Theme
   fonts:
     title: Fonts
   backgrounds:

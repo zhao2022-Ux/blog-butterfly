@@ -205,6 +205,9 @@ settings:
   title: 設定
   site:
     title: 網站
+    blur: 啟用模糊效果
+    fps: '開啟幀率檢測 （<a href="javascript:window.location.reload()">重繪</a>後生效）'
+    theme: 主題
   fonts:
     title: 字體
   backgrounds:
