@@ -41,6 +41,6 @@ comments: false
           sort_rule: 'created'
       }
   </script>
-  <script type="text/javascript" src="https://www.jsdelivr.ren/gh/zhheo/JS-Heo@master/moments5/app.min.js"></script>
-  <script type="text/javascript" src="https://www.jsdelivr.ren/gh/zhheo/JS-Heo@master/moments5/bundle.js"></script>
+  <script type="text/javascript" src="https://jsd.cdn.storisinz.site/gh/zhheo/JS-Heo@master/moments5/app.min.js"></script>
+  <script type="text/javascript" src="https://jsd.cdn.storisinz.site/gh/zhheo/JS-Heo@master/moments5/bundle.js"></script>
 {% endraw %}
