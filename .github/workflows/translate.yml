@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: lizheming/github-translate-action
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         with:
           IS_MODIFY_TITLE: true
           APPEND_TRANSLATION: true
