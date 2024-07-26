@@ -208,6 +208,12 @@ settings:
     blur: 启用模糊效果
     fps: '开启帧率检测 （<a href="javascript:window.location.reload()">刷新</a>后生效）'
     theme: 主题
+    music: 音乐播放器
+    sakura: 落樱特效
+    dark: 明暗模式自动切换
+    color:
+      title: 主题色
+      default: 默认
   fonts:
     title: 字体
   backgrounds:

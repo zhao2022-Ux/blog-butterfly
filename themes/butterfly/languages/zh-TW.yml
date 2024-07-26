@@ -208,6 +208,12 @@ settings:
     blur: 啟用模糊效果
     fps: '開啟幀率檢測 （<a href="javascript:window.location.reload()">重繪</a>後生效）'
     theme: 主題
+    music: 音樂播放機
+    sakura: 落櫻特效
+    dark: 明暗模式自動切換
+    color:
+      title: 主題色
+      default: 默認
   fonts:
     title: 字體
   backgrounds:

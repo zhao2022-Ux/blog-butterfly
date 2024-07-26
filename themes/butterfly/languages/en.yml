@@ -196,7 +196,7 @@ rightmenu:
   restore: Open a new tab
   copylink2: Copy link
   savepic: Save this image
-  fullpage: Full Screen
+  fullpage: Full screen
   copypicname: Copy image link
   random: Random posts
 
@@ -207,6 +207,12 @@ settings:
     blur: Enable blur effect
     fps: 'Enable FPS detection (Effective after <a href="javascript:window.location.reload()">refreshing</a>)'
     theme: Theme
+    music: Music player
+    sakura: Falling sakura effect
+    dark: Auto darkmode
+    color:
+      title: Theme color
+      default: Default
   fonts:
     title: Fonts
   backgrounds:

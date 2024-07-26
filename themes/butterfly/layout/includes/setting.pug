@@ -52,19 +52,19 @@ body
                             .content(style='display:flex')
                                 input#hideAplayer(type='checkbox', onclick='toggleAplayer()')
                                 .content-text
-                                    span 音乐播放器
+                                    span=_p('settings.site.music')
                         .content(style='display:flex')
                             input#hideSakura(type='checkbox', onclick='toggleSakuras()')
-                            .content-text 落樱特效
+                            .content-text=_p('settings.site.sakura')
                         .content(style='display:flex')
                             input#autoTheme(type='checkbox', onclick='toggleAutoTheme()')
-                            .content-text 明暗模式自动切换
+                            .content-text=_p('settings.site.dark')
 
                     p
-                        h3.content-head 主题色
+                        h3.content-head=_p('settings.site.color.title')
                         #themeColorSettings.content(style='display:flex')
                             input#default(type='radio', name='colors', onclick='setColor(\'default\')', checked)
-                            span#deftext 默认
+                            span#deftext=_p('settings.site.color.default')
                             input#red(type='radio', name='colors', onclick='setColor(\'red\')')
                             input#orange(type='radio', name='colors', onclick='setColor(\'orange\')')
                             input#yellow(type='radio', name='colors', onclick='setColor(\'yellow\')')
@@ -105,7 +105,7 @@ body
                         div
                         button.content-button(onclick='localStorage.removeItem(\'blogbg\');location.reload();')
                             i.fa-solid.fa-arrows-rotate
-                            span  点我恢复默认背景
+                            span=_p('settings.backgrounds.default')
                         each bgs in site.data.backgrounds
                             if bgs.set === 'pe'
                                 .bg-mobi

@@ -26,8 +26,8 @@ comments: false
     hungryFish: 500,
     }
   </script>
-  <link rel="stylesheet" type="text/css" href="https://www.jsdelivr.ren/gh/zhheo/JS-Heo@main/moments/random-friends-post.css">
-  <script src = "https://www.jsdelivr.ren/gh/zhheo/JS-Heo@main/moments/random-friends-post.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://jsd.cdn.storisinz.site/gh/zhheo/JS-Heo@main/moments/random-friends-post.css">
+  <script src = "https://jsd.cdn.storisinz.site/gh/zhheo/JS-Heo@main/moments/random-friends-post.js"></script>
   <div id="hexo-circle-of-friends-root"></div>
   <script>
       let UserConfig = {
