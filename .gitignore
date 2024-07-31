@@ -8,6 +8,7 @@ node_modules/
 /public*/
 .deploy*/
 .idea/
+.vscode/
 _multiconfig.yml
 _config.butterfly.yml
 _config.yml

@@ -17,5 +17,7 @@ if hexo-config('preloader.enable')
     @import './_load_style/heo'
   else if hexo-config('preloader.load_style') == 'story'
     @import './_load_style/story'
+  else if hexo-config('preloader.load_style') == 'nyancat'
+    @import './_load_style/nyancat'
   else
     @import './_load_style/default'

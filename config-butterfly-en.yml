@@ -740,7 +740,7 @@ subtitle:
 preloader:
   enable: true
   load_color: 'var(--story-theme)' # '#37474f'
-  load_style: story # default|gear|ironheart|scarecrow|triangles|wizard|image|icat|heo
+  load_style: nyancat # default|gear|ironheart|scarecrow|triangles|wizard|image|icat|heo|nyancat
   load_image: /img/load-light.png # url
   load_image_dark: /img/load-dark.png
 
