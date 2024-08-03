@@ -262,9 +262,5 @@ echarts_js:
   version: 4.9.0
 Discuss_js:
   name: discuss
-  file: dist/discuss.js
-  version: latest
-qexo_daodao:
-  name: qexo-static
-  file: hexo/statistic.js
+  file: dist/discuss.min.js
   version: latest
