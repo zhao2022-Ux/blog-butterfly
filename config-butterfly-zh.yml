@@ -641,7 +641,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: url(https://sininno.api.sinzmise.x10.bz/api/Random/ba/api.php)
+background: url(https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/ba/pc/06.86tfa8gmnm.webp)
 
 # Footer Background
 footer_bg: false
