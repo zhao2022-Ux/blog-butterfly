@@ -156,7 +156,6 @@ body
                         p 页面访问量:
                             span#qexo-page-pv
                     if theme.qexo.enable && theme.qexo.serverURL
-                        script(src=url_for('/js/statistic.js'))
                         script.
                             loadStatistic("!{theme.qexo.serverURL}")
 

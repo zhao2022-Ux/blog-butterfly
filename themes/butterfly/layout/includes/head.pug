@@ -22,6 +22,8 @@ meta(name="copyright" content=pageCopyright)
 meta(name ="format-detection" content="telephone=no")
 meta(name="theme-color" content=themeColor)
 
+script(src=url_for('/js/statistic.js'))
+
 if theme.IndieWeb.enable && theme.IndieWeb.IndieAuth.enable
   - var authlink= theme.IndieWeb.IndieAuth.auth_link || "https://indieauth.com/auth"
   - var tokenlink= theme.IndieWeb.IndieAuth.token_link || "https://tokens.indieauth.com/token"
