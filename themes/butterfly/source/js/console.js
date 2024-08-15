@@ -275,6 +275,7 @@ function tosetting(){
             script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
             script.setAttribute('key',GLOBAL_CONFIG.player.key);
             script.setAttribute('m',GLOBAL_CONFIG.player.mobile);
+            script.setAttribute('api',"https://y.cenguigui.cn/");
             document.getElementsByTagName('body')[0].appendChild(script);
         }
     }
@@ -320,6 +321,7 @@ function tosetting(){
                 script.src = 'https://y.cenguigui.cn/Static/player13/js/player.js';
                 script.setAttribute('key',GLOBAL_CONFIG.player.key);
                 script.setAttribute('m',GLOBAL_CONFIG.player.mobile);
+                script.setAttribute('api',"https://y.cenguigui.cn/");
                 document.getElementsByTagName('body')[0].appendChild(script);
             }
         }
