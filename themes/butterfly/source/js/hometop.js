@@ -1,8 +1,8 @@
-function whenDOMReady() {
+function hometopreload() {
     if (location.pathname == '/essay/') document.addEventListener('DOMContentLoaded', function () {setTimeout(() => {reflashhometop();}, 300)})
 }
-whenDOMReady()
-document.addEventListener("pjax:complete", whenDOMReady)
+hometopreload()
+document.addEventListener("pjax:complete", hometopreload)
 
 function reflashhometop() {
     window.onload = function(){
