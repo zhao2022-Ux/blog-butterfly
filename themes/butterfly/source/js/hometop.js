@@ -1,5 +1,5 @@
 function hometopreload() {
-    if (location.pathname == '/essay/') document.addEventListener('DOMContentLoaded', function () {setTimeout(() => {reflashhometop();}, 300)})
+    if (location.pathname == '/') document.addEventListener('DOMContentLoaded', function () {setTimeout(() => {reflashhometop();}, 300)})
 }
 hometopreload()
 document.addEventListener("pjax:complete", hometopreload)
