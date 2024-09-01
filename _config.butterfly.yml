@@ -477,23 +477,25 @@ messenger:
 # --------------------------------------
 footer:
   custom_text:
-    - <a href="https://icp.gov.moe/?keyword=20231033" target="_blank">萌ICP备20231033号</a>&nbsp;
+    - <a href="https://icp.gov.moe/?keyword=20231033" target="_blank">萌ICP备20231033号</a>&nbsp;|
+    - <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?query=blog.sinzmise.top" title="MIIT备20240818号">MIIT备20240818号</a>&nbsp;|
+    - <a href="https://guan.ma/hao/2024000155/" title="官码2024000155号"><img src="https://style.wmou.com/images/guanma.png" alt="官码" width="9">官码2024000155号</a>
     - <br>
     - <a href="https://xn--sr8hvo.ws/previous">←</a>
     - An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
     - <a href="https://xn--sr8hvo.ws/next">→</a>
     - <br>
     - <span>我加入的：</span>
-    - <a href="https://zhblogs.ohyee.cc/" target="_blank">中文博客列表</a>&nbsp;
-    - <a href="https://storeweb.cn/member/o/1585" target="_blank">个站商店</a>&nbsp;
-    - <a href="https://bf.zzxworld.com/s/995" target="_blank">BlogFinder</a>&nbsp;
-    - <a href="https://sites.link/site-info?siteType=life&siteId=64cb373190e35300a8eec654" target="_blank">站点聚合平台</a>&nbsp;
-    - <a href="https://boke.lu" target="_blank">博客录</a>&nbsp;
-    - <a href="https://rssblog.cn/member/d711afd659d65c2ba2d3b18697818cf7/" target="_blank">RssBlog</a>&nbsp;
-    - <a href="https://blogscn.fun" target="_blank">笔墨迹</a>&nbsp;
-    - <a href="https://forever.dreamerhe.cn/" target="_blank">梦境列车</a>&nbsp;
-    - <a href="https://firewood.news/" target="_blank">积薪</a>&nbsp;
-    - <a href="https://daohang.lusongsong.com/" target="_blank">博客大全</a>&nbsp;
+    - <a href="https://zhblogs.ohyee.cc/" target="_blank">中文博客列表</a>&nbsp;|
+    - <a href="https://storeweb.cn/member/o/1585" target="_blank">个站商店</a>&nbsp;|
+    - <a href="https://bf.zzxworld.com/s/995" target="_blank">BlogFinder</a>&nbsp;|
+    - <a href="https://sites.link/site-info?siteType=life&siteId=64cb373190e35300a8eec654" target="_blank">站点聚合平台</a>&nbsp;|
+    - <a href="https://boke.lu" target="_blank">博客录</a>&nbsp;|
+    - <a href="https://rssblog.cn/member/d711afd659d65c2ba2d3b18697818cf7/" target="_blank">RssBlog</a>&nbsp;|
+    - <a href="https://blogscn.fun" target="_blank">笔墨迹</a>&nbsp;|
+    - <a href="https://forever.dreamerhe.cn/" target="_blank">梦境列车</a>&nbsp;|
+    - <a href="https://firewood.news/" target="_blank">积薪</a>&nbsp;|
+    - <a href="https://daohang.lusongsong.com/" target="_blank">博客大全</a>&nbsp;|
   left:
     - name: 个人主页
       url: https://www.sinzmise.top/
