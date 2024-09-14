@@ -1,6 +1,6 @@
 {
   "name": "hexo-site",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "private": true,
   "scripts": {
     "build": "npm run builden && npm run buildzh && hexo swpp && gulp",

@@ -1128,7 +1128,7 @@ orlike:
   enable: true
   serverurl: https://orlike.blog.sinzmise.top/
 
-ui_version: v1.8.0
+ui_version: v1.9.0
 
 # essay 即刻短文
 essay:
