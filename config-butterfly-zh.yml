@@ -1285,6 +1285,9 @@ inject:
     # 最新评论
     - <script async type="text/javascript" src="/js/comments.js"></script>
 
+    # 哔哔广场iframe
+    - <script src='/bbs/bbs.js'></script>
+
 
 # CDN
 # Don't modify the following settings unless you know how they work
