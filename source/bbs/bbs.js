@@ -1,10 +1,8 @@
-function whenDOMReady() {
+$(function () {
+    //时间控制每隔200毫秒检查当前页面高度以及滚动高度，测试多遍，cpu占用极少，不明显影响程序运行速度
     if (location.pathname.startsWith('/bbs/')) window.setInterval("reinitIframe()", 200);
-}
- 
-whenDOMReady() // 打开网站先执行一次
-document.addEventListener("pjax:complete", whenDOMReady) // pjax加载完成（切换页面）后再执行一次
- 
+})
+
 //iframe自适应高度,解决了动态更换页面高度无法自适应问题
 function reinitIframe() {
     var iframe = document.getElementById("mainFrame");
