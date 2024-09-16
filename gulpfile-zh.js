@@ -8,7 +8,7 @@ var terser = require('gulp-terser');
 
 // minify js - gulp-tester
 gulp.task('compress', () =>
-    gulp.src(['./public/**/*.js', '!./public/**/*.min.js', '!./public/**/custom.js', '!./public/sw.js', '!./public/sw-dom.js'])
+    gulp.src(['./public/**/*.js', '!./public/**/*.min.js', '!./public/**/custom.js','!./public/**/custom.js', '!./public/bbs/bbs.js', '!./public/sw-dom.js'])
         .pipe(terser())
         .pipe(gulp.dest('./public'))
 )
