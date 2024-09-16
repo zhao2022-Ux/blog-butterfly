@@ -6,4 +6,4 @@ aside: false
 top_img: false
 ---
 因为pjax会使我页面错乱，只能用iframe了。。。。。
-<iframe src="/bbs/bbs.html" id='v' name="mainFrame" width="1246px" height="auto" frameborder="0" scrolling="no" onLoad="this.height=100"></iframe>
+<iframe src="/bbs/bbs.html" id='mainFrame' name="mainFrame" width="1246px" height="auto" frameborder="0" scrolling="no" onLoad="this.height=100"></iframe>
