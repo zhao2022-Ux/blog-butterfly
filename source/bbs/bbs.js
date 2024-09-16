@@ -2,6 +2,8 @@ function whenDOMReady() {
     if (location.pathname.startsWith('/bbs/')) window.setInterval("reinitIframe()", 200);
 }
  
+whenDOMReady() // 打开网站先执行一次
+document.addEventListener("pjax:complete", whenDOMReady) // pjax加载完成（切换页面）后再执行一次
  
 //iframe自适应高度,解决了动态更换页面高度无法自适应问题
 function reinitIframe() {
