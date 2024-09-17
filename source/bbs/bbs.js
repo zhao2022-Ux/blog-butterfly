@@ -8,10 +8,10 @@ function reinitIframe() {
     try {
         //bHeight 和 dHeight 如果相等，用其一等于iframe.height 即可
         var bHeight = iframe.contentWindow.document.body.scrollHeight;
-        var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-        var height = Math.max(bHeight, dHeight);
-        console.log(height)
-        iframe.height = height;
+        //var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+        //var height = Math.max(bHeight, dHeight);
+        console.log(bHeight)
+        iframe.height = bHeight;
     } catch (ex) { }
 }
 
