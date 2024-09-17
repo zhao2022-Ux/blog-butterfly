@@ -202,6 +202,14 @@ artalk_css:
   name: artalk
   file: dist/Artalk.css
   version: latest
+artalklite_js:
+  name: artalk
+  file: dist/ArtalkLite.js
+  version: latest
+artalklite_css:
+  name: artalk
+  file: dist/ArtalkLite.css
+  version: latest
 pace_js:
   name: pace-js
   other_name: pace

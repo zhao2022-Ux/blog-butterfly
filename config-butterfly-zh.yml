@@ -14,7 +14,6 @@ menu:
     朋友圈: /fcircle/ || icon-pjh-icon_pengyouquan
     留言板: /comments/ || icon-pjh-liuyanban
     哔哔广场: /bbs/ || icon-pjh-laba
-    哔哔广场（pjax测试）: /bbs2/ || icon-pjh-laba
 
 #  我的||icon-guanyuwomen:
 #    墙上照片: /album/ || icon-zhaopian
@@ -936,7 +935,7 @@ pjax:
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: true
 
 # Snackbar (Toast Notification 彈窗)

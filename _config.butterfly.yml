@@ -308,7 +308,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: Twikoo,Discuss # Valine,Disqus
+  use: Twikoo,Artalk # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -415,7 +415,7 @@ remark42:
 # Artalk
 # https://artalk.js.org/guide/frontend/config.html
 artalk:
-  server: https://alt.pl.blog.sinzmise.top/
+  server: https://atk.pl.blog.sinzmise.top/
   site: 星空故事·魔法小屋
   visitor: false
   option:
@@ -930,13 +930,12 @@ note:
 pjax:
   enable: true
   exclude:
-    - /bbs/
     # - xxxx
     # - xxxx
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: true
 
 # Snackbar (Toast Notification 彈窗)
@@ -1148,7 +1147,7 @@ orlike:
   enable: true
   serverurl: https://orlike.blog.sinzmise.top/
 
-ui_version: v1.8.0
+ui_version: v1.9.0
 
 # essay 即刻短文
 essay:
@@ -1284,6 +1283,9 @@ inject:
 
     # 最新评论
     - <script async type="text/javascript" src="/js/comments.js"></script>
+
+    # 哔哔广场iframe
+    - <script src='/bbs/bbs.js'></script>
 
 
 # CDN

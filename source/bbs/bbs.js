@@ -1,21 +1,42 @@
-function startbbs() {
-    if (location.pathname.startsWith('/bbs/')) reinitIframe();
+function whenDOMReady() {
+    if (location.pathname.startsWith('/bbs/')) loadbbs();
 }
 
-//iframe自适应高度,解决了动态更换页面高度无法自适应问题
-function reinitIframe() {
-    var iframe = document.getElementById("mainFrame");
-    try {
-        //bHeight 和 dHeight 如果相等，用其一等于iframe.height 即可
-        var bHeight = iframe.contentWindow.document.body.scrollHeight;
-        //var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-        //var height = Math.max(bHeight, dHeight);
-        console.log(bHeight)
-        iframe.height = bHeight;
-    } catch (ex) { }
+whenDOMReady() // 打开网站先执行一次
+document.addEventListener("pjax:complete", whenDOMReady) // pjax加载完成（切换页面）后再执行一次
+
+// 封装异步加载资源的方法
+function loadExternalResource(url, type) {
+    return new Promise((resolve, reject) => {
+        let tag;
+
+        if (type === "css") {
+            tag = document.createElement("link");
+            tag.rel = "stylesheet";
+            tag.href = url;
+        }
+        else if (type === "js") {
+            tag = document.createElement("script");
+            tag.src = url;
+        }
+        if (tag) {
+            tag.onload = () => resolve(url);
+            tag.onerror = () => reject(url);
+            document.getElementById('memobbs-static').appendChild(tag);
+        }
+    });
 }
 
-$(function () {
-    //时间控制每隔200毫秒检查当前页面高度以及滚动高度，测试多遍，cpu占用极少，不明显影响程序运行速度
-    window.setInterval("startbbs()", 200);
-})
+function loadbbs() {
+    // 哔哔广场依赖的css
+    loadExternalResource("https://jsd.cdn.storisinz.site/npm/artalk/dist/ArtalkLite.css", "css"),
+    loadExternalResource("https://memobbs.app/memos.css", "css"),
+    loadExternalResource("https://memobbs.app/grid.css", "css"),
+
+    // 哔哔广场依赖的js
+    loadExternalResource("https://jsd.cdn.storisinz.site/npm/twikoo", "js"),
+    loadExternalResource("https://jsd.cdn.storisinz.site/npm/artalk/dist/ArtalkLite.js", "js"),
+    loadExternalResource("https://jsd.cdn.storisinz.site/npm/marked/marked.min.js", "js"),
+    loadExternalResource("https://jsd.cdn.storisinz.site/npm/lozad/dist/lozad.min.js", "js"),
+    loadExternalResource("https://memobbs.app/memos.js", "js")
+}
