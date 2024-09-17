@@ -1,7 +1,6 @@
-$(function () {
-    //时间控制每隔200毫秒检查当前页面高度以及滚动高度，测试多遍，cpu占用极少，不明显影响程序运行速度
-    if (location.pathname.startsWith('/bbs/')) window.setInterval("reinitIframe()", 200);
-})
+function startbbs() {
+    if (location.pathname.startsWith('/bbs/')) reinitIframe();
+}
 
 //iframe自适应高度,解决了动态更换页面高度无法自适应问题
 function reinitIframe() {
@@ -15,3 +14,9 @@ function reinitIframe() {
         iframe.height = dHeight;
     } catch (ex) { }
 }
+
+$(function () {
+    //时间控制每隔200毫秒检查当前页面高度以及滚动高度，测试多遍，cpu占用极少，不明显影响程序运行速度
+    window.setInterval("startbbs()", 200);
+})
+ 
