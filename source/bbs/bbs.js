@@ -7,11 +7,11 @@ function reinitIframe() {
     var iframe = document.getElementById("mainFrame");
     try {
         //bHeight 和 dHeight 如果相等，用其一等于iframe.height 即可
-        // var bHeight = iframe.contentWindow.document.body.scrollHeight;
+        var bHeight = iframe.contentWindow.document.body.scrollHeight;
         var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-        // var height = Math.max(bHeight, dHeight);
-        console.log(dHeight)
-        iframe.height = dHeight;
+        var height = Math.max(bHeight, dHeight);
+        console.log(height)
+        iframe.height = height;
     } catch (ex) { }
 }
 
