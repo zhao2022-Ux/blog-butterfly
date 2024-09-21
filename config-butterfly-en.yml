@@ -910,6 +910,7 @@ note:
 pjax:
   enable: true
   exclude:
+    - bbs
     # - xxxx
     # - xxxx
 
