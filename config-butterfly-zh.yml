@@ -930,7 +930,7 @@ note:
 pjax:
   enable: true
   exclude:
-    - bbs
+    - /bbs/
     # - xxxx
     # - xxxx
 
