@@ -1,7 +1,7 @@
 ---
 title: Gameload示例
 description: 一个普通的GameLoad示例
-cover: 'https://github.com/SinzMise/picx-images-hosting/raw/master/6624169a523e7.ic3h96k1t.webp'
+cover: 'https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/6624169a523e7.ic3h96k1t.webp'
 tags:
   - 项目折腾
   - Windows软件
