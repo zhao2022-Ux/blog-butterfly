@@ -1,0 +1,9 @@
+<div id="artalk"></div>
+<%- js({src: theme.assets.plugin.artalk_js,'data-swup-reload-script': true, 'data-reset':'true' }) %>
+<%- css(theme.assets.plugin.artalk_css) %>
+<script data-swup-reload-script>
+    Artalk.init({
+        ...<%- JSON.stringify(theme.comment.artalk) %>,
+        el:document.querySelector('#artalk')
+    });
+</script>

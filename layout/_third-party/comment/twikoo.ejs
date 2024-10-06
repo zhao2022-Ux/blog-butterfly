@@ -1,0 +1,8 @@
+<div id="tcomment"></div>
+<%- js({src: theme.assets.plugin.twikoo,'data-swup-reload-script': true, 'data-reset':'true' }) %>
+<script data-swup-reload-script>
+    twikoo.init({
+        ...<%- JSON.stringify(theme.comment.twikoo) %>,
+        el:'#tcomment'
+    })
+</script>

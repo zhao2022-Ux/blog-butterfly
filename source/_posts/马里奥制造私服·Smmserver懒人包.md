@@ -21,11 +21,14 @@ lang: zh-CN
 # 下载懒人包
 这玩意我已经打包成为一个懒人包了
 大伙想要的可以下载：
+
 {% btns rounded grid5 %}
 {% cell 懒人包链接, https://pan.sinzmise.top/SMM/SMM.7z, fas fa-download %}
 {% endbtns %}
+
 下载完成之后先点击Start启动服务端
 ![SmmServer_5kCtRQwhp0](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/SmmServer_5kCtRQwhp0.5mnlvwyhv7.webp)
+
 {% tip success %}
 正常情况下的这四个的提示是这样的：
 - NEX（SMM） 占用端口59900和59921
@@ -37,6 +40,7 @@ lang: zh-CN
 - Caddy 占用端口80和443
 ![SmmServer_Hngcypv9AG](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/SmmServer_Hngcypv9AG.6ik3bd9cqv.webp)
 {% endtip %}
+
 {% tip warning %}
 ***请注意：***
 如果出现异常的话
@@ -45,6 +49,7 @@ lang: zh-CN
 如果端口被侵占了，输入`taskkill /t /f /im 进程号`关闭占用端口的进程
 如果还是不行的话。。。。加Q群问（在最下方）
 {% endtip %}
+
 一切正常的话，点击“Start Cemu”打开模拟器***注意：必须用自带的模拟器！要不然打开马造世界关卡会提示106-0502错误***
 ![SmmServer_zKuO6e7rGt](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/SmmServer_zKuO6e7rGt.4xucbwm194.webp)
 然后双击Super Mario Maker，等待加载完成便可以游玩了！

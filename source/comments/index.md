@@ -1,7 +1,7 @@
 ---
 title: 留言板
 date: 2023-07-17 14:07:01
-type: comments
+type: comment
 top_img: false
 aside: false
 top_page: true

@@ -51,13 +51,16 @@ Zeabur部署Memos很方便，自带的Marketplace就有Memos
 在image这一行填写：`ghcr.io/usememos/memos:latest`，点击Next
 ![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_3pmSNqxnlH.png)
 划到下面，点击Advanced，Environment variables新增两个变量：`MEMOS_DRIVER`和`MEMOS_DSN`
-{% note warning modern %}注意：两个变量都是必选的，当然你也可以不用添加这两个，只不过一旦Memos更新数据会丢失！{% endnote %}
+
+{% note warning %}注意：两个变量都是必选的，当然你也可以不用添加这两个，只不过一旦Memos更新数据会丢失！{% endnote %}
+
 ![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_3jo6namzf5.png)
 | 变量      | 值 |
 | ----------- | ----------- |
 |MEMOS_DRIVER|数据库名称，MySQL就填`mysql`，postgreSQL就填`postgres`|
 |MEMOS_DSN|数据库地址|
-{% note info modern %}
+
+{% note info %}
 值得一提的是，你使用postgreSQL的时候，数据库地址必须要添加前面的`postgresql://`
 也就是下面的例子：
 ```
@@ -70,9 +73,11 @@ root:password@tcp(localhost)/memos_prod
 
 ```
 {% endnote %}
+
 然后将Exposing your service下面的port改为5432，然后deploy
 等一会你就能体验到Memos了
-{% note info modern %}
+
+{% note info %}
 但koyeb绑定域名好像要钱，因此最好再注册个koyeb账号来搞Uptime Kuma ，然后监测源站（这样的话可以确保反代的时候源站不会没）
 {% endnote %}
 

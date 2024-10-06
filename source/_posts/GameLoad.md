@@ -1,7 +1,6 @@
 ---
 title: GameLoad
 description: Play Unity games through your browser
-cover: 'https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/6624165c7f851.9nzrkxau2v.webp'
 tags:
   - 游戏相关
   - 其它游戏

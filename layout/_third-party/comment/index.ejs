@@ -1,0 +1,40 @@
+<% let comment = theme.comment%>
+<div class="trm-card trm-scroll-animation comment-container">
+    <% if(comment.use.length > 1) { %>
+        <% comment.use.forEach(item=>{ %>
+            <button onclick="<%= item + 'set()' %>" style="margin-bottom:3px"><%= item %></button>
+        <%})%>
+    <% } %>
+
+    <% comment.use.forEach(item=>{ %>
+        <div id="<%= item + '-warp' %>">
+            <% if(item === 'b-comments') { %>
+                <%- partial('async/_third-party/comment/b-comments') %>
+            <% } else if(item === 'Twikoo') { %>
+                <%- partial('async/_third-party/comment/twikoo') %>
+            <% } else if(item === 'Giscus') { %>
+                <%- partial('async/_third-party/comment/giscus') %>
+            <% } else if(item === 'Waline') { %>
+                <%- partial('async/_third-party/comment/waline') %>
+            <% } else if(item === 'Artalk') { %>
+                <%- partial('async/_third-party/comment/artalk') %>
+            <% } %>
+        </div>
+    <%})%>
+
+    <script data-swup-reload-script>
+        function hidecomment() {
+            <% comment.use.forEach(item=>{ %>
+            document.getElementById('<%= item + '-warp' %>').style.display = 'none';
+            <%})%>
+        }
+        hidecomment()
+        document.getElementById('<%= comment.use[0] + '-warp' %>').style.display = 'block';
+        <% comment.use.forEach(item=>{ %>
+        function <%- item + 'set()' %> {
+            hidecomment()
+            document.getElementById('<%= item + '-warp' %>').style.display = 'block';
+        }
+        <%})%>
+    </script>
+</div>
