@@ -153,6 +153,7 @@ layout:
   sidebar: async/_partial/sidebar/index # 侧栏模板
   banner: async/_partial/banner # 顶部横幅模板
   main: async/_partial/main # 整体布局结构模板
+  script: async/_partial/script # 脚本块 v2.1.11 +
 
   post_info: async/_partial/post/post-info # 文章信息模板
   post_content: async/_partial/post/post-content # 文章内容模板
