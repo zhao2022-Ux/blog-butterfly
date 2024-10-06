@@ -15,7 +15,7 @@
                     window.stop()
                     document.innerHTML=""
                 }
-                navigator.serviceWorker.register(`/<%= url_for("serviceworker.js") %>?time=${Math.ceil(Math.random()*10000000000000000000)}`)//随机数,强制更新
+                navigator.serviceWorker.register(`/serviceworker.js?time=${Math.ceil(Math.random()*10000000000000000000)}`)//随机数,强制更新
                     .then(async () => {
                         if (Number(window.localStorage.getItem('CetaHouseHelper_Set')) < 2) {
                             setTimeout(() => {
