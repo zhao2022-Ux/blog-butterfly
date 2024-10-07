@@ -115,6 +115,8 @@ assets:
     # Artalk
     artalk_js: https://jsd.cdn.storisinz.site/npm/artalk/dist/Artalk.js
     artalk_css: https://jsd.cdn.storisinz.site/npm/artalk/dist/Artalk.css
+    # Twikoo
+    twikoo: https://jsd.cdn.storisinz.site/npm/twikoo/dist/twikoo.all.min.js
     # DocSearch
     docsearch_css: https://jsd.cdn.storisinz.site/npm/@docsearch/css/dist/style.min.css
     docsearch_js: https://jsd.cdn.storisinz.site/npm/@docsearch/js/dist/umd/index.min.js
