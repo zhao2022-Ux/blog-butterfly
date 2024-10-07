@@ -14,7 +14,7 @@ const { ExpirationPlugin } = expiration;
 const cacheSuffixVersion = '_20200610';
 
 core.setCacheNameDetails({
-    prefix: 'bycg',
+    prefix: 'CetaHouseCache',
     suffix: cacheSuffixVersion
 });
 
@@ -55,6 +55,10 @@ routing.registerRoute(
 //不作缓存
 routing.registerRoute(
     /\/sw.js/,
+    new NetworkOnly()
+);
+routing.registerRoute(
+    /\/serviceworker.js/,
     new NetworkOnly()
 );
 
@@ -184,8 +188,7 @@ const generate_blog_urls = (packagename, blogversion, path) => {
 }
 const mirror = [
     `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories/latest`,
-    `https://registry.npmjs.org/sinzmise-cetastories/latest`,
-    `https://registry.npmmirror.com/sinzmise-cetastories/latest`
+    `https://registry.npmjs.org/sinzmise-cetastories/latest`
 ]
 const get_newest_version = async (mirror) => {
     return lfetch(mirror, mirror[0])
