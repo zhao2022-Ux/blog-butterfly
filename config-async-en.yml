@@ -41,6 +41,7 @@ user:
   email: email@sinzmise.top # email | 电子邮箱
   domain: 'https://www.sinzmise.top/' # Domain | 站点域名
   avatar: /img/avatar.jpg # Avatar | 站点头像
+  logo: /images/icon.png
 
 sw: true
 

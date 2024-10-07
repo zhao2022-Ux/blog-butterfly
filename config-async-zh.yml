@@ -51,6 +51,7 @@ user:
   avatar: /img/avatar.png # Avatar | 站点头像
   describe: 种下一颗有故事的种子，让它带着魔法和奇迹生根发芽 # Describe | 网站简介
   rule_text: 1.站点可以在中国大陆区域正常访问且内容符合中国大陆法律法规<br>2.站点友情链接含本站链接<br>3.站点类型为博客（除我主动申请的链接之外） # 友链规则
+  logo: /images/icon.png
 
 sw: true
 
