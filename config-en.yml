@@ -110,6 +110,12 @@ deploy:
     repository: git@github.com:SinzMise/blog
     branch: zh
 
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
 tag_plugins:

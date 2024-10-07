@@ -36,8 +36,8 @@ favicon:
 # User info | 用户信息
 user:
   name: SZ·Ninty Ong # Nickname | 昵称
-  first_name: Ceta  # 名
-  last_name: Storical House # 姓
+  first_name: Storical House  # 名
+  last_name: Ceta # 姓
   email: email@sinzmise.top # email | 电子邮箱
   domain: 'https://www.sinzmise.top/' # Domain | 站点域名
   avatar: /img/avatar.jpg # Avatar | 站点头像
@@ -85,9 +85,9 @@ banner:
 
 sidebar:
   social: # 社交地址
-    - name: Homepage
-      icon: iconfont cg-gitee
-      url: https://gitee.com
+    - name: RSS
+      icon: fas fa-rss
+      url: atom.xml
     - name: Github
       icon: fab fa-github
       url: https://github.com/SinzMise
@@ -118,6 +118,11 @@ assets:
     # DocSearch
     docsearch_css: https://jsd.cdn.storisinz.site/npm/@docsearch/css/dist/style.min.css
     docsearch_js: https://jsd.cdn.storisinz.site/npm/@docsearch/js/dist/umd/index.min.js
+
+wordcount:
+  enable: true
+  count: true
+  time: true
 
 footer:
   copyright_year: 2021
