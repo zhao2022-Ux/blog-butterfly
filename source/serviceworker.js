@@ -1,7 +1,5 @@
 importScripts('https://jsd.cdn.storisinz.site/npm/workbox-cdn@5.1.3/workbox/workbox-sw.js');
 
-importScripts('https://jsd.cdn.storisinz.site/npm/clientworker@latest') //ClientWorker
-
 workbox.setConfig({
     modulePathPrefix: 'https://jsd.cdn.storisinz.site/npm/workbox-cdn@5.1.3/workbox/'
 });
@@ -98,3 +96,5 @@ routing.registerRoute(
         ]
     })
 );
+
+importScripts('https://jsd.cdn.storisinz.site/npm/clientworker@latest') //ClientWorker
