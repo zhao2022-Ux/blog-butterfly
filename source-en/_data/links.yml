@@ -7,11 +7,11 @@
       image: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
       desc: 快速、简单且强大的网站框架
       siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://hexo.io/zh-tw/
-    - name: Butterfly
-      url: https://butterfly.js.org/
-      image: https://butterfly.js.org/img/avatar.png
-      desc: A Simple and Card UI Design theme for Hexo
-      siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://butterfly.js.org/
+    - name: Async
+      url: https://hexo-theme-async.imalun.com/
+      image: https://hexo-theme-async.imalun.com/logo@128x128.png
+      desc: A simple & lightweight theme for Hexo.
+      siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://hexo-theme-async.imalun.com/
 - class_name: 大佬们
   number: 02
   class_desc: 膜拜大佬~~
