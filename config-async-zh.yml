@@ -33,7 +33,7 @@ top_bars:
     url: '#'
     children:
       - title: 游戏库
-        url: /comments/
+        url: /games/
   - title: 开往
     url: https://www.travellings.cn/go.html
 
