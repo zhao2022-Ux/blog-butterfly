@@ -92,6 +92,9 @@ sidebar:
     - name: Github
       icon: fab fa-github
       url: https://github.com/SinzMise
+    - name: Travelling
+      icon: fab fa-train-subway
+      url: https://www.travellings.cn/go.html
 
 # Blog search | 搜索
 search:

@@ -102,6 +102,9 @@ sidebar:
     - name: Github
       icon: fab fa-github
       url: https://github.com/SinzMise
+    - name: Travelling
+      icon: fab fa-train-subway
+      url: https://www.travellings.cn/go.html
   info: # 个人信息
     - key: 邮件
       class: u-email
