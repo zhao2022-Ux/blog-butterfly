@@ -123,30 +123,28 @@ feed:
 
 # 追番插件
 # https://github.com/HCLonely/hexo-bilibili-bangumi
-bangumi: # 追番设置
+game: # 游戏设置，仅支持source: bgmv0
   enable: true
-  source: bili
-  bgmInfoSource: 'bgmv0'
-  path:
-  vmid: 479627766
-  title: '追番列表'
-  quote: '生命不息，追番不止！'
+  path: games
+  source: bgmv0
+  vmid: 924429
+  title: 'Ceta Games Factory'
+  quote: 'Some games'
   show: 1
   lazyload: true
   srcValue: '__image__'
   lazyloadAttrName: 'data-src=__image__'
   loading:
-  showMyComment: false
-  pagination: false
   metaColor:
   color:
   webp:
   progress:
+  progressBar:
   extraOrder:
-  order: latest
+  order:
   extra_options:
     key: value
-  coverMirror:
+  coverMirror: 'https://img.noobzone.ru/getimg.php?url='
 
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/

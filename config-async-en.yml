@@ -24,6 +24,8 @@ top_bars:
         url: /tags/
   - title: menu.links
     url: /link/
+  - title: Travelling
+    url: https://www.travellings.cn/go.html
 
 favicon:
   logo: /images/siteicon/favicon.ico
@@ -44,6 +46,13 @@ user:
   logo: /images/icon.png
 
 sw: true
+
+lazyload:
+  enable: true
+
+theme:
+  switch: true
+  default: auto
 
 comment:
   use:
@@ -92,9 +101,6 @@ sidebar:
     - name: Github
       icon: fab fa-github
       url: https://github.com/SinzMise
-    - name: Travelling
-      icon: fab fa-train-subway
-      url: https://www.travellings.cn/go.html
 
 # Blog search | 搜索
 search:

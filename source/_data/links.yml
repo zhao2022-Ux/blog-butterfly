@@ -495,6 +495,11 @@
           image: https://jsd.cdn.storisinz.site/gh/debuginn/image@main/img/202302182238057.JPG
           desc: 做一个爱分享的程序猿
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://debuginn.com
+        - name: lhDream
+          url: https://blog.luhua.site
+          image: https://blog.luhua.site/upload/avatar.jfif
+          desc: 醉后不知天在水，满船清梦压星河。
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.luhua.site
 - class_name: 友谊长存
   number: 04
   class_desc: 无评论系统的博客（相识即是缘分）

@@ -29,6 +29,13 @@ top_bars:
         url: /link/
       - title: 留言板
         url: /comments/
+  - title: menu.about
+    url: '#'
+    children:
+      - title: 游戏库
+        url: /comments/
+  - title: 开往
+    url: https://www.travellings.cn/go.html
 
 favicon:
   logo: /images/siteicon/favicon.ico
@@ -54,6 +61,13 @@ user:
   logo: /images/icon.png
 
 sw: true
+
+lazyload:
+  enable: true
+
+theme:
+  switch: true
+  default: auto
 
 comment:
   use:
@@ -102,9 +116,6 @@ sidebar:
     - name: Github
       icon: fab fa-github
       url: https://github.com/SinzMise
-    - name: Travelling
-      icon: fab fa-train-subway
-      url: https://www.travellings.cn/go.html
   info: # 个人信息
     - key: 邮件
       class: u-email
