@@ -29,6 +29,13 @@ top_bars:
         url: /link/
       - title: 留言板
         url: /comments/
+  - title: menu.about
+    url: '#'
+    children:
+      - title: 游戏库
+        url: /games/
+  - title: 开往
+    url: https://www.travellings.cn/go.html
 
 favicon:
   logo: /images/siteicon/favicon.ico
@@ -51,8 +58,16 @@ user:
   avatar: /img/avatar.png # Avatar | 站点头像
   describe: 种下一颗有故事的种子，让它带着魔法和奇迹生根发芽 # Describe | 网站简介
   rule_text: 1.站点可以在中国大陆区域正常访问且内容符合中国大陆法律法规<br>2.站点友情链接含本站链接<br>3.站点类型为博客（除我主动申请的链接之外） # 友链规则
+  logo: /images/icon.png
 
 sw: true
+
+lazyload:
+  enable: true
+
+theme:
+  switch: true
+  default: auto
 
 comment:
   use:
@@ -135,6 +150,8 @@ assets:
     # Artalk
     artalk_js: https://jsd.cdn.storisinz.site/npm/artalk/dist/Artalk.js
     artalk_css: https://jsd.cdn.storisinz.site/npm/artalk/dist/Artalk.css
+    # Twikoo
+    twikoo: https://jsd.cdn.storisinz.site/npm/twikoo/dist/twikoo.all.min.js
     # DocSearch
     docsearch_css: https://jsd.cdn.storisinz.site/npm/@docsearch/css/dist/style.min.css
     docsearch_js: https://jsd.cdn.storisinz.site/npm/@docsearch/js/dist/umd/index.min.js

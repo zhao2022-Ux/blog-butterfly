@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "build": "npm run builden && npm run buildzh && hexo swpp && gulp",
-    "builden": "sh ./deploy-en.sh && npm run clean && hexo generate && hexo bangumi -u && cp \"./source-en/serviceworker.js\" \"./public-en/sw.js\"",
-    "buildzh": "sh ./deploy-zh.sh && npm run clean && hexo generate && hexo bangumi -u && cp \"./source/serviceworker.js\" \"./public/sw.js\"",
+    "builden": "sh ./deploy-en.sh && npm run clean && hexo generate && hexo game -u && cp \"./source-en/serviceworker.js\" \"./public-en/sw.js\"",
+    "buildzh": "sh ./deploy-zh.sh && npm run clean && hexo generate && hexo game -u && cp \"./source/serviceworker.js\" \"./public/sw.js\"",
     "clean": "hexo clean",
     "deployzh": "npm run buildzh && gulp && hexo deploy",
     "deployen": "npm run builden && gulp && hexo deploy",
-    "serveren": "npm run clean && sh ./deploy-en.sh && hexo s -g",
-    "serverzh": "npm run clean && sh ./deploy-zh.sh && hexo s -g"
+    "serveren": "npm run clean && sh ./deploy-en.sh && hexo game -u && hexo s -g",
+    "serverzh": "npm run clean && sh ./deploy-zh.sh && hexo game -u && hexo s -g"
   },
   "hexo": {
     "version": "7.3.0"
@@ -33,6 +33,7 @@
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-searchdb": "^1.4.1",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-oh-my-live2d": "^0.1.4",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-kramed": "^0.1.4",
     "hexo-renderer-less": "^4.0.0",
