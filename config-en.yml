@@ -110,7 +110,7 @@ theme: async
 deploy:
   - type: git
     repository: git@github.com:SinzMise/blog
-    branch: zh
+    branch: en
 
 plugins:
   - hexo-algoliasearch
