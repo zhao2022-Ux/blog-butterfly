@@ -35,6 +35,7 @@ top_bars:
       - title: 游戏库
         url: /games/
   - title: 开往
+    target: '_blank'
     url: https://www.travellings.cn/go.html
 
 favicon:

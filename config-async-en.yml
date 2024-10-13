@@ -25,6 +25,7 @@ top_bars:
   - title: menu.links
     url: /link/
   - title: Travelling
+    target: '_blank'
     url: https://www.travellings.cn/go.html
 
 favicon:
