@@ -167,7 +167,7 @@ tag_plugins:
 
 # _config.yml
 OhMyLive2d:
-  enable: true
+  enable: false
   CDN: https://jsd.cdn.storisinz.site/npm/oh-my-live2d
   # CDN: https://registry.npmmirror.com/oh-my-live2d/0.13/files/dist/index.min.js
   option:
