@@ -16,6 +16,8 @@ plugin = theme.assets.plugin;
     <%- isSwiper ? css(plugin.swiper.css) : '' %>
     <%- isKatex ? css(plugin.katex.css) : '' %>
 
+    <%- js(plugin.jquery) %>
+
 <% } else { %>
 
     <%- theme.swup ? js(plugin.swup) : '' %>
@@ -62,4 +64,9 @@ plugin = theme.assets.plugin;
     <% if(theme.banner.danmu.enable) {%>
         <script src="<%= url_for(plugin.hexo_theme_async.danmu) %>?v=<%= theme.version %>"></script>
     <% } %>
+
+    <link rel="stylesheet" type="text/css" href="/weichuncai/css/style.css">
+    <script src="/weichuncai/js/common.js"></script>
+    <script src="/weichuncai/wcc-config.js"></script>
+
 <% } %>

@@ -133,6 +133,8 @@ assets:
     docsearch_js: https://jsd.cdn.storisinz.site/npm/@docsearch/js/dist/umd/index.min.js
     # Axios
     axios: https://jsd.cdn.storisinz.site/npm/axios/dist/axios.min.js
+    # jQuery
+    jquery: https://jsd.cdn.storisinz.site/npm/jquery
 
 wordcount:
   enable: true
