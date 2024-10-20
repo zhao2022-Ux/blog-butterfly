@@ -35,6 +35,7 @@ top_bars:
       - title: 游戏库
         url: /games/
   - title: 开往
+    target: '_blank'
     url: https://www.travellings.cn/go.html
 
 favicon:
@@ -155,6 +156,8 @@ assets:
     # DocSearch
     docsearch_css: https://jsd.cdn.storisinz.site/npm/@docsearch/css/dist/style.min.css
     docsearch_js: https://jsd.cdn.storisinz.site/npm/@docsearch/js/dist/umd/index.min.js
+    # Axios
+    axios: https://jsd.cdn.storisinz.site/npm/axios/dist/axios.min.js
 
 wordcount:
   enable: true

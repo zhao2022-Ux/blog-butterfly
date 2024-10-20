@@ -20,6 +20,9 @@ plugin = theme.assets.plugin;
 
     <%- theme.swup ? js(plugin.swup) : '' %>
     <%- js(plugin.fancybox.js) %>
+
+    <%- js(plugin.axios) %>
+
     <%- isSwiper ? js(plugin.swiper.js) : '' %>
 
     <% if(isTyping) {%>
