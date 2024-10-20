@@ -133,7 +133,7 @@ feed:
   enable: true
   type: atom
   path: atom.xml
-  limit: 20
+  limit: 30
 
 # 追番插件
 # https://github.com/HCLonely/hexo-bilibili-bangumi
