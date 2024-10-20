@@ -65,8 +65,10 @@ plugin = theme.assets.plugin;
         <script src="<%= url_for(plugin.hexo_theme_async.danmu) %>?v=<%= theme.version %>"></script>
     <% } %>
 
-    <link rel="stylesheet" type="text/css" href="/weichuncai/css/style.css">
-    <script src="/weichuncai/js/common.js"></script>
-    <script src="/weichuncai/wcc-config.js"></script>
+    <% if(theme.ssp) {%>
+        <link rel="stylesheet" type="text/css" href="/weichuncai/css/style.css">
+        <script src="/weichuncai/js/common.js"></script>
+        <script src="/weichuncai/wcc-config.js"></script>
+    <% } %>
 
 <% } %>

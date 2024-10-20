@@ -159,7 +159,9 @@ assets:
     # Axios
     axios: https://jsd.cdn.storisinz.site/npm/axios/dist/axios.min.js
     # jQuery
-    jquery: https://jsd.cdn.storisinz.site/npm/jquery
+    jquery: https://jsd.cdn.storisinz.site/npm/jquery/dist/jquery.min.js
+
+ssp: true
 
 wordcount:
   enable: true
