@@ -500,6 +500,11 @@
           image: https://blog.luhua.site/upload/avatar.jfif
           desc: 醉后不知天在水，满船清梦压星河。
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.luhua.site
+        - name: XingJiのBlog
+          url: https://love.xingji.fun/
+          image: https://i.p-i.vip/47/20240920-66ed7b168c38c.jpg
+          desc: 迄今所有人生都大写着失败，但不妨碍我继续向前✨
+          siteshot: https://i.p-i.vip/47/20240920-66ed7b6730ca9.png
 - class_name: 友谊长存
   number: 04
   class_desc: 无评论系统的博客（相识即是缘分）
