@@ -115,6 +115,20 @@ deploy:
 plugins:
   - hexo-algoliasearch
 
+# algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+algolia:
+  chunkSize: 5000
+  indexName: "hexo"
+  fields:
+    - content:strip:truncate,0,200
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
+
 feed:
   enable: true
   type: atom
