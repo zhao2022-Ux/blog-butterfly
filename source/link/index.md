@@ -1,51 +1,51 @@
 ---
 title: 友人帐
 date: 2020-12-01 22:19:45
-layout: links
+layout: friends
 top_img: false
 aside: false
 ---
 # 待君归（大佬）
 ```yaml
-          # 未添加本站链接
-          - name: 沧海网络
-            link: https://www.halloworlds.cn
-            avatar: https://www.halloworlds.cn/wp-content/uploads/2022/01/1640496399484.png
-            descr: 冲天香阵透长安，满城尽带黄金甲
-            siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://www.halloworlds.cn
-          # 未添加本站链接，新友链页面没法添加
-          - name: 醉里博客
-            link: https://202271.xyz
-            avatar: https://202271.xyz/images/uploads/android-chrome-192x192.png
-            descr: 小豪的个人博客
-            siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://202271.xyz
+    # 未添加本站链接
+    - title: 沧海网络
+      url: https://www.halloworlds.cn
+      avatar: https://www.halloworlds.cn/wp-content/uploads/2022/01/1640496399484.png
+      descr: 冲天香阵透长安，满城尽带黄金甲
+      siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://www.halloworlds.cn
+    # 未添加本站链接，新友链页面没法添加
+    - title: 醉里博客
+      url: https://202271.xyz
+      avatar: https://202271.xyz/images/uploads/android-chrome-192x192.png
+      descr: 小豪的个人博客
+      siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://202271.xyz
 ```
 # 失去同步！（小伙伴）
 ```yaml
-          #（无法访问，疑似域名被卖掉）
-          - name: HeiYing
-            link: https://blog.black-ying.online
-            avatar: https://blog.black-ying.online/img/avatar.jpg
-            descr: 游龙当归海，海不迎我自来也。
-            siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://blog.black-ying.online
-          #（疑似停止更新）
-          - name: 萌！萝莉
-            link: https://loliloli.moe
-            avatar: https://img.cdn.loliloli.net/images/2021/01/11/avatar.jpg
-            descr: 一个普通的小博客哦~
-            siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://loliloli.moe
-            # 此域名被售卖
-          - name: 无名博客
-            descr: 一个无聊的人罢了～
-            avatar: https://wuminboke.site/avatar.jpg
-            link: https://wuminboke.site/
-            siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://wuminboke.site/
-          # 未添加本站链接
-          - name: YYDS Space
-            link: https://www.yyds.space
-            avatar: https://www.yyds.space/public/images/author.jpg
-            descr: A space for sharing technology.
-            siteshot: https://www.yyds.space/public/images/siteshot.jpg
+    #（无法访问，疑似域名被卖掉）
+    - title: HeiYing
+      url: https://blog.black-ying.online
+      avatar: https://blog.black-ying.online/img/avatar.jpg
+      descr: 游龙当归海，海不迎我自来也。
+      siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://blog.black-ying.online
+    #（疑似停止更新）
+    - title: 萌！萝莉
+      url: https://loliloli.moe
+      avatar: https://img.cdn.loliloli.net/images/2021/01/11/avatar.jpg
+      descr: 一个普通的小博客哦~
+      siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://loliloli.moe
+      # 此域名被售卖
+    - title: 无名博客
+      descr: 一个无聊的人罢了～
+      avatar: https://wuminboke.site/avatar.jpg
+      url: https://wuminboke.site/
+      siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://wuminboke.site/
+    # 未添加本站链接
+    - title: YYDS Space
+      url: https://www.yyds.space
+      avatar: https://www.yyds.space/public/images/author.jpg
+      descr: A space for sharing technology.
+      siteshot: https://www.yyds.space/public/images/siteshot.jpg
 ```
 （既然“小伙伴们”的友情链接超过10条，那么是时候该提一下添加要求了）
 # 本站添加友链要求

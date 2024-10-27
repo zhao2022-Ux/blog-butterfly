@@ -8,7 +8,7 @@ subtitle: 'Ceta Magical House'
 description: 'The Story,The Dream.'
 keywords:
 author: 王九弦SZ·Ninty
-language: zh-Hans
+language: zh-CN
 timezone: ''
 
 # URL
@@ -105,7 +105,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: async
+theme: volantis
 
 # Deployment
 # Docs: https://hexo.io/docs/one-command-deployment
@@ -119,6 +119,8 @@ plugins:
 
 # algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
 algolia:
+  appId: 72TOQYD33Q
+  apiKey: 608d2f3acd06140a2473153f6cb61eda
   chunkSize: 5000
   indexName: "hexo"
   fields:

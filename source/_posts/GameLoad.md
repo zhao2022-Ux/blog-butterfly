@@ -10,7 +10,6 @@ abbrlink: 21375
 date: 2023-04-04 20:07:45
 lang: zh-CN
 ---
-# 前言
 自从在我的360极速浏览器安装FVD Downloader这个插件后，我就习惯将4399上的swf下载下来了
 后面我在玩4399上的U3D游戏（得安装UnityWebPlayer才能玩）的时候弹出了这个提示：
 ![360chrome_xFZnhVi7dg](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230404/360chrome_xFZnhVi7dg.1xookg8vju2o.webp)
@@ -19,7 +18,7 @@ lang: zh-CN
 于是我将后缀为“unity3d”的游戏下载下来，打算找个游戏启动器来启动这个游戏
 找了一圈找到了这玩意：
 ![msedge_ZV2ru5IQh0](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230404/msedge_ZV2ru5IQh0.48zi2sq5i620.webp)
-
+<!-- more -->
 这个软件安装完成之后，会自动关联后缀为“unity3d”的文件
 经测试，能顺利游玩大部分u3d游戏
 # 示例

@@ -1,9 +1,0 @@
-<div id="waline"></div>
-<%- js({src: theme.assets.plugin.waline_js,'data-swup-reload-script': true, 'data-reset':'true' }) %>
-<%- css(theme.assets.plugin.waline_css) %>
-<script data-swup-reload-script>
-    Waline.init({
-        ...<%- JSON.stringify(theme.comment.waline) %>,
-        el:'#waline'
-    });
-</script>

@@ -2,7 +2,7 @@
 title: 自建Meting服务
 description: Meting官方API用不了了，所以。。。。。
 swiper_index: 5
-cover: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230128/30165599-36623bea-93a6-11e7-8956-1ddf99ce0e6f.2rbu2i9xfvy0.webp
+headimg: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230128/30165599-36623bea-93a6-11e7-8956-1ddf99ce0e6f.2rbu2i9xfvy0.webp
 tags:
   - 站点折腾
   - 自建部署
@@ -12,9 +12,9 @@ abbrlink: 61417
 date: 2023-01-19 19:52:34
 lang: zh-CN
 ---
-# 前言
 听人说Meting官方API证书过期了，也就是说MetingAPI得自建了
 然后很快啊，有人就搞出了自建MetingAPI的Vercel版本
+<!-- more -->
 # 教程
 ## 后端部署
 {% tabs 后端部署 %}

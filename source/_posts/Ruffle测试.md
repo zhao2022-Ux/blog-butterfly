@@ -5,7 +5,7 @@ tags:
   - Flash相关
 categories:
   - 站点折腾
-cover: >-
+headimg: >-
   https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/logo.4913vyk2ki.svg
 abbrlink: 57692
 date: 2024-05-25 21:12:39
@@ -13,8 +13,8 @@ lang: zh-CN
 ---
 这玩意也是很久之前就认识到了
 我甚至记得我还给这玩意写过Hexo插件
+<!-- more -->
 ~~但后来我给这个插件删了，因为这玩意的配置真的简单~~
-
 # 介绍
 随着网页的安全性升级，带有安全漏洞的Flash也逐渐被淘汰，现在的主流浏览器几乎都不支持Flash
 也因此，很多的站点都已经废弃掉他们的flash了
