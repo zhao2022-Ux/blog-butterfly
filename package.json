@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "npm run builden && npm run buildzh && hexo swpp && gulp",
-    "builden": "sh ./deploy-en.sh && npm run clean && hexo generate && hexo game -u && cp \"./source-en/serviceworker.js\" \"./public-en/sw.js\"",
-    "buildzh": "sh ./deploy-zh.sh && npm run clean && hexo generate && hexo game -u && cp \"./source/serviceworker.js\" \"./public/sw.js\"",
+    "builden": "sh ./deploy-en.sh && npm run clean && hexo generate && hexo game -u",
+    "buildzh": "sh ./deploy-zh.sh && npm run clean && hexo generate && hexo game -u",
     "clean": "hexo clean",
     "deployzh": "npm run buildzh && gulp && hexo deploy",
     "deployen": "npm run builden && gulp && hexo deploy",
