@@ -7,11 +7,11 @@
       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
       description: 快速、简单且强大的网站框架
       screenshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://hexo.io/zh-tw/
-    - title: Async
-      url: https://hexo-theme-async.imalun.com/
-      avatar: https://hexo-theme-async.imalun.com/logo@128x128.png
-      description: A simple & lightweight theme for Hexo.
-      screenshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://hexo-theme-async.imalun.com/
+    - title: Volantis
+      url: https://volantis.js.org/
+      avatar: https://jsd.cdn.storisinz.site/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
+      description: A Wonderful Theme for Hexo
+      screenshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://volantis.js.org/
 - group: 大佬们
   number: 02
   description: 膜拜大佬~~

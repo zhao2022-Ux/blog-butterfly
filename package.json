@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "npm run builden && npm run buildzh && hexo swpp && gulp",
-    "builden": "sh ./deploy-en.sh && npm run clean && hexo generate && hexo game -u",
-    "buildzh": "sh ./deploy-zh.sh && npm run clean && hexo generate && hexo game -u",
+    "builden": "sh ./deploy-en.sh && npm run clean && hexo generate && hexo game -u && node link.js",
+    "buildzh": "sh ./deploy-zh.sh && npm run clean && hexo generate && hexo game -u && node link.js",
     "clean": "hexo clean",
     "deployzh": "npm run buildzh && gulp && hexo deploy",
     "deployen": "npm run builden && gulp && hexo deploy",
@@ -42,6 +42,7 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+    "yamljs": "^0.3.0"
   }
 }
