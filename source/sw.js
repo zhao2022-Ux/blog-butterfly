@@ -228,10 +228,8 @@ const generate_blog_urls = (packagename, blogversion, path) => {
     return npmmirror
 }
 const mirror = [
-    `https://registry.npmmirror.com/sinzmise-cetastories/latest`,
     `https://registry.npmjs.org/sinzmise-cetastories/latest`,
-    `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories/latest`,
-    `https://registry.npmmirror.com/sinzmise-cetastories/latest`
+    `https://mirrors.cloud.tencent.com/npm/sinzmise-cetastories/latest`
 ]
 const get_newest_version = async (mirror) => {
 return lfetch(mirror, mirror[0])
