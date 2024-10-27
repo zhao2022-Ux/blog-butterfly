@@ -1,0 +1,56 @@
+/////////////////
+// 样式覆盖区域 //
+/////////////////
+
+html,
+a:not([href]),
+a:not([href]) p,
+p > img,
+p > svg,
+p.title,
+p.subtitle,
+picture,
+.fix-cursor-default
+  cursor: $default
+
+a,
+a.fa-fw,
+button span,
+btn-close span,
+.menuitem span
+ cursor: $pointer
+
+span,
+input,
+pre>span,
+textarea,
+figure.pre,
+article p
+  cursor: $text
+
+/////////////////
+// 强制覆盖区域 //
+/////////////////
+
+.atk-cancel,
+.atk-plug-btn,
+.atk-send-btn,
+.atk-send-reply
+.atk-dropdown-wrap,
+.atk-dropdown-item>span,
+.atk-right-action>span,
+.atk-grp-switcher>span,
+.atk-grp>span,
+.atk-actions-new>span,
+.atk-common-action-btn
+  cursor: $pointer !important
+
+
+.fancybox__carousel.is-draggable .fancybox__slide,
+.fancybox__carousel.is-draggable .fancybox__slide .fancybox__content
+  cursor: $grab !important
+.fancybox__caption
+  cursor: $text !important
+.carousel__button,
+.fancybox__thumbs .carousel__slide
+  cursor: $pointer !important
