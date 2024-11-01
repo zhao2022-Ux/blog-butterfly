@@ -56,45 +56,43 @@ aside: false
 <!-- tab General -->
 | 名称      | 值 |
 | ----------- | ----------- |
-|站点名称|中弦星空魔法屋|
+|站点名称|汐塔魔法屋|
 |站点地址|https://blog.sinzmise.top/|
 |站点描述|种下一颗有故事的种子，让它带着魔法和奇迹生根发芽|
-|站点图像|https://blog.sinzmise.top/img/512.png|
+|站点图像|https://blog.sinzmise.top/images/icon.png|
 |站点页面|https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.sinzmise.top/|
-|站点关键词|王九弦SZ·Ninty,中弦星空魔法屋,个人网站,个人博客|
+|站点关键词|王九弦SZ·Ninty,汐塔魔法屋,个人网站,个人博客|
 |站点配色|#e66744或#ef9140|
 |rss链接|https://blog.sinzmise.top/atom.xml|
 <!-- endtab -->
 <!-- tab Butterfly(anzhiyu) & MengD -->
 ```yml
-- name: 中弦星空魔法屋
+- name: 汐塔魔法屋
   link: https://blog.sinzmise.top/
-  avatar: https://blog.sinzmise.top/img/512.png
+  avatar: https://blog.sinzmise.top/images/icon.png
   descr: 种下一颗有故事的种子，让它带着魔法和奇迹生根发芽
   siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.sinzmise.top/
   theme_color: "#e66744"
 ```
 <!-- endtab -->
 <!-- tab Volantis -->
-```json
-{
-  "title": "中弦星空魔法屋",
-  "screenshot": "https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.sinzmise.top/",
-  "url": "https://blog.sinzmise.top/",
-  "avatar": "https://blog.sinzmise.top/img/512.png",
-  "description": "种下一颗有故事的种子，让它带着魔法和奇迹生根发芽",
-  "keywords": "王九弦SZ·Ninty,中弦星空魔法屋,个人网站,个人博客"
-}
+```yml
+- title: 汐塔魔法屋
+  url: https://blog.sinzmise.top/
+  avatar: https://blog.sinzmise.top/images/icon.png
+  description: 种下一颗有故事的种子，让它带着魔法和奇迹生根发芽
+  keywords: 王九弦SZ·Ninty,汐塔魔法屋,个人网站,个人博客
+  screenshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.sinzmise.top/
 ```
 <!-- endtab -->
 <!-- tab Yun -->
 ```json
 {
     "url": "https://blog.sinzmise.top/",
-    "avatar": "https://blog.sinzmise.top/img/512.png",
+    "avatar": "https://blog.sinzmise.top/images/icon.png",
     "name": "王九弦SZ·Ninty",
     "color": "#e66744", //或者 #ef9140
-    "blog": "中弦星空魔法屋", 
+    "blog": "汐塔魔法屋", 
     "desc": "种下一颗有故事的种子，让它带着魔法和奇迹生根发芽"
 }
 ```
@@ -102,26 +100,26 @@ aside: false
 <!-- tab fluid -->
 ```yml
 - {
-  title: '中弦星空魔法屋',
+  title: '汐塔魔法屋',
   intro: '种下一颗有故事的种子，让它带着魔法和奇迹生根发芽',
   link: 'https://blog.sinzmise.top/',
-  avatar: 'https://blog.sinzmise.top/img/512.png'
+  avatar: 'https://blog.sinzmise.top/images/icon.png'
 }
 ```
 <!-- endtab -->
 <!-- tab Html -->
 ```html
-<a href="https://blog.sinzmise.top/"><img src="https://blog.sinzmise.top/img/512.png" alt="avatar">中弦星空魔法屋</a>
+<a href="https://blog.sinzmise.top/"><img src="https://blog.sinzmise.top/images/icon.png" alt="avatar">汐塔魔法屋</a>
 ```
 <!-- endtab -->
 <!-- tab jade -->
 ```pug
 a(href='https://blog.sinzmise.top/')
-  img(src='https://blog.sinzmise.top/img/512.png', alt='avatar') 中弦星空魔法屋
+  img(src='https://blog.sinzmise.top/images/icon.png', alt='avatar') 汐塔魔法屋
 ```
 或者
 ```pug
-a(href='https://blog.sinzmise.top/' rel="external nofollow") 中弦星空魔法屋
+a(href='https://blog.sinzmise.top/' rel="external nofollow") 汐塔魔法屋
 ```
 <!-- endtab -->
 {% endtabs %}
