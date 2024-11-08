@@ -754,6 +754,9 @@ site_footer:
     - img: https://www.travellings.cn/assets/logo.gif
       url: https://www.travellings.cn/go.html
       alt: Travellings
+    - img: https://boringbay.com/api/badge/blog.sinzmise.top
+      url: https://boringbay.com
+      alt: 🥱 The Boring Bay
     - img: https://photo.xiangming.site/img/blogscn.png
       url: https://blogscn.fun/
       alt: BLOGS·CN
