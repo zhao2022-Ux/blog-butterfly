@@ -34,12 +34,6 @@ aside: false
       avatar: https://img.cdn.loliloli.net/images/2021/01/11/avatar.jpg
       descr: 一个普通的小博客哦~
       siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://loliloli.moe
-      # 此域名被售卖
-    - title: 无名博客
-      descr: 一个无聊的人罢了～
-      avatar: https://wuminboke.site/avatar.jpg
-      url: https://wuminboke.site/
-      siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://wuminboke.site/
     # 未添加本站链接
     - title: YYDS Space
       url: https://www.yyds.space
