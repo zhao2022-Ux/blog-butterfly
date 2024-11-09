@@ -16,6 +16,8 @@ const handleFetch = async (event) => {
   const url = event.request.url;
   if (/nocache/.test(url)) {
     return NetworkOnly(event)
+  } else if (/hm\.baidu\.com/.test(url)) {
+    return NetworkOnly(event)
   } else if (/@latest/.test(url)) {
     return CacheFirst(event)
   } else if (/cdnjs\.cloudflare\.com/.test(url)) {
@@ -29,8 +31,6 @@ const handleFetch = async (event) => {
   } else if (/npm\.elemecdn\.com/.test(url)) {
     return CacheAlways(event)
   } else if (/unpkg\.com/.test(url)) {
-    return CacheAlways(event)
-  } else if (/hm\.baidu\.com/.test(url)) {
     return CacheAlways(event)
   } else if (/.*\.(?:png|jpg|jpeg|svg|gif|webp|ico|eot|ttf|woff|woff2|mp3)$/.test(url)) {
     return CacheAlways(event)
