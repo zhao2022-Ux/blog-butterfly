@@ -51,6 +51,7 @@ jobs:
         run: |
           yarn buildzh
           python ./.github/cache.py
+          gulp
           hexo d
 
       - name: NPM Publish Pre Set
