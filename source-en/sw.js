@@ -18,6 +18,12 @@ const handleFetch = async (event) => {
     return NetworkOnly(event)
   } else if (/hm\.baidu\.com/.test(url)) {
     return NetworkOnly(event)
+  } else if (/collect-perf\.51\.la/.test(url)) {
+    return NetworkOnly(event)
+  } else if (/sdk\.51\.la/.test(url)) {
+    return NetworkOnly(event)
+  } else if (/www\.google-analytics\.com/.test(url)) {
+    return NetworkOnly(event)
   } else if (/@latest/.test(url)) {
     return CacheFirst(event)
   } else if (/cdnjs\.cloudflare\.com/.test(url)) {
