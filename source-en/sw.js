@@ -40,18 +40,21 @@ const handleFetch = async (event) => {
 }
 const cdn = {
   gh: {
-    jsdelivr: 'https://kkgithub.com/extdomains/cdn.jsdelivr.net/gh',
+    jsdelivr: 'https://cdn.jsdelivr.net/gh',
     fastly: 'https://fastly.jsdelivr.net/gh',
     gcore: 'https://gcore.jsdelivr.net/gh',
     testingcf: 'https://testingcf.jsdelivr.net/gh',
     test1: 'https://test1.jsdelivr.net/gh',
+    storisinz: 'https://jsd.cdn.storisinz.site/gh',
+    webcache: 'https://code.webcache.cn/gh',
   },
   combine: {
-    jsdelivr: 'https://kkgithub.com/extdomains/cdn.jsdelivr.net/combine',
+    jsdelivr: 'https://cdn.jsdelivr.net/combine',
     fastly: 'https://fastly.jsdelivr.net/combine',
     gcore: 'https://gcore.jsdelivr.net/combine',
     testingcf: 'https://testingcf.jsdelivr.net/combine',
     test1: 'https://test1.jsdelivr.net/combine',
+    storisinz: 'https://jsd.cdn.storisinz.site/combine',
   },
   npm: {
     jsdelivr: 'https://cdn.jsdelivr.net/npm',
@@ -65,11 +68,11 @@ const cdn = {
     webcache: 'https://npm.webcache.cn',
   },
   cdnjs: {
-    cdnjs: 'https://kkgithub.com/extdomains/cdnjs.cloudflare.com/ajax/libs',
+    cdnjs: 'https://cdnjs.cloudflare.com/ajax/libs',
     baomitu: 'https://lib.baomitu.com',
-    bootcdn: 'https://cdn.bootcdn.net/ajax/libs',
     bytedance: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M',
     sustech: 'https://mirrors.sustech.edu.cn/cdnjs/ajax/libs',
+    webcache: 'https://cdnjs.webstatic.cn/ajax/libs',
   }
 }
 const cdn_match_list = []
