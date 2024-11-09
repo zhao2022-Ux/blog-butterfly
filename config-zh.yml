@@ -190,6 +190,14 @@ tag_plugins:
     tag_plugins_css: https://jsd.cdn.storisinz.site/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
     ghcard_url: https://github-readme-stats.vercel.app #API仓库https://kkgithub.com/anuraghazra/github-readme-stats
 
+baidu_analytics_key: 59986c9d6715c06178a2b6e2f118f837
+
+google_analytics_key: G-7MR59SK1DP
+
+v6_51_la: K9WDMA2h2AfDg5GG
+
+perf_51_la: K94JRCDsbHJJSjNs
+
 # _config.yml
 OhMyLive2d:
   enable: true
@@ -200,6 +208,12 @@ OhMyLive2d:
       items: |
         (defaultItems)=>{
           return [
+            {
+             id: 'home',
+             icon: 'fa fa-house',
+             title: '我的个人主页',
+             onClick: ()=>window.open('https://www.sinzmise.top/')
+            },
             defaultItems[0],
             defaultItems[2],
             defaultItems[3]
