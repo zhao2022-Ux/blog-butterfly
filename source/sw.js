@@ -17,7 +17,7 @@ const handleFetch = async (event) => {
   if (/nocache/.test(url)) {
     return NetworkOnly(event)
   } else if (/hm\.baidu\.com/.test(url)) {
-    return NetworkOnly(event)
+    return CacheAlways(event)
   } else if (/collect-perf\.51\.la/.test(url)) {
     return NetworkOnly(event)
   } else if (/sdk\.51\.la/.test(url)) {
