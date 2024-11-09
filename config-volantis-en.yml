@@ -409,7 +409,8 @@ article:
 comments:
   title: <i class='fa-solid fa-comments'></i> Comment
   subtitle:
-  service: twikoo
+  service: 
+    - twikoo
   # 可选评论系统 #
 
   # artalk

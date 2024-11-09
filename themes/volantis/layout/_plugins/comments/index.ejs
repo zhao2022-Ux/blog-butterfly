@@ -3,11 +3,9 @@
     if (page.comments && page.comments == false) {
       checkComment = false;
     }
-    var commentServerFlag = theme.comments.service == 'twikoo' ? 'block' : 'none';
 %>
 <% if (checkComment&&(theme.comments.service && theme.comments.service.length > 0)) { %>
   
-  <% if(theme.comments.service == 'twikoo-beaudar') { %>
   <article class="post white-box <%- theme.custom_css.body.effect.join(' ') %>" id="comments">
     <div class="changeComment">
       <div class="comment-headline">
@@ -19,37 +17,31 @@
       <p cst><%- theme.comments.subtitle %></p>
     <% } %>
       </div>
-      <div class="comment-switch not-select" style="display: <%- commentServerFlag %>;">
-        <span class="first-comment">Twikoo</span>
-        <span class="switch-btn move cur-pointer" id="switchBtn"></span>
-        <span class="second-comment">Beaudar</span>
+      <div class="comment-switch">
+        <% theme.comments.service.forEach(item=>{ %>
+          <a href="javascript:void(0)" onclick="<%= item + 'set()' %>" style="margin-bottom:3px"><%= item %></a>
+        <%})%>
       </div>
     </div>
-    <div id="layoutHelper-comments"></div>
+    <% theme.comments.service.forEach(item=>{ %>
+      <div id="<%= 'layoutHelper-' + item %>"></div>
+    <%})%>
   </article>
-  <% } else { %>
-    <article class="post white-box <%- theme.custom_css.body.effect.join(' ') %>" id="comments">
-      <span hidden>
-        <meta itemprop="discussionUrl" content="<%- url_for(path) %>#comments">
-      </span>
-      <p ct><%- theme.comments && theme.comments.title %></p>
-      <% if (theme.comments && theme.comments.subtitle) { %>
-        <p cst><%- theme.comments.subtitle %></p>
-      <% } %>
-      <% if(theme.ShowICPInfo && theme.ShowICPInfo.enable){ %>
-      <div class="comment-policy">
-        <div class="content">
-          <p class="comment-policy-title">枋柚梓的猫会发光 评论政策</p>
-          <p class="comment-policy-link">请在评论前阅读我们的<a
-              href="https://inkss.cn/page/policy/#%E4%BA%8C%E3%80%81%E8%AF%84%E8%AE%BA%E8%A7%84%E5%88%99" target="_blank"
-              rel="noopener noreferrer" class=" policy-link">评论政策</a>。</p>
-          </p>
-        </div>
-      </div>
-      <% } %>
-      <div id="layoutHelper-comments"></div>
-    </article>
-  <% } %>
+  <script data-pjax>
+    function hidecomment() {
+        <% theme.comments.service.forEach(item=>{ %>
+        document.getElementById('<%= 'layoutHelper-' + item %>').style.display = 'none';
+        <%})%>
+    }
+    hidecomment()
+    document.getElementById('<%= 'layoutHelper-' + theme.comments.service[0] %>').style.display = 'block';
+    <% theme.comments.service.forEach(item=>{ %>
+    function <%- item + 'set()' %> {
+        hidecomment()
+        document.getElementById('<%= 'layoutHelper-' + item %>').style.display = 'block';
+    }
+    <%})%>
+  </script>
 <% } else { %>
   <% page.comments = false; %>
 <% } %>
