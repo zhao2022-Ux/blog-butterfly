@@ -117,6 +117,15 @@ deploy:
 plugins:
   - hexo-algoliasearch
 
+jsonContent: 
+  meta: false 
+  pages: false 
+  posts: 
+    title: true 
+    path: true 
+    text: true 
+    uuid: true
+
 # algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
 algolia:
   appId: 72TOQYD33Q

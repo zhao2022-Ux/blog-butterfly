@@ -1,4 +1,5 @@
 ---
+uuid: 5f57d335-9dd9-11ef-8624-a3174cf555fc
 title: 记一次部署Memos
 tags:
   - 站点折腾

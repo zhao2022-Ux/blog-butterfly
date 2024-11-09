@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: "latest"
 
+      - name: Setup Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+          architecture: "x64"
+
       - name: Setup Hexo Dependencies
         run: |
           npm i hexo-cli -g
@@ -43,8 +49,9 @@ jobs:
 
       - name: Deploy Hexo
         run: |
-          yarn deployzh
-
+          yarn buildzh
+          python ./.github/cache.py
+          hexo d
 
       - name: NPM Publish Pre Set
         run: |

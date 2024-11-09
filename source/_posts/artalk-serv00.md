@@ -1,4 +1,5 @@
 ---
+uuid: 5f57d333-9dd9-11ef-8624-a3174cf555fc
 title: Serv00搭建Artalk
 abbrlink: 13624
 date: 2024-04-12 22:46:14

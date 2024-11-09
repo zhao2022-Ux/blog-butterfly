@@ -1,4 +1,5 @@
 ---
+uuid: 5f57d336-9dd9-11ef-8624-a3174cf555fc
 title: 小康大佬的说说方案 ———— ispeak搭建教程
 description: 这篇文章是我之前写过的教程的重写
 swiper_index: 3

@@ -1,4 +1,5 @@
 ---
+uuid: 5f57fa40-9dd9-11ef-8624-a3174cf555fc
 title: butterfly主题添加音乐页面（适配手机）
 description: 原先的音乐页面存在BUG：手机访问会错乱，所以我重新找了个音乐播放器源码
 swiper_index: 2

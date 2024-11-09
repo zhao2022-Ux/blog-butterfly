@@ -1,4 +1,5 @@
 ---
+uuid: 5f584860-9dd9-11ef-8624-a3174cf555fc
 title: 自建不蒜子API
 tags:
   - 站点折腾

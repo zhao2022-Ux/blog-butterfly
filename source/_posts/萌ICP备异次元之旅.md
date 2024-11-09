@@ -1,4 +1,5 @@
 ---
+uuid: 5f582156-9dd9-11ef-8624-a3174cf555fc
 title: 萌ICP备异次元之旅
 tags:
   - 站点折腾

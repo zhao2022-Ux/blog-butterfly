@@ -1,4 +1,5 @@
 ---
+uuid: 5f57ac24-9dd9-11ef-8624-a3174cf555fc
 title: Gameload示例
 description: 一个普通的GameLoad示例
 tags:

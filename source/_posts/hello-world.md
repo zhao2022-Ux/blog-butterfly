@@ -1,4 +1,5 @@
 ---
+uuid: 5f57d337-9dd9-11ef-8624-a3174cf555fc
 title: 新起点，新出发
 headimg: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20221230/46348.3e004dfapae0.webp
 description: 改名后的第一篇文章

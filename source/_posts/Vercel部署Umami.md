@@ -1,4 +1,5 @@
 ---
+uuid: 5f57d332-9dd9-11ef-8624-a3174cf555fc
 title: Vercel部署Umami
 abbrlink: 28733
 headimg: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/umami-x-vercel.37hd3icfx5y0.webp
