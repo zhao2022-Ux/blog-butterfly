@@ -290,7 +290,6 @@ const compareVersion = (a, b) => {
 
 const mirrors = [
   `https://registry.npmjs.org/${NPMPackage}/latest`,
-  `https://registry.npmmirror.com/${NPMPackage}/latest`,
   `https://mirrors.cloud.tencent.com/npm/${NPMPackage}/latest`
 ]
 const getLocalVersion = async () => {
