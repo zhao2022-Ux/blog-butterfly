@@ -1172,16 +1172,16 @@ rightmenus:
 # npm i hexo-generator-json-content
 search:
   enable: true
-  service: algolia  # hexo, algolia, meilisearch
+  service: meilisearch  # hexo, algolia, meilisearch
   algolia:
     searchAsYouType: true # If false, triggers the search only on submit.
     hitsPerPage: 5 # Set the number of hits per page.
     placeholder: 'Search...' # The placeholder text of the input.
   meilisearch:
     placeholder: 'Search...'
-    searchKey: ''
+    searchKey: 'e9b6151de5a598167bd90d0573c3b2cbe2ca52578ff9b3a2b33f77e681f0f50b'
     indexName: 'hexo'
-    hostUrl: 'https://meili.search.blog.sinzmise.top/'
+    hostUrl: 'https://meili.search.blog.sinzmise.top'
 
 ############################### Search ############################### > end
 
