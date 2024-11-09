@@ -14,9 +14,7 @@ let debug = true;
 // location.hostname == 'localhost' && (debug = true) && (NPMMirror = false);
 const handleFetch = async (event) => {
   const url = event.request.url;
-  if (/nocache/.test(url)) {
-    return NetworkOnly(event)
-  } else if (/hm\.baidu\.com/.test(url)) {
+  if (/hm\.baidu\.com/.test(url)) {
     return NetworkOnly(event)
   } else if (/collect-perf\.51\.la/.test(url)) {
     return NetworkOnly(event)
@@ -31,6 +29,8 @@ const handleFetch = async (event) => {
   } else if (/music\.126\.net/.test(url)) {
     return CacheAlways(event)
   } else if (/qqmusic\.qq\.com/.test(url)) {
+    return CacheAlways(event)
+  } else if (/jsd\.cdn\.storisinz\.site/.test(url)) {
     return CacheAlways(event)
   } else if (/jsdelivr\.net/.test(url)) {
     return CacheAlways(event)
