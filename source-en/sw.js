@@ -30,6 +30,8 @@ const handleFetch = async (event) => {
     return CacheAlways(event)
   } else if (/unpkg\.com/.test(url)) {
     return CacheAlways(event)
+  } else if (/hm\.baidu\.com/.test(url)) {
+    return CacheAlways(event)
   } else if (/.*\.(?:png|jpg|jpeg|svg|gif|webp|ico|eot|ttf|woff|woff2|mp3)$/.test(url)) {
     return CacheAlways(event)
   } else if (/.*\.(css|js)$/.test(url)) {
