@@ -190,7 +190,7 @@ tag_plugins:
     tag_plugins_css: https://jsd.cdn.storisinz.site/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
     ghcard_url: https://github-readme-stats.vercel.app #API仓库https://kkgithub.com/anuraghazra/github-readme-stats
 
-baidu_analytics_key: 59986c9d6715c06178a2b6e2f118f837
+baidu_analytics_key: 33c5603025d6142ccb2970d515c09598
 
 google_analytics_key: G-7MR59SK1DP
 
