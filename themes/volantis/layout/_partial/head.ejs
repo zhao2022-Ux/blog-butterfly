@@ -100,6 +100,11 @@
     <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
   <%_ } _%>
 
+  <%_ if (theme.indieweb.enable && theme.comments.webmention.link){ _%>
+    <link rel="webmention" href="https://webmention.io/<%- theme.comments.webmention.link %>/webmention" />
+<link rel="pingback" href="https://webmention.io/<%- theme.comments.webmention.link %>/xmlrpc" />
+  <%_ } _%>
+
   <!-- Axios -->
   <script src="<%- theme.cdn.axios %>" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
