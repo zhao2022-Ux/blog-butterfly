@@ -148,9 +148,15 @@ navbar:
     - name: 归档
       icon: fa-solid fa-archive
       url: archives/
-    - name: 友链
+    - name: 友人帐
       icon: fa-solid fa-link
       url: link/
+    - name: 朋友圈
+      icon: fa-solid fa-link
+      url: fcircle/
+    - name: 统计
+      icon: fa fa-chart-line
+      url: https://umami.status.sinzmise.top/share/OaBMl3SHl8e9fyMJ/%E6%B1%90%E5%A1%94%E9%AD%94%E6%B3%95%E5%B1%8B
     - name: 开往
       icon: fa-solid fa-subway
       url: https://www.travellings.cn/go.html
@@ -174,9 +180,12 @@ nextNavbar:
     - name: 归档
       icon: fa-solid fa-archive
       url: archives/
-    - name: 友链
+    - name: 友人帐
       icon: fa-solid fa-link
       url: link/
+    - name: 朋友圈
+      icon: fa-solid fa-link
+      url: fcircle/
     - name: 统计
       icon: fa fa-chart-line
       url: https://umami.status.sinzmise.top/share/OaBMl3SHl8e9fyMJ/%E6%B1%90%E5%A1%94%E9%AD%94%E6%B3%95%E5%B1%8B
