@@ -7,7 +7,7 @@ const PreCachlist = [
   "/js/app.js",
   "/js/search/hexo.js",
 ];
-let NPMMirror = true;
+let NPMMirror = false;
 const NPMPackage = "sinzmise-cetastories-en";
 let NPMPackageVersion = "latest";
 let debug = true;
