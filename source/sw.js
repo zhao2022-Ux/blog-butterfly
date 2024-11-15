@@ -28,6 +28,8 @@ const handleFetch = async (event) => {
     return CacheAlways(event)
   } else if (/music\.126\.net/.test(url)) {
     return CacheAlways(event)
+  } else if (/files\.blog\.sinzmise\.top/.test(url)) {
+    return CacheAlways(event)
   } else if (/qqmusic\.qq\.com/.test(url)) {
     return CacheAlways(event)
   } else if (/jsdelivr\.net/.test(url)) {
