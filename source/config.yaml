@@ -28,17 +28,26 @@ catch_rules:
   - rule: _ #ClientWorker语法糖，匹配当前域，返回一个域名带端口
     transform_rules: #转换规则，最上面的优先最高
       - search: \#.* #在发送请求时匹配#后内容并移除
+        searchin: url
         replace: ''
       - search: \?.* #在发送请求时匹配?后内容并移除，仅限静态请求
         replace: ''
-      - search: boringbay\.com
+      - search: ([^\/.]+)\/index(|\.html)$ #优化url
+        action: redirect
+        redirect: 
+          to: $1/
+      - search: boringbay\.com #绕过boringbay
         action: skip
-      - search: tk\.pl\.blog\.sinzmise\.top
+      - search: tk\.pl\.blog\.sinzmise\.top #绕过twikoo后端
         action: skip
+      - search: ([^\/.]+)\/$  #解析index.html
+        replace: $1/index.html
       - search: _
         replace:
           - _ #保留原始请求
           - vercel.blog.sinzmise.top #Vercel托管
+          - jsd.cdn.storisinz.site/npm/sinzmise-cetastories #npm托管
+          - jsd.cdn.storisinz.site/gh/SinzMise/blog@zh #gh托管
 
       - search: \.html$
         header:
