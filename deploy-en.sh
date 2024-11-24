@@ -1,6 +1,6 @@
 #!/bin/bash
 
 cp "config-en.yml" _config.yml
-cp "config-volantis-en.yml" "_config.volantis.yml"
+cp "config-butterfly-en.yml" "_config.butterfly.yml"
 cp "gulpfile-en.js" "gulpfile.js"
 echo "Set en success!"

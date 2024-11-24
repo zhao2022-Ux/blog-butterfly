@@ -1,8 +1,7 @@
 ---
-uuid: 5f57d332-9dd9-11ef-8624-a3174cf555fc
 title: Vercel部署Umami
 abbrlink: 28733
-headimg: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/umami-x-vercel.37hd3icfx5y0.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/umami-x-vercel.37hd3icfx5y0.webp
 date: 2023-07-14 08:48:13
 tags:
   - 站点折腾
@@ -11,10 +10,10 @@ categories:
   - 站点折腾
 lang: zh-CN
 ---
+# 前言
 之前我是想参考这个教程来部署：https://digu.plus/post/8034746f42b3495fbb19926e3fb8ec4f/
 然而部署过程中翻了车
 这个教程新版教程（顺便总结一下我翻的车）
-<!-- more -->
 # 数据库选择
 Umami支持MySQL和PostgreSQL数据库，选择自己喜欢的数据库进行数据初始化即可。下面是几个免费的数据库服务，这里选择的是ElephantSQL，当然，并不限于这些。
 目前www.jsdelivr.ren免费数据库如下：
@@ -23,12 +22,10 @@ Umami支持MySQL和PostgreSQL数据库，选择自己喜欢的数据库进行数
 - PostgreSQL：[ElephantSQL](https://www.elephantsql.com/)、[Supabase](https://supabase.com/)
 
 # 数据库部署
-
-{% noteblock warning %}
+{% note warning simple %}
 目前已知Supabase部署失败原因：
 ![msedge_DL0IGBX6O1](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230716/msedge_DL0IGBX6O1.2876ewjv3lz4.webp)
-{% endnoteblock %}
-
+{% endnote %}
 {% tabs 数据库部署 %}
 <!-- tab MySQL -->
 {% tabs MySQL数据库 %}
@@ -47,12 +44,10 @@ mysql://（DATABASE USER）:（PASSWORD）@（HOST）:（PORT）/（DATABASE NAM
 
 <!-- endtab -->
 <!-- tab db4free（不推荐，官网访问较慢） -->
-
-{% noteblock warning %}
-这个数据库疑似国人开办，建议用国内邮箱收验证码，国外的基本收不到
+{% note warning simple %}
+注意事项：这个数据库疑似国人开办，建议用国内邮箱收验证码，国外的基本收不到
 （转自：https://www.freeaday.com/2023/01/db4free/ 的一条评论）
-{% endnoteblock %}
-
+{% endnote %}
 打开[db4free](https://www.db4free.net/)，点击“注册免费账号”，输入信息然后点击“注册”，一会后你会收到如下邮件：
 
 ![网易灵犀办公_JmFVOuOEIc](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/网易灵犀办公_JmFVOuOEIc.30smaneqwfa0.webp)
@@ -102,9 +97,7 @@ mysql://（数据库用户）:（数据库密码）@（数据库地址）/（数
 [![部署到Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmikecao%2Fumami&env=DATABASE_URL,HASH_SALT,TRACKER_SCRIPT_NAME&envDescription=These%20values%20are%20defined%20in%20the%20configure%20Umami%20step%20from%20Install&envLink=https%3A%2F%2Fumami.is%2Fdocs%2Finstall&project-name=umami&repo-name=umami)
 
 1. 点击上方按钮，跳转至 Vercel 进行 Server 端部署
-2. 
-{% noteblock info %}如果你未登录的话，Vercel 会让你注册或登录，请使用 GitHub 账户进行快捷登录。{% endnoteblock %}
-
+{% note warning simple %}如果你未登录的话，Vercel 会让你注册或登录，请使用 GitHub 账户进行快捷登录。{% endnote %}
 2. 输入一个你喜欢的 Vercel 项目名称并点击 Create 继续:
 
 ![msedge_EtpjrPwPlG](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230714/msedge_EtpjrPwPlG.4zkys81bppo0.webp)

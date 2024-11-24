@@ -4,12 +4,12 @@ const fs = require('fs')
 const blacklist = ["Hexo", "Volantis"]; // 由于某种原因，不想订阅的列表
 
 let friends = [],
-    data_f = YML.parse(fs.readFileSync('source-en/_data/friends.yml').toString().replace(/(?<=rss:)\s*\n/g, ' ""\n'));
+    data_f = YML.parse(fs.readFileSync('source-en/_data/link.yml').toString().replace(/(?<=rss:)\s*\n/g, ' ""\n'));
 
 data_f.forEach((entry, index) => {
-    let lastIndex = 4;
+    let lastIndex = 2;
     if (index < lastIndex) {
-        const filteredLinkList = entry.items.filter(linkItem => !blacklist.includes(linkItem.title));
+        const filteredLinkList = entry.link_list.filter(linkItem => !blacklist.includes(linkItem.name));
         friends = friends.concat(filteredLinkList);
     }
 });
@@ -17,7 +17,7 @@ data_f.forEach((entry, index) => {
 // 根据规定的格式构建 JSON 数据
 const friendData = {
     friends: friends.map(item => {
-        return [item.title, item.url, item.avatar];
+        return [item.name, item.link, item.avatar];
     })
 };
 

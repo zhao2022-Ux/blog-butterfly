@@ -1,21 +1,20 @@
 ---
-uuid: 5f57d335-9dd9-11ef-8624-a3174cf555fc
 title: 记一次部署Memos
 tags:
   - 站点折腾
   - 自建部署
 categories:
   - 站点折腾
-headimg: >-
+cover: >-
   https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230801/未标题-1.66u9tpp5tsw0.webp
 abbrlink: 18063
 date: 2023-08-01 16:30:15
 lang: zh-CN
 ---
+# 前言
 ispeak的编辑器用的jsdelivr，这导致了每次我要新建日记的时候编辑器没显示，被迫换方案
 经过[木木](https://immmmm.com/hi-memos/)大佬的介绍，我找到了一个叫Memos的知识库
 但我没钱买服务器部署，于是就考虑无服务器部署
-<!-- more -->
 # Render部署
 我首先考虑的是Render部署，因为Render能部署“Web Server”
 但部署完成没几个小时后，我发布的日记消失了
@@ -52,16 +51,13 @@ Zeabur部署Memos很方便，自带的Marketplace就有Memos
 在image这一行填写：`ghcr.io/usememos/memos:latest`，点击Next
 ![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_3pmSNqxnlH.png)
 划到下面，点击Advanced，Environment variables新增两个变量：`MEMOS_DRIVER`和`MEMOS_DSN`
-
-{% noteblock warning %}注意：两个变量都是必选的，当然你也可以不用添加这两个，只不过一旦Memos更新数据会丢失！{% endnoteblock %}
-
+{% note warning modern %}注意：两个变量都是必选的，当然你也可以不用添加这两个，只不过一旦Memos更新数据会丢失！{% endnote %}
 ![](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/msedge_3jo6namzf5.png)
 | 变量      | 值 |
 | ----------- | ----------- |
 |MEMOS_DRIVER|数据库名称，MySQL就填`mysql`，postgreSQL就填`postgres`|
 |MEMOS_DSN|数据库地址|
-
-{% noteblock info %}
+{% note info modern %}
 值得一提的是，你使用postgreSQL的时候，数据库地址必须要添加前面的`postgresql://`
 也就是下面的例子：
 ```
@@ -73,14 +69,12 @@ mysql不用在前面加`mysql://`
 root:password@tcp(localhost)/memos_prod
 
 ```
-{% endnoteblock %}
-
+{% endnote %}
 然后将Exposing your service下面的port改为5432，然后deploy
 等一会你就能体验到Memos了
-
-{% noteblock info %}
+{% note info modern %}
 但koyeb绑定域名好像要钱，因此最好再注册个koyeb账号来搞Uptime Kuma ，然后监测源站（这样的话可以确保反代的时候源站不会没）
-{% endnoteblock %}
+{% endnote %}
 
 # Serv00部署
 由于Koyeb的部署会自动休眠，因此不得不找别的部署方式
@@ -89,5 +83,5 @@ root:password@tcp(localhost)/memos_prod
 但是苦于不知道前端文件夹放到哪里，因此只能搁置了
 然后那个博主就补充了一个serv00部署Memos的教程
 教程我放这里了（主要是我懒得搬过来）：
-{% link Serv00部署Memos::https://blog.rappit.site/2024/01/27/serv00_logs/#Memos %}
+{% link Serv00部署Memos,https://blog.rappit.site/2024/01/27/serv00_logs/#Memos %}
 

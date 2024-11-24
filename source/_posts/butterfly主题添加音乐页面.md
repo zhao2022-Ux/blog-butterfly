@@ -1,9 +1,8 @@
 ---
-uuid: 5f57fa40-9dd9-11ef-8624-a3174cf555fc
 title: butterfly主题添加音乐页面（适配手机）
 description: 原先的音乐页面存在BUG：手机访问会错乱，所以我重新找了个音乐播放器源码
 swiper_index: 2
-headimg: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/logo.22azkjyis5uo.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230114/logo.22azkjyis5uo.webp
 tags:
   - 站点折腾
   - 页面魔改
@@ -13,9 +12,10 @@ abbrlink: 22945
 date: 2023-01-08 22:31:46
 lang: zh-CN
 ---
-{% noteblock info %}
-本博客已经更换主题
-{% endnoteblock %}
+# 前言
+{% note info modern %}
+本博客音乐页面已经换成了[安知鱼大佬的方案](https://anzhiy.cn/posts/c3d3.html)
+{% endnote %}
 没有音乐页面怎么行，花里胡哨的都安排上，本来想摆烂直接上aplayer，~~但考虑到我不会写样式（虽然我可以自学）~~ 所以我音乐页面用的是[Chuckle的方案](https://www.chuckle.top/article/3322c8a8.html)
 {% psw （等会为啥开头这么像<a href="https://www.chuckle.top/article/3322c8a8.html">这篇文章</a>） %}
 原本我是想做[单页背景透明](https://www.chuckle.top/article/eb3a4679.html)的，但我发现单页背景透明和我博客背景冲突导致丑的一批，所以我把背景换成了渐变动画
@@ -26,14 +26,13 @@ lang: zh-CN
 当时我还以为是浏览器的问题，立即换成了Chrome浏览器，结果：
 ![Screenshot_2023-01-09-10-02-41-554_com](https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20230109/Screenshot_2023-01-09-10-02-41-554_com.6tcc3lty2uo0.webp)
 （后来我用手机访问了那位大佬的音乐页面，也是一样出现这个问题，之前有人反映过这位大佬，大佬说自己去适配，~~但我懒得适配，于是就有了这个教程~~ ）
-<!-- more -->
 # 教程
 {% tabs 教程开始, 2 %}
 <!-- tab 1.0 -->
-{% noteblock info %}
+{% note info modern %}
 这个教程是我基于https://www.php.cn/xiazai/js/6169 做的适配butterfly主题的版本，但后面我发现这跟csdn里的[html好看的音乐播放器](https://blog.csdn.net/weixin_43151418/article/details/125351391){% psw （希望csdn那篇文章的作者看完不会在意） %}
-{% endnoteblock %}
-{% noteblock warning %}目前博客已经弃用这个方案，改用2.0版本{% endnoteblock %}
+{% endnote %}
+{% note warning modern %}目前博客已经弃用这个方案，改用2.0版本{% endnote %}
 1. 新建[Blogroot]\themes\butterfly\layout\includes\page\music.pug，内容如下：
 {% folding green, 点我查看代码 %}
 ``` pug
@@ -832,9 +831,9 @@ if theme.musicplayer.hitokoto
 {% btns rounded grid5 %}
 {% cell （密码：3r5i）, https://sinz.lanzouw.com/iUJTx0krafpi, fas fa-download %}
 {% endbtns %}
-{% noteblock info %}
+{% note info modern %}
 1.0想升级成2.0的，下面的步骤可以不用做
-{% endnoteblock %}
+{% endnote %}
 3. 编辑[blogroot]\themes\butterfly\_config.yml，在末尾添加：
 ``` yml
 musicplayer:

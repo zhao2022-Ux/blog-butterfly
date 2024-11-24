@@ -1,7 +1,6 @@
 ---
-uuid: 5f57fa49-9dd9-11ef-8624-a3174cf555fc
 title: 游玩mud游戏
-headimg: >-
+cover: >-
   https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20230806/Update_2JXuMM4TY3.2hgks6n4b8o0.webp
 tags:
   - 游戏相关
@@ -13,10 +12,10 @@ abbrlink: 38917
 date: 2023-08-06 15:51:36
 lang: zh-CN
 ---
+# 前言
 昨天我打开了很久没访问的[北大侠客行Mud](https://pkuxkx.net/)官网
 其实这个游戏是第二个我接触的mud游戏，至于第一个。。。。我忘记了
 （值得一提的是，我第一次接触mud是从NetForce的一个游戏，但我忘了是啥了）
-<!-- more -->
 # 怎么玩mud游戏？
 {% tabs 怎么玩mud游戏 %}
 <!-- tab Windows -->

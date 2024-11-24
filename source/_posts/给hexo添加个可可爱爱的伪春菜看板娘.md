@@ -1,17 +1,17 @@
 ---
-uuid: 5f582154-9dd9-11ef-8624-a3174cf555fc
 title: 给你的站点添加个可可爱爱的看板娘——伪春菜
 tags:
   - 站点折腾
   - 悬浮宠物/看板娘
 categories:
   - 站点折腾
-headimg: >-
+cover: >-
   https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240216/16V9BANNER091002000.4rmqc30bwnc0.jpg
 abbrlink: 54787
 date: 2024-02-16 17:17:26
 lang: zh-CN
 ---
+# 前言
 什么是伪春菜？[请看这里](https://mzh.moegirl.org.cn/%E4%BC%AA%E6%98%A5%E8%8F%9C)
 作为一个早在xp时代就出现的桌面精灵，伪春菜有了爆火的人气
 后来不知道什么时候开始在国内由盛转衰，直到现在我对这个圈子少之又少
@@ -21,7 +21,6 @@ lang: zh-CN
 就去去搜了一下，得到的结果是：http://www.lmyoaoa.com/inn/archives/4504/
 又因为这玩意已经很久没更新，所以我将这个的js、css和图片提取出来，然后魔改了一下，方便放在hexo里面
 废话不多说，开始吧！
-<!-- more -->
 # 引入js和css
 {blogroot}/source/weichuncai/css/style.css
 ```css

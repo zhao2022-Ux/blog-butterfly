@@ -1,7 +1,7 @@
 ---
-uuid: 5f57ac24-9dd9-11ef-8624-a3174cf555fc
 title: Gameload示例
 description: 一个普通的GameLoad示例
+cover: 'https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/6624169a523e7.ic3h96k1t.webp'
 tags:
   - 项目折腾
   - Windows软件
@@ -11,7 +11,6 @@ abbrlink: 20412
 date: 2023-04-08 18:25:26
 lang: zh-CN
 ---
-<!-- more -->
 ## 安装GameLoad
 {% raw %}
 <a href="https://files.blog.sinzmise.top/unity3d/gameload.exe" class="css-button post-button-gameload"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;&nbsp;安装GameLoad</a>

@@ -1,5 +1,4 @@
 ---
-uuid: 5f57fa41-9dd9-11ef-8624-a3174cf555fc
 title: 为博客添加一个游戏收藏页（npm插件版）
 tags:
   - 站点折腾
@@ -9,18 +8,18 @@ categories:
 ai: true
 abbrlink: 10045
 date: 2024-01-18 21:39:51
-headimg: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/fe131d7f5a6b38b23cc967316c13dae2.8dwp7xp4q5.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/fe131d7f5a6b38b23cc967316c13dae2.8dwp7xp4q5.webp
 lang: zh-CN
 ---
+# 前言
 之前看到Kouseki大佬的这篇文章：
-{% link 为博客添加一个游戏收藏页::https://blog.kouseki.cn/posts/e7dd.html %}
+{% link 为博客添加一个游戏收藏页,https://blog.kouseki.cn/posts/e7dd.html %}
 我原本是想要给我博客搞这个的，但由于我一般会给博客的主题更新，导致魔改的内容消失
 思来想去，我还是决定做npm版本的游戏收藏页
-<!-- more -->
 # 效果
-{% folding 效果预览 %}
+{% hideBlock 效果预览 %}
 ![](https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240118/msedge_3ga8r6QcmR.3doduw5wpd60.png)
-{% endfolding %}
+{% endhideBlock %}
 # 安装
 
 1. 安装插件,在博客根目录`[Blogroot]`下打开终端，运行以下指令：

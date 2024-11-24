@@ -1,5 +1,5 @@
 ---
-title: 小屋统计
+title: 魔法统计
 date: 2024-02-19 10:37:59
 comments: false
 aside: false

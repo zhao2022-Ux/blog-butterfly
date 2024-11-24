@@ -1,7 +1,6 @@
 ---
-uuid: 5f57d337-9dd9-11ef-8624-a3174cf555fc
 title: 新起点，新出发
-headimg: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20221230/46348.3e004dfapae0.webp
+cover: https://jsd.cdn.storisinz.site/gh/SinzMise/MYPictures@master/20221230/46348.3e004dfapae0.webp
 description: 改名后的第一篇文章
 date: 2021-12-17 14:53:11
 abbrlink: 16107
@@ -11,7 +10,6 @@ categories:
   - 站点折腾
 lang: zh-CN
 ---
-<!-- more -->
 你好，我是小星鑫233，当然现在请叫我“SinzMise”或“Sinz”
 这是“SinGO博客”停止更新且我更换名字的第一篇文章
 博客的迁移，代表着原SinGO博客 和 Hexo-Theme-SinGO主题正式停止更新

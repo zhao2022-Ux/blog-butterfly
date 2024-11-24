@@ -1,7 +1,7 @@
 ---
 title: 留言板
 date: 2023-07-17 14:07:01
-type: comment
+type: comments
 top_img: false
 aside: false
 top_page: true
@@ -11,10 +11,10 @@ top_title: 最新评论
 top_tips: 快速预览本站最近评论
 ---
 
-{% noteblock success %}
+{% note success  flat %}
 如果有什么 **想说的**、**想问的** 或者 **发现了本站的BUG**，欢迎留言告知😊。
-{% endnoteblock %}
+{% endnote %}
 
-{% noteblock pink %}
+{% note pink 'fa-solid fa-link'  flat %}
 若想 **添加友链** 请前往 [友情链接](/link/) 页面进行友链申请😄
-{% endnoteblock %}
+{% endnote %}
