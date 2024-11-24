@@ -51,13 +51,13 @@ catch_rules:
         action: skip
       - search: ([^\/.]+)\/$  #解析index.html
         replace: $1/index.html
+        
       - search: _
         replace:
           - _ #保留原始请求
           - en.vercel.blog.sinzmise.top #Vercel托管
           - jsd.cdn.storisinz.site/npm/sinzmise-cetastories-en #npm托管
           - jsd.cdn.storisinz.site/gh/SinzMise/blog@en #gh托管
-
       - search: \.html$
         header:
           Content-Type: text/html;charset=UTF-8 #修复标头

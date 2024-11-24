@@ -48,7 +48,6 @@ catch_rules:
           - vercel.blog.sinzmise.top #Vercel托管
           - jsd.cdn.storisinz.site/npm/sinzmise-cetastories #npm托管
           - jsd.cdn.storisinz.site/gh/SinzMise/blog@zh #gh托管
-
       - search: \.html$
         header:
           Content-Type: text/html;charset=UTF-8 #修复标头
