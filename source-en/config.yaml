@@ -31,6 +31,9 @@ catch_rules:
         replace: ''
       - search: \?.* #在发送请求时匹配?后内容并移除，仅限静态请求
         replace: ''
+      - search: \#.+
+        searchin: url
+        replace: ''
       - search: _
         replace:
           - _ #保留原始请求
@@ -48,3 +51,10 @@ catch_rules:
           engine: classic
           preflight: false
           timeout: 5000
+
+      - search: (^4|^5) 
+        searchin: status 
+        action: return
+        return:
+          body: The GateWay is down!This Page is provided by ClientWorker!
+          status: 503
