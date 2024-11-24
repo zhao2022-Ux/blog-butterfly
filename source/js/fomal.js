@@ -1180,7 +1180,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+      "%c ⚡ Powered by SinZero %c 你正在访问汐塔魔法屋",
       "color:white; background-color:#f0ad4e",
       ""
     )
