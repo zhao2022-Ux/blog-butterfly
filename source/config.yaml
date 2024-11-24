@@ -46,60 +46,23 @@ catch_rules:
         replace:
           - _ #保留原始请求
           - vercel.blog.sinzmise.top #Vercel托管
-          - jsdnpm/npm/sinzmise-cetastories #npm托管
-          - jsdgithub/gh/SinzMise/blog@zh #gh托管
-
-      - search: ^https\:\/\/jsdnpm
-        replace:
-          - https://cdn.jsdelivr.net/npm
-          - https://jsd.onmicrosoft.cn/npm
-          - https://unpkg.onmicrosoft.cn
-          - https://unpkg.com
-          - https://jsd.cdn.storisinz.site/npm
-        action: fetch
-        fetch:
-          status: 200
-          engine: parallel
-          preflight: false
-          timeout: 5000
-          cache:
-            expire: 1000*10
-            delay: 3000
-
-      - search: ^https\:\/\/jsdgithub
-        replace:
-          - https://jsd.onmicrosoft.cn/gh
-          - https://jsd.cdn.storisinz.site/gh
-        action: fetch
-        fetch:
-          status: 200
-          engine: parallel
-          preflight: false
-          timeout: 5000
-          cache:
-            expire: 1000*10
-            delay: 3000
+          - jsd.cdn.storisinz.site/npm/sinzmise-cetastories #npm托管
 
       - search: \.html$
         header:
-          content-type: text/html;charset=utf-8 #修复标头
-          ServerProvide: ClientWorker
+          Content-Type: text/html;charset=UTF-8 #修复标头
 
-  - rule: .*
-    transform_rules:
-      - search: .*
+      - search: _
         action: fetch
         fetch:
-          enable: true
-          engine: fetch
+          status: 200
+          engine: classic
           preflight: false
-        
-      - search: (^4|^5)
-        searchin: status
+          timeout: 5000
+      
+      - search: (^4|^5) 
+        searchin: status 
         action: return
-        return: 
-          body: Error!
-          header:
-            content-type: text/plain;charset=utf-8
-            ServerProvide: ClientWorker
+        return:
+          body: The GateWay is down!This Page is provided by ClientWorker!
           status: 503

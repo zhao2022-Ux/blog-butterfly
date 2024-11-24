@@ -17,15 +17,6 @@ catch_rules:
           - https://cdnjs.cdn.storisinz.site/ajax/libs
           - https://cdnjs.onmicrosoft.cn/ajax/libs
 
-  - rule: ^https\:\/\/cdnjs\.cloudflare\.com\/ajax\/libs
-    transform_rules:
-      - search: _
-        replace:
-          - _
-          - https://cdnjs.webstatic.cn/ajax/libs
-          - https://cdnjs.cdn.storisinz.site/ajax/libs
-          - https://cdnjs.onmicrosoft.cn/ajax/libs
-
   - rule: ^https\:\/\/((cdn|fastly|gcore|test1|quantil)\.jsdelivr\.net\/gh)
     transform_rules:
       - search: _
@@ -51,32 +42,27 @@ catch_rules:
         action: skip
       - search: ([^\/.]+)\/$  #解析index.html
         replace: $1/index.html
-        
       - search: _
         replace:
           - _ #保留原始请求
           - en.vercel.blog.sinzmise.top #Vercel托管
           - jsd.cdn.storisinz.site/npm/sinzmise-cetastories-en #npm托管
-          - jsd.cdn.storisinz.site/gh/SinzMise/blog@en #gh托管
+
       - search: \.html$
         header:
           Content-Type: text/html;charset=UTF-8 #修复标头
 
-  - rule: .*
-    transform_rules:
-      - search: .*
+      - search: _
         action: fetch
         fetch:
-          enable: true
-          engine: fetch
+          status: 200
+          engine: classic
           preflight: false
-        
-      - search: (^4|^5)
-        searchin: status
+          timeout: 5000
+
+      - search: (^4|^5) 
+        searchin: status 
         action: return
-        return: 
-          body: Error!
-          header:
-            content-type: text/plain;charset=utf-8
-            ServerProvide: ClientWorker
+        return:
+          body: The GateWay is down!This Page is provided by ClientWorker!
           status: 503
