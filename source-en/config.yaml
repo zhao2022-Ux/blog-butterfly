@@ -62,17 +62,21 @@ catch_rules:
         header:
           Content-Type: text/html;charset=UTF-8 #修复标头
 
-      - search: _
+  - rule: .*
+    transform_rules:
+      - search: .*
         action: fetch
         fetch:
-          status: 200
-          engine: classic
+          enable: true
+          engine: fetch
           preflight: false
-          timeout: 5000
-
-      - search: (^4|^5) 
-        searchin: status 
+        
+      - search: (^4|^5)
+        searchin: status
         action: return
-        return:
-          body: The GateWay is down!This Page is provided by ClientWorker!
+        return: 
+          body: Error!
+          header:
+            content-type: text/plain;charset=utf-8
+            ServerProvide: ClientWorker
           status: 503
