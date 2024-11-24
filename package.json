@@ -9,8 +9,8 @@
     "clean": "hexo clean",
     "deployzh": "npm run buildzh && gulp && hexo deploy",
     "deployen": "npm run builden && gulp && hexo deploy",
-    "serveren": "npm run clean && sh ./deploy-en.sh && hexo s -g",
-    "serverzh": "npm run clean && sh ./deploy-zh.sh && hexo s -g"
+    "serveren": "npm run builden && hexo server",
+    "serverzh": "npm run buildzh && hexo server"
   },
   "hexo": {
     "version": "6.3.0"

@@ -49,9 +49,7 @@ jobs:
 
       - name: Deploy Hexo
         run: |
-          yarn builden
-          gulp
-          hexo d
+          yarn deployen
 
       - name: NPM Publish Pre Set
         run: |

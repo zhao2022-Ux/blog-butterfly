@@ -497,6 +497,10 @@ cloudflare_analytics:
 # https://clarity.microsoft.com/
 microsoft_clarity:
 
+LA:
+  ck: false
+  perf: false
+
 # Advertisement
 # --------------------------------------
 

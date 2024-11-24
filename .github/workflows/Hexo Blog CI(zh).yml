@@ -49,9 +49,7 @@ jobs:
 
       - name: Deploy Hexo
         run: |
-          yarn buildzh
-          gulp
-          hexo d
+          yarn deployzh
 
       - name: Upload json
         run: |
