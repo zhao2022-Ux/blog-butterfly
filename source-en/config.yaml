@@ -33,11 +33,12 @@ catch_rules:
         replace: ''
       - search: boringbay\.com
         action: skip
+      - search: tk\.pl\.blog\.sinzmise\.top
+        action: skip
       - search: _
         replace:
           - _ #保留原始请求
           - en.vercel.blog.sinzmise.top #Vercel托管
-          - en.netlify.blog.sinzmise.top #Netlify托管
 
       - search: \.html$
         header:
