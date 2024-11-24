@@ -46,11 +46,44 @@ catch_rules:
         replace:
           - _ #保留原始请求
           - vercel.blog.sinzmise.top #Vercel托管
-          - jsd.cdn.storisinz.site/npm/sinzmise-cetastories #npm托管
-          - jsd.cdn.storisinz.site/gh/SinzMise/blog@zh #gh托管
+          - jsdnpm/npm/sinzmise-cetastories #npm托管
+          - jsdgithub/gh/SinzMise/blog@zh #gh托管
+
+      - search: ^https\:\/\/jsdnpm
+        replace:
+          - https://cdn.jsdelivr.net/npm
+          - https://jsd.onmicrosoft.cn/npm
+          - https://unpkg.onmicrosoft.cn
+          - https://unpkg.com
+          - https://jsd.cdn.storisinz.site/npm
+        action: fetch
+        fetch:
+          status: 200
+          engine: parallel
+          preflight: false
+          timeout: 5000
+          cache:
+            expire: 1000*10
+            delay: 3000
+
+      - search: ^https\:\/\/jsdgithub
+        replace:
+          - https://jsd.onmicrosoft.cn/gh
+          - https://jsd.cdn.storisinz.site/gh
+        action: fetch
+        fetch:
+          status: 200
+          engine: parallel
+          preflight: false
+          timeout: 5000
+          cache:
+            expire: 1000*10
+            delay: 3000
+
       - search: \.html$
         header:
-          Content-Type: text/html;charset=UTF-8 #修复标头
+          content-type: text/html;charset=utf-8 #修复标头
+          ServerProvide: ClientWorker
 
   - rule: .*
     transform_rules:
