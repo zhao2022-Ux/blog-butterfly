@@ -7,8 +7,8 @@
     "builden": "sh ./deploy-en.sh && node link.js && npm run clean && hexo generate",
     "buildzh": "sh ./deploy-zh.sh && node link-en.js && npm run clean && hexo generate",
     "clean": "hexo clean",
-    "deployzh": "npm run buildzh && hexo swpp && gulp && hexo deploy",
-    "deployen": "npm run builden && hexo swpp && gulp && hexo deploy",
+    "deployzh": "npm run buildzh && gulp && hexo swpp && hexo deploy",
+    "deployen": "npm run builden && gulp && hexo swpp && hexo deploy",
     "serveren": "npm run clean && sh ./deploy-en.sh && node link-en.js && hexo generate && hexo swpp && hexo server",
     "serverzh": "npm run clean && sh ./deploy-zh.sh && node link.js && hexo generate && hexo swpp && hexo server"
   },
