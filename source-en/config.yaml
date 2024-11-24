@@ -6,7 +6,7 @@ catch_rules:
         action: skip
       - search: tk\.pl\.blog\.sinzmise\.top #绕过twikoo后端
         action: skip
-      - search: \#.+ #在发送请求时匹配#后内容并移除
+      - search: \#.* #在发送请求时匹配#后内容并移除
         searchin: url
         replace: ''
       - search: \?.* #在发送请求时匹配?后内容并移除，仅限静态请求
