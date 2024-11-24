@@ -7,10 +7,10 @@
     "builden": "sh ./deploy-en.sh && node link.js && npm run clean && hexo generate",
     "buildzh": "sh ./deploy-zh.sh && node link-en.js && npm run clean && hexo generate",
     "clean": "hexo clean",
-    "deployzh": "npm run buildzh && gulp && hexo deploy",
-    "deployen": "npm run builden && gulp && hexo deploy",
-    "serveren": "npm run clean && sh ./deploy-en.sh && node link-en.js && hexo generate && hexo server",
-    "serverzh": "npm run clean && sh ./deploy-zh.sh && node link.js && hexo generate && hexo server"
+    "deployzh": "npm run buildzh && gulp && hexo swpp && hexo deploy",
+    "deployen": "npm run builden && gulp && hexo swpp && hexo deploy",
+    "serveren": "npm run clean && sh ./deploy-en.sh && node link-en.js && hexo generate && hexo swpp && hexo server",
+    "serverzh": "npm run clean && sh ./deploy-zh.sh && node link.js && hexo generate && hexo swpp && hexo server"
   },
   "hexo": {
     "version": "6.3.0"
@@ -62,7 +62,7 @@
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-mark": "^3.0.1",
     "save": "^2.5.0",
-    "swpp-backends": "^3.0.0-alpha.601",
+    "swpp-backends": "^3.0.0-alpha.600",
     "vanilla-lazyload": "^17.8.3",
     "workbox-build": "^6.5.4",
     "yamljs": "^0.3.0"
