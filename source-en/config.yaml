@@ -46,7 +46,6 @@ catch_rules:
         replace:
           - _ #保留原始请求
           - en.vercel.blog.sinzmise.top #Vercel托管
-          - jsd.cdn.storisinz.site/npm/sinzmise-cetastories-en #npm托管
 
       - search: \.html$
         header:
