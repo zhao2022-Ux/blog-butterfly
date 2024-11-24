@@ -433,7 +433,7 @@ crisp:
 # --------------------------------------
 footer:
   owner:
-    enable: true
+    enable: false
     since: 2021
     custom_text: '<a href="https://www.travellings.cn/go.html" class="social flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url" alt="Travellings">
                             <img src="https://www.travellings.cn/assets/logo.gif" class="lazyload" data-srcset="https://www.travellings.cn/assets/logo.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="height: 24px;">
