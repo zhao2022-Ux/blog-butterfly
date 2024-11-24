@@ -30,7 +30,7 @@ catch_rules:
         action: fetch
         fetch:
           status: 200
-          engine: parallel
+          engine: KFCThursdayVW50
           preflight: false
           timeout: 5000
 
