@@ -10,13 +10,7 @@ catch_rules:
       - search: boringbay\.com #绕过boringbay
         action: skip
       - search: tk\.pl\.blog\.sinzmise\.top #绕过twikoo后端
-        action: skip 
-      - search: ([^\/.]+)\/index(|\.html)$  #url优化
-        action: redirect
-        redirect: 
-          to: $1/
-      - search: ([^\/.]+)\/$ 
-        replace: $1/index.html
+        action: skip
       - search: _ 
         replace: 
           - _ #保留原始请求
@@ -30,7 +24,7 @@ catch_rules:
         action: fetch
         fetch:
           status: 200
-          engine: classic
+          engine: KFCThursdayVW50
           preflight: false
           timeout: 5000
 
