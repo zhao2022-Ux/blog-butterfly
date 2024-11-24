@@ -50,7 +50,6 @@ jobs:
       - name: Deploy Hexo
         run: |
           yarn builden
-          python ./.github/cache-en.py
           gulp
           hexo d
 
