@@ -418,8 +418,8 @@
           link: https://souiken.moe/
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://souiken.moe/
         - name: PuddingKCの小站
-          avatar: https://img.fastmirror.net/s/2023/10/24/65369bc6614d4.png
-          descr: 布丁的个人博客
+          avatar: https://img.fastmirror.net/s/2024/11/12/67335aef723ed.png
+          descr: 愿你所热爱的依旧不减当年。
           link: https://www.puddingkc.com/
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://www.puddingkc.com/
         - name: MBRjun-Blog
@@ -517,6 +517,11 @@
           avatar: https://wxweb.xyz/wp-content/uploads/2024/05/1716211806-mmexport1716211797071.jpg
           link: https://wxweb.xyz
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://wxweb.xyz
+        - name: murenyouの小窝
+          avatar: https://murenyou.cn/wp-content/uploads/2024/11/cropped-f82fdf0fd2e10917380177e55b32b239.jpg
+          descr: 很高兴认识你
+          link: https://murenyou.cn
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://murenyou.cn
 - class_name: 友谊长存
   class_desc: 无评论系统的博客（相识即是缘分）
   link_list: 
