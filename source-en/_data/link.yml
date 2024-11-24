@@ -6,11 +6,11 @@
       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
       descr: 快速、简单且强大的网站框架
       siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://hexo.io/zh-tw/
-    - name: Volantis
-      link: https://volantis.js.org/
-      avatar: https://jsd.cdn.storisinz.site/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
-      descr: A Wonderful Theme for Hexo
-      siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://volantis.js.org/
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://butterfly.js.org/img/butterfly-icon.png
+      descr: A Simple and Card UI Design theme for Hexo
+      siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://butterfly.js.org/
 - class_name: 大佬们
   class_desc: 膜拜大佬~~
   link_list: 
