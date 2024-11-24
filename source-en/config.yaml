@@ -1,5 +1,30 @@
 name: CetaHouseEnCache
 catch_rules:
+  - rule: ^https\:\/\/((cdn|fastly|gcore|test1|quantil)\.jsdelivr\.net\/npm|unpkg\.com)
+    transform_rules:
+      - search: _
+        replace:
+          - _
+          - https://jsd.cdn.storisinz.site/npm
+          - https://npm.webcache.cn
+
+  - rule: ^https\:\/\/cdnjs\.cloudflare\.com\/ajax\/libs
+    transform_rules:
+      - search: _
+        replace:
+          - _
+          - https://cdnjs.webstatic.cn/ajax/libs
+          - https://cdnjs.cdn.storisinz.site/ajax/libs
+          - https://cdnjs.onmicrosoft.cn/ajax/libs
+
+  - rule: ^https\:\/\/((cdn|fastly|gcore|test1|quantil)\.jsdelivr\.net\/gh)
+    transform_rules:
+      - search: _
+        replace:
+          - _
+          - https://jsd.cdn.storisinz.site/gh
+          - https://code.webcache.cn/gh
+
   - rule: _ #ClientWorker语法糖，匹配当前域，返回一个域名带端口
     transform_rules: #转换规则，最上面的优先最高
       - search: \#.* #在发送请求时匹配#后内容并移除
@@ -16,31 +41,6 @@ catch_rules:
         header:
           Content-Type: text/html;charset=UTF-8 #修复标头
 
-      - rule: ^https\:\/\/((cdn|fastly|gcore|test1|quantil)\.jsdelivr\.net\/npm|unpkg\.com)
-        transform_rules:
-          - search: _
-            replace:
-              - _
-              - https://jsd.cdn.storisinz.site/npm
-              - https://npm.webcache.cn
-
-      - rule: ^https\:\/\/cdnjs\.cloudflare\.com\/ajax\/libs
-        transform_rules:
-          - search: _
-            replace:
-              - _
-              - https://cdnjs.webstatic.cn/ajax/libs
-              - https://cdnjs.cdn.storisinz.site/ajax/libs
-              - https://cdnjs.onmicrosoft.cn/ajax/libs
-
-      - rule: ^https\:\/\/((cdn|fastly|gcore|test1|quantil)\.jsdelivr\.net\/gh)
-        transform_rules:
-          - search: _
-            replace:
-              - _
-              - https://jsd.cdn.storisinz.site/gh
-              - https://code.webcache.cn/gh
-
       - search: _
         action: fetch
         fetch:
@@ -48,10 +48,3 @@ catch_rules:
           engine: classic
           preflight: false
           timeout: 5000
-
-      - search: (^4|^5) 
-        searchin: status 
-        action: return
-        return:
-          body: The GateWay is down!This Page is provided by ClientWorker!
-          status: 503
