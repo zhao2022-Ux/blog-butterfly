@@ -15,10 +15,8 @@ catch_rules:
         replace: $1/index.html
       - search: _ 
         replace: 
-        - _ #保留原始请求
-        - vercel.blog.sinzmise.top #Vercel托管
-        - jsd.cdn.storisinz.site/npm/sinzmise-cetastories #NPM托管
-        - jsd.cdn.storisinz.site/gh/SinzMise/blog@zh #gh托管
+          - _ #保留原始请求
+          - vercel.blog.sinzmise.top #Vercel托管
 
       - search: \.html$
         header:
