@@ -12,8 +12,8 @@ menu:
     留言板: /comments/ || icon-liuyan || faa-tada
     友人帐: /link/ || icon-lianjie || faa-tada
   虫洞 || icon-shejiaoxinxi || faa-tada || hide:
-    开往: /fcircle/ || icon-pjh-huoche || faa-tada
-    异次元之旅: /comments/ || icon-pjh-meng || faa-tada
+    开往: https://www.travellings.cn/go-by-clouds.html || icon-pjh-huoche || faa-tada
+    异次元之旅: https://travel.moe/go.html || icon-pjh-meng || faa-tada
     个站商店: https://storeweb.cn/s/1707 || icon-pjh-shangdian || faa-tada
     博客录: https://bokelu.suijiboke.gs/ || icon-pjh-boke || faa-tada
     笔墨迹: https://blogscn.fun/random.html || icon-pjh-data-input || faa-tada
@@ -491,7 +491,7 @@ footer:
     - title: 主题版本Butterfly_v4.3.1
       link: https://butterfly.js.org/
       image: https://files.blog.sinzmise.top/images/Theme-Butterfly-6513df.svg
-    - title: 本站采用多线部署，主线路托管于Cloudflare Pages
+    - title: 本站采用多线部署，主线路部署到
       link: https://pages.cloudflare.com/
       image: https://files.blog.sinzmise.top/images/HostCF.svg
     - title: 本站数据分析得益于51la技术支持
