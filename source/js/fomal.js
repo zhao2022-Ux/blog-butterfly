@@ -2930,7 +2930,7 @@ function clearItem() {
 
 // 设置字体
 if (localStorage.getItem("font") == undefined) {
-  localStorage.setItem("font", "JinBuTi");
+  localStorage.setItem("font", "LXGW");
 }
 setFont(localStorage.getItem("font"));
 function setFont(n) {
