@@ -491,9 +491,12 @@ footer:
     - title: 主题版本Butterfly_v4.3.1
       link: https://butterfly.js.org/
       image: https://files.blog.sinzmise.top/images/Theme-Butterfly-6513df.svg
-    - title: 本站采用多线部署，主线路部署到
+    - title: 本站采用多线部署，主线路部署到Cloudflare Pages
       link: https://pages.cloudflare.com/
       image: https://files.blog.sinzmise.top/images/HostCF.svg
+    - title: 本站由LEDCDN提供站点加速服务
+      link: https://cdn.ledcdn.com/
+      image: https://files.blog.sinzmise.top/images/LEDCDN.svg
     - title: 本站数据分析得益于51la技术支持
       link: https://51.la/
       image: https://files.blog.sinzmise.top/images/Analytics-51la-3db1eb.svg
