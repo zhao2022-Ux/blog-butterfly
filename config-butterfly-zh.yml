@@ -485,7 +485,7 @@ footer:
       title: Fomalhaut🥝
       image: https://www.fomal.cc/assets/avatar.webp
   bdages:
-    - title: 博客框架为Hexo_v6.3.0
+    - title: 博客框架为Hexo_v6.2.0
       link: https://hexo.io/
       image: https://files.blog.sinzmise.top/images/Frame-Hexo-blue.svg
     - title: 主题版本Butterfly_v4.3.1
