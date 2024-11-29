@@ -120,6 +120,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: JinBuTi;
+  src: url(https://files.blog.sinzmise.top/fonts/JinBuTi.ttf) format('ttf');
+  font-display: swap;
+}
+
 /* 特定部件字体调用 */
 div#menus {
   font-weight: bold !important;

@@ -2928,7 +2928,7 @@ function clearItem() {
 
 // 设置字体
 if (localStorage.getItem("font") == undefined) {
-  localStorage.setItem("font", "LXGW");
+  localStorage.setItem("font", "JinBuTi");
 }
 setFont(localStorage.getItem("font"));
 function setFont(n) {
@@ -3390,6 +3390,7 @@ function createWinbox() {
 <a class="swf" id="swf_TTQHB" href="javascript:;" rel="noopener external nofollow" style="font-family:'TTQHB'!important;color:black" onclick="setFont('TTQHB')">Tiantianquan Haobao</a>
 <a class="swf" id="swf_YSHST" href="javascript:;" rel="noopener external nofollow" style="font-family:'YSHST'!important;color:black" onclick="setFont('YSHST')">YSHaoShenTi</a>
 <a class="swf" id="swf_MiSans" href="javascript:;" rel="noopener external nofollow" style="font-family:'MiSans'!important;color:black" onclick="setFont('MiSans')">MiSans</a>
+<a class="swf" id="swf_JinBuTi" href="javascript:;" rel="noopener external nofollow" style="font-family:'JinBuTi'!important;color:black" onclick="setFont('JinBuTi')">DingTalk Jinbuti</a>
 <a class="swf" id="swf_default" href="javascript:;" rel="noopener external nofollow" style="font-family:-apple-system, IBM Plex Mono ,monosapce,'Microsoft YaHei', sans-serif;!important;color:black" onclick="setFont('default')">Default</a>
 </p>
 
