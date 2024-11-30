@@ -312,6 +312,8 @@ idisqus:
   shortname: cetahouse-en
   serverURL: https://idq.pl.blog.sinzmise.top/blog/en
   url: https://en.blog.sinzmise.top
+  css: https://idq.pl.blog.sinzmise.top/dist/iDisqus.min.css
+  js: https://idq.pl.blog.sinzmise.top/dist/iDisqus.min.js
   option: 
 
 # livere (來必力)

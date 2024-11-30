@@ -1,4 +1,4 @@
-- const { serverURL, shortname, url, option } = theme.idisqus
+- const { serverURL, shortname, url, option, css, js } = theme.idisqus
 - const { lazyload, use } = theme.comments
 
 script.
@@ -6,13 +6,13 @@ script.
     function insertCSS () {
       const link = document.createElement("link")
       link.rel = "stylesheet"
-      link.href = "!{url_for(serverURL) + '/dist/iDisqus.min.css'}"
+      link.href = "!{url_for(css)}"
       document.head.appendChild(link)
     }
 
     function initiDisqus () {
       var disq = new iDisqus('idisqus-container',{
-        api: '!{serverURL+"/api"}',
+        api: '!{serverURL}',
         forum: '!{shortname}',
         mode: 3,
         toggle: "comment-toggle",
@@ -24,7 +24,7 @@ script.
     if (typeof iDisqus === 'function') initiDisqus()
     else {
       insertCSS()
-      getScript('!{url_for(serverURL) + "/dist/iDisqus.min.js"}').then(initiDisqus)
+      getScript('!{url_for(js)}').then(initiDisqus)
     }
   }
 
