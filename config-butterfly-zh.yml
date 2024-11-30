@@ -509,7 +509,12 @@ footer:
     - title: 本站数据分析得益于51la技术支持
       link: https://51.la/
       image: https://files.blog.sinzmise.top/images/Analytics-51la-3db1eb.svg
-    
+    - title: 本站项目由GitHub托管
+      link: https://github.com/
+      image: https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub
+    - title: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+      link: http://creativecommons.org/licenses/by-nc-sa/4.0/
+      image: https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris
 # Analysis
 # --------------------------------------
 
