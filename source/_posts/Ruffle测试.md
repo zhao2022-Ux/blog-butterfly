@@ -6,7 +6,7 @@ tags:
 categories:
   - 站点折腾
 cover: >-
-  https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/20240525/logo.4913vyk2ki.svg
+  https://images1.blog.sinzmise.top/images/Canvas-Ruom.7pbzp97mh.webp
 abbrlink: 57692
 date: 2024-05-25 21:12:39
 lang: zh-CN

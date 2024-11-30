@@ -6,7 +6,7 @@ tags:
 categories:
   - 游戏相关
 cover: >-
-  https://jsd.cdn.storisinz.site/gh/SinzMise/picx-images-hosting@master/dp2l6fpd1yfj0sxcjsi8.9kfzckr3ik.webp
+  https://images1.blog.sinzmise.top/images/Canvas-Ruom.86tous013z.webp
 abbrlink: 10996
 date: 2024-04-27 19:43:40
 lang: zh-CN
