@@ -13,8 +13,8 @@ script.
     function initiDisqus () {
       var disq = new iDisqus('idisqus-container',{
         api: '!{serverURL+"/api"}',
-        forum: '!{url}',
-        site: '!{url_for()}',
+        forum: '!{shortname}',
+        site: '!{url}',
         init: true,
       })
     }
