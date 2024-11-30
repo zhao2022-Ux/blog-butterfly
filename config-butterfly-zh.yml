@@ -315,7 +315,7 @@ disqusjs:
 # https://github.com/fooleap/disqus-php-api
 idisqus:
   shortname: cetahousezh
-  serverURL: https://idq.pl.blog.sinzmise.top
+  serverURL: https://idq.pl.blog.sinzmise.top/blog/zh
   url: https://blog.sinzmise.top
   option: 
 
