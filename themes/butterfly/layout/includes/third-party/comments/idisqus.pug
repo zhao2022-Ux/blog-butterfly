@@ -1,4 +1,4 @@
-- const { serverURL, shortname, option } = theme.idisqus
+- const { serverURL, shortname, url, option } = theme.idisqus
 - const { lazyload, use } = theme.comments
 
 script.
@@ -13,8 +13,8 @@ script.
     function initiDisqus () {
       var disq = new iDisqus('idisqus-container',{
         api: '!{serverURL+"/api"}',
-        forum: '!{shortname}',
-        site: '!{serverURL}',
+        forum: '!{url}',
+        site: '!{url_for()}',
         init: true,
       })
     }

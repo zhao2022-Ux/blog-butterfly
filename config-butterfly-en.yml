@@ -309,8 +309,9 @@ disqusjs:
 # iDisqus
 # https://github.com/fooleap/disqus-php-api
 idisqus:
-  shortname: szngarden
+  shortname: cetahouse-en
   serverURL: https://idq.pl.blog.sinzmise.top
+  url: https://en.blog.sinzmise.top
   option: 
 
 # livere (來必力)
