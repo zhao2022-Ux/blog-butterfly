@@ -24,6 +24,8 @@ hr
           when 'Disqusjs'
             #disqusjs
           when 'Idisqus'
+            input#comment-toggle(type="checkbox" disabled)
+            span= ' ' + _p('disquscheck')
             #idisqus-container
           when 'Livere'
             #lv-container(data-id="city" data-uid=theme.livere.uid)

@@ -123,6 +123,8 @@ Snackbar:
   day_to_night: 你已切換為深色模式
   night_to_day: 你已切換為淺色模式
 
+disquscheck: 加載Disqus原生評論框
+
 loading: 載入中...
 
 error404: 頁面沒有找到

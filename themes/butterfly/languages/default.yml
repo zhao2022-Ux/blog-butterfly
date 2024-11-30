@@ -122,6 +122,8 @@ Snackbar:
   day_to_night: Dark Mode Activated Manually
   night_to_day: Light Mode Activated Manually
 
+disquscheck: Load Disqus native comment box
+
 loading: Loading...
 
 error404: Page not found
