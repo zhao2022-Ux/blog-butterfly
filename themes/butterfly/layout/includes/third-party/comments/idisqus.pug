@@ -1,0 +1,37 @@
+- const { serverURL, shortname, option } = theme.idisqus
+- const { lazyload, use } = theme.comments
+
+script.
+  function loadiDisqus () {
+    function insertCSS () {
+      const link = document.createElement("link")
+      link.rel = "stylesheet"
+      link.href = "!{url_for(serverURL) + '/dist/iDisqus.min.css'}"
+      document.head.appendChild(link)
+    }
+
+    function initiDisqus () {
+      var disq = new iDisqus('idisqus-container',{
+        api: '!{serverURL+"/api"}',
+        forum: '!{shortname}',
+        site: '!{serverURL}',
+        init: true,
+      })
+    }
+
+    if (typeof iDisqus === 'function') initiDisqus()
+    else {
+      insertCSS()
+      getScript('!{url_for(serverURL) + "/dist/iDisqus.min.js"}').then(initiDisqus)
+    }
+  }
+
+  if ('!{use[0]}' === 'iDisqus' || !!{lazyload}) {
+    if (!{lazyload}) btf.loadComment(document.getElementById('idisqus-container'),loadiDisqus)
+    else setTimeout(loadiDisqus, 0)
+  } else {
+    function loadOtherComment () {
+      loadiDisqus()
+    }
+  }
+  
