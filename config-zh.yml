@@ -33,7 +33,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - "baidu_verify_codeva-NA6uDlCuZg.html"
+  - "bbs/bbs.html"
+  - "baidu_verify_codeva-F0RjFTve6w.html"
   - "google8073542809160a67.html"
   - "config.yaml"
   - "load.html"
