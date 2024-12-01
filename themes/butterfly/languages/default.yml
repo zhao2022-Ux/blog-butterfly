@@ -125,22 +125,22 @@ Snackbar:
 disquscheck: Load Disqus native comment box
 
 rightmenu:
-  copy: 複製
+  copy: Copy
   bing: Bing Search
-  tolink: 轉到連結
-  paste: 粘貼
-  comment: 評論
-  copythislink: 複製本文地址
-  newtab: 在新窗口打開
-  copylink: 複製連結
-  saveimage: 保存圖片
-  copypiclink: 複製圖片連結
-  random: 隨機文章
-  checkdark: 晝夜切換
-  reading: 閱讀模式
-  about: 關於我
-  themesetting: 主題設定
-  fullscreen: 切換全屏
+  tolink: Go to link
+  paste: Paste
+  comment: Comment
+  copythislink: Copy article link
+  newtab: Open from newpage
+  copylink: Copy link
+  saveimage: Save this image
+  copypiclink: Copy image link
+  random: Random posts
+  checkdark: Check the darkmode
+  reading: Reading mode
+  about: About me
+  themesetting: Theme settings
+  fullscreen: Full screen
   print: Print
 
 loading: Loading...

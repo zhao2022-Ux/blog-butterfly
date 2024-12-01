@@ -130,11 +130,11 @@ rightmenu:
   tolink: Go to link
   paste: Paste
   comment: Comment
-  copythislink: Copy the link to this article
-  newtab: Open from the new page
+  copythislink: Copy article link
+  newtab: Open from newpage
   copylink: Copy link
   saveimage: Save this image
-  copypiclink: Copy the link to this image
+  copypiclink: Copy image link
   random: Random posts
   checkdark: Check the darkmode
   reading: Reading mode
