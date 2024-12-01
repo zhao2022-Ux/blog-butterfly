@@ -924,6 +924,7 @@ note:
 pjax:
   enable: true
   exclude:
+    - /bbs/
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
