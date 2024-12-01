@@ -1,11 +1,11 @@
 function loadbbs(){
-    $.get("/bbs/bbs.html",function(data){
+    $.get("/bbs/bbs",function(data){
         $("#memos-bbsset").html(data);
     });
 }
 
 window.DOMReady = function () {
-	if (document.querySelector('#memos-bbsset')) setTimeout("loadbbs()",10000); 
+	if (document.querySelector('#memos-bbsset')) loadbbs(); 
 };
 
 window.addEventListener("load", DOMReady)

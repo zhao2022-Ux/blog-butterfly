@@ -5,4 +5,4 @@ comments: false
 aside: false
 top_img: false
 ---
-<div id="#memos-bbsset">等待10秒自动加载</div>
+<div id="#memos-bbsset">正在加载。。。。。。</div>
