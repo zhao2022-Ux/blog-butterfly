@@ -124,6 +124,25 @@ Snackbar:
 
 disquscheck: Load Disqus native comment box
 
+rightmenu:
+  copy: Copy
+  bing: Bing Search
+  tolink: Go to link
+  paste: Paste
+  comment: Comment
+  copythislink: Copy the link to this article
+  newtab: Open from the new page
+  copylink: Copy link
+  saveimage: Save this image
+  copypiclink: Copy the link to this image
+  random: Random posts
+  checkdark: Check the darkmode
+  reading: Reading mode
+  about: About me
+  themesetting: Theme settings
+  fullscreen: Full screen
+  print: Print
+
 loading: Loading...
 
 error404: Page not found

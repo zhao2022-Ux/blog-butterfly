@@ -11,66 +11,66 @@
     .rightMenu-group.rightMenu-line.hide#menu-text
         a.rightMenu-item(href="javascript:rmf.copySelect();")
             i.fa.fa-copy
-            span='复制'
-        a.rightMenu-item(href="javascript:window.open(\"https://www.baidu.com/s?wd=\"+window.getSelection().toString());window.location.reload();")
+            span=_p('rightmenu.copy')
+        a.rightMenu-item(href="javascript:window.open(\"https://bing.com/search?q=\"+window.getSelection().toString());window.location.reload();")
             i.fa.fa-search
-            span='百度搜索'
+            span=_p('rightmenu.bing')
     .rightMenu-group.rightMenu-line.hide#menu-too
         a.rightMenu-item(href="javascript:window.open(window.getSelection().toString());window.location.reload();")
             i.fa.fa-link
-            span='转到链接'
+            span=_p('rightmenu.tolink')
     .rightMenu-group.rightMenu-line.hide#menu-paste
         a.rightMenu-item(href='javascript:rmf.paste()')
             i.fa.fa-copy
-            span='粘贴'
+            span=_p('rightmenu.paste')
     .rightMenu-group.rightMenu-line.hide#menu-post
         a.rightMenu-item(href="#post-comment")
             i.fas.fa-comment
-            span='空降评论'
+            span=_p('rightmenu.comment')
         a.rightMenu-item(href="javascript:rmf.copyWordsLink()")
             i.fa.fa-link
-            span='复制本文地址'
+            span=_p('rightmenu.copythislink')
     .rightMenu-group.rightMenu-line.hide#menu-to
         a.rightMenu-item(href="javascript:rmf.openWithNewTab()")
             i.fa.fa-window-restore
-            span='新窗口打开'
+            span=_p('rightmenu.newtab')
         a.rightMenu-item#menu-too(href="javascript:rmf.open()")
             i.fa.fa-link
-            span='转到链接'
+            span=_p('rightmenu.tolink')
         a.rightMenu-item(href="javascript:rmf.copyLink()")
             i.fa.fa-copy
-            span='复制链接'
+            span=_p('rightmenu.copylink')
     .rightMenu-group.rightMenu-line.hide#menu-img
         a.rightMenu-item(href="javascript:rmf.saveAs()")
             i.fa.fa-download
-            span='保存图片'
+            span=_p('rightmenu.saveimage')
         a.rightMenu-item(href="javascript:rmf.openWithNewTab()")
             i.fa.fa-window-restore
-            span='在新窗口打开'
+            span=_p('rightmenu.newtab')
         a.rightMenu-item(href="javascript:rmf.copyLink()")
             i.fa.fa-copy
-            span='复制图片链接'
+            span=_p('rightmenu.copypiclink')
     .rightMenu-group.rightMenu-line
         a.rightMenu-item(href="javascript:randomPost()")
             i.fa.fa-paper-plane
-            span='随便逛逛'
+            span=_p('rightmenu.random')
         a.rightMenu-item(href="javascript:switchNightMode();")
             i.fa.fa-moon
-            span='昼夜切换'
+            span=_p('rightmenu.checkdark')
         if is_post()||is_page()
             a.rightMenu-item(href="javascript:rmf.switchReadMode();")
                 i.fa.fa-book
-                span='阅读模式'
-        a.rightMenu-item(href="/personal/about/")
+                span=_p('rightmenu.reading')
+        a.rightMenu-item(href="/about/")
             i.fa.fa-info-circle
-            span='关于博客'
+            span=_p('rightmenu.about')
         a.rightMenu-item(href="javascript:toggleWinbox();")
             i.fas.fa-cog
-            span='主题设置'
+            span=_p('rightmenu.themesetting')
         a.rightMenu-item(href="javascript:rmf.fullScreen();")
             i.fas.fa-expand
-            span='切换全屏'
+            span=_p('rightmenu.fullscreen')
         a.rightMenu-item(href="javascript:window.print();")
             i.fa-solid.fa-print
-            span='打印页面'
+            span=_p('rightmenu.print')
 

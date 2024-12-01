@@ -125,6 +125,25 @@ Snackbar:
 
 disquscheck: 加载 Disqus 原生评论框
 
+rightmenu:
+  copy: 复制
+  bing: 必应搜索
+  tolink: 转到链接
+  paste: 粘贴
+  comment: 评论
+  copythislink: 复制本文地址
+  newtab: 在新窗口打开
+  copylink: 复制链接
+  saveimage: 保存图片
+  copypiclink: 复制图片链接
+  random: 随便逛逛
+  checkdark: 昼夜切换
+  reading: 阅读模式
+  about: 关于我
+  themesetting: 主题设置
+  fullscreen: 切换全屏
+  print: 打印页面
+
 loading: 加载中...
 
 error404: 页面没有找到
