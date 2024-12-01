@@ -746,7 +746,7 @@ aside:
       link: https://www.sinzmise.top/
   card_announcement:
     enable: true
-    content: '<center>果然，还是Butterfly真香</center>'
+    content: '<center>Butterfly is Good!</center>'
   card_recent_post:
     enable: true
     limit: 3 # if set 0 will show all
