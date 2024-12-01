@@ -114,6 +114,7 @@ deploy:
   - type: git
     repository: git@github.com:SinzMise/blog
     branch: en
+  - type: baidu_url_submitter # 百度
 
 # algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
 algolia:
