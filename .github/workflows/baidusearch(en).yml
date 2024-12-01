@@ -1,4 +1,4 @@
-name: Baidu Search Push (ZH)
+name: Baidu Search Push (EN)
 on:
   schedule:
     - cron: "0 0 * * *"
