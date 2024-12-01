@@ -136,10 +136,10 @@ rightmenu:
   saveimage: Save this image
   copypiclink: Copy image link
   random: Random posts
-  checkdark: Check the darkmode
-  reading: Reading mode
+  checkdark: Darkmode
+  reading: Readmode
   about: About me
-  themesetting: Theme settings
+  themesetting: Themesetting
   fullscreen: Full screen
   print: Print
 
