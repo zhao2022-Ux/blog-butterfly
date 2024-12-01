@@ -281,10 +281,6 @@ div#archive {
 #page-header {
   background: transparent !important;
 }
-/* 夜间模式页脚遮罩隐藏 */
-[data-theme="dark"] #footer::before {
-  background: transparent !important;
-}
 /* 夜间模式页脚头部遮罩隐藏 */
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
@@ -835,6 +831,14 @@ h6::before {
   border: none!important;
   box-shadow: none!important;
   padding-top: 0;
+}
+
+[data-theme='light'] #web_bg:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(238, 238, 238, .8);
+  content: ''
 }
 
 /* 侧边卡片栏宽度 */

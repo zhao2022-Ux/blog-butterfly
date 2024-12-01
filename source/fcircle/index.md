@@ -3,14 +3,6 @@ title: 朋友圈
 date: 2024-05-02 12:01:50
 top_img: false
 aside: false
-top_page: true
-top_bg: https://image.sretna.cn/comic/pc/6ea9ab1baa0efb9e19094440c317e21b.jpg
-top_item: 友联朋友圈
-top_title: 来看看发生了什么有趣的事情吧！
-top_tips: 使用 友链朋友圈 订阅友链最新文章
-top_link: /link/
-top_text: 跳转友链
-comments: false
 ---
 {% raw %}
 <div id="friend-circle-lite-root"></div>

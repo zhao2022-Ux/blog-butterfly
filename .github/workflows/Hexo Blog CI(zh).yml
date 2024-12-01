@@ -7,7 +7,8 @@ on:
   watch:
     types: [started]
   workflow_dispatch:
-
+env:
+  BAIDU_URL_SUBMIT_TOKEN: ${{ secrets.BAIDU_URL_SUBMIT_TOKEN }}
 jobs:
   build:
     runs-on: ubuntu-latest

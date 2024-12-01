@@ -158,9 +158,6 @@
     padding: 0 !important;
     background: transparent !important;
   }
-  #web_bg ~ .page:has(#icat_page) {
-    background: var(--card-bg);
-  }
   /* page背景调整 */
   
   .icat-content.icat-content-item.icatPage {
