@@ -274,7 +274,7 @@ addThis:
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: false
+  enable: true
   sites: facebook,twitter,wechat,weibo,qq
 
 # AddToAny
@@ -815,6 +815,7 @@ busuanzi:
   site_uv: true
   site_pv: true
   page_pv: true
+  cdn: https://jsd.cdn.storisinz.site/npm/penndu@16.0.0/bsz.js
 
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time

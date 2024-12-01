@@ -3414,6 +3414,7 @@ function createWinbox() {
 <h3>1. Amine</h3>
 {% folding cyan, View the anime background %}
 <div class="bgbox">
+<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/185f135bac68ed5f558e042c9f2d663d48d5362b.77dkep9sqh.webp)" class="imgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/185f135bac68ed5f558e042c9f2d663d48d5362b.77dkep9sqh.webp)')"></a>
 <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/64cb52bd7052b3aa4868b906fab59f46cfa6acd0.1hs8lsyu1t.webp)" class="imgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/64cb52bd7052b3aa4868b906fab59f46cfa6acd0.1hs8lsyu1t.webp)')"></a>
 <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/a9179659586ee509f27367a82c4d639b52ba1342.6t756ikwq7.webp)" class="imgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/a9179659586ee509f27367a82c4d639b52ba1342.6t756ikwq7.webp)')"></a>
 <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/421f8fbd754f7f6264cb40b78812cc5d60e5911b.4g4ipb73jd.webp)" class="imgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/421f8fbd754f7f6264cb40b78812cc5d60e5911b.4g4ipb73jd.webp)')"></a>
@@ -3432,12 +3433,6 @@ function createWinbox() {
 <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/2.6wqr48dz46.webp)" class="imgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/2.6wqr48dz46.webp)')"></a>
 <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/1.1e8mo35qzm.webp)" class="imgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/1.1e8mo35qzm.webp)')"></a>
 <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/b8171c65a69cb14d1bb8150936585151edc7cb72.83a2cu2vkv.webp)" class="imgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/b8171c65a69cb14d1bb8150936585151edc7cb72.83a2cu2vkv.webp)')"></a>
-<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a>
-<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a>
-<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a>
-<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a>
-<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a>
-<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a>
 </div>
 {% endfolding %}
 
@@ -3614,6 +3609,16 @@ function toggleWinbox() {
   } else {
     createWinbox();
   };
+}
+
+var hostname1 = 'en.b' + 'lo' + 'g' + '.' + 's' + 'in' + 'zm' + 'ise'  + '.top'
+var hostname2 = 'en.ve' + 'rc' + 'el' + '.' + 'b' + 'lo' + 'g' + '.' + 'si' + 'nzm' + 'is' + 'e' + '.' + 'top'
+var hostname3 = 'en.n' + 'etl' + 'ify' + '.' + 'b' + 'lo' + 'g' + '.' + 'sin' + 'zmi' + 'se' + '.' + 'top'
+var hostname4 = 'localhost'
+var hostnameNow = document.location.hostname
+if (hostnameNow !== hostname1 && hostnameNow !== hostname2 && hostnameNow !== hostname3) {
+	var sourceDomain = 'https://' + hostname1
+	window.location.href = sourceDomain + document.location.pathname
 }
 
 /* 美化模块 end */
