@@ -34,7 +34,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
   - "bbs/bbs.html"
-  - "baidu_verify_codeva-bmoHtpF3Hd.html"
+  - "baidu_verify_codeva-F0RjFTve6w.html"
   - "google8073542809160a67.html"
   - "config.yaml"
   - "load.html"
@@ -111,9 +111,7 @@ theme: butterfly
 # Deployment
 # Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  - type: git
-    repository: git@github.com:SinzMise/blog
-    branch: en
+  - type: baidu_url_submitter # 百度
 
 # algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
 algolia:

@@ -1,0 +1,21 @@
+name: Baidu Search Push (ZH)
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+env:
+  BAIDU_URL_SUBMIT_TOKEN: ${{ secrets.BAIDU_URL_SUBMIT_TOKEN }}
+jobs:
+  pushsearch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js latest
+        uses: actions/setup-node@main
+        with:
+          node-version: "latest"
+
+      - name: Install & Push Baidu Search
+        run: >
+          npm install -D && npm install -g hexo-cli && npm run searchzh && hexo swpp && hexo d

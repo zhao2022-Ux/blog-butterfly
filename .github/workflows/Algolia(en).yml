@@ -21,4 +21,4 @@ jobs:
 
       - name: Install & Push Algolia
         run: >
-          npm install -D && npm install -g hexo-cli && npm run builden && hexo swpp && hexo algolia
+          npm install -D && npm install -g hexo-cli && npm run searchen && hexo swpp && hexo algolia
