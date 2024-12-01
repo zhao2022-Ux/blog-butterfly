@@ -824,7 +824,17 @@ h6::before {
 
 /* 全局宽度 参考:https://yisous.xyz/posts/d1fc759/ */
 .layout {
+  width: 100%;
   max-width: 1400px;
+}
+.layout.hide-aside {
+  max-width: 1400px;
+}
+.page #page:not(.home #page),.page #tag{
+  background: transparent!important;
+  border: none!important;
+  box-shadow: none!important;
+  padding-top: 0;
 }
 
 /* 侧边卡片栏宽度 */
