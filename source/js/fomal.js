@@ -3704,8 +3704,9 @@ var hostname1 = 'b' + 'lo' + 'g' + '.' + 's' + 'in' + 'zm' + 'ise'  + '.top'
 var hostname2 = 've' + 'rc' + 'el' + '.' + 'b' + 'lo' + 'g' + '.' + 'si' + 'nzm' + 'is' + 'e' + '.' + 'top'
 var hostname3 = 'n' + 'etl' + 'ify' + '.' + 'b' + 'lo' + 'g' + '.' + 'sin' + 'zmi' + 'se' + '.' + 'top'
 var hostname4 = 'localhost'
+var hostname5 = '127.0.0.1'
 var hostnameNow = document.location.hostname
-if (hostnameNow !== hostname1 && hostnameNow !== hostname2 && hostnameNow !== hostname3) {
+if (hostnameNow !== hostname1 && hostnameNow !== hostname2 && hostnameNow !== hostname3 && hostnameNow !== hostname4 && hostnameNow !== hostname5) {
 	var sourceDomain = 'https://' + hostname1
 	window.location.href = sourceDomain + document.location.pathname
 }

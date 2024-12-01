@@ -13,6 +13,7 @@ menu:
     Storeweb: https://storeweb.cn/s/1707 || icon-pjh-shangdian || faa-tada
     Bokelu: https://bokelu.suijiboke.gs/ || icon-pjh-boke || faa-tada
     Blogscn: https://blogscn.fun/random.html || icon-pjh-data-input || faa-tada
+    BlogsClub: https://www.blogsclub.org/go || icon-pjh-b_x || faa-tada
 # Code Blocks (代碼相關)
 # --------------------------------------
 
@@ -460,7 +461,9 @@ footer:
                         </a>
                         <a href="https://blogscn.fun/random.html" class="social flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url" alt="BLOGS·CN Random Access">
                             <img src="https://photo.xiangming.site/img/footer.gif" class="lazyload" data-srcset="https://photo.xiangming.site/img/footer.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="height: 24px;">
-                        </a><br><a target="_blank" rel="noopener" href="https://xn--sr8hvo.ws/previous">←</a>
+                        </a>
+                        <a href="https://www.blogsclub.org/go" target="_blank" title="Space Shuttle - Random Access to BlogsClub Member Blogs"><img src="https://www.blogsclub.org/images/shuttle_3.png"></a>
+                        <br><a target="_blank" rel="noopener" href="https://xn--sr8hvo.ws/previous">←</a>
                             An <a target="_blank" rel="noopener" href="https://xn--sr8hvo.ws">IndieWeb Webring</a>
                             🕸💍 <a target="_blank" rel="noopener" href="https://xn--sr8hvo.ws/next">→</a>
                             <br>
@@ -974,6 +977,7 @@ inject:
     - <script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script> # js图标引入1
     - <script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script> # js图标引入2
     - <script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script> # js图标引入3
+    - <script async src="//at.alicdn.com/t/c/font_4199232_qgf79nv3qb8.js"></script> # js图标引入4
     - <script async src="/js/Gold-ingot.js"></script>  # 新年元宝
     - <canvas id="universe"></canvas> # 星空画布
     - <canvas id="snow"></canvas> # 雪花画布

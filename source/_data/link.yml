@@ -124,11 +124,6 @@
         avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=507249007&spec=640
         descr: 自知之明是最可贵的知识！
         siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.tianli0.top/
-      - name: 陈鑫磊的博客
-        link: https://www.cxl2020mc.top
-        avatar: https://public.img.cxl2020mc.top/avatar.png
-        descr: 这个人太懒了啥也没写......
-        siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://www.cxl2020mc.top
       - name: 时光日志
         link: https://www.timelogs.cn
         avatar: https://www.imageoss.com/images/2023/10/13/tlogad52d3ad75546484.png
@@ -277,11 +272,11 @@
           avatar: https://ffbf.top/upload/logo3.jpeg
           descr: 不服就是不服
           siteshot: https://ffbf.top/upload/%E4%B8%BB%E9%A1%B5%E5%B0%81%E9%9D%A2.png
-        - name: 追梦幻境·梦想之都
-          link: https://hexo.dreamerhe.online/
-          avatar: https://hexo.dreamerhe.online/LOGO/logo.png
+        - name: 追梦幻境·梦想之星
+          link: https://blog.dreamerhe.cn/
+          avatar: https://blog.dreamerhe.cn/LOGO/logo.png
           descr: 朝着梦想前进，纵有万般阻挠，也绝不会让我停下脚步，待到成功时，之喜唯有我独享！
-          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://hexo.dreamerhe.online/
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.dreamerhe.cn/
         - name: 星溢栈
           link: https://blog.xez.cc/
           avatar: https://blog.xez.cc/img/avatar.jpg
@@ -488,10 +483,10 @@
           descr: 世上本没有博客，直到有了程序员
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://leziblog.com
         - name: 雨滴思绪
-          link: https://zaochuanqiu.online/
+          link: https://www.qunqin.net/
           avatar: https://uesu.cn-sy1.rains3.com/halo/gptlogo.png
-          descr: 文字绘就生活点滴，用心启迪每一个细节。
-          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://zaochuanqiu.online/
+          descr: 在繁杂的世界里，我的信念始终锚定在真理的彼岸。
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://www.qunqin.net/
         - name: Pinpe 的云端
           link: https://pinpe.top
           avatar: https://pinpe.top/head.jpg
@@ -532,6 +527,11 @@
           avatar: https://bu.dusays.com/2024/10/25/671b2438203a6.gif
           descr: 致以无暇之人
           siteshot: https://bu.dusays.com/2024/10/25/671b50dc2dd2b.png
+        - name: 小妖客栈
+          link: https://wangkay.top
+          avatar: https://picture.wangkay.tech/zibill/2024/04/20240412165509269.png
+          descr: 代码筑梦，AI绘心
+          siteshot: https://wangkay.top/wp-content/uploads/2024/11/20241121105901854-jietu.png
 - class_name: 友谊长存
   class_desc: 无评论系统的博客（相识即是缘分）
   link_list: 
