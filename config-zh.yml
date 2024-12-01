@@ -114,7 +114,7 @@ deploy:
   - type: git
     repository: git@github.com:SinzMise/blog
     branch: zh
-  - type: baidu_url_submitter # 百度
+    ignore_hidden: false # 忽略隐藏文件及文件夹(目录)
 
 # algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
 algolia:
@@ -182,13 +182,21 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
-  
-# 主动推送百度，被百度收录
-baidu_url_submit:
-  count: 50 # 提交最新的10个链接
-  host: https://blog.sinzmise.top/ # 百度站长平台中注册的域名
-  path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
-
+hexo_seo_autopush:
+  cron: 0 4 * * *
+  deployBranch:
+  baidu:
+    enable: true
+    date: created
+    count: 10
+  bing:
+    enable: true
+    date: created
+    count: 10
+  google:
+    enable: true
+    date: created
+    count: 10
 
 nofollow:
   enable: false
