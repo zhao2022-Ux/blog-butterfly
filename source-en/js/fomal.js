@@ -3409,7 +3409,7 @@ function createWinbox() {
         onclick="setColor('blackgray')"></div>
 
 <h2>Background Settings</h2>
-<center><button onclick="resetBg()" style="background:var(--theme-color);display:block;width:35%;padding:15px 0;border-radius:30px;color:white;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认背景</button></center>
+<center><button onclick="resetBg()" style="background:var(--theme-color);display:block;width:35%;padding:15px 0;border-radius:30px;color:white;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;Restore default background</button></center>
 
 <h3>1. Amine</h3>
 {% folding cyan, View the anime background %}
@@ -3457,8 +3457,8 @@ function createWinbox() {
 {% endfolding %}
 
 
-<h3>3. 纯色</h3>
-{% folding cyan, 查看纯色背景 %}
+<h3>3. Solid color</h3>
+{% folding cyan, View solid background %}
 <div class="bgbox">
 <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #ecb1b1" onclick="changeBg('#ecb1b1')"></a> 
 <a href="javascript:;" rel="noopener external nofollow" class="box" style="background: #d3ebac" onclick="changeBg('#d3ebac')"></a> 
@@ -3473,8 +3473,8 @@ function createWinbox() {
 
 
 
-<h3>4. 适配手机</h3>
-{% folding cyan, 查看适配手机的背景 %}
+<h3>4. Mobile Phone</h3>
+{% folding cyan, View mobile background %}
 <div class="bgbox">
 <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/images/2ce1a1b45a0f40baf50f2af6f01c9f4b137e0ed1.4jo4ocrk61.webp)" class="pimgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/images/2ce1a1b45a0f40baf50f2af6f01c9f4b137e0ed1.4jo4ocrk61.webp)')"></a>
 <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://images1.blog.sinzmise.top/images/2a461fe33ecca22e966b2b1640275e93b238b05a.3nrn8whvpi.webp)" class="pimgbox" onclick="changeBg('url(https://images1.blog.sinzmise.top/images/2a461fe33ecca22e966b2b1640275e93b238b05a.3nrn8whvpi.webp)')"></a>
@@ -3511,8 +3511,8 @@ function createWinbox() {
 {% endfolding %}
 
 
-<h3>5. 壁纸API</h3>
-{% folding cyan, 查看壁纸API系列背景 %}
+<h3>5. Bg API</h3>
+{% folding cyan, View Background APIs %}
 <div class="bgbox">
 <a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a>
 <a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a>
@@ -3526,8 +3526,8 @@ function createWinbox() {
 {% endfolding %}
 
 
-<h3>6. 自定义背景</h3>
-{% folding cyan, 设置自定义背景 %}
+<h3>6. Custom background</h3>
+{% folding cyan, Set custom background %}
 <p><center>
 <input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="Please enter a valid image link, such as https://source.fomal.cc/img/home_bg.webp">
 </center></p>
