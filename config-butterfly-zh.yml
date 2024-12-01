@@ -569,6 +569,8 @@ site_verification:
     content: 18428535B4425286753107589FC35E79
   - name: blogsclub-find
     content: 0bcd40f87500234dd4721904e917e748
+  - name: blogsclub-verify
+    content: c993246f2c944fed8e4fdc8d024561fe
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
