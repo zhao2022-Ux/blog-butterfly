@@ -1,8 +1,18 @@
+#app-refresh.app-refresh(style='position: fixed;top: -2.2rem;left: 0;right: 0;z-index: 99999;padding: 0 1rem;font-size: 15px;height: 2.2rem;transition: all 0.3s ease;')
+  .app-refresh-wrap(style=' display: flex;color: #fff;height: 100%;align-items: center;justify-content: center;')
+    label=_p('sw.update')
+    a(href='javascript:void(0)' onclick='location.reload()')
+      span(style='color: #fff;text-decoration: underline;cursor: pointer;')=_p('sw.check')
 script.
     /////////////////////////////// serviceWorker ///////////////////////////////////////////
     function registerServiceWorker(path) {
       if (window.location.hostname != "localhost") {
         "serviceWorker" in navigator && navigator.serviceWorker.register(`${path}?time=${new Date().getTime()}`).then(function (n) {
+          if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.addEventListener('controllerchange', function() {
+              showNotification()
+            })
+          }
           n.onupdatefound = function () {
             var e = n.installing;
             e.onstatechange = function () {
