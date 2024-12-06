@@ -494,10 +494,32 @@ footer:
       l_name: 文章标签
       r_link: /categories/
       r_name: 文章分类
+    - l_link: /link/
+      l_name: 友情链接
+      r_link: /fcircle/
+      r_name: 朋友圈
   flinks:
     - link: https://www.fomal.cc/
       title: Fomalhaut🥝
       image: https://www.fomal.cc/assets/avatar.webp
+    - link: https://blog.tianli0.top/
+      title: Tianli
+      image: https://q2.qlogo.cn/headimg_dl?dst_uin=507249007&spec=640
+    - link: https://blog.zhheo.com/
+      title: 张洪Heo
+      image: https://bu.dusays.com/2022/12/28/63ac2812183aa.png
+    - link: https://www.qcqx.cn/
+      title: 轻笑Chuckle
+      image: https://www.qcqx.cn/head.webp
+    - link: https://kmar.top/
+      title: 山岳库博·空梦
+      image: https://npm.elemecdn.com/@kmar/fonts@1/avatar/own.png
+    - link: https://blog.qjqq.cn/
+      title: 青桔气球
+      image: https://q2.qlogo.cn/headimg_dl?dst_uin=1645253&spec=640
+    - link: https://bikari.top
+      title: 微光档案
+      image: https://cravatar.cn/avatar/ECB2EA87C4532F007838D86D02798F89
   bdages:
     - title: 博客框架为Hexo_v6.2.0
       link: https://hexo.io/
