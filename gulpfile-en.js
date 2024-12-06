@@ -12,7 +12,7 @@ gulp.task('generate-service-worker', () => {
     return workbox.injectManifest({
         swSrc: './sw-template-en.js',
         swDest: './public-en/cw.js',
-        globDirectory: './public',
+        globDirectory: './public-en',
         globPatterns: [
           // 缓存所有以下类型的文件，极端不推荐
           // "**/*.{html,css,js,json,woff2,xml}"
