@@ -80,7 +80,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
     /^https:\/\/jsd\.cdn\.storisinz\.site/,
     new workbox.strategies.CacheFirst({
-        cacheName: "static-libs",
+        cacheName: "static-libs-jsdelivr",
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 1000,
@@ -97,7 +97,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
     /^https:\/\/cdnjs\.cdn\.storisinz\.site/,
     new workbox.strategies.CacheFirst({
-        cacheName: "static-libs",
+        cacheName: "static-libs-cdnjs",
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 1000,
