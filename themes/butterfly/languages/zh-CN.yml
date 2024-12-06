@@ -125,6 +125,10 @@ Snackbar:
 
 disquscheck: 加载 Disqus 原生评论框
 
+sw:
+  update: ✨ 魔法屋上新了！ 👉
+  check: 🍭查看新品🍬
+
 rightmenu:
   copy: 复制
   bing: 必应搜索

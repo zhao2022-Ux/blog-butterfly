@@ -124,6 +124,10 @@ Snackbar:
 
 disquscheck: Load Disqus native comment box
 
+sw:
+  update: ✨  The magic house is new! 👉
+  check: 🍭  View new products 🍬
+
 rightmenu:
   copy: Copy
   bing: Bing Search

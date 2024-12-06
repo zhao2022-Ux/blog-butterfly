@@ -1,3 +1,44 @@
+function showNotification() {
+	if (GLOBAL_CONFIG.Snackbar) {
+		var snackbarBg =
+			document.documentElement.getAttribute('data-theme') === 'light' ?
+			GLOBAL_CONFIG.Snackbar.bgLight :
+			GLOBAL_CONFIG.Snackbar.bgDark
+		var snackbarPos = GLOBAL_CONFIG.Snackbar.position
+		Snackbar.show({
+			text: '✨  The magic house is new! 👉',
+			backgroundColor: snackbarBg,
+			duration: 500000,
+			pos: snackbarPos,
+			actionText: '🍭  View new products 🍬',
+			actionTextColor: '#fff',
+			onActionClick: function(e) {
+				location.reload()
+			},
+		})
+	} else {
+		new Vue({
+			data: function() {
+				this.$notify({
+					title: "✨  The magic house is new! 👉",
+					message: "Click on 'View New Products' above to update!",
+					position: 'top-left',
+					offset: 50,
+					showClose: true,
+					type: "success",
+					duration: 5000
+				});
+			}
+		})
+		var showBg =
+			document.documentElement.getAttribute('data-theme') === 'light' ?
+			'#49b1f5' :
+			'#1f1f1f'
+		var cssText = `top: 0; background: ${showBg};`
+		document.getElementById('app-refresh').style.cssText = cssText
+	}
+}
+
 /* 阅读进度 start */
 document.addEventListener('pjax:complete', function () {
   window.onscroll = percent;
