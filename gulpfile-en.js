@@ -6,6 +6,25 @@ var htmlclean = require('gulp-htmlclean');
 // 使用terser压缩js
 var terser = require('gulp-terser');
 
+const workbox = require("workbox-build");
+
+gulp.task('generate-service-worker', () => {
+    return workbox.injectManifest({
+        swSrc: './sw-template-en.js',
+        swDest: './public-en/cw.js',
+        globDirectory: './public',
+        globPatterns: [
+          // 缓存所有以下类型的文件，极端不推荐
+          // "**/*.{html,css,js,json,woff2,xml}"
+          // 推荐只缓存404，主页和主要样式和脚本。
+          "404.html","index.html","js/main.js","css/index.css"
+        ],
+        modifyURLPrefix: {
+            "": "./"
+        }
+    });
+});
+
 // minify js - gulp-tester
 gulp.task('compress', () =>
     gulp.src(['./public-en/**/*.js', '!./public-en/**/*.min.js', '!./public-en/**/custom.js','!./public-en/**/custom.js', '!./public-en/sw-dom.js', '!./public-en/bbs/bbs.js'])
@@ -41,6 +60,4 @@ gulp.task('minify-html', () => {
 });
 
 // 執行 gulp 命令時執行的任務
-gulp.task("default", gulp.parallel(
-    'compress','minify-html', 'minify-css'
-));
+gulp.task("default", gulp.series("generate-service-worker", gulp.parallel('compress','minify-html', 'minify-css')));

@@ -109,7 +109,7 @@ mathjax:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /images/siteicon/favicon.ico
+favicon: /favicon.ico
 
 # Avatar (頭像)
 avatar:
