@@ -10,6 +10,7 @@ top_title: 一颗颗故事的种子
 top_tips: 使用 哔哔点啥 2.0 By Memos 构建
 top_link: /link/
 top_text: 友情链接
+comments: false
 ---
 <center>
 <span onclick="randomMemo()">回忆</span>
@@ -22,7 +23,6 @@ top_text: 友情链接
 <script src="https://fastly.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
-<script src="https://cdn.staticfile.org/twikoo/1.6.16/twikoo.all.min.js"></script>
 <script type="text/javascript">
   var bbMemos = {
     memos : 'https://diary.sinzmise.top/',//修改为自己部署 Memos 的网址，末尾有 / 斜杠
