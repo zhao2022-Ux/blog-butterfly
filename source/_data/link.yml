@@ -280,9 +280,9 @@
           avatar: https://ffbf.top/upload/logo3.jpeg
           descr: 不服就是不服
           siteshot: https://ffbf.top/upload/%E4%B8%BB%E9%A1%B5%E5%B0%81%E9%9D%A2.png
-        - name: 追梦幻境·梦想之星
+        - name: 追梦幻境·云之都
           link: https://blog.dreamerhe.cn/
-          avatar: https://blog.dreamerhe.cn/LOGO/logo.png
+          avatar: https://cdn.img.dreamerhe.cn/picx-images-hosting/dreamerstarlogo-removebg-preview.9gwi3fldv6.webp
           descr: 朝着梦想前进，纵有万般阻挠，也绝不会让我停下脚步，待到成功时，之喜唯有我独享！
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://blog.dreamerhe.cn/
         - name: 星溢栈
@@ -545,6 +545,16 @@
           avatar: https://r1n.top/avatar_nr.jpg 
           descr: Everything collapses, but you rise. 
           siteshot: https://r1n.top/siteshot.jpg
+        - name: 森尧记
+          link: https://07111.cn
+          avatar: https://07111.cn/logo1.png
+          descr: 多年的建站小白
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://07111.cn
+        - name: 厄尔科斯
+          link: https://sikan.moe/
+          avatar: https://sikan.moe/img/akas.png
+          descr: 架空世界-厄尔科斯
+          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://sikan.moe/
 - class_name: 友谊长存
   class_desc: 无评论系统的博客（相识即是缘分）
   flink_style: butterfly
@@ -559,9 +569,4 @@
           avatar: https://www.siena.zone/favicon_compressed.png
           descr: 跳吧，在无比宏大的星系！
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://www.siena.zone
-        - name: 厄尔科斯
-          link: https://sikan.moe/
-          avatar: https://sikan.moe/img/akas.png
-          descr: akas
-          siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://sikan.moe/
 

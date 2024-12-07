@@ -12,6 +12,8 @@ menu:
     留言板: /comments/ || icon-liuyan || faa-tada
     友人帐: /link/ || icon-lianjie || faa-tada
     哔哔广场: /bbs/ || icon-pjh-laba || faa-tada
+  关于 || icon-shejiaoxinxi || faa-tada || hide:
+    即刻短文: /essay/ || icon-pjh-duanwenbentuijian || faa-tada
   虫洞 || icon-pjh-chongdonglogo || faa-tada || hide:
     开往: https://www.travellings.cn/go-by-clouds.html || icon-pjh-huoche || faa-tada
     异次元之旅: https://travel.moe/go.html || icon-pjh-meng || faa-tada
@@ -1001,6 +1003,19 @@ Open_Graph_meta: true
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true
 
+# essay 即刻短文
+# MeuiCat设计
+# https://meuicat.com/blog/67/
+# --------------------------------------
+
+essay:
+  enable: true
+  # 即刻短文仅展示前n条
+  # Jike short text only shows the first n
+  strip: 50
+  mode: memos # local：本地静态 / json：动态json / memos：动态Memos
+  mode_link: https://diary.sinzmise.top/api/v1/memo?creatorId=1&tag=说说 #动态模式地址
+
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
@@ -1023,7 +1038,10 @@ inject:
     - <link rel="pingback" href="https://webmention.io/blog.sinzmise.top/xmlrpc">
 
   bottom:
+    - <script async src="/js/waterfall.js"></script> # 瀑布流JS
+    - <script defer src="/js/essay.js"></script> # 即刻逻辑文件
     - <script async data-pjax src="/bbs/bbs.js"></script> # 哔哔广场
+    - <script src="https://jsd.cdn.storisinz.site/npm/swiper@10.3.1/swiper-bundle.min.js"></script>
     - <script src="https://cdnjs.cdn.storisinz.site/ajax/libs/jquery/3.6.3/jquery.min.js"></script> # jQuery
     - <script src="https://jsd.cdn.storisinz.site/npm/axios/dist/axios.min.js"></script> # Axios
     - <script>var meting_api = 'https://meting.api.sinzmise.eu.org/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script> # Meting API
@@ -1036,7 +1054,7 @@ inject:
     - <script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script> # js图标引入1
     - <script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script> # js图标引入2
     - <script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script> # js图标引入3
-    - <script async src="//at.alicdn.com/t/c/font_4199232_qgf79nv3qb8.js"></script> # js图标引入4
+    - <script async src="//at.alicdn.com/t/c/font_4199232_t96lac78z3.js"></script> # js图标引入4
     - <script async src="/js/Gold-ingot.js"></script>  # 新年元宝
     - <canvas id="universe"></canvas> # 星空画布
     - <canvas id="snow"></canvas> # 雪花画布

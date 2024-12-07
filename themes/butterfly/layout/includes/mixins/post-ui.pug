@@ -140,6 +140,8 @@
 
 
 mixin postUI(posts)
+  if theme.essay.enable && theme.essay.home_mini
+    include ./essay_mini.pug
   each article , index in page.posts.data
     .recent-post-item
       -
