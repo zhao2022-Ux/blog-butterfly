@@ -76,23 +76,6 @@ workbox.routing.registerRoute(
     })
 );
 
-// jsdelivr自建反代的CDN资源
-workbox.routing.registerRoute(
-    /^https:\/\/jsd\.cdn\.storisinz\.site/,
-    new workbox.strategies.CacheFirst({
-        cacheName: "static-libs-jsdelivr",
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 1000,
-                maxAgeSeconds: 60 * 60 * 24 * 30
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200]
-            })
-        ]
-    })
-);
-
 // cdnjs代理的CDN资源
 workbox.routing.registerRoute(
     /^https:\/\/cdnjs\.cdn\.storisinz\.site/,
