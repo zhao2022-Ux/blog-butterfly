@@ -93,6 +93,4 @@ workbox.routing.registerRoute(
     })
 );
 
-importScripts(`/sw.js`);
-
 workbox.googleAnalytics.initialize();
