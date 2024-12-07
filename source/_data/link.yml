@@ -1,5 +1,6 @@
 - class_name: 框架
   class_desc: 使用的框架＆主题
+  flink_style: flexcard
   link_list: 
     - name: Hexo
       link: https://hexo.io/
@@ -13,6 +14,7 @@
       siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://butterfly.js.org/
 - class_name: 大佬们
   class_desc: 膜拜大佬~~
+  flink_style: volantis
   link_list: 
       - name: 安知鱼
         link: https://blog.anheyu.com/
@@ -224,8 +226,14 @@
         avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=1645253&spec=640
         descr: 分享网络安全与科技生活
         siteshot: https://q2.qlogo.cn/headimg_dl?dst_uin=1645253&spec=640
+      - name: 微光档案
+        link: https://bikari.top
+        avatar: https://cravatar.cn/avatar/ECB2EA87C4532F007838D86D02798F89
+        descr: 虚幻的幸福
+        siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://bikari.top
 - class_name: 小伙伴们
   class_desc: 那些人，那些事
+  flink_style: butterfly
   link_list: 
         - name: Aciano
           link: https://aciano.top/
@@ -539,6 +547,7 @@
           siteshot: https://r1n.top/siteshot.jpg
 - class_name: 友谊长存
   class_desc: 无评论系统的博客（相识即是缘分）
+  flink_style: butterfly
   link_list: 
         - name: 甜鱼/Ayu
           link: https://ayu.land/

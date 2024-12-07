@@ -5,15 +5,15 @@
   background-position: bottom
   background-size: cover
 
-  &:after
+  &:before
     position: absolute
     width: 100%
     height: 100%
-    background-color: alpha($dark-black, .3)
+    background-color: alpha($dark-black, .5)
     content: ''
 
   if hexo-config('footer_bg') != false
-    &:after
+    &:before
       position: absolute
       width: 100%
       height: 100%

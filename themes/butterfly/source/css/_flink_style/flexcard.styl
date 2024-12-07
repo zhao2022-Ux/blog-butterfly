@@ -1,6 +1,6 @@
 #article-container img
   margin 0 auto!important
-.flink-list
+.flexcard-flink-list
   overflow auto
   & > a
     width calc(25% - 15px)
@@ -77,27 +77,27 @@
         white-space nowrap
         overflow hidden
         text-overflow ellipsis
-.flink-list>a .info,
-.flink-list>a .wrapper .cover
+.flexcard-flink-list>a .info,
+.flexcard-flink-list>a .wrapper .cover
   position absolute
   top 0
   left 0
 
 @media screen and (max-width:1024px)
-  .flink-list
+  .flexcard-flink-list
     & > a
       width calc(33.33333% - 15px)
 
 @media screen and (max-width:600px)
-  .flink-list
+  .flexcard-flink-list
     & > a
       width calc(50% - 15px)
 
 [data-theme=dark]
-  .flink-list a .info,
-  .flink-list a .info span
+  .flexcard-flink-list a .info,
+  .flexcard-flink-list a .info span
     background-color rgba(0, 0, 0, .6)
-  .flink-list
+  .flexcard-flink-list
     & > a
       &:hover
         &:before
