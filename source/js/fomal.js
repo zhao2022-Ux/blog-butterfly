@@ -34,7 +34,7 @@ function showNotification() {
 			document.documentElement.getAttribute('data-theme') === 'light' ?
 			'#49b1f5' :
 			'#1f1f1f'
-		var cssText = `top: 0; background: ${showBg};`
+		var cssText = `top: 0; background: ${showBg};position: fixed;left: 0;right: 0;z-index: 99999;padding: 0 1rem;font-size: 15px;height: 2.2rem;transition: all 0.3s ease;`
 		document.getElementById('app-refresh').style.cssText = cssText
 	}
 }
