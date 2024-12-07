@@ -33,6 +33,7 @@ post:
   copyright:
     author: Author
     link: Link
+    license: License Agreement
     copyright_notice: Copyright Notice
     copyright_content: 'All articles in this blog are licensed under <a href="%s">%s</a> unless stating additionally.'
   recommend: Related Articles

@@ -31,19 +31,19 @@ if theme.post_copyright.enable && page.copyright !== false
     .post-copyright-m
       .post-copyright-m-info
         .post-copyright-a
-            h 作者
+            h=_p('post.copyright.author')
             .post-copyright-cc-info
                 h=author
         .post-copyright-c
-            h 发布于
+            h=_p('post.created')
             .post-copyright-cc-info
                 h=date(page.date, config.date_format)
         .post-copyright-u
-            h 更新于
+            h=_p('post.updated')
             .post-copyright-cc-info
                 h=date(page.updated, config.date_format)
         .post-copyright-c
-            h 许可协议
+            h=_p('post.copyright.license')
             .post-copyright-cc-info
                 a.icon(rel='noopener' target='_blank' title='Creative Commons' href='https://creativecommons.org/')
                   i.fab.fa-creative-commons
