@@ -14,7 +14,7 @@ aside: false
 <script data-pjax src="https://jsd.cdn.storisinz.site/npm/qexo-static@1.6.0/hexo/friends.js"></script>
 <script data-pjax>loadQexoFriends("qexo-friends", "https://houtai.hexo.sinzmise.top")</script>
 
-<link rel="stylesheet" href="https://jsd.cdn.storisinz.site/npm/apursuer-qexo-friend-links@1.0.2/apursuer-hexo-friend-links.css"/>
+<link rel="stylesheet" href="/css/apursuer-hexo-friend-links.css"/>
 
 {% endraw %}
 # 待君归（大佬）
