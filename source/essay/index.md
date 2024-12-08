@@ -20,9 +20,10 @@ comments: false
 </center>
 <div id="bber"></div>
 <script type="module" src="https://immmmm.com/emaction.js?v=230811"></script>
-<script src="https://fastly.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="https://fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js"></script>
-<script src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
+<script src="https://jsd.cdn.storisinz.site/npm/marked/marked.min.js"></script>
+<script src="https://jsd.cdn.storisinz.site/gh/Tokinx/ViewImage/view-image.min.js"></script>
+<script src="https://jsd.cdn.storisinz.site/gh/Tokinx/Lately/lately.min.js"></script>
+<script src="https://jsd.cdn.storisinz.site/npm/twikoo/dist/twikoo.all.min.js"></script>
 <script type="text/javascript">
   var bbMemos = {
     memos : 'https://diary.sinzmise.top/',//修改为自己部署 Memos 的网址，末尾有 / 斜杠
@@ -31,4 +32,4 @@ comments: false
     twiEnv:'https://tk2.diary.sinzmise.top/',//启开 twikoo 评论，默认 https://metk.edui.fun/
   }
 </script>
-<script src="/essay/memos.js"></script>
+<script data-pjax src="/essay/memos.js"></script>
