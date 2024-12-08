@@ -565,6 +565,11 @@
           avatar: https://bu.dusays.com/2024/08/18/66c1b1239a312.png
           descr: 个人阅读笔记与日常生活留存地
           siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://luoca.cn/
+        - name: FloatSheep
+          link: https://blog.hesiy.cn
+          avatar: https://jsd.cdn.storisinz.site/npm/@floatsheep/fsl-fim@1.0.23/avatar%202024.main.webp
+          descr: On the other side of obstacles
+          siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://blog.hesiy.cn
 - class_name: 友谊长存
   class_desc: 无评论系统的博客（相识即是缘分）
   flink_style: butterfly
