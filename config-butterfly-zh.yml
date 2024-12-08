@@ -490,7 +490,8 @@ footer:
                             | <a target="_blank" rel="noopener" href="https://rssblog.cn/member/d711afd659d65c2ba2d3b18697818cf7/">RssBlog</a>
                             | <a target="_blank" rel="noopener" href="https://blogscn.fun/">笔墨迹</a>
                             | <a target="_blank" rel="noopener" href="https://daohang.lusongsong.com/">博客大全</a>
-                            | <a target="_blank" rel="noopener" href="https://www.blogsclub.org/blog/99.html">BlogsClub</a>'
+                            | <a target="_blank" rel="noopener" href="https://www.blogsclub.org/blog/99.html">BlogsClub</a>
+                            | <a target="_blank" rel="noopener" href="https://ourblo.gs/blogs/55/">OurBlogs</a>'
   copyright: false # Copyright of theme and framework
   links:
     - l_link: /tags/
@@ -505,6 +506,9 @@ footer:
     - link: https://www.fomal.cc/
       title: Fomalhaut🥝
       image: https://www.fomal.cc/assets/avatar.webp
+    - link: https://dusays.com/
+      title: 杜老师说
+      image: https://cdn.dusays.com/avatar.png
     - link: https://blog.tianli0.top/
       title: Tianli
       image: https://q2.qlogo.cn/headimg_dl?dst_uin=507249007&spec=640
