@@ -555,6 +555,11 @@
           avatar: https://sikan.moe/img/akas.png
           descr: 架空世界-厄尔科斯
           siteshot: https://image.thum.io/get/allowJPG/wait/20/width/600/crop/950/https://sikan.moe/
+        - name: 萌！萝莉
+          link: https://loliloli.moe
+          avatar: https://img.cdn.loliloli.net/images/2021/01/11/avatar.jpg
+          descr: 一个普通的小博客哦~
+          siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://loliloli.moe
 - class_name: 友谊长存
   class_desc: 无评论系统的博客（相识即是缘分）
   flink_style: butterfly

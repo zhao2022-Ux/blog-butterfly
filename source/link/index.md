@@ -47,11 +47,6 @@ aside: false
         descr: 游龙当归海，海不迎我自来也。
         siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://blog.black-ying.online
       #（疑似停止更新）
-      - name: 萌！萝莉
-        link: https://loliloli.moe
-        avatar: https://img.cdn.loliloli.net/images/2021/01/11/avatar.jpg
-        descr: 一个普通的小博客哦~
-        siteshot: https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://loliloli.moe
     # 未添加本站链接
       - name: YYDS Space
         link: https://www.yyds.space
