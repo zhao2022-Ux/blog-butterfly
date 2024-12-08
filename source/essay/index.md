@@ -4,7 +4,7 @@ date: 2023-01-17 13:38:17
 top_img: false
 aside: false
 top_page: true
-top_bg: https://image.sretna.cn/comic/pc/9dcb88e0137649590b755372b040afad.jpg
+top_bg: https://images1.blog.sinzmise.top/images/40311014_1591849369.969sikabhl.webp
 top_item: 即刻短文
 top_title: 一颗颗故事的种子
 top_tips: 使用 哔哔点啥 2.0 By Memos 构建

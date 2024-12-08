@@ -5,6 +5,18 @@ type: link
 top_img: false
 aside: false
 ---
+# 通过qexo添加的
+{% raw %}
+
+<div id="qexo-friends"></div>
+<link rel="stylesheet" href="https://jsd.cdn.storisinz.site/npm/qexo-static@1.6.0/hexo/friends.css"/>
+
+<script data-pjax src="https://jsd.cdn.storisinz.site/npm/qexo-static@1.6.0/hexo/friends.js"></script>
+<script data-pjax>loadQexoFriends("qexo-friends", "https://houtai.hexo.sinzmise.top")</script>
+
+<link rel="stylesheet" href="https://jsd.cdn.storisinz.site/npm/apursuer-qexo-friend-links@1.0.2/apursuer-hexo-friend-links.css"/>
+
+{% endraw %}
 # 待君归（大佬）
 ```yaml
       # 已经永久停止更新
@@ -123,6 +135,142 @@ a(href='https://blog.sinzmise.top/' rel="external nofollow") 汐塔魔法屋
 ```
 <!-- endtab -->
 {% endtabs %}
+# 评论区申请（速度较慢）
 <div class="addBtns"><button class="addBtn btn-beautify block orange larger" onclick="leonus.linkCom()"><i class="fa-solid fa-circle-plus"></i>&nbsp;快速申请 (默认样式)</button> <button class="addBtn btn-beautify block orange larger" onclick="leonus.linkCom(&quot;bf&quot;)"><i class="fa-solid fa-circle-plus"></i>&nbsp;快速申请 (Butterfly)</button></div>
 <script src="/js/kslink.js"></script>
-由于最近要开学，所以友链不会频繁添加，请见谅！
+
+## Qexo申请（速度较快）
+<article class="message is-info">
+    <div class="message-header">
+        通过Qexo申请友链
+    </div>
+    <div class="message-body">
+        <div class="form-ask-friend">
+            <div class="field">
+                <label class="label">站点名字</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="你的站点名字" id="friend-name" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-signature"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">站点链接</label>
+            <div class="control has-icons-left">
+                <input class="input" type="url" placeholder="你的站点链接" id="friend-link" required>
+                <span class="icon is-small is-left">
+                    <i class="fas fa-link"></i>
+                </span>
+            </div>
+            <p class="help ">请确保该网站可访问！</p>
+            </div>
+            <div class="field">
+                <label class="label">站点图标</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="url" placeholder="你的站点图标" id="friend-icon" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-image"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">站点简介</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="你的站点简介" id="friend-des" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-info"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">人机验证</label>
+                <div class="control has-icons-left">
+                    <div id="captcha"></div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label class="checkbox">
+                        <input type="checkbox" id="friend-check"/> 我不会提交无意义的信息，并且已经遵守以上规则。
+                    </label>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button id='submit-btn' class="button is-info" type="submit" >提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<script data-pjax src="https://static.geetest.com/v4/gt4.js"></script>
+<script>
+  function TestUrl(url) {
+    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+    var objExp=new RegExp(Expression);
+    if(objExp.test(url) != true){
+        return false;
+    }
+    return true;
+  }
+  initGeetest4({
+    captchaId: "a2d6434a425cb78f33ebe88946d1a6c7",
+    product: 'popup',
+    language: "zho",
+    riskType: 'word'
+  }, function(captcha) {
+    captcha.appendTo("#captcha");
+    $("#submit-btn").click(function() {
+        var result = captcha.getValidate();
+        if (!result) {
+            return alert('请完成人机验证！');
+        }
+        result.captcha_id = "a2d6434a425cb78f33ebe88946d1a6c7"
+        //your code
+        let check = $("#friend-check").is(":checked");
+        let name = $("#friend-name").val();
+        let url = $("#friend-link").val();
+        let image = $("#friend-icon").val();
+        let des = $("#friend-des").val();
+        if (!check) {
+            alert("请勾选 \"我不会提交无意义的信息，并且已经遵守以上规则。\"");
+            captcha.reset();
+            return;
+        }
+        if (!(name && url && image && des)) {
+            alert("站点信息不完整！");
+            captcha.reset();
+            return;
+        }
+        if (!(TestUrl(url))) {
+            alert("URL格式错误！需要包含HTTP或者HTTPS协议头！ ");
+            captcha.reset();
+            return;
+        }
+        if (!(TestUrl(image))) {
+            alert("图片URL的格式错误！它需要包含HTTP或者HTTPS协议头！");
+            captcha.reset();
+            return;
+        }
+        event.target.classList.add('is-loading');
+        $.ajax({
+            type: 'POST',
+            dataType: "json",
+            data: {
+                "name": name,
+                "url": url,
+                "image": image,
+                "description": des,
+                "verify": result.pass_token,
+            },
+            url: 'https://houtai.hexo.sinzmise.top/pub/ask_friend/',
+            success: function(data) {
+                alert(data.msg);
+                captcha.reset();
+            }
+        });
+        event.target.classList.remove('is-loading');
+    })
+  });
+</script>
