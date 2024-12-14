@@ -1,62 +1,72 @@
-// live2d_path 参数建议使用绝对路径
-const live2d_path = "https://jsd.cdn.storisinz.site/gh/stevenjoezhang/live2d-widget@latest/";
-//const live2d_path = "/live2d-widget/";
-
-// 封装异步加载资源的方法
-function loadExternalResource(url, type) {
-	return new Promise((resolve, reject) => {
-		let tag;
-
-		if (type === "css") {
-			tag = document.createElement("link");
-			tag.rel = "stylesheet";
-			tag.href = url;
+OML2D.loadOml2d({
+	menus: {
+		items: (defaultItems) =>{
+			return [{
+				id: 'home',
+				icon: 'fa fa-house',
+				title: '我的个人主页',
+				onClick: () =>window.open('https://www.sinzmise.top/')
+			},
+			defaultItems[0], defaultItems[2], defaultItems[3]]
 		}
-		else if (type === "js") {
-			tag = document.createElement("script");
-			tag.src = url;
+	},
+	mobileDisplay: false,
+	models: [{
+		"path": "https://files.blog.sinzmise.top/live2d/dujiaoshou_6/dujiaoshou_6.model3.json",
+		"mobilePosition": [ - 10, 23],
+		"mobileScale": 0.1,
+		"mobileStageStyle": {
+			"width": 180,
+			"height": 166
+		},
+		"motionPreloadStrategy": "IDLE",
+		"position": [ - 120, -30],
+		"scale": 0.06,
+		"stageStyle": {
+			"width": 250,
+			"height": 400
 		}
-		if (tag) {
-			tag.onload = () => resolve(url);
-			tag.onerror = () => reject(url);
-			document.head.appendChild(tag);
+	},
+	{
+		"path": "https://files.blog.sinzmise.top/live2d/dujiaoshou_4/dujiaoshou_4.model3.json",
+		"scale": 0.06,
+		"position": [ - 50, -25],
+		"stageStyle": {
+			"width": 250,
+			"height": 300
+		},
+		"mobileScale": 0.08,
+		"mobilePosition": [0, 0],
+		"mobileStageStyle": {
+			"width": 180
 		}
-	});
-}
-
-// 加载 waifu.css live2d.min.js waifu-tips.js
-if (screen.width >= 768) {
-	Promise.all([
-		loadExternalResource(live2d_path + "waifu.css", "css"),
-		loadExternalResource(live2d_path + "live2d.min.js", "js"),
-		loadExternalResource(live2d_path + "waifu-tips.js", "js")
-	]).then(() => {
-		// 配置选项的具体用法见 README.md
-		initWidget({
-			waifuPath: "/js/waifu-tips.json",
-			//apiPath: "https://live2d.fghrsh.net/api/",
-			cdnPath: "https://npm.webcache.cn/akilar-live2dapi@latest/",
-			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
-		});
-	});
-}
-
-console.log(`
-  く__,.ヘヽ.        /  ,ー､ 〉
-           ＼ ', !-─‐-i  /  /´
-           ／｀ｰ'       L/／｀ヽ､
-         /   ／,   /|   ,   ,       ',
-       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
-        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
-          !,/7 '0'     ´0iソ|    |
-          |.从"    _     ,,,, / |./    |
-          ﾚ'| i＞.､,,__  _,.イ /   .i   |
-            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
-              | |/i 〈|/   i  ,.ﾍ |  i  |
-             .|/ /  ｉ：    ﾍ!    ＼  |
-              kヽ>､ﾊ    _,.ﾍ､    /､!
-              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
-              ﾚ'ヽL__|___i,___,ンﾚ|ノ
-                  ﾄ-,/  |___./
-                  'ｰ'    !_,.:
-`);
+	}],
+	parentElement: document.body,
+	primaryColor: "var(--theme-color)",
+	sayHello: false,
+	tips: {
+		style: {
+			"width": 230,
+			"height": 120,
+			"left": "calc(50% + 6px)",
+			"top": "-100px"
+		},
+		mobileStyle: {
+			"width": 180,
+			"height": 80,
+			"left": "calc(50% - 30px)",
+			"top": "-100px"
+		},
+		idleTips: {
+			interval: 15000,
+			message: function() {
+				return axios.get('https://v1.hitokoto.cn?c=i').then(function(response) {
+					return response.data.hitokoto;
+				}).
+				catch(function(error) {
+					console.error(error);
+				});
+			}
+		}
+	}
+  });

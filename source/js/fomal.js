@@ -2966,6 +2966,7 @@ function clearItem() {
   localStorage.removeItem('light');
   localStorage.removeItem('snow');
   localStorage.removeItem('music');
+  localStorage.removeItem('live2d');
 }
 
 
@@ -3225,6 +3226,52 @@ function playnotify(){
       });
     }
   })
+}
+
+// Live2D开关
+if (localStorage.getItem("live2d") == undefined) {
+  localStorage.setItem("live2d", "0");
+}
+function live2dsw() {
+  if (document.getElementById("live2dbutton").checked) {
+    localStorage.setItem("live2d", "1");
+    loadlive2d('on');
+  } else {
+    localStorage.setItem("live2d", "0");
+    loadlive2d('off');
+  }
+}
+
+function loadlive2d(n) {
+  var live2djs = document.getElementById('live2djs');
+  var autoloadjs = document.getElementById('autoloadjs');
+  var oml2dstage = document.getElementById('oml2d-stage');
+  var oml2dstatusBar = document.getElementById('oml2d-statusBar');
+  if (n == 'on') {
+    if (oml2dstage && oml2dstatusBar && live2djs && autoloadjs) {
+      oml2dstage.style.visibility = 'visible';
+      oml2dstatusBar.style.visibility = 'visible';
+    }else{
+      var l2dscript = document.createElement('script');
+      l2dscript.id = 'live2djs';
+      l2dscript.setAttribute('data-pjax','true');
+      l2dscript.src = 'https://jsd.cdn.storisinz.site/npm/oh-my-live2d';
+      document.getElementsByTagName('body')[0].appendChild(l2dscript);
+
+      var autoloadjs = document.createElement('script');
+      autoloadjs.id = 'autoloadjs';
+      autoloadjs.setAttribute('data-pjax','true');
+      autoloadjs.src = '/js/autoload.js';
+      document.getElementsByTagName('body')[0].appendChild(autoloadjs);
+    }
+  } else if (n == 'off' && oml2dstage && oml2dstatusBar && live2djs && autoloadjs) {
+    oml2dstage.style.visibility = 'hidden';
+    oml2dstatusBar.style.visibility = 'hidden';
+  }
+}
+
+if (window.localStorage.getItem("live2d") == "1") {
+  loadlive2d('on');
 }
 
 // 更换背景(原来Leonus的代码)
@@ -3501,6 +3548,10 @@ function createWinbox() {
   <div class="content-text" style="font-weight:bold; padding-left:10px"> 雪花特效 (白天模式) </div><input type="checkbox" id="snowSet" onclick="setSnow()">
 </div>
 
+<div class="content" style="display:flex">
+  <div class="content-text" style="font-weight:bold; padding-left:10px"> Live2D </div><input type="checkbox" id="live2dbutton" onclick="live2dsw()">
+</div>
+
 <h2>二、背景音乐</h2>
 <div class="content" style="display:flex">
   <div class="content-text" style="font-weight:bold; padding-left:10px"> 开启背景音乐 </div><input type="checkbox" id="musicbutton" onclick="musicsw()">
@@ -3703,6 +3754,11 @@ function createWinbox() {
     document.getElementById("musicbutton").checked = true;
   } else {
     document.getElementById("musicbutton").checked = false;
+  }
+  if (localStorage.getItem("live2d") == "1") {
+    document.getElementById("live2dbutton").checked = true;
+  } else {
+    document.getElementById("live2dbutton").checked = false;
   }
 }
 
