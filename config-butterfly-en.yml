@@ -967,6 +967,8 @@ inject:
     - <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
     - <link rel="webmention" href="https://webmention.io/blog.sinzmise.top/webmention">
     - <link rel="pingback" href="https://webmention.io/blog.sinzmise.top/xmlrpc">
+    - <script data-pjax src="/chatroom/chatroom.js"></script>
+    - <link rel="stylesheet" href="/chatroom/chatroom.css">
 
   bottom:
     - <script src="https://cdnjs.cdn.storisinz.site/ajax/libs/jquery/3.6.3/jquery.min.js"></script> # jQuery
