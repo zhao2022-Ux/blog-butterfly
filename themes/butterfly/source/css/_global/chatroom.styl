@@ -1,22 +1,23 @@
 :root {
-    --primary-color: rgb(43, 105, 100);
-    --secondary-color: rgb(236, 236, 236);
-    --text-color: rgb(255, 255, 255);
-    --highlight-color: rgb(63, 153, 146);
+    --primary-color: var(--theme-color);
+    --secondary-color: var(--anzhiyu-card-btn-bg);
+    --text-color: var(--anzhiyu-card-bg);
+    --highlight-color: var(--text-bg-hover);
     --avatar-size: 40px;
     --padding-main: 20px;
     --radius-main: 10px;
 }
 
-.chatContainer {
+
+.chatContainer 
     overflow: hidden;
     width: 100%;
     border: 3px solid var(--primary-color);
     border-radius: 8px;
     background-color: var(--secondary-color);
-}
 
-.chatBoxTitle {
+
+.chatBoxTitle 
     display: flex;
     justify-content: space-between;
     background: var(--primary-color);
@@ -24,15 +25,15 @@
     color: var(--text-color);
     align-items: center;
 
-    i {
+    i 
         padding-top: 4px;
         font-size: 16px;
         margin: 0 10px;
         color: var(--text-color);
         cursor: pointer;
-    }
+    
 
-    .chatTitleText {
+    .chatTitleText 
         flex: 1;
         font-size: 16px;
         white-space: nowrap;
@@ -41,49 +42,49 @@
         color: var(--text-color);
         cursor: pointer;
         transition: color 0.3s ease-in-out;
-    }
+    
 
-    .chatTitleText:hover {
+    .chatTitleText:hover 
         color: var(--secondary-color);
-    }
-}
+    
 
-.chatBox {
+
+.chatBox 
     padding: var(--padding-main) 30px;
     box-sizing: border-box;
     background-color: var(--secondary-color);
     max-height: 900px;
     overflow: auto;
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px) 
         padding: var(--padding-main) 10px;
-    }
+    
 
-    @media (max-width: 480px) {
+    @media (max-width: 480px) 
         padding: var(--padding-main) 5px;
-    }
+    
 
-}
 
-.chatItem {
+
+.chatItem 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin: var(--padding-main) 0;
 
-    .chatAvatar {
+    .chatAvatar 
         width: var(--avatar-size);
         height: var(--avatar-size);
         border-radius: 50% !important;
         margin: 5px 10px 0 0 !important;
-    }
+    
 
-    .chatContentWrapper {
+    .chatContentWrapper 
         display: flex;
         flex-direction: column;
         width: calc(100% - 110px);
 
-        .chatContent {
+        .chatContent 
             background: var(--secondary-color);
             border: 1px solid var(--border-color);
             padding: 10px;
@@ -93,85 +94,85 @@
             word-wrap: break-word;
             transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 
-            .chatCall {
+            .chatCall 
                 color: rgb(4, 147, 243);
                 font-weight: bold;
-            }
-        }
+            
+        
 
-        .chatContent:hover {
+        .chatContent:hover 
             background: var(--primary-color);
             color: var(--text-color);
-        }
+        
 
-        .chatName {
+        .chatName 
             color: var(--primary-color);
-        }
+        
 
-        .chatMedia {
+        .chatMedia 
             max-width: 100%;
             height: auto;
             margin-top: 5px;
             cursor: pointer;
             transition: transform 0.2s ease-in-out;
             border-radius: 8px;
-        }
+        
 
-        .chatMedia:hover {
+        .chatMedia:hover 
             transform: scale(1.1);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    }
+        
+    
 
-    &.me {
+    &.me 
         flex-direction: row-reverse;
 
-        .chatAvatar {
+        .chatAvatar 
             margin: 5px 0 0 10px !important;
-        }
+        
 
-        .chatContentWrapper {
+        .chatContentWrapper 
             align-items: flex-end;
 
-            .chatContent {
+            .chatContent 
                 background: rgb(248, 251, 255);
                 border-radius: var(--radius-main) 0 var(--radius-main) var(--radius-main);
                 transition: none;
                 /* 移除悬停效果 */
 
-                .chatCall {
+                .chatCall 
                     color: rgb(225, 160, 8);
                     font-weight: bold;
-                }
-            }
+                
+            
 
-            .chatContent:hover {
+            .chatContent:hover 
                 background: rgb(248, 251, 255);
                 /* 保持原背景色 */
                 color: inherit;
                 /* 保持文本颜色 */
-            }
+            
 
-            .chatName {
+            .chatName 
                 color: var(--highlight-color);
-            }
-        }
-    }
-}
+            
+        
+    
+
 
 /* 链接样式 */
-.chatLink {
+.chatLink 
     /* color: var(--primary-color); */
     text-decoration: underline;
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-}
 
-.chatLink:hover {
+
+.chatLink:hover 
     text-decoration: none;
     color: var(--highlight-color);
-}
 
-.chatQuoteCard {
+
+.chatQuoteCard 
     display: flex;
     border: 3px solid var(--highlight-color);
     border-radius: 0 var(--radius-main) var(--radius-main) var(--radius-main);
@@ -180,30 +181,30 @@
     margin: -12px;
 
 
-    .chatQuoteTetle {
+    .chatQuoteTetle 
         background-color: var(--highlight-color);
         display: flex;
         justify-content: space-between;
         color: #fff;
 
-        span {
+        span 
             padding-left: 64px;
-        }
+        
 
-        i {
+        i 
             margin-top: 2px;
             margin-left: 2px;
-        }
+        
 
-    }
+    
 
-    .chatMessage {
+    .chatMessage 
         /* margin-left: 8px; */
         margin: 16px 16px;
-    }
-}
+    
 
-.chatQuote {
+
+.chatQuote 
     display: flex;
     border: 3px solid var(--highlight-color);
     border-radius: 0 var(--radius-main) var(--radius-main) var(--radius-main);
@@ -211,27 +212,27 @@
     align-items: stretch;
     margin: 0px -10px -10px;
 
-    .quoteUser {
+    .quoteUser 
         background-color: var(--highlight-color);
         display: flex;
         justify-content: space-between;
         color: #fff;
 
-        span {
+        span 
             padding: -16px;
             font-weight: lighter;
-        }
+        
 
-        i {
+        i 
             margin-top: 2px;
             margin-left: 2px;
             font-weight: lighter;
-        }
-    }
-}
+        
+    
 
 
-.systemNotification {
+
+.systemNotification 
     text-align: center ; 
     /* color: var(--primary-color); */
     background-color: rgb(161, 161, 161);
@@ -243,11 +244,10 @@
     border: 1px  ;
     border-radius: var(--radius-main);
 
-    .systemContent {
+    .systemContent 
         /* display: flex; */
         font-size: 14px;
         line-height: 1.5;
         /* text-align: center; */
-    }
+    
 
-}
