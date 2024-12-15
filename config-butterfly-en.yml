@@ -447,6 +447,9 @@ crisp:
 # Footer Settings
 # --------------------------------------
 footer:
+  marquee:
+    enable: false
+    text: ''
   owner:
     enable: false
     since: 2021
