@@ -1045,6 +1045,7 @@ inject:
     - <link rel="webmention" href="https://webmention.io/blog.sinzmise.top/webmention">
     - <link rel="pingback" href="https://webmention.io/blog.sinzmise.top/xmlrpc">
     - <script data-pjax src="/chatroom/chatroom.js"></script>
+    - <script async src="/js/categorybar.js"></script>
 
   bottom:
     - <script defer src="/js/essay.js"></script> # 即刻逻辑文件
