@@ -491,7 +491,9 @@ footer:
                             | <a target="_blank" rel="noopener" href="https://blogscn.fun/">笔墨迹</a>
                             | <a target="_blank" rel="noopener" href="https://daohang.lusongsong.com/">博客大全</a>
                             | <a target="_blank" rel="noopener" href="https://www.blogsclub.org/blog/99.html">BlogsClub</a>
-                            | <a target="_blank" rel="noopener" href="https://ourblo.gs/blogs/55/">OurBlogs</a>'
+                            | <a target="_blank" rel="noopener" href="https://ourblo.gs/blogs/55/">OurBlogs</a>
+                            <br>
+                            <a href="https://ipw.cn/ipv6webcheck/?site=blog.sinzmise.top" title="本站支持IPv6访问" target="_blank"><img style="display:inline-block;vertical-align:middle" alt="本站支持IPv6访问" src="https://static.ipw.cn/icon/ipv6-s1.svg"></a>'
   copyright: false # Copyright of theme and framework
   links:
     - l_link: /tags/
