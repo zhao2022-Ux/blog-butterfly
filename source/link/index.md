@@ -179,12 +179,6 @@ a(href='https://blog.sinzmise.top/' rel="external nofollow") 汐塔魔法屋
                 </div>
             </div>
             <div class="field">
-                <label class="label">人机验证</label>
-                <div class="control has-icons-left">
-                    <div id="captcha"></div>
-                </div>
-            </div>
-            <div class="field">
                 <div class="control">
                     <label class="checkbox">
                         <input type="checkbox" id="friend-check"/> 我不会提交无意义的信息，并且已经遵守以上规则。
@@ -193,79 +187,79 @@ a(href='https://blog.sinzmise.top/' rel="external nofollow") 汐塔魔法屋
             </div>
             <div class="field is-grouped">
                 <div class="control">
-                    <button id='submit-btn' class="button is-info" type="submit" >提交</button>
+                    <button class="button is-info" type="submit" onclick="askFriend(event)">提交</button>
                 </div>
             </div>
         </div>
     </div>
 </article>
-<script data-pjax src="https://static.geetest.com/v4/gt4.js"></script>
-<script>
-  function TestUrl(url) {
+<script data-pjax src="https://recaptcha.net/recaptcha/api.js?render=6LcrLZwqAAAAAE2vd7a-W_5tNO5jsCI-GXf0ONo8"></script>
+<script data-pjax>
+function TestUrl(url) {
     var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
     var objExp=new RegExp(Expression);
     if(objExp.test(url) != true){
         return false;
     }
     return true;
-  }
-  initGeetest4({
-    captchaId: "a2d6434a425cb78f33ebe88946d1a6c7",
-    product: 'popup',
-    language: "zho",
-    riskType: 'word'
-  }, function(captcha) {
-    captcha.appendTo("#captcha");
-    $("#submit-btn").click(function() {
-        var result = captcha.getValidate();
-        if (!result) {
-            return alert('请完成人机验证！');
-        }
-        result.captcha_id = "a2d6434a425cb78f33ebe88946d1a6c7"
-        //your code
-        let check = $("#friend-check").is(":checked");
-        let name = $("#friend-name").val();
-        let url = $("#friend-link").val();
-        let image = $("#friend-icon").val();
-        let des = $("#friend-des").val();
-        if (!check) {
-            alert("请勾选 \"我不会提交无意义的信息，并且已经遵守以上规则。\"");
-            captcha.reset();
-            return;
-        }
-        if (!(name && url && image && des)) {
-            alert("站点信息不完整！");
-            captcha.reset();
-            return;
-        }
-        if (!(TestUrl(url))) {
-            alert("URL格式错误！需要包含HTTP或者HTTPS协议头！ ");
-            captcha.reset();
-            return;
-        }
-        if (!(TestUrl(image))) {
-            alert("图片URL的格式错误！它需要包含HTTP或者HTTPS协议头！");
-            captcha.reset();
-            return;
-        }
-        event.target.classList.add('is-loading');
-        $.ajax({
-            type: 'POST',
-            dataType: "json",
-            data: {
-                "name": name,
-                "url": url,
-                "image": image,
-                "description": des,
-                "verify": result.pass_token,
-            },
-            url: 'https://houtai.hexo.sinzmise.top/pub/ask_friend/',
-            success: function(data) {
-                alert(data.msg);
-                captcha.reset();
-            }
+}
+function askFriend (event) {
+    let check = $("#friend-check").is(":checked");
+    let name = $("#friend-name").val();
+    let url = $("#friend-link").val();
+    let image = $("#friend-icon").val();
+    let des = $("#friend-des").val();
+    if(!check){
+        alert("Please check \"I am not submitting nonsense information\"");
+        return;
+    }
+    if(!(name&&url&&image&&des)){
+        alert("The information is incomplete! ");
+        return;
+    }
+    if (!(TestUrl(url))){
+        alert("URL format error! Need to include HTTP protocol header! ");
+        return;
+    }
+    if (!(TestUrl(image))){
+        alert("The format of the slice URL is wrong! It needs to contain the HTTP protocol header! ");
+        return;
+    }
+    event.target.classList.add('is-loading');
+    grecaptcha.ready(function() {
+          grecaptcha.execute('6LcrLZwqAAAAAE2vd7a-W_5tNO5jsCI-GXf0ONo8', {action: 'submit'}).then(function(token) {
+              $.ajax({
+                type: 'get',
+                cache: false,
+                url: url,
+                dataType: "jsonp",
+                async: false,
+                processData: false,
+                //timeout:10000, 
+                complete: function (data) {
+                    if(data.status==200){
+                    $.ajax({
+                        type: 'POST',
+                        dataType: "json",
+                        data: {
+                            "name": name,
+                            "url": url,
+                            "image": image,
+                            "description": des,
+                            "verify": token,
+                        },
+                        url: 'https://houtai.hexo.sinzmise.top/pub/ask_friend/',
+                        success: function (data) {
+                            alert(data.msg);
+                        }
+                    });}
+                    else{
+                        alert("The URL cannot be reached!");
+                    }
+                    event.target.classList.remove('is-loading');
+                }
+          });
         });
-        event.target.classList.remove('is-loading');
-    })
-  });
+    });
+}
 </script>

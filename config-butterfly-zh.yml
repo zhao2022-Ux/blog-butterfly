@@ -455,6 +455,9 @@ crisp:
 # Footer Settings
 # --------------------------------------
 footer:
+  marquee:
+    enable: true
+    text: '12/15更新：1.更新底部跑马灯 2.添加团ICP备案号 3.CDN支持ipv6访问 4.标签和分类添加切换 5.更换Qexo友链申请为Qexo' 
   owner:
     enable: false
     since: 2021
