@@ -153,3 +153,17 @@ rightmenu:
 loading: 加载中...
 
 error404: 页面没有找到
+
+webmention:
+  webmention: 网络回响
+  webmention_submit: "欲提交/移除对本文的回应，请于此提交您的文章地址："
+  webmention_response:
+    response: Webmention 回应
+    no_response: 本文暂无回应。
+    one_response: 本文有以下一条回应：
+    some_response: 本文有以下 ${count} 条回应：
+    loading_response: 正在加载回应。
+  webmention_status:
+    submit: "提交"
+    good: "已提交！"
+    bad: "提交失败。"

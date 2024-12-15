@@ -152,3 +152,17 @@ rightmenu:
 loading: Loading...
 
 error404: Page not found
+
+webmention:
+  webmention: Webmention
+  webmention_submit: "To submit/delete a response to this post, tell me the link to your post:"
+  webmention_response:
+    response: Webmention response
+    no_response: No response
+    one_response: 1 response
+    some_response: ${count} responses
+    loading_response: Loading response...
+  webmention_status:
+    submit: "Submit"
+    good: "Submitted!"
+    bad: "Failed to submit."

@@ -30,6 +30,14 @@ meta(name="copyright" content=pageCopyright)
 meta(name ="format-detection" content="telephone=no")
 meta(name="theme-color" content=themeColor)
 
+//- IndieWeb
+if theme.indieweb.enable
+  link(rel="authorization_endpoint" href=url_for(theme.indieweb.auth_endpoint))
+  link(rel="token_endpoint" href=url_for(theme.indieweb.token_endpoint))
+  if theme.indieweb.webmention.enable
+    link(rel="webmention" href=url_for(theme.indieweb.webmention.endpoint))
+    link(rel="pingback" href=url_for(theme.indieweb.webmention.pingback))
+
 //- Open_Graph
 include ./head/Open_Graph.pug
 

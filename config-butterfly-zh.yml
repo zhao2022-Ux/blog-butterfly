@@ -1020,12 +1020,23 @@ css_prefix: true
 # --------------------------------------
 
 essay:
-  enable: true
+  enable: false
   # 即刻短文仅展示前n条
   # Jike short text only shows the first n
   strip: 50
   mode: memos # local：本地静态 / json：动态json / memos：动态Memos
   mode_link: https://diary.sinzmise.top/api/v1/memo?creatorId=1&tag=说说 #动态模式地址
+
+# IndieWeb
+# --------------------------------------
+indieweb:
+  enable: true
+  auth_endpoint: https://indieauth.com/auth
+  token_endpoint: https://tokens.indieauth.com/token
+  webmention:
+   enable: true
+   endpoint: https://webmention.io/blog.sinzmise.top/webmention
+   pingback: https://webmention.io/blog.sinzmise.top/xmlrpc
 
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
@@ -1043,16 +1054,10 @@ inject:
     - <span id="fps"></span> # 帧率检测
     - <style id="defineBg"></style> # 自定义背景选项
     - <style id="menu_shadow"></style> # 菜单发光样式
-    - <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-    - <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-    - <link rel="webmention" href="https://webmention.io/blog.sinzmise.top/webmention">
-    - <link rel="pingback" href="https://webmention.io/blog.sinzmise.top/xmlrpc">
     - <script data-pjax src="/chatroom/chatroom.js"></script>
     - <script async src="/js/categorybar.js"></script>
-    - <script data-pjax src="https://recaptcha.net/recaptcha/api.js?render=6LdoOJwqAAAAAE5155u3gJeEhEHzjYIVOuOVY1YC"></script>
 
   bottom:
-    - <script defer src="/js/essay.js"></script> # 即刻逻辑文件
     - <script async data-pjax src="/bbs/bbs.js"></script> # 哔哔广场
     - <script src="https://jsd.cdn.storisinz.site/npm/swiper@10.3.1/swiper-bundle.min.js"></script>
     - <script src="https://cdnjs.cdn.storisinz.site/ajax/libs/jquery/3.6.3/jquery.min.js"></script> # jQuery
