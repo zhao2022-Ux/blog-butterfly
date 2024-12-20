@@ -191,7 +191,7 @@ center#name-container {
   padding: 0 0 0 8px !important;
 }
 /* 子菜单横向展示 */
-.menus_item_child li:not(#sidebar-menus > li){
+.menus_item_child li:not(#sidebar-menus  li){
   float: left;
   border-radius: 6px!important;
   -webkit-border-radius: 6px!important;
@@ -199,7 +199,7 @@ center#name-container {
   -ms-border-radius: 6px!important;
   -o-border-radius: 6px!important;
 }
-.menus_item_child:not(#sidebar-menus > ul){
+.menus_item_child:not(#sidebar-menus  ul){
 /*
   left:calc(-150%)!important;这是估算值，为了保持元素居中的，如果不合适可以自己调
 改为：*/
