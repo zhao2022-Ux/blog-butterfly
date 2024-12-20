@@ -62,7 +62,7 @@
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-mark": "^3.0.1",
     "save": "^2.5.0",
-    "swpp-backends": "^3.0.0-alpha.610",
+    "swpp-backends": "^3.0.0-alpha.702",
     "vanilla-lazyload": "^17.8.3",
     "workbox-build": "^6.6.0",
     "yamljs": "^0.3.0"
