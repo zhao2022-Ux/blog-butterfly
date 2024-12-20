@@ -190,22 +190,6 @@ center#name-container {
 #nav .menus_items .menus_item {
   padding: 0 0 0 8px !important;
 }
-/* 子菜单横向展示 */
-.menus_item_child li:not(#sidebar-menus  li){
-  float: left;
-  border-radius: 6px!important;
-  -webkit-border-radius: 6px!important;
-  -moz-border-radius: 6px!important;
-  -ms-border-radius: 6px!important;
-  -o-border-radius: 6px!important;
-}
-.menus_item_child:not(#sidebar-menus  ul){
-/*
-  left:calc(-150%)!important;这是估算值，为了保持元素居中的，如果不合适可以自己调
-改为：*/
-left:50%;
-translate:-50%;
-}
 
 /*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
 /* #page-header:not(.not-top-img):before {
