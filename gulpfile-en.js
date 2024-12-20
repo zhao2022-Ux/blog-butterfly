@@ -33,7 +33,7 @@ gulp.task('compress', () =>
 )
 //css
 gulp.task('minify-css', () => {
-    gulp.src('./public-en/**/*.css', '!./public-en/css/custom2.css')
+    return gulp.src('./public-en/css/*.css')
         .pipe(cleanCSS({
             compatibility: 'ie11'
         }))
