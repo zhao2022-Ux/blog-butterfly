@@ -278,8 +278,7 @@ hexo_safego:
 
 swpp:
   # 是否启用，默认 false
-  enable: true
-  # 配置文件路径，以 `/` 结尾表示加载指定文件夹下的所有文件，注意文件夹中只能有配置文件，不能有其它文件及文件夹
+  enable: false  # 配置文件路径，以 `/` 结尾表示加载指定文件夹下的所有文件，注意文件夹中只能有配置文件，不能有其它文件及文件夹
   config_path: 'swpp.config.en.ts'
   # 是否生成 sw
   # serviceWorker: true
